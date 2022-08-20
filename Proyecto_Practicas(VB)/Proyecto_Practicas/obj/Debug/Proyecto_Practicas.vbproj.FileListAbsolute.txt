@@ -42,4 +42,4 @@ A:\Roberto\Roberto (Beta)\Proyecto_practica\Proyecto_practica\Proyecto_Practicas
 A:\Roberto\Roberto (Beta)\Proyecto_practica\Proyecto_practica\Proyecto_Practicas(VB)\Proyecto_Practicas\obj\Debug\Proyecto_Practicas.vbproj.Proyecto_Practicas.exe.config
 A:\Roberto\Roberto (Beta)\Proyecto_practica\Proyecto_practica\Proyecto_Practicas(VB)\Proyecto_Practicas\obj\Debug\Proyecto_Practicas.Resources.resources
 A:\Roberto\Roberto (Beta)\Proyecto_practica\Proyecto_practica\Proyecto_Practicas(VB)\Proyecto_Practicas\obj\Debug\Proyecto_Practicas.vbproj.GenerateResource.Cache
-A:\Roberto\Roberto (Beta)\Proyecto_practica\Proyecto_practica\Proyecto_Practicas(VB)\Proyecto_Practicas\obj\Debug\Proyecto_Practicas.Form1.resources
+A:\Roberto\Roberto (Beta)\Proyecto_practica\Proyecto_practica\Proyecto_Practicas(VB)\Proyecto_Practicas\obj\Debug\Proyecto_Practicas.Login.resources
