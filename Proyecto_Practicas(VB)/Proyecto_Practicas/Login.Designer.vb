@@ -83,7 +83,7 @@ Partial Class Login
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Segoe UI", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(80, 49)
+        Me.Label1.Location = New System.Drawing.Point(91, 49)
         Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(324, 54)
@@ -118,16 +118,17 @@ Partial Class Login
         '
         'bMinimizar
         '
+        Me.bMinimizar.BackColor = System.Drawing.Color.LimeGreen
         Me.bMinimizar.FlatAppearance.BorderSize = 0
         Me.bMinimizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray
-        Me.bMinimizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red
+        Me.bMinimizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray
         Me.bMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.bMinimizar.Image = CType(resources.GetObject("bMinimizar.Image"), System.Drawing.Image)
         Me.bMinimizar.Location = New System.Drawing.Point(413, 0)
         Me.bMinimizar.Name = "bMinimizar"
         Me.bMinimizar.Size = New System.Drawing.Size(36, 36)
         Me.bMinimizar.TabIndex = 1
-        Me.bMinimizar.UseVisualStyleBackColor = True
+        Me.bMinimizar.UseVisualStyleBackColor = False
         '
         'bCerrar
         '
