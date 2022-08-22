@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 20-08-2022 a las 04:09:51
+-- Tiempo de generación: 22-08-2022 a las 20:40:42
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 8.1.6
 
@@ -163,6 +163,28 @@ CREATE TABLE `subastas` (
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `users`
+--
+
+CREATE TABLE `users` (
+  `id_user` int(11) NOT NULL,
+  `nombre_completo` varchar(50) NOT NULL,
+  `correo` text NOT NULL,
+  `puesto` varchar(20) NOT NULL,
+  `user` varchar(20) NOT NULL,
+  `psw` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `users`
+--
+
+INSERT INTO `users` (`id_user`, `nombre_completo`, `correo`, `puesto`, `user`, `psw`) VALUES
+(1, 'Carlos Roberto Calderón', 'robertocal2@yahoo.com', 'Administrador', 'crCalderon2509', 'ImportadoraR1');
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `ventas`
 --
 
@@ -248,6 +270,12 @@ ALTER TABLE `subastas`
   ADD PRIMARY KEY (`id_sub`);
 
 --
+-- Indices de la tabla `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id_user`);
+
+--
 -- Indices de la tabla `ventas`
 --
 ALTER TABLE `ventas`
@@ -313,6 +341,12 @@ ALTER TABLE `revendedores`
 --
 ALTER TABLE `subastas`
   MODIFY `id_sub` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `users`
+--
+ALTER TABLE `users`
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `ventas`
