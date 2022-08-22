@@ -22,7 +22,6 @@ Partial Class Carros
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.CBid_car = New Guna.UI2.WinForms.Guna2ComboBox()
         Me.Numano_Careeeeeeeeeeeeeeeeee = New Guna.UI2.WinForms.Guna2NumericUpDown()
         Me.tbmar_car = New Guna.UI2.WinForms.Guna2TextBox()
         Me.tbmodelo_car = New Guna.UI2.WinForms.Guna2TextBox()
@@ -31,25 +30,10 @@ Partial Class Carros
         Me.tbmotor_car = New Guna.UI2.WinForms.Guna2TextBox()
         Me.numcili_car = New Guna.UI2.WinForms.Guna2NumericUpDown()
         Me.tburl_car = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.Button1 = New System.Windows.Forms.Button()
         CType(Me.Numano_Careeeeeeeeeeeeeeeeee, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.numcili_car, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'CBid_car
-        '
-        Me.CBid_car.BackColor = System.Drawing.Color.Transparent
-        Me.CBid_car.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
-        Me.CBid_car.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.CBid_car.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.CBid_car.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.CBid_car.Font = New System.Drawing.Font("Segoe UI Black", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CBid_car.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
-        Me.CBid_car.ItemHeight = 30
-        Me.CBid_car.Location = New System.Drawing.Point(29, 14)
-        Me.CBid_car.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.CBid_car.Name = "CBid_car"
-        Me.CBid_car.Size = New System.Drawing.Size(231, 36)
-        Me.CBid_car.TabIndex = 0
         '
         'Numano_Careeeeeeeeeeeeeeeeee
         '
@@ -61,7 +45,7 @@ Partial Class Carros
         Me.Numano_Careeeeeeeeeeeeeeeeee.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.Numano_Careeeeeeeeeeeeeeeeee.Maximum = New Decimal(New Integer() {2023, 0, 0, 0})
         Me.Numano_Careeeeeeeeeeeeeeeeee.Name = "Numano_Careeeeeeeeeeeeeeeeee"
-        Me.Numano_Careeeeeeeeeeeeeeeeee.Size = New System.Drawing.Size(172, 31)
+        Me.Numano_Careeeeeeeeeeeeeeeeee.Size = New System.Drawing.Size(211, 31)
         Me.Numano_Careeeeeeeeeeeeeeeeee.TabIndex = 1
         '
         'tbmar_car
@@ -170,7 +154,7 @@ Partial Class Carros
         Me.numcili_car.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.numcili_car.Maximum = New Decimal(New Integer() {1500, 0, 0, 0})
         Me.numcili_car.Name = "numcili_car"
-        Me.numcili_car.Size = New System.Drawing.Size(172, 31)
+        Me.numcili_car.Size = New System.Drawing.Size(211, 31)
         Me.numcili_car.TabIndex = 8
         '
         'tburl_car
@@ -192,11 +176,21 @@ Partial Class Carros
         Me.tburl_car.Size = New System.Drawing.Size(211, 30)
         Me.tburl_car.TabIndex = 10
         '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(29, 371)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(211, 31)
+        Me.Button1.TabIndex = 11
+        Me.Button1.Text = "Button1"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'Carros
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 15.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1063, 449)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.tburl_car)
         Me.Controls.Add(Me.numcili_car)
         Me.Controls.Add(Me.tbmotor_car)
@@ -205,7 +199,6 @@ Partial Class Carros
         Me.Controls.Add(Me.tbmodelo_car)
         Me.Controls.Add(Me.tbmar_car)
         Me.Controls.Add(Me.Numano_Careeeeeeeeeeeeeeeeee)
-        Me.Controls.Add(Me.CBid_car)
         Me.Font = New System.Drawing.Font("Segoe UI Black", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
@@ -216,8 +209,6 @@ Partial Class Carros
         Me.ResumeLayout(False)
 
     End Sub
-
-    Friend WithEvents CBid_car As Guna.UI2.WinForms.Guna2ComboBox
     Friend WithEvents Numano_Careeeeeeeeeeeeeeeeee As Guna.UI2.WinForms.Guna2NumericUpDown
     Friend WithEvents tbmar_car As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents tbmodelo_car As Guna.UI2.WinForms.Guna2TextBox
@@ -226,4 +217,5 @@ Partial Class Carros
     Friend WithEvents tbmotor_car As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents numcili_car As Guna.UI2.WinForms.Guna2NumericUpDown
     Friend WithEvents tburl_car As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents Button1 As Button
 End Class

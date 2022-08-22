@@ -1,8 +1,5 @@
 ﻿Imports MySql.Data.MySqlClient
 Public Class Login
-    Dim conn As New MySqlConnection
-    Dim objetoconexion As New conexion
-    Dim cmd As MySqlCommand
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles bCerrar.Click
         Me.Close()
     End Sub
@@ -10,7 +7,32 @@ Public Class Login
         Me.WindowState = FormWindowState.Minimized
     End Sub
     Private Sub Guna2Button1_Click(sender As Object, e As EventArgs) Handles Guna2Button1.Click
+        Dim cmd As MySqlCommand = New MySqlCommand
+        Dim conn As New MySqlConnection
+        Try
+            cmd.Connection = conn
+            conn.ConnectionString = "Server=localhost;Database=importadora_roca;Uid=root;Pwd=;Convert Zero Datetime=True;"
+            conn.Open()
+        Catch ex As Exception
 
+        End Try
+        Try
+            cmd.CommandText = "SELECT user from users WHERE user='" & tbUser.Text & "' AND psw='" & tbPswd.Text & "';"
+            Dim r As MySqlDataReader
+            r = cmd.ExecuteReader
+            If r.HasRows <> False Then
+                r.Read()
+                MessageBox.Show("¡Inicio de Sesión Correcto!")
+                Carros.Show()
+                Me.Hide()
+            Else
+                MessageBox.Show("Datos incorrectos, por favor registrarse.", "ERROR AL INICIAR SESIÓN", MessageBoxButtons.RetryCancel, MessageBoxIcon.Asterisk)
+            End If
+            conn.Close()
+            conn.Dispose()
+        Catch ex As Exception
+            MessageBox.Show(ex.ToString())
+        End Try
     End Sub
     'Pasar click en DataGrid
     'Dim row As DataGridViewRow = DataGridView1.CurrentRow
@@ -29,7 +51,7 @@ Public Class Login
     '    End Try
     'Sub cargarcombox()
     '    conn.Open()
-    '    Dim query As String = "SELECT * FROM proveedores;"
+    '    Dim query As String = "Select * FROM proveedores;"
     '    Dim adpt As New MySqlDataAdapter(query, conn)
     '    Dim ds As New DataSet()
     '    adpt.Fill(ds)
@@ -42,15 +64,15 @@ Public Class Login
     'ACTUALIZAR
     'Try
     'If ComboBox1.SelectedIndex = -1 Or ComboBox2.SelectedIndex = -1 Then
-    '            MessageBox.Show("PUEDE QUE LA SELECCIÓN PARA PROVEEDORES Y/O FABRICANTES ESTÉ VACÍA", "ERROR AL MODIFICAR", MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
+    '            MessageBox.Show("PUEDE QUE LA SELECCIÓN PARA PROVEEDORES Y/O FABRICANTES ESTÉ VACÍA", "Error AL MODIFICAR", MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
     '        Else
     '            cont += 1
     '            cmd = conn.CreateCommand
-    '            cmd.CommandText = "update consolas_videojuegos set codigo_cons=@cod,nombre_cons=@nom,mod_cons=@mod,id_fab=@Fab,foto_cons=@Foto,desc_cons=@Desc,precio_cons=@prec,id_proveedor=@prov WHERE id_cons=@id;"
+    '            cmd.CommandText = "update consolas_videojuegos Set codigo_cons=@cod,nombre_cons=@nom,mod_cons=@Mod,id_fab=@Fab,foto_cons=@Foto,desc_cons=@Desc,precio_cons=@prec,id_proveedor=@prov WHERE id_cons=@id;"
     '            cmd.Parameters.AddWithValue("@id", TextBox10.Text)
     '            cmd.Parameters.AddWithValue("@cod", TextBox7.Text)
     '            cmd.Parameters.AddWithValue("@nom", TextBox8.Text)
-    '            cmd.Parameters.AddWithValue("@mod", TextBox9.Text)
+    '            cmd.Parameters.AddWithValue("@Mod", TextBox9.Text)
     '            cmd.Parameters.AddWithValue("@Fab", ComboBox1.SelectedValue)
     '            cmd.Parameters.AddWithValue("@Foto", TextBox12.Text)
     '            cmd.Parameters.AddWithValue("@Desc", TextBox11.Text)
@@ -81,7 +103,7 @@ Public Class Login
     'End Try
     'Private Sub mostrar()
     '    conn = objetoconexion.AbrirCon
-    '    Dim query As String = "SELECT c.id_cons as 'ID', c.codigo_cons as 'Codigo', c.nombre_cons as 'Nombre', c.mod_cons as 'Modelo', f.nombre_fab as 'Fabricante', c.foto_cons as 'Fotografía (URL)', c.desc_cons as 'Descripcion', c.precio_cons as 'Precio', p.nombre_proveedor as 'Nombre Proveedor' FROM consolas_videojuegos c INNER JOIN proveedores p ON c.id_proveedor = p.id_proveedor INNER JOIN fabricante f ON c.id_fab = f.id_fab;"
+    '    Dim query As String = "Select c.id_cons As 'ID', c.codigo_cons as 'Codigo', c.nombre_cons as 'Nombre', c.mod_cons as 'Modelo', f.nombre_fab as 'Fabricante', c.foto_cons as 'Fotografía (URL)', c.desc_cons as 'Descripcion', c.precio_cons as 'Precio', p.nombre_proveedor as 'Nombre Proveedor' FROM consolas_videojuegos c INNER JOIN proveedores p ON c.id_proveedor = p.id_proveedor INNER JOIN fabricante f ON c.id_fab = f.id_fab;"
     '    Dim adpt As New MySqlDataAdapter(query, conn)
     '    Dim ds As New DataSet()
     '    adpt.Fill(ds)
