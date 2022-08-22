@@ -28,8 +28,8 @@ Partial Class Login
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Guna2Button1 = New Guna.UI2.WinForms.Guna2Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.bCerrar = New System.Windows.Forms.Button()
         Me.bMinimizar = New System.Windows.Forms.Button()
+        Me.bCerrar = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -46,7 +46,7 @@ Partial Class Login
         Me.Guna2TextBox1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
         Me.Guna2TextBox1.ForeColor = System.Drawing.Color.Black
         Me.Guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2TextBox1.Location = New System.Drawing.Point(64, 136)
+        Me.Guna2TextBox1.Location = New System.Drawing.Point(65, 109)
         Me.Guna2TextBox1.Margin = New System.Windows.Forms.Padding(7, 6, 7, 6)
         Me.Guna2TextBox1.Name = "Guna2TextBox1"
         Me.Guna2TextBox1.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -69,7 +69,7 @@ Partial Class Login
         Me.Guna2TextBox2.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
         Me.Guna2TextBox2.ForeColor = System.Drawing.Color.Black
         Me.Guna2TextBox2.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2TextBox2.Location = New System.Drawing.Point(64, 196)
+        Me.Guna2TextBox2.Location = New System.Drawing.Point(65, 169)
         Me.Guna2TextBox2.Margin = New System.Windows.Forms.Padding(7, 6, 7, 6)
         Me.Guna2TextBox2.Name = "Guna2TextBox2"
         Me.Guna2TextBox2.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -83,7 +83,7 @@ Partial Class Login
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Segoe UI", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(111, 69)
+        Me.Label1.Location = New System.Drawing.Point(114, 48)
         Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(260, 45)
@@ -99,7 +99,7 @@ Partial Class Login
         Me.Guna2Button1.FillColor = System.Drawing.Color.CornflowerBlue
         Me.Guna2Button1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.Guna2Button1.ForeColor = System.Drawing.Color.White
-        Me.Guna2Button1.Location = New System.Drawing.Point(152, 262)
+        Me.Guna2Button1.Location = New System.Drawing.Point(153, 235)
         Me.Guna2Button1.Name = "Guna2Button1"
         Me.Guna2Button1.Size = New System.Drawing.Size(180, 45)
         Me.Guna2Button1.TabIndex = 3
@@ -113,21 +113,8 @@ Partial Class Login
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(490, 44)
+        Me.Panel1.Size = New System.Drawing.Size(490, 36)
         Me.Panel1.TabIndex = 4
-        '
-        'bCerrar
-        '
-        Me.bCerrar.FlatAppearance.BorderSize = 0
-        Me.bCerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray
-        Me.bCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red
-        Me.bCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.bCerrar.Image = CType(resources.GetObject("bCerrar.Image"), System.Drawing.Image)
-        Me.bCerrar.Location = New System.Drawing.Point(446, 0)
-        Me.bCerrar.Name = "bCerrar"
-        Me.bCerrar.Size = New System.Drawing.Size(44, 44)
-        Me.bCerrar.TabIndex = 0
-        Me.bCerrar.UseVisualStyleBackColor = True
         '
         'bMinimizar
         '
@@ -136,17 +123,30 @@ Partial Class Login
         Me.bMinimizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red
         Me.bMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.bMinimizar.Image = CType(resources.GetObject("bMinimizar.Image"), System.Drawing.Image)
-        Me.bMinimizar.Location = New System.Drawing.Point(405, 0)
+        Me.bMinimizar.Location = New System.Drawing.Point(413, 0)
         Me.bMinimizar.Name = "bMinimizar"
-        Me.bMinimizar.Size = New System.Drawing.Size(44, 44)
+        Me.bMinimizar.Size = New System.Drawing.Size(36, 36)
         Me.bMinimizar.TabIndex = 1
         Me.bMinimizar.UseVisualStyleBackColor = True
+        '
+        'bCerrar
+        '
+        Me.bCerrar.FlatAppearance.BorderSize = 0
+        Me.bCerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray
+        Me.bCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red
+        Me.bCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.bCerrar.Image = CType(resources.GetObject("bCerrar.Image"), System.Drawing.Image)
+        Me.bCerrar.Location = New System.Drawing.Point(454, 0)
+        Me.bCerrar.Name = "bCerrar"
+        Me.bCerrar.Size = New System.Drawing.Size(36, 36)
+        Me.bCerrar.TabIndex = 0
+        Me.bCerrar.UseVisualStyleBackColor = True
         '
         'Login
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 21.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(490, 356)
+        Me.ClientSize = New System.Drawing.Size(490, 310)
         Me.ControlBox = False
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Guna2Button1)
@@ -155,6 +155,7 @@ Partial Class Login
         Me.Controls.Add(Me.Guna2TextBox1)
         Me.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "Login"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
