@@ -43,3 +43,27 @@ A:\Roberto\Roberto (Beta)\Proyecto_practica\Proyecto_practica\Proyecto_Practicas
 A:\Roberto\Roberto (Beta)\Proyecto_practica\Proyecto_practica\Proyecto_Practicas(VB)\Proyecto_Practicas\obj\Debug\Proyecto_Practicas.Resources.resources
 A:\Roberto\Roberto (Beta)\Proyecto_practica\Proyecto_practica\Proyecto_Practicas(VB)\Proyecto_Practicas\obj\Debug\Proyecto_Practicas.vbproj.GenerateResource.Cache
 A:\Roberto\Roberto (Beta)\Proyecto_practica\Proyecto_practica\Proyecto_Practicas(VB)\Proyecto_Practicas\obj\Debug\Proyecto_Practicas.Login.resources
+C:\Users\LENOVO\Documents\GitHub\Proyecto_practica\Proyecto_Practicas(VB)\Proyecto_Practicas\bin\Debug\Proyecto_Practicas.exe.config
+C:\Users\LENOVO\Documents\GitHub\Proyecto_practica\Proyecto_Practicas(VB)\Proyecto_Practicas\obj\Debug\Proyecto_Practicas.exe
+C:\Users\LENOVO\Documents\GitHub\Proyecto_practica\Proyecto_Practicas(VB)\Proyecto_Practicas\obj\Debug\Proyecto_Practicas.xml
+C:\Users\LENOVO\Documents\GitHub\Proyecto_practica\Proyecto_Practicas(VB)\Proyecto_Practicas\obj\Debug\Proyecto_Practicas.pdb
+C:\Users\LENOVO\Documents\GitHub\Proyecto_practica\Proyecto_Practicas(VB)\Proyecto_Practicas\bin\Debug\Proyecto_Practicas.exe
+C:\Users\LENOVO\Documents\GitHub\Proyecto_practica\Proyecto_Practicas(VB)\Proyecto_Practicas\bin\Debug\Proyecto_Practicas.pdb
+C:\Users\LENOVO\Documents\GitHub\Proyecto_practica\Proyecto_Practicas(VB)\Proyecto_Practicas\bin\Debug\Proyecto_Practicas.xml
+C:\Users\LENOVO\Documents\GitHub\Proyecto_practica\Proyecto_Practicas(VB)\Proyecto_Practicas\bin\Debug\Guna.UI2.dll
+C:\Users\LENOVO\Documents\GitHub\Proyecto_practica\Proyecto_Practicas(VB)\Proyecto_Practicas\bin\Debug\Google.Protobuf.dll
+C:\Users\LENOVO\Documents\GitHub\Proyecto_practica\Proyecto_Practicas(VB)\Proyecto_Practicas\bin\Debug\ZstdNet.dll
+C:\Users\LENOVO\Documents\GitHub\Proyecto_practica\Proyecto_Practicas(VB)\Proyecto_Practicas\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\LENOVO\Documents\GitHub\Proyecto_practica\Proyecto_Practicas(VB)\Proyecto_Practicas\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\LENOVO\Documents\GitHub\Proyecto_practica\Proyecto_Practicas(VB)\Proyecto_Practicas\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\LENOVO\Documents\GitHub\Proyecto_practica\Proyecto_Practicas(VB)\Proyecto_Practicas\bin\Debug\System.Buffers.dll
+C:\Users\LENOVO\Documents\GitHub\Proyecto_practica\Proyecto_Practicas(VB)\Proyecto_Practicas\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\LENOVO\Documents\GitHub\Proyecto_practica\Proyecto_Practicas(VB)\Proyecto_Practicas\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\LENOVO\Documents\GitHub\Proyecto_practica\Proyecto_Practicas(VB)\Proyecto_Practicas\bin\Debug\MySql.Data.xml
+C:\Users\LENOVO\Documents\GitHub\Proyecto_practica\Proyecto_Practicas(VB)\Proyecto_Practicas\obj\Debug\Proyecto_Practicas.vbprojResolveAssemblyReference.cache
+C:\Users\LENOVO\Documents\GitHub\Proyecto_practica\Proyecto_Practicas(VB)\Proyecto_Practicas\obj\Debug\Proyecto_Practicas.vbproj.Proyecto_Practicas.exe.config
+C:\Users\LENOVO\Documents\GitHub\Proyecto_practica\Proyecto_Practicas(VB)\Proyecto_Practicas\obj\Debug\Proyecto_Practicas.Inventario.resources
+C:\Users\LENOVO\Documents\GitHub\Proyecto_practica\Proyecto_Practicas(VB)\Proyecto_Practicas\obj\Debug\Proyecto_Practicas.Login.resources
+C:\Users\LENOVO\Documents\GitHub\Proyecto_practica\Proyecto_Practicas(VB)\Proyecto_Practicas\obj\Debug\Proyecto_Practicas.Resources.resources
+C:\Users\LENOVO\Documents\GitHub\Proyecto_practica\Proyecto_Practicas(VB)\Proyecto_Practicas\obj\Debug\Proyecto_Practicas.vbproj.GenerateResource.Cache
+C:\Users\LENOVO\Documents\GitHub\Proyecto_practica\Proyecto_Practicas(VB)\Proyecto_Practicas\obj\Debug\Proyecto_Practicas.Compras.resources
