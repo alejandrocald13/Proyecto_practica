@@ -66,4 +66,4 @@ C:\Users\LENOVO\Documents\GitHub\Proyecto_practica\Proyecto_Practicas(VB)\Proyec
 C:\Users\LENOVO\Documents\GitHub\Proyecto_practica\Proyecto_Practicas(VB)\Proyecto_Practicas\obj\Debug\Proyecto_Practicas.Login.resources
 C:\Users\LENOVO\Documents\GitHub\Proyecto_practica\Proyecto_Practicas(VB)\Proyecto_Practicas\obj\Debug\Proyecto_Practicas.Resources.resources
 C:\Users\LENOVO\Documents\GitHub\Proyecto_practica\Proyecto_Practicas(VB)\Proyecto_Practicas\obj\Debug\Proyecto_Practicas.vbproj.GenerateResource.Cache
-C:\Users\LENOVO\Documents\GitHub\Proyecto_practica\Proyecto_Practicas(VB)\Proyecto_Practicas\obj\Debug\Proyecto_Practicas.Compras.resources
+C:\Users\LENOVO\Documents\GitHub\Proyecto_practica\Proyecto_Practicas(VB)\Proyecto_Practicas\obj\Debug\Proyecto_Practicas.Carros.resources

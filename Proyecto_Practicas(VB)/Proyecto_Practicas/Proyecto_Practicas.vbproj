@@ -78,10 +78,10 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Compras.Designer.vb">
-      <DependentUpon>Compras.vb</DependentUpon>
+    <Compile Include="Carros.Designer.vb">
+      <DependentUpon>Carros.vb</DependentUpon>
     </Compile>
-    <Compile Include="Compras.vb">
+    <Compile Include="Carros.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="conexion.vb" />
@@ -115,8 +115,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Compras.resx">
-      <DependentUpon>Compras.vb</DependentUpon>
+    <EmbeddedResource Include="Carros.resx">
+      <DependentUpon>Carros.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inventario.resx">
       <DependentUpon>Inventario.vb</DependentUpon>
