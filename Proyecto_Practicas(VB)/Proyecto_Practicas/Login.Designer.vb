@@ -22,11 +22,15 @@ Partial Class Login
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Login))
         Me.Guna2TextBox1 = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Guna2TextBox2 = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Guna2Button1 = New Guna.UI2.WinForms.Guna2Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.bCerrar = New System.Windows.Forms.Button()
+        Me.bMinimizar = New System.Windows.Forms.Button()
+        Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Guna2TextBox1
@@ -92,7 +96,7 @@ Partial Class Login
         Me.Guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.Guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
         Me.Guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.Guna2Button1.FillColor = System.Drawing.Color.RoyalBlue
+        Me.Guna2Button1.FillColor = System.Drawing.Color.CornflowerBlue
         Me.Guna2Button1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.Guna2Button1.ForeColor = System.Drawing.Color.White
         Me.Guna2Button1.Location = New System.Drawing.Point(152, 262)
@@ -103,12 +107,40 @@ Partial Class Login
         '
         'Panel1
         '
-        Me.Panel1.BackColor = System.Drawing.Color.OrangeRed
+        Me.Panel1.BackColor = System.Drawing.Color.LimeGreen
+        Me.Panel1.Controls.Add(Me.bMinimizar)
+        Me.Panel1.Controls.Add(Me.bCerrar)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(490, 44)
         Me.Panel1.TabIndex = 4
+        '
+        'bCerrar
+        '
+        Me.bCerrar.FlatAppearance.BorderSize = 0
+        Me.bCerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray
+        Me.bCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red
+        Me.bCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.bCerrar.Image = CType(resources.GetObject("bCerrar.Image"), System.Drawing.Image)
+        Me.bCerrar.Location = New System.Drawing.Point(446, 0)
+        Me.bCerrar.Name = "bCerrar"
+        Me.bCerrar.Size = New System.Drawing.Size(44, 44)
+        Me.bCerrar.TabIndex = 0
+        Me.bCerrar.UseVisualStyleBackColor = True
+        '
+        'bMinimizar
+        '
+        Me.bMinimizar.FlatAppearance.BorderSize = 0
+        Me.bMinimizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray
+        Me.bMinimizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red
+        Me.bMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.bMinimizar.Image = CType(resources.GetObject("bMinimizar.Image"), System.Drawing.Image)
+        Me.bMinimizar.Location = New System.Drawing.Point(405, 0)
+        Me.bMinimizar.Name = "bMinimizar"
+        Me.bMinimizar.Size = New System.Drawing.Size(44, 44)
+        Me.bMinimizar.TabIndex = 1
+        Me.bMinimizar.UseVisualStyleBackColor = True
         '
         'Login
         '
@@ -125,7 +157,9 @@ Partial Class Login
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "Login"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Inicio de Sesión"
+        Me.Panel1.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -136,4 +170,6 @@ Partial Class Login
     Friend WithEvents Label1 As Label
     Friend WithEvents Guna2Button1 As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Panel1 As Panel
+    Friend WithEvents bCerrar As Button
+    Friend WithEvents bMinimizar As Button
 End Class
