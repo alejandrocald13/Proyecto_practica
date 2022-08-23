@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 22-08-2022 a las 20:40:42
+-- Tiempo de generación: 23-08-2022 a las 02:20:51
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 8.1.6
 
@@ -120,6 +120,28 @@ CREATE TABLE `inventario` (
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `puestos`
+--
+
+CREATE TABLE `puestos` (
+  `id_puestos` int(11) NOT NULL,
+  `puesto` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `puestos`
+--
+
+INSERT INTO `puestos` (`id_puestos`, `puesto`) VALUES
+(1, 'Administrador'),
+(2, 'Gerente'),
+(3, 'Sub-Gerente'),
+(4, 'Cliente'),
+(5, 'Revendedor');
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `reparaciones`
 --
 
@@ -170,17 +192,10 @@ CREATE TABLE `users` (
   `id_user` int(11) NOT NULL,
   `nombre_completo` varchar(50) NOT NULL,
   `correo` text NOT NULL,
-  `puesto` varchar(20) NOT NULL,
+  `id_puesto` int(11) NOT NULL,
   `user` varchar(20) NOT NULL,
   `psw` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Volcado de datos para la tabla `users`
---
-
-INSERT INTO `users` (`id_user`, `nombre_completo`, `correo`, `puesto`, `user`, `psw`) VALUES
-(1, 'Carlos Roberto Calderón', 'robertocal2@yahoo.com', 'Administrador', 'crCalderon2509', 'ImportadoraR1');
 
 -- --------------------------------------------------------
 
@@ -249,6 +264,12 @@ ALTER TABLE `inventario`
   ADD KEY `index_carro` (`id_carro`);
 
 --
+-- Indices de la tabla `puestos`
+--
+ALTER TABLE `puestos`
+  ADD PRIMARY KEY (`id_puestos`);
+
+--
 -- Indices de la tabla `reparaciones`
 --
 ALTER TABLE `reparaciones`
@@ -273,7 +294,8 @@ ALTER TABLE `subastas`
 -- Indices de la tabla `users`
 --
 ALTER TABLE `users`
-  ADD PRIMARY KEY (`id_user`);
+  ADD PRIMARY KEY (`id_user`),
+  ADD KEY `puesto` (`id_puesto`);
 
 --
 -- Indices de la tabla `ventas`
@@ -323,6 +345,12 @@ ALTER TABLE `info_carro`
 --
 ALTER TABLE `inventario`
   MODIFY `id_invent` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `puestos`
+--
+ALTER TABLE `puestos`
+  MODIFY `id_puestos` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de la tabla `reparaciones`
@@ -392,6 +420,12 @@ ALTER TABLE `inventario`
 ALTER TABLE `reparaciones`
   ADD CONSTRAINT `reparaciones_ibfk_1` FOREIGN KEY (`id_carro`) REFERENCES `info_carro` (`id_carro`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `reparaciones_ibfk_2` FOREIGN KEY (`id_compras`) REFERENCES `compra_carros` (`id_compras`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Filtros para la tabla `users`
+--
+ALTER TABLE `users`
+  ADD CONSTRAINT `users_ibfk_1` FOREIGN KEY (`id_puesto`) REFERENCES `puestos` (`id_puestos`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Filtros para la tabla `ventas`
