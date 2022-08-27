@@ -19,11 +19,17 @@ Public Class Carros
         tbcol_car.Clear()
         numcili_car.Value = 1.0
         tbmotor_car.Clear()
-        tburl_car.Clear()
+        tbURL_car.Clear()
+        tbVIN_car.Clear()
+        If rdSi_llaves.Checked = True Or rdNo_llaves.Checked = True Then
+            rdSi_llaves.Checked = False
+            rdNo_llaves.Checked = False
+        End If
         Numano_Car.Focus()
     End Sub
     Private Sub Guna2Button1_Click(sender As Object, e As EventArgs) Handles Guna2Button1.Click
         limpiar()
+        Guna2Button2.Enabled = True
     End Sub
     Sub mostrar()
         conn = objetoconexion.AbrirCon
@@ -61,6 +67,7 @@ Public Class Carros
                 conn.Dispose()
                 mostrar()
                 limpiar()
+                Guna2Button2.Enabled = True
             End If
         Catch ex As Exception
             MessageBox.Show(ex.ToString())
@@ -68,6 +75,7 @@ Public Class Carros
     End Sub
     Private Sub Carros_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         mostrar()
+        Guna2Button2.Enabled = False
     End Sub
     Private Sub Guna2Button3_Click(sender As Object, e As EventArgs) Handles Guna2Button3.Click
         conn = objetoconexion.AbrirCon
@@ -102,6 +110,7 @@ Public Class Carros
         End Try
     End Sub
     Private Sub dgvCarros_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvCarros.CellContentClick
+        Guna2Button2.Enabled = False
         Dim row As DataGridViewRow = dgvCarros.CurrentRow
         Try
             tbID.Text = row.Cells(0).Value.ToString()

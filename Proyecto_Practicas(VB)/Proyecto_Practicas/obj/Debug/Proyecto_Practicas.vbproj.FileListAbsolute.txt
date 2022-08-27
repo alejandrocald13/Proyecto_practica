@@ -113,7 +113,7 @@ C:\Users\User\Documents\GitHub\Proyecto_practica\Proyecto_Practicas(VB)\Proyecto
 C:\Users\User\Documents\GitHub\Proyecto_practica\Proyecto_Practicas(VB)\Proyecto_Practicas\obj\Debug\Proyecto_Practicas.vbprojResolveAssemblyReference.cache
 C:\Users\User\Documents\GitHub\Proyecto_practica\Proyecto_Practicas(VB)\Proyecto_Practicas\obj\Debug\Proyecto_Practicas.vbproj.Proyecto_Practicas.exe.config
 C:\Users\User\Documents\GitHub\Proyecto_practica\Proyecto_Practicas(VB)\Proyecto_Practicas\obj\Debug\Proyecto_Practicas.Carros.resources
-C:\Users\User\Documents\GitHub\Proyecto_practica\Proyecto_Practicas(VB)\Proyecto_Practicas\obj\Debug\Proyecto_Practicas.Inventario.resources
 C:\Users\User\Documents\GitHub\Proyecto_practica\Proyecto_Practicas(VB)\Proyecto_Practicas\obj\Debug\Proyecto_Practicas.Login.resources
 C:\Users\User\Documents\GitHub\Proyecto_practica\Proyecto_Practicas(VB)\Proyecto_Practicas\obj\Debug\Proyecto_Practicas.Resources.resources
 C:\Users\User\Documents\GitHub\Proyecto_practica\Proyecto_Practicas(VB)\Proyecto_Practicas\obj\Debug\Proyecto_Practicas.vbproj.GenerateResource.Cache
+C:\Users\User\Documents\GitHub\Proyecto_practica\Proyecto_Practicas(VB)\Proyecto_Practicas\obj\Debug\Proyecto_Practicas.Subasta.resources

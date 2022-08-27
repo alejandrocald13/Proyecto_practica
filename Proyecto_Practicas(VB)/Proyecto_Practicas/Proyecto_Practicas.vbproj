@@ -85,12 +85,6 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="conexion.vb" />
-    <Compile Include="Inventario.Designer.vb">
-      <DependentUpon>Inventario.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Inventario.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Login.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -113,13 +107,16 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Subasta.Designer.vb">
+      <DependentUpon>Subasta.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Subasta.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Carros.resx">
       <DependentUpon>Carros.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Inventario.resx">
-      <DependentUpon>Inventario.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.vb</DependentUpon>
@@ -129,6 +126,9 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Subasta.resx">
+      <DependentUpon>Subasta.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
