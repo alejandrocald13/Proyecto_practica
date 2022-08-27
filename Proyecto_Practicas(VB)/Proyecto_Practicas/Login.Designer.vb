@@ -30,6 +30,7 @@ Partial Class Login
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.bMinimizar = New System.Windows.Forms.Button()
         Me.bCerrar = New System.Windows.Forms.Button()
+        Me.bMpswd = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -97,7 +98,7 @@ Partial Class Login
         Me.Guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
         Me.Guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
         Me.Guna2Button1.FillColor = System.Drawing.Color.CornflowerBlue
-        Me.Guna2Button1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.Guna2Button1.Font = New System.Drawing.Font("Segoe UI Black", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Guna2Button1.ForeColor = System.Drawing.Color.White
         Me.Guna2Button1.Location = New System.Drawing.Point(136, 230)
         Me.Guna2Button1.Name = "Guna2Button1"
@@ -143,12 +144,29 @@ Partial Class Login
         Me.bCerrar.TabIndex = 0
         Me.bCerrar.UseVisualStyleBackColor = True
         '
+        'bMpswd
+        '
+        Me.bMpswd.BackColor = System.Drawing.Color.White
+        Me.bMpswd.BackgroundImage = CType(resources.GetObject("bMpswd.BackgroundImage"), System.Drawing.Image)
+        Me.bMpswd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.bMpswd.FlatAppearance.BorderColor = System.Drawing.Color.White
+        Me.bMpswd.FlatAppearance.BorderSize = 0
+        Me.bMpswd.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.MenuHighlight
+        Me.bMpswd.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.MenuHighlight
+        Me.bMpswd.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.bMpswd.Location = New System.Drawing.Point(368, 171)
+        Me.bMpswd.Name = "bMpswd"
+        Me.bMpswd.Size = New System.Drawing.Size(45, 35)
+        Me.bMpswd.TabIndex = 5
+        Me.bMpswd.UseVisualStyleBackColor = False
+        '
         'Login
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 21.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(490, 310)
         Me.ControlBox = False
+        Me.Controls.Add(Me.bMpswd)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Guna2Button1)
         Me.Controls.Add(Me.Label1)
@@ -174,4 +192,5 @@ Partial Class Login
     Friend WithEvents Panel1 As Panel
     Friend WithEvents bCerrar As Button
     Friend WithEvents bMinimizar As Button
+    Friend WithEvents bMpswd As Button
 End Class
