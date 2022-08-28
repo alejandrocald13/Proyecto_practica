@@ -54,6 +54,10 @@ Public Class Login
             cont += 1
         End If
     End Sub
+
+    Private Sub Login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
     'Sub cargarcombox()
     '    conn.Open()
     '    Dim query As String = "Select * FROM proveedores;"

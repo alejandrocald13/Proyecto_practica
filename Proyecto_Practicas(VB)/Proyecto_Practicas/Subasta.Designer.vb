@@ -27,10 +27,10 @@ Partial Class Subasta
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.bMinimizar = New System.Windows.Forms.Button()
-        Me.bCerrar = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.bMinimizar = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
+        Me.bCerrar = New System.Windows.Forms.Button()
         Me.Guna2Button2 = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2Button1 = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2Button3 = New Guna.UI2.WinForms.Guna2Button()
@@ -55,32 +55,6 @@ Partial Class Subasta
         Me.Panel1.Size = New System.Drawing.Size(473, 35)
         Me.Panel1.TabIndex = 21
         '
-        'bMinimizar
-        '
-        Me.bMinimizar.FlatAppearance.BorderSize = 0
-        Me.bMinimizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray
-        Me.bMinimizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray
-        Me.bMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.bMinimizar.Image = CType(resources.GetObject("bMinimizar.Image"), System.Drawing.Image)
-        Me.bMinimizar.Location = New System.Drawing.Point(953, 0)
-        Me.bMinimizar.Name = "bMinimizar"
-        Me.bMinimizar.Size = New System.Drawing.Size(52, 35)
-        Me.bMinimizar.TabIndex = 22
-        Me.bMinimizar.UseVisualStyleBackColor = True
-        '
-        'bCerrar
-        '
-        Me.bCerrar.FlatAppearance.BorderSize = 0
-        Me.bCerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray
-        Me.bCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red
-        Me.bCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.bCerrar.Image = CType(resources.GetObject("bCerrar.Image"), System.Drawing.Image)
-        Me.bCerrar.Location = New System.Drawing.Point(1011, 0)
-        Me.bCerrar.Name = "bCerrar"
-        Me.bCerrar.Size = New System.Drawing.Size(52, 35)
-        Me.bCerrar.TabIndex = 21
-        Me.bCerrar.UseVisualStyleBackColor = True
-        '
         'Button1
         '
         Me.Button1.FlatAppearance.BorderSize = 0
@@ -94,6 +68,19 @@ Partial Class Subasta
         Me.Button1.TabIndex = 24
         Me.Button1.UseVisualStyleBackColor = True
         '
+        'bMinimizar
+        '
+        Me.bMinimizar.FlatAppearance.BorderSize = 0
+        Me.bMinimizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray
+        Me.bMinimizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray
+        Me.bMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.bMinimizar.Image = CType(resources.GetObject("bMinimizar.Image"), System.Drawing.Image)
+        Me.bMinimizar.Location = New System.Drawing.Point(953, 0)
+        Me.bMinimizar.Name = "bMinimizar"
+        Me.bMinimizar.Size = New System.Drawing.Size(52, 35)
+        Me.bMinimizar.TabIndex = 22
+        Me.bMinimizar.UseVisualStyleBackColor = True
+        '
         'Button2
         '
         Me.Button2.FlatAppearance.BorderSize = 0
@@ -106,6 +93,19 @@ Partial Class Subasta
         Me.Button2.Size = New System.Drawing.Size(52, 35)
         Me.Button2.TabIndex = 23
         Me.Button2.UseVisualStyleBackColor = True
+        '
+        'bCerrar
+        '
+        Me.bCerrar.FlatAppearance.BorderSize = 0
+        Me.bCerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray
+        Me.bCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red
+        Me.bCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.bCerrar.Image = CType(resources.GetObject("bCerrar.Image"), System.Drawing.Image)
+        Me.bCerrar.Location = New System.Drawing.Point(1011, 0)
+        Me.bCerrar.Name = "bCerrar"
+        Me.bCerrar.Size = New System.Drawing.Size(52, 35)
+        Me.bCerrar.TabIndex = 21
+        Me.bCerrar.UseVisualStyleBackColor = True
         '
         'Guna2Button2
         '
@@ -217,6 +217,7 @@ Partial Class Subasta
         '
         'dgvSubastas
         '
+        Me.dgvSubastas.AllowUserToResizeRows = False
         DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
         Me.dgvSubastas.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.dgvSubastas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
