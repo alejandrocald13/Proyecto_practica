@@ -84,6 +84,12 @@
     <Compile Include="Carros.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Compra_Carros.Designer.vb">
+      <DependentUpon>Compra_Carros.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Compra_Carros.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="conexion.vb" />
     <Compile Include="Login.vb">
       <SubType>Form</SubType>
@@ -123,6 +129,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Carros.resx">
       <DependentUpon>Carros.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Compra_Carros.resx">
+      <DependentUpon>Compra_Carros.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.vb</DependentUpon>
