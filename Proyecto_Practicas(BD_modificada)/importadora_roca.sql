@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 23-08-2022 a las 04:05:14
+-- Tiempo de generación: 02-09-2022 a las 03:49:22
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 8.1.6
 
@@ -52,6 +52,15 @@ CREATE TABLE `compra_carros` (
   `costosubasta_compra` int(6) NOT NULL,
   `ubicacion_compra` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `compra_carros`
+--
+
+INSERT INTO `compra_carros` (`id_compras`, `id_carro`, `id_sub`, `lote_compra`, `daño_princ`, `fecha_compra`, `costosubasta_compra`, `ubicacion_compra`) VALUES
+(1, 2, 1, '29760620', 'FRONT END', '2022-07-06', 3000, 'CA - SAN DIEGO '),
+(2, 3, 1, '31180514', 'FRONT END', '2022-05-01', 10000, 'NY - NEWBURGH '),
+(3, 4, 1, '25890831', 'FRONT END', '2022-08-01', 400, 'AR - LITTLE ROCK');
 
 -- --------------------------------------------------------
 
@@ -173,12 +182,18 @@ CREATE TABLE `reparaciones` (
 
 CREATE TABLE `revendedores` (
   `id_revend` int(11) NOT NULL,
-  `Nombre_revend` varchar(100) NOT NULL,
-  `Carro_vendido` varchar(50) NOT NULL,
-  `Comision` int(5) NOT NULL,
+  `nom_revend` varchar(20) NOT NULL,
+  `apelli_revend` varchar(20) NOT NULL,
   `CUI_revend` varchar(13) NOT NULL,
   `num_revend` varchar(8) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `revendedores`
+--
+
+INSERT INTO `revendedores` (`id_revend`, `nom_revend`, `apelli_revend`, `CUI_revend`, `num_revend`) VALUES
+(1, 'Roberto Alejandro', 'Calderón Martínez', '3133455890901', '40447309');
 
 -- --------------------------------------------------------
 
@@ -191,6 +206,13 @@ CREATE TABLE `subastas` (
   `nombre_sub` varchar(15) NOT NULL,
   `url_sub` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `subastas`
+--
+
+INSERT INTO `subastas` (`id_sub`, `nombre_sub`, `url_sub`) VALUES
+(1, 'Copart', 'https://www.copart.com/es/');
 
 -- --------------------------------------------------------
 
@@ -298,8 +320,7 @@ ALTER TABLE `reparaciones`
 -- Indices de la tabla `revendedores`
 --
 ALTER TABLE `revendedores`
-  ADD PRIMARY KEY (`id_revend`),
-  ADD KEY `index_carro` (`Carro_vendido`);
+  ADD PRIMARY KEY (`id_revend`);
 
 --
 -- Indices de la tabla `subastas`
@@ -337,7 +358,7 @@ ALTER TABLE `clientes`
 -- AUTO_INCREMENT de la tabla `compra_carros`
 --
 ALTER TABLE `compra_carros`
-  MODIFY `id_compras` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_compras` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `facturacion`
@@ -379,13 +400,13 @@ ALTER TABLE `reparaciones`
 -- AUTO_INCREMENT de la tabla `revendedores`
 --
 ALTER TABLE `revendedores`
-  MODIFY `id_revend` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_revend` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `subastas`
 --
 ALTER TABLE `subastas`
-  MODIFY `id_sub` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_sub` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `users`
