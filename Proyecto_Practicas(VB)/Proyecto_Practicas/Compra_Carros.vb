@@ -4,28 +4,98 @@ Public Class Compra_Carros
     Dim conn As New MySqlConnection
     Dim objetoconexion As New conexion
     Dim i As Integer
+    Private Sub Guna2Button3_Click(sender As Object, e As EventArgs) Handles Guna2Button3.Click
+        conn = objetoconexion.AbrirCon
+        Try
+            If tbLote_CompraCar.Text = "" Or tbDanoPrin_CompraCar.Text = "" Or cbCarro_CompraCar.SelectedIndex = -1 Then
+                MessageBox.Show("ALGUN CAMPO ESTÁ VACÍO", "ERROR AL MODIFICAR", MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
+            Else
+                cmd = conn.CreateCommand
+                cmd.CommandText = "UPDATE compra_carros SET id_carro=@carro,id_sub=@sub,lote_compra=@lote, daño_princ=@dano, fecha_compra=@fec, costosubasta_compra=@cost, ubicacion_compra=@ubi WHERE id_compras=@id"
+                cmd.Parameters.AddWithValue("@id", tbID_CompraCar.Text)
+                cmd.Parameters.AddWithValue("@carro", cbCarro_CompraCar.SelectedValue.ToString)
+                cmd.Parameters.AddWithValue("@sub", cbSub_CompraCar.SelectedValue.ToString)
+                cmd.Parameters.AddWithValue("@lote", tbLote_CompraCar.Text)
+                cmd.Parameters.AddWithValue("@dano", tbDanoPrin_CompraCar.Text)
+                cmd.Parameters.AddWithValue("@fec", dtpFecha_CompraCar.Value.Date)
+                cmd.Parameters.AddWithValue("@cost", nudCosto_CompraCar.Value)
+                cmd.Parameters.AddWithValue("@ubi", tbUbi_CompraCar.Text)
+                cmd.ExecuteNonQuery()
+                conn.Close()
+                conn.Dispose()
+                mostrar()
+                l()
+                cbCarro_CompraCar.SelectedIndex = -1
+                cbSub_CompraCar.SelectedIndex = -1
+                Guna2Button3.Enabled = False
+            End If
+        Catch ex As Exception
+            MessageBox.Show(ex.ToString())
+        End Try
+    End Sub
+    Private Sub Guna2Button2_Click(sender As Object, e As EventArgs) Handles Guna2Button2.Click
+        conn = objetoconexion.AbrirCon
+        Try
+            If tbLote_CompraCar.Text = "" Or tbDanoPrin_CompraCar.Text = "" Or cbCarro_CompraCar.SelectedIndex = -1 Then
+                MessageBox.Show("ALGUN CAMPO ESTÁ VACÍO", "ERROR AL GUARDAR", MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
+            Else
+                cmd = conn.CreateCommand
+                cmd.CommandText = "insert into compra_carros(id_compras,id_carro,id_sub,lote_compra, daño_princ,fecha_compra, costosubasta_compra, ubicacion_compra)values(NULL,@carro,@sub,@lote,@dano, @fec, @cost,@ubi);"
+                cmd.Parameters.AddWithValue("@carro", cbCarro_CompraCar.SelectedValue.ToString)
+                cmd.Parameters.AddWithValue("@sub", cbSub_CompraCar.SelectedValue.ToString)
+                cmd.Parameters.AddWithValue("@lote", tbLote_CompraCar.Text)
+                cmd.Parameters.AddWithValue("@dano", tbDanoPrin_CompraCar.Text)
+                cmd.Parameters.AddWithValue("@fec", dtpFecha_CompraCar.Value.Date)
+                cmd.Parameters.AddWithValue("@cost", nudCosto_CompraCar.Value)
+                cmd.Parameters.AddWithValue("@ubi", tbUbi_CompraCar.Text)
+                cmd.ExecuteNonQuery()
+                conn.Close()
+                conn.Dispose()
+                mostrar()
+                l()
+                cbCarro_CompraCar.SelectedIndex = -1
+                cbSub_CompraCar.SelectedIndex = -1
+                Guna2Button2.Enabled = False
+            End If
+        Catch ex As Exception
+            MessageBox.Show(ex.ToString())
+        End Try
+    End Sub
     Sub l()
         tbID_CompraCar.Clear()
+        tbLote_CompraCar.Clear()
+        tbDanoPrin_CompraCar.Clear()
+        tbCarroSelec_CompraCar.Clear()
+        dtpFecha_CompraCar.Value = Now
         cbCarro_CompraCar.SelectedIndex = -1
+        cbSub_CompraCar.SelectedIndex = -1
+        tbCarroSelec_CompraCar.Clear()
+        nudCosto_CompraCar.Value = 100
+        tbUbi_CompraCar.Clear()
+        cbCarro_CompraCar.Focus()
     End Sub
-    Sub sepa()
-        conn = objetoconexion.AbrirCon
-        Dim query As String = "Select CONCAT(año_carro,' ', marca_carro,' ', modelo_carro) as info1_car FROM info_carro WHERE id_carro='" + cbCarro_CompraCar.SelectedValue.ToString + "';"
-        Dim adpt As New MySqlDataAdapter(query, conn)
-        Try
-            Dim row As DataRow = Nothing
-            Using dt As New DataTable()
-                adpt.Fill(dt)
-                If (dt.Rows.Count > 0) Then
-                    row = dt.Rows(0)
-                End If
-            End Using
-            tbCarroSelec_CompraCar.Text = Convert.ToString(row("info1_car"))
-            conn.Close()
-            conn.Dispose()
-        Catch ex As Exception
-            MsgBox(ex.ToString)
-        End Try
+    Sub txtbox()
+        If cbCarro_CompraCar.SelectedValue = 0 Then
+            Exit Sub
+        Else
+            conn = objetoconexion.AbrirCon
+            Dim query As String = "Select CONCAT(año_carro,' ', marca_carro,' ', modelo_carro) as info1_car FROM info_carro WHERE id_carro='" + cbCarro_CompraCar.SelectedValue.ToString + "';"
+            Dim adpt As New MySqlDataAdapter(query, conn)
+            Try
+                Dim row As DataRow = Nothing
+                Using dt As New DataTable()
+                    adpt.Fill(dt)
+                    If (dt.Rows.Count > 0) Then
+                        row = dt.Rows(0)
+                    End If
+                End Using
+                tbCarroSelec_CompraCar.Text = Convert.ToString(row("info1_car"))
+                conn.Close()
+                conn.Dispose()
+            Catch ex As Exception
+                MsgBox(ex.ToString)
+            End Try
+        End If
     End Sub
     Sub cargarcarro()
         conn = objetoconexion.AbrirCon
@@ -65,11 +135,46 @@ Public Class Compra_Carros
         cargarsub()
         cbCarro_CompraCar.SelectedIndex = -1
         cbSub_CompraCar.SelectedIndex = -1
+        Guna2Button2.Enabled = False
+        Guna2Button3.Enabled = False
+        dtpFecha_CompraCar.Value = Now
     End Sub
-    Private Sub cbCarro_CompraCar_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbCarro_CompraCar.SelectedIndexChanged
+    Private Sub Guna2Button1_Click(sender As Object, e As EventArgs) Handles Guna2Button1.Click
+        i = 2
+        l()
+        cbCarro_CompraCar.SelectedIndex = -1
+        cbSub_CompraCar.SelectedIndex = -1
+        Guna2Button2.Enabled = True
+        Guna2Button3.Enabled = False
+    End Sub
+    Private Sub cbCarro_CompraCar_SelectedIndexChanged_1(sender As Object, e As EventArgs) Handles cbCarro_CompraCar.SelectedIndexChanged
         i += 1
         If i >= 4 Then
-            sepa()
+            txtbox()
         End If
+    End Sub
+    Private Sub dgvCompraC_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvCompraC.CellContentClick
+        Guna2Button2.Enabled = False
+        Dim row As DataGridViewRow = dgvCompraC.CurrentRow
+        Try
+            tbID_CompraCar.Text = row.Cells(0).Value.ToString()
+            cbCarro_CompraCar.Text = row.Cells(1).Value.ToString()
+            cbSub_CompraCar.Text = row.Cells(2).Value.ToString()
+            tbLote_CompraCar.Text = row.Cells(3).Value.ToString()
+            tbDanoPrin_CompraCar.Text = row.Cells(4).Value.ToString()
+            dtpFecha_CompraCar.Value = row.Cells(5).Value
+            nudCosto_CompraCar.Value = row.Cells(6).Value
+            tbUbi_CompraCar.Text = row.Cells(7).Value.ToString()
+            Guna2Button3.Enabled = True
+        Catch ex As Exception
+            MessageBox.Show(ex.ToString())
+        End Try
+    End Sub
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Me.Hide()
+        Login.Close()
+    End Sub
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Me.WindowState = FormWindowState.Minimized
     End Sub
 End Class

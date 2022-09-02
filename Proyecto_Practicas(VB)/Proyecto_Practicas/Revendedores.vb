@@ -37,7 +37,7 @@ Public Class Revendedores
         conn = objetoconexion.AbrirCon
         Try
             If tbNombre_reven.Text = "" Or tbApellido_revend.Text = "" Or tbCUI_reven.Text = "" Or tbNum_reven.Text = "" Then
-                MessageBox.Show("ALGUN CAMPO ESTÁ VACÍO", "ERROR AL GUARDAR", MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
+                MessageBox.Show("ALGUN CAMPO ESTÁ VACÍO", "ERROR AL MODIFICAR", MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
             Else
                 cmd = conn.CreateCommand
                 cmd.CommandText = "UPDATE revendedores SET nom_revend=@nom,apelli_revend=@apell,CUI_revend=@CUI, num_revend=@num WHERE id_revend=@id"
