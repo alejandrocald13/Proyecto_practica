@@ -91,6 +91,12 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="conexion.vb" />
+    <Compile Include="Importaion.Designer.vb">
+      <DependentUpon>Importaion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Importaion.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Login.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -132,6 +138,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Compra_Carros.resx">
       <DependentUpon>Compra_Carros.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Importaion.resx">
+      <DependentUpon>Importaion.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.vb</DependentUpon>
