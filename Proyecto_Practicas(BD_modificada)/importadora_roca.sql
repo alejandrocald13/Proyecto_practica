@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 02-09-2022 a las 03:49:22
+-- Tiempo de generación: 08-09-2022 a las 01:54:57
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 8.1.6
 
@@ -33,8 +33,16 @@ CREATE TABLE `clientes` (
   `direc_clien` varchar(100) NOT NULL,
   `correo_clien` varchar(100) DEFAULT NULL,
   `num_clien` varchar(8) NOT NULL,
-  `NIT_clien` varchar(15) NOT NULL
+  `NIT_clien` varchar(15) NOT NULL,
+  `CUI_clien` varchar(13) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `clientes`
+--
+
+INSERT INTO `clientes` (`id_clien`, `nom_clien`, `direc_clien`, `correo_clien`, `num_clien`, `NIT_clien`, `CUI_clien`) VALUES
+(1, 'Pedro Leonel', 'Villa Nueva', 'pedroleonel4589@gmail.com', '45589043', '12358442-5', '3133468910603');
 
 -- --------------------------------------------------------
 
@@ -92,6 +100,13 @@ CREATE TABLE `importaciones` (
   `metodo_impo` varchar(20) NOT NULL,
   `costo_impo` int(7) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `importaciones`
+--
+
+INSERT INTO `importaciones` (`id_impo`, `id_carro`, `id_compras`, `encarg_impo`, `metodo_impo`, `costo_impo`) VALUES
+(3, 2, 1, 'Margarita ', 'Avión', 350);
 
 -- --------------------------------------------------------
 
@@ -169,10 +184,19 @@ CREATE TABLE `reparaciones` (
   `id_carro` int(11) NOT NULL,
   `id_compras` int(11) NOT NULL,
   `costo_reparacion` int(11) NOT NULL,
-  `encarg_reparacion` int(11) NOT NULL,
+  `encarg_reparacion` varchar(30) NOT NULL,
   `fechae_reparacion` date NOT NULL,
-  `fechad_reparacion` date NOT NULL
+  `fechad_reparacion` date NOT NULL,
+  `danos_repar` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `reparaciones`
+--
+
+INSERT INTO `reparaciones` (`id_reparaciones`, `id_carro`, `id_compras`, `costo_reparacion`, `encarg_reparacion`, `fechae_reparacion`, `fechad_reparacion`, `danos_repar`) VALUES
+(1, 3, 2, 7000, 'Cristian Rodriguéz', '2022-08-20', '2022-09-15', 'Pintura Nueva, Llantas Nuevas, Pulido y Encerado.'),
+(2, 4, 3, 8050, 'Pedro Picapiedra', '2022-08-30', '2022-09-30', 'Pintura Nueva, Cambio de Aceite, Pulido y Encerado.');
 
 -- --------------------------------------------------------
 
@@ -352,7 +376,7 @@ ALTER TABLE `ventas`
 -- AUTO_INCREMENT de la tabla `clientes`
 --
 ALTER TABLE `clientes`
-  MODIFY `id_clien` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_clien` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `compra_carros`
@@ -370,7 +394,7 @@ ALTER TABLE `facturacion`
 -- AUTO_INCREMENT de la tabla `importaciones`
 --
 ALTER TABLE `importaciones`
-  MODIFY `id_impo` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_impo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `info_carro`
@@ -394,7 +418,7 @@ ALTER TABLE `puestos`
 -- AUTO_INCREMENT de la tabla `reparaciones`
 --
 ALTER TABLE `reparaciones`
-  MODIFY `id_reparaciones` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_reparaciones` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `revendedores`
