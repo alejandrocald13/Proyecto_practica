@@ -22,9 +22,9 @@ Partial Class Carros
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Carros))
         Me.Numano_Car = New Guna.UI2.WinForms.Guna2NumericUpDown()
         Me.tbmar_car = New Guna.UI2.WinForms.Guna2TextBox()
@@ -56,12 +56,14 @@ Partial Class Carros
         '
         'Numano_Car
         '
+        Me.Numano_Car.AutoRoundedCorners = True
         Me.Numano_Car.BackColor = System.Drawing.Color.Transparent
+        Me.Numano_Car.BorderRadius = 14
         Me.Numano_Car.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.Numano_Car.Font = New System.Drawing.Font("Segoe UI Black", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Numano_Car.Font = New System.Drawing.Font("Segoe UI Black", 12.0!, System.Drawing.FontStyle.Bold)
         Me.Numano_Car.ForeColor = System.Drawing.Color.Black
         Me.Numano_Car.Increment = New Decimal(New Integer() {5, 0, 0, 0})
-        Me.Numano_Car.Location = New System.Drawing.Point(63, 108)
+        Me.Numano_Car.Location = New System.Drawing.Point(63, 99)
         Me.Numano_Car.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.Numano_Car.Maximum = New Decimal(New Integer() {2023, 0, 0, 0})
         Me.Numano_Car.Minimum = New Decimal(New Integer() {1910, 0, 0, 0})
@@ -73,6 +75,8 @@ Partial Class Carros
         '
         'tbmar_car
         '
+        Me.tbmar_car.AutoRoundedCorners = True
+        Me.tbmar_car.BorderRadius = 14
         Me.tbmar_car.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.tbmar_car.DefaultText = ""
         Me.tbmar_car.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
@@ -80,11 +84,11 @@ Partial Class Carros
         Me.tbmar_car.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.tbmar_car.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.tbmar_car.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.tbmar_car.Font = New System.Drawing.Font("Segoe UI Black", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tbmar_car.Font = New System.Drawing.Font("Segoe UI Black", 12.0!, System.Drawing.FontStyle.Bold)
         Me.tbmar_car.ForeColor = System.Drawing.Color.Black
         Me.tbmar_car.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.tbmar_car.Location = New System.Drawing.Point(13, 137)
-        Me.tbmar_car.Margin = New System.Windows.Forms.Padding(4)
+        Me.tbmar_car.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.tbmar_car.Name = "tbmar_car"
         Me.tbmar_car.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.tbmar_car.PlaceholderText = "Marca "
@@ -94,6 +98,8 @@ Partial Class Carros
         '
         'tbmodelo_car
         '
+        Me.tbmodelo_car.AutoRoundedCorners = True
+        Me.tbmodelo_car.BorderRadius = 14
         Me.tbmodelo_car.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.tbmodelo_car.DefaultText = ""
         Me.tbmodelo_car.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
@@ -105,7 +111,7 @@ Partial Class Carros
         Me.tbmodelo_car.ForeColor = System.Drawing.Color.Black
         Me.tbmodelo_car.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.tbmodelo_car.Location = New System.Drawing.Point(13, 173)
-        Me.tbmodelo_car.Margin = New System.Windows.Forms.Padding(4)
+        Me.tbmodelo_car.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.tbmodelo_car.Name = "tbmodelo_car"
         Me.tbmodelo_car.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.tbmodelo_car.PlaceholderText = "Modelo"
@@ -115,6 +121,8 @@ Partial Class Carros
         '
         'tbcol_car
         '
+        Me.tbcol_car.AutoRoundedCorners = True
+        Me.tbcol_car.BorderRadius = 14
         Me.tbcol_car.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.tbcol_car.DefaultText = ""
         Me.tbcol_car.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
@@ -122,11 +130,11 @@ Partial Class Carros
         Me.tbcol_car.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.tbcol_car.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.tbcol_car.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.tbcol_car.Font = New System.Drawing.Font("Segoe UI Black", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tbcol_car.Font = New System.Drawing.Font("Segoe UI Black", 12.0!, System.Drawing.FontStyle.Bold)
         Me.tbcol_car.ForeColor = System.Drawing.Color.Black
         Me.tbcol_car.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.tbcol_car.Location = New System.Drawing.Point(263, 64)
-        Me.tbcol_car.Margin = New System.Windows.Forms.Padding(4)
+        Me.tbcol_car.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.tbcol_car.Name = "tbcol_car"
         Me.tbcol_car.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.tbcol_car.PlaceholderText = "Color"
@@ -136,6 +144,8 @@ Partial Class Carros
         '
         'tbmotor_car
         '
+        Me.tbmotor_car.AutoRoundedCorners = True
+        Me.tbmotor_car.BorderRadius = 14
         Me.tbmotor_car.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.tbmotor_car.DefaultText = ""
         Me.tbmotor_car.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
@@ -143,7 +153,7 @@ Partial Class Carros
         Me.tbmotor_car.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.tbmotor_car.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.tbmotor_car.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.tbmotor_car.Font = New System.Drawing.Font("Segoe UI Black", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tbmotor_car.Font = New System.Drawing.Font("Segoe UI Black", 12.0!, System.Drawing.FontStyle.Bold)
         Me.tbmotor_car.ForeColor = System.Drawing.Color.Black
         Me.tbmotor_car.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.tbmotor_car.Location = New System.Drawing.Point(263, 137)
@@ -175,6 +185,8 @@ Partial Class Carros
         '
         'tbID
         '
+        Me.tbID.AutoRoundedCorners = True
+        Me.tbID.BorderRadius = 14
         Me.tbID.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.tbID.DefaultText = ""
         Me.tbID.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
@@ -186,7 +198,7 @@ Partial Class Carros
         Me.tbID.ForeColor = System.Drawing.Color.Black
         Me.tbID.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.tbID.Location = New System.Drawing.Point(13, 64)
-        Me.tbID.Margin = New System.Windows.Forms.Padding(4)
+        Me.tbID.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.tbID.Name = "tbID"
         Me.tbID.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.tbID.PlaceholderText = "ID"
@@ -197,6 +209,8 @@ Partial Class Carros
         '
         'Guna2Button1
         '
+        Me.Guna2Button1.AutoRoundedCorners = True
+        Me.Guna2Button1.BorderRadius = 18
         Me.Guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.Guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.Guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
@@ -211,6 +225,8 @@ Partial Class Carros
         '
         'Guna2Button2
         '
+        Me.Guna2Button2.AutoRoundedCorners = True
+        Me.Guna2Button2.BorderRadius = 18
         Me.Guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.Guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.Guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
@@ -226,6 +242,8 @@ Partial Class Carros
         '
         'Guna2Button3
         '
+        Me.Guna2Button3.AutoRoundedCorners = True
+        Me.Guna2Button3.BorderRadius = 18
         Me.Guna2Button3.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.Guna2Button3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.Guna2Button3.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
@@ -241,30 +259,30 @@ Partial Class Carros
         '
         'dgvCarros
         '
-        DataGridViewCellStyle10.BackColor = System.Drawing.Color.White
-        Me.dgvCarros.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle10
+        DataGridViewCellStyle4.BackColor = System.Drawing.Color.White
+        Me.dgvCarros.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle4
         Me.dgvCarros.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
         Me.dgvCarros.BackgroundColor = System.Drawing.Color.White
         Me.dgvCarros.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dgvCarros.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
         Me.dgvCarros.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle11.Font = New System.Drawing.Font("Segoe UI Black", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle11.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvCarros.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle11
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Segoe UI Black", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvCarros.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
         Me.dgvCarros.ColumnHeadersHeight = 20
-        DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle12.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle12.Font = New System.Drawing.Font("Segoe UI Black", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvCarros.DefaultCellStyle = DataGridViewCellStyle12
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle6.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Segoe UI Black", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvCarros.DefaultCellStyle = DataGridViewCellStyle6
         Me.dgvCarros.EnableHeadersVisualStyles = False
         Me.dgvCarros.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.dgvCarros.Location = New System.Drawing.Point(14, 235)
@@ -324,7 +342,7 @@ Partial Class Carros
         Me.rdNo_llaves.ForeColor = System.Drawing.Color.Black
         Me.rdNo_llaves.Location = New System.Drawing.Point(126, 58)
         Me.rdNo_llaves.Name = "rdNo_llaves"
-        Me.rdNo_llaves.Size = New System.Drawing.Size(52, 24)
+        Me.rdNo_llaves.Size = New System.Drawing.Size(43, 19)
         Me.rdNo_llaves.TabIndex = 1
         Me.rdNo_llaves.Text = "No"
         Me.rdNo_llaves.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
@@ -344,7 +362,7 @@ Partial Class Carros
         Me.rdSi_llaves.ForeColor = System.Drawing.Color.Black
         Me.rdSi_llaves.Location = New System.Drawing.Point(40, 58)
         Me.rdSi_llaves.Name = "rdSi_llaves"
-        Me.rdSi_llaves.Size = New System.Drawing.Size(44, 24)
+        Me.rdSi_llaves.Size = New System.Drawing.Size(36, 19)
         Me.rdSi_llaves.TabIndex = 0
         Me.rdSi_llaves.Text = "Si"
         Me.rdSi_llaves.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
@@ -391,6 +409,8 @@ Partial Class Carros
         '
         'tbVIN_car
         '
+        Me.tbVIN_car.AutoRoundedCorners = True
+        Me.tbVIN_car.BorderRadius = 14
         Me.tbVIN_car.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.tbVIN_car.DefaultText = ""
         Me.tbVIN_car.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
@@ -402,7 +422,7 @@ Partial Class Carros
         Me.tbVIN_car.ForeColor = System.Drawing.Color.Black
         Me.tbVIN_car.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.tbVIN_car.Location = New System.Drawing.Point(498, 64)
-        Me.tbVIN_car.Margin = New System.Windows.Forms.Padding(4)
+        Me.tbVIN_car.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.tbVIN_car.Name = "tbVIN_car"
         Me.tbVIN_car.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.tbVIN_car.PlaceholderText = "VIN"
@@ -412,6 +432,8 @@ Partial Class Carros
         '
         'tbURL_car
         '
+        Me.tbURL_car.AutoRoundedCorners = True
+        Me.tbURL_car.BorderRadius = 14
         Me.tbURL_car.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.tbURL_car.DefaultText = ""
         Me.tbURL_car.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
@@ -439,7 +461,7 @@ Partial Class Carros
         Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(193, Byte), Integer), CType(CType(200, Byte), Integer), CType(CType(207, Byte), Integer))
         Me.Label1.Location = New System.Drawing.Point(9, 106)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(53, 28)
+        Me.Label1.Size = New System.Drawing.Size(42, 21)
         Me.Label1.TabIndex = 23
         Me.Label1.Text = "Año"
         '
@@ -451,13 +473,13 @@ Partial Class Carros
         Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(193, Byte), Integer), CType(CType(200, Byte), Integer), CType(CType(207, Byte), Integer))
         Me.Label2.Location = New System.Drawing.Point(259, 106)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(101, 28)
+        Me.Label2.Size = New System.Drawing.Size(80, 21)
         Me.Label2.TabIndex = 24
         Me.Label2.Text = "Cilindros"
         '
         'Carros
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1063, 555)
         Me.ControlBox = False

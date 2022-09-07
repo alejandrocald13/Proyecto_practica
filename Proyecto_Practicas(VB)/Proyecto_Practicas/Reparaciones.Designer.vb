@@ -22,81 +22,82 @@ Partial Class Reparaciones
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle58 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle59 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle60 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Reparaciones))
-        Me.cbCarro_CompraCar = New Guna.UI2.WinForms.Guna2ComboBox()
-        Me.tbCarroSelec_CompraCar = New Guna.UI2.WinForms.Guna2TextBox()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Me.cbCarro_repar = New Guna.UI2.WinForms.Guna2ComboBox()
+        Me.tbCarroSelec_repar = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.dgvCompraC = New Guna.UI2.WinForms.Guna2DataGridView()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.nudCosto_CompraCar = New Guna.UI2.WinForms.Guna2NumericUpDown()
+        Me.nudCosto_repar = New Guna.UI2.WinForms.Guna2NumericUpDown()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Guna2Button3 = New Guna.UI2.WinForms.Guna2Button()
-        Me.Guna2Button2 = New Guna.UI2.WinForms.Guna2Button()
-        Me.Guna2Button1 = New Guna.UI2.WinForms.Guna2Button()
-        Me.tbID_CompraCar = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.bUpdate = New Guna.UI2.WinForms.Guna2Button()
+        Me.bSave = New Guna.UI2.WinForms.Guna2Button()
+        Me.bNew = New Guna.UI2.WinForms.Guna2Button()
+        Me.tbID_repar = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.bMinimizar = New System.Windows.Forms.Button()
         Me.bCerrar = New System.Windows.Forms.Button()
-        Me.tbLoteSelec_Impo = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.tbLoteSelec_repar = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.tbencar_impor = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.tbencar_repar = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.Guna2DateTimePicker1 = New Guna.UI2.WinForms.Guna2DateTimePicker()
-        Me.Guna2DateTimePicker2 = New Guna.UI2.WinForms.Guna2DateTimePicker()
-        CType(Me.dgvCompraC, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.nudCosto_CompraCar, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.dtpEntrega_repar = New Guna.UI2.WinForms.Guna2DateTimePicker()
+        Me.dtpEntrada_repar = New Guna.UI2.WinForms.Guna2DateTimePicker()
+        Me.dgvRepar = New Guna.UI2.WinForms.Guna2DataGridView()
+        Me.tbDanos_repar = New Guna.UI2.WinForms.Guna2TextBox()
+        CType(Me.nudCosto_repar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
+        CType(Me.dgvRepar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'cbCarro_CompraCar
+        'cbCarro_repar
         '
-        Me.cbCarro_CompraCar.AutoRoundedCorners = True
-        Me.cbCarro_CompraCar.BackColor = System.Drawing.Color.Transparent
-        Me.cbCarro_CompraCar.BorderRadius = 17
-        Me.cbCarro_CompraCar.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
-        Me.cbCarro_CompraCar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cbCarro_CompraCar.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.cbCarro_CompraCar.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.cbCarro_CompraCar.Font = New System.Drawing.Font("Segoe UI Black", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.cbCarro_CompraCar.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
-        Me.cbCarro_CompraCar.ItemHeight = 30
-        Me.cbCarro_CompraCar.Location = New System.Drawing.Point(85, 97)
-        Me.cbCarro_CompraCar.Name = "cbCarro_CompraCar"
-        Me.cbCarro_CompraCar.Size = New System.Drawing.Size(194, 36)
-        Me.cbCarro_CompraCar.TabIndex = 58
+        Me.cbCarro_repar.AutoRoundedCorners = True
+        Me.cbCarro_repar.BackColor = System.Drawing.Color.Transparent
+        Me.cbCarro_repar.BorderRadius = 17
+        Me.cbCarro_repar.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.cbCarro_repar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbCarro_repar.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.cbCarro_repar.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.cbCarro_repar.Font = New System.Drawing.Font("Segoe UI Black", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.cbCarro_repar.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
+        Me.cbCarro_repar.ItemHeight = 30
+        Me.cbCarro_repar.Location = New System.Drawing.Point(85, 97)
+        Me.cbCarro_repar.Name = "cbCarro_repar"
+        Me.cbCarro_repar.Size = New System.Drawing.Size(194, 36)
+        Me.cbCarro_repar.TabIndex = 58
         '
-        'tbCarroSelec_CompraCar
+        'tbCarroSelec_repar
         '
-        Me.tbCarroSelec_CompraCar.AutoRoundedCorners = True
-        Me.tbCarroSelec_CompraCar.BackColor = System.Drawing.Color.Transparent
-        Me.tbCarroSelec_CompraCar.BorderColor = System.Drawing.Color.FromArgb(CType(CType(213, Byte), Integer), CType(CType(218, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.tbCarroSelec_CompraCar.BorderRadius = 14
-        Me.tbCarroSelec_CompraCar.Cursor = System.Windows.Forms.Cursors.No
-        Me.tbCarroSelec_CompraCar.DefaultText = ""
-        Me.tbCarroSelec_CompraCar.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.tbCarroSelec_CompraCar.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.tbCarroSelec_CompraCar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.tbCarroSelec_CompraCar.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.tbCarroSelec_CompraCar.FillColor = System.Drawing.Color.DodgerBlue
-        Me.tbCarroSelec_CompraCar.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.tbCarroSelec_CompraCar.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
-        Me.tbCarroSelec_CompraCar.ForeColor = System.Drawing.Color.White
-        Me.tbCarroSelec_CompraCar.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.tbCarroSelec_CompraCar.Location = New System.Drawing.Point(310, 60)
-        Me.tbCarroSelec_CompraCar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.tbCarroSelec_CompraCar.Name = "tbCarroSelec_CompraCar"
-        Me.tbCarroSelec_CompraCar.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.tbCarroSelec_CompraCar.PlaceholderForeColor = System.Drawing.Color.White
-        Me.tbCarroSelec_CompraCar.PlaceholderText = "Carro Seleccionado"
-        Me.tbCarroSelec_CompraCar.ReadOnly = True
-        Me.tbCarroSelec_CompraCar.SelectedText = ""
-        Me.tbCarroSelec_CompraCar.Size = New System.Drawing.Size(277, 30)
-        Me.tbCarroSelec_CompraCar.TabIndex = 57
+        Me.tbCarroSelec_repar.AutoRoundedCorners = True
+        Me.tbCarroSelec_repar.BackColor = System.Drawing.Color.Transparent
+        Me.tbCarroSelec_repar.BorderColor = System.Drawing.Color.FromArgb(CType(CType(213, Byte), Integer), CType(CType(218, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.tbCarroSelec_repar.BorderRadius = 14
+        Me.tbCarroSelec_repar.Cursor = System.Windows.Forms.Cursors.No
+        Me.tbCarroSelec_repar.DefaultText = ""
+        Me.tbCarroSelec_repar.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.tbCarroSelec_repar.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.tbCarroSelec_repar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.tbCarroSelec_repar.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.tbCarroSelec_repar.FillColor = System.Drawing.Color.DodgerBlue
+        Me.tbCarroSelec_repar.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.tbCarroSelec_repar.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
+        Me.tbCarroSelec_repar.ForeColor = System.Drawing.Color.White
+        Me.tbCarroSelec_repar.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.tbCarroSelec_repar.Location = New System.Drawing.Point(310, 60)
+        Me.tbCarroSelec_repar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.tbCarroSelec_repar.Name = "tbCarroSelec_repar"
+        Me.tbCarroSelec_repar.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.tbCarroSelec_repar.PlaceholderForeColor = System.Drawing.Color.White
+        Me.tbCarroSelec_repar.PlaceholderText = "Carro Seleccionado"
+        Me.tbCarroSelec_repar.ReadOnly = True
+        Me.tbCarroSelec_repar.SelectedText = ""
+        Me.tbCarroSelec_repar.Size = New System.Drawing.Size(277, 30)
+        Me.tbCarroSelec_repar.TabIndex = 57
         '
         'Label4
         '
@@ -104,69 +105,11 @@ Partial Class Reparaciones
         Me.Label4.BackColor = System.Drawing.Color.Transparent
         Me.Label4.Font = New System.Drawing.Font("Segoe UI Black", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.Black
-        Me.Label4.Location = New System.Drawing.Point(306, 145)
+        Me.Label4.Location = New System.Drawing.Point(306, 104)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(143, 21)
         Me.Label4.TabIndex = 56
         Me.Label4.Text = "Fecha de Entrada"
-        '
-        'dgvCompraC
-        '
-        DataGridViewCellStyle58.BackColor = System.Drawing.Color.White
-        Me.dgvCompraC.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle58
-        Me.dgvCompraC.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
-        Me.dgvCompraC.BackgroundColor = System.Drawing.Color.White
-        Me.dgvCompraC.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.dgvCompraC.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
-        Me.dgvCompraC.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle59.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle59.BackColor = System.Drawing.Color.Red
-        DataGridViewCellStyle59.Font = New System.Drawing.Font("Segoe UI Black", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle59.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle59.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle59.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle59.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvCompraC.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle59
-        Me.dgvCompraC.ColumnHeadersHeight = 20
-        DataGridViewCellStyle60.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle60.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle60.Font = New System.Drawing.Font("Segoe UI Black", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle60.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle60.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(218, Byte), Integer), CType(CType(218, Byte), Integer))
-        DataGridViewCellStyle60.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle60.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvCompraC.DefaultCellStyle = DataGridViewCellStyle60
-        Me.dgvCompraC.EnableHeadersVisualStyles = False
-        Me.dgvCompraC.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.dgvCompraC.Location = New System.Drawing.Point(30, 238)
-        Me.dgvCompraC.Name = "dgvCompraC"
-        Me.dgvCompraC.ReadOnly = True
-        Me.dgvCompraC.RowHeadersVisible = False
-        Me.dgvCompraC.RowTemplate.Height = 24
-        Me.dgvCompraC.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvCompraC.Size = New System.Drawing.Size(848, 306)
-        Me.dgvCompraC.TabIndex = 55
-        Me.dgvCompraC.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White
-        Me.dgvCompraC.ThemeStyle.AlternatingRowsStyle.Font = Nothing
-        Me.dgvCompraC.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty
-        Me.dgvCompraC.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty
-        Me.dgvCompraC.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty
-        Me.dgvCompraC.ThemeStyle.BackColor = System.Drawing.Color.White
-        Me.dgvCompraC.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.dgvCompraC.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.dgvCompraC.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        Me.dgvCompraC.ThemeStyle.HeaderStyle.Font = New System.Drawing.Font("Segoe UI Black", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dgvCompraC.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White
-        Me.dgvCompraC.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing
-        Me.dgvCompraC.ThemeStyle.HeaderStyle.Height = 20
-        Me.dgvCompraC.ThemeStyle.ReadOnly = True
-        Me.dgvCompraC.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White
-        Me.dgvCompraC.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
-        Me.dgvCompraC.ThemeStyle.RowsStyle.Font = New System.Drawing.Font("Segoe UI Black", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dgvCompraC.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        Me.dgvCompraC.ThemeStyle.RowsStyle.Height = 24
-        Me.dgvCompraC.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.dgvCompraC.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
         '
         'Label3
         '
@@ -176,28 +119,28 @@ Partial Class Reparaciones
         Me.Label3.ForeColor = System.Drawing.Color.Black
         Me.Label3.Location = New System.Drawing.Point(26, 183)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(83, 21)
+        Me.Label3.Size = New System.Drawing.Size(85, 21)
         Me.Label3.TabIndex = 53
-        Me.Label3.Text = "Costo ($)"
+        Me.Label3.Text = "Costo (Q)"
         '
-        'nudCosto_CompraCar
+        'nudCosto_repar
         '
-        Me.nudCosto_CompraCar.AutoRoundedCorners = True
-        Me.nudCosto_CompraCar.BackColor = System.Drawing.Color.Transparent
-        Me.nudCosto_CompraCar.BorderRadius = 14
-        Me.nudCosto_CompraCar.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.nudCosto_CompraCar.Font = New System.Drawing.Font("Segoe UI Black", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.nudCosto_CompraCar.ForeColor = System.Drawing.Color.Black
-        Me.nudCosto_CompraCar.Increment = New Decimal(New Integer() {50, 0, 0, 0})
-        Me.nudCosto_CompraCar.Location = New System.Drawing.Point(116, 180)
-        Me.nudCosto_CompraCar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.nudCosto_CompraCar.Maximum = New Decimal(New Integer() {10000, 0, 0, 0})
-        Me.nudCosto_CompraCar.Minimum = New Decimal(New Integer() {100, 0, 0, 0})
-        Me.nudCosto_CompraCar.Name = "nudCosto_CompraCar"
-        Me.nudCosto_CompraCar.Size = New System.Drawing.Size(163, 30)
-        Me.nudCosto_CompraCar.TabIndex = 52
-        Me.nudCosto_CompraCar.UpDownButtonFillColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.nudCosto_CompraCar.Value = New Decimal(New Integer() {100, 0, 0, 0})
+        Me.nudCosto_repar.AutoRoundedCorners = True
+        Me.nudCosto_repar.BackColor = System.Drawing.Color.Transparent
+        Me.nudCosto_repar.BorderRadius = 14
+        Me.nudCosto_repar.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.nudCosto_repar.Font = New System.Drawing.Font("Segoe UI Black", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.nudCosto_repar.ForeColor = System.Drawing.Color.Black
+        Me.nudCosto_repar.Increment = New Decimal(New Integer() {50, 0, 0, 0})
+        Me.nudCosto_repar.Location = New System.Drawing.Point(118, 178)
+        Me.nudCosto_repar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.nudCosto_repar.Maximum = New Decimal(New Integer() {10000, 0, 0, 0})
+        Me.nudCosto_repar.Minimum = New Decimal(New Integer() {100, 0, 0, 0})
+        Me.nudCosto_repar.Name = "nudCosto_repar"
+        Me.nudCosto_repar.Size = New System.Drawing.Size(163, 30)
+        Me.nudCosto_repar.TabIndex = 52
+        Me.nudCosto_repar.UpDownButtonFillColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.nudCosto_repar.Value = New Decimal(New Integer() {100, 0, 0, 0})
         '
         'Label1
         '
@@ -211,79 +154,79 @@ Partial Class Reparaciones
         Me.Label1.TabIndex = 47
         Me.Label1.Text = "Carro"
         '
-        'Guna2Button3
+        'bUpdate
         '
-        Me.Guna2Button3.AutoRoundedCorners = True
-        Me.Guna2Button3.BorderRadius = 18
-        Me.Guna2Button3.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.Guna2Button3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.Guna2Button3.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.Guna2Button3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.Guna2Button3.FillColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Guna2Button3.Font = New System.Drawing.Font("Segoe UI Black", 10.8!, System.Drawing.FontStyle.Bold)
-        Me.Guna2Button3.ForeColor = System.Drawing.Color.White
-        Me.Guna2Button3.Location = New System.Drawing.Point(698, 183)
-        Me.Guna2Button3.Name = "Guna2Button3"
-        Me.Guna2Button3.Size = New System.Drawing.Size(180, 38)
-        Me.Guna2Button3.TabIndex = 45
-        Me.Guna2Button3.Text = "Modificar"
+        Me.bUpdate.AutoRoundedCorners = True
+        Me.bUpdate.BorderRadius = 18
+        Me.bUpdate.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.bUpdate.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.bUpdate.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.bUpdate.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.bUpdate.FillColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.bUpdate.Font = New System.Drawing.Font("Segoe UI Black", 10.8!, System.Drawing.FontStyle.Bold)
+        Me.bUpdate.ForeColor = System.Drawing.Color.White
+        Me.bUpdate.Location = New System.Drawing.Point(698, 158)
+        Me.bUpdate.Name = "bUpdate"
+        Me.bUpdate.Size = New System.Drawing.Size(180, 38)
+        Me.bUpdate.TabIndex = 45
+        Me.bUpdate.Text = "Modificar"
         '
-        'Guna2Button2
+        'bSave
         '
-        Me.Guna2Button2.AutoRoundedCorners = True
-        Me.Guna2Button2.BorderRadius = 18
-        Me.Guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.Guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.Guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.Guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.Guna2Button2.FillColor = System.Drawing.Color.MediumSeaGreen
-        Me.Guna2Button2.Font = New System.Drawing.Font("Segoe UI Black", 10.8!, System.Drawing.FontStyle.Bold)
-        Me.Guna2Button2.ForeColor = System.Drawing.Color.White
-        Me.Guna2Button2.Location = New System.Drawing.Point(698, 139)
-        Me.Guna2Button2.Name = "Guna2Button2"
-        Me.Guna2Button2.Size = New System.Drawing.Size(180, 38)
-        Me.Guna2Button2.TabIndex = 44
-        Me.Guna2Button2.Text = "Guardar"
+        Me.bSave.AutoRoundedCorners = True
+        Me.bSave.BorderRadius = 18
+        Me.bSave.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.bSave.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.bSave.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.bSave.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.bSave.FillColor = System.Drawing.Color.MediumSeaGreen
+        Me.bSave.Font = New System.Drawing.Font("Segoe UI Black", 10.8!, System.Drawing.FontStyle.Bold)
+        Me.bSave.ForeColor = System.Drawing.Color.White
+        Me.bSave.Location = New System.Drawing.Point(698, 114)
+        Me.bSave.Name = "bSave"
+        Me.bSave.Size = New System.Drawing.Size(180, 38)
+        Me.bSave.TabIndex = 44
+        Me.bSave.Text = "Guardar"
         '
-        'Guna2Button1
+        'bNew
         '
-        Me.Guna2Button1.AutoRoundedCorners = True
-        Me.Guna2Button1.BorderRadius = 18
-        Me.Guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.Guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.Guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.Guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.Guna2Button1.Font = New System.Drawing.Font("Segoe UI Black", 10.8!, System.Drawing.FontStyle.Bold)
-        Me.Guna2Button1.ForeColor = System.Drawing.Color.White
-        Me.Guna2Button1.Location = New System.Drawing.Point(698, 95)
-        Me.Guna2Button1.Name = "Guna2Button1"
-        Me.Guna2Button1.Size = New System.Drawing.Size(180, 38)
-        Me.Guna2Button1.TabIndex = 43
-        Me.Guna2Button1.Text = "Nuevo"
+        Me.bNew.AutoRoundedCorners = True
+        Me.bNew.BorderRadius = 18
+        Me.bNew.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.bNew.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.bNew.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.bNew.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.bNew.Font = New System.Drawing.Font("Segoe UI Black", 10.8!, System.Drawing.FontStyle.Bold)
+        Me.bNew.ForeColor = System.Drawing.Color.White
+        Me.bNew.Location = New System.Drawing.Point(698, 70)
+        Me.bNew.Name = "bNew"
+        Me.bNew.Size = New System.Drawing.Size(180, 38)
+        Me.bNew.TabIndex = 43
+        Me.bNew.Text = "Nuevo"
         '
-        'tbID_CompraCar
+        'tbID_repar
         '
-        Me.tbID_CompraCar.AutoRoundedCorners = True
-        Me.tbID_CompraCar.BorderRadius = 14
-        Me.tbID_CompraCar.Cursor = System.Windows.Forms.Cursors.No
-        Me.tbID_CompraCar.DefaultText = ""
-        Me.tbID_CompraCar.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.tbID_CompraCar.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.tbID_CompraCar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.tbID_CompraCar.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.tbID_CompraCar.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.tbID_CompraCar.Font = New System.Drawing.Font("Segoe UI Black", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.tbID_CompraCar.ForeColor = System.Drawing.Color.Black
-        Me.tbID_CompraCar.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.tbID_CompraCar.Location = New System.Drawing.Point(30, 60)
-        Me.tbID_CompraCar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.tbID_CompraCar.Name = "tbID_CompraCar"
-        Me.tbID_CompraCar.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.tbID_CompraCar.PlaceholderText = "ID"
-        Me.tbID_CompraCar.ReadOnly = True
-        Me.tbID_CompraCar.SelectedText = ""
-        Me.tbID_CompraCar.Size = New System.Drawing.Size(49, 30)
-        Me.tbID_CompraCar.TabIndex = 42
+        Me.tbID_repar.AutoRoundedCorners = True
+        Me.tbID_repar.BorderRadius = 14
+        Me.tbID_repar.Cursor = System.Windows.Forms.Cursors.No
+        Me.tbID_repar.DefaultText = ""
+        Me.tbID_repar.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.tbID_repar.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.tbID_repar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.tbID_repar.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.tbID_repar.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.tbID_repar.Font = New System.Drawing.Font("Segoe UI Black", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.tbID_repar.ForeColor = System.Drawing.Color.Black
+        Me.tbID_repar.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.tbID_repar.Location = New System.Drawing.Point(30, 60)
+        Me.tbID_repar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.tbID_repar.Name = "tbID_repar"
+        Me.tbID_repar.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.tbID_repar.PlaceholderText = "ID"
+        Me.tbID_repar.ReadOnly = True
+        Me.tbID_repar.SelectedText = ""
+        Me.tbID_repar.Size = New System.Drawing.Size(49, 30)
+        Me.tbID_repar.TabIndex = 42
         '
         'Panel1
         '
@@ -350,33 +293,33 @@ Partial Class Reparaciones
         Me.bCerrar.TabIndex = 21
         Me.bCerrar.UseVisualStyleBackColor = True
         '
-        'tbLoteSelec_Impo
+        'tbLoteSelec_repar
         '
-        Me.tbLoteSelec_Impo.AutoRoundedCorners = True
-        Me.tbLoteSelec_Impo.BackColor = System.Drawing.Color.Transparent
-        Me.tbLoteSelec_Impo.BorderColor = System.Drawing.Color.FromArgb(CType(CType(213, Byte), Integer), CType(CType(218, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.tbLoteSelec_Impo.BorderRadius = 14
-        Me.tbLoteSelec_Impo.Cursor = System.Windows.Forms.Cursors.No
-        Me.tbLoteSelec_Impo.DefaultText = ""
-        Me.tbLoteSelec_Impo.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.tbLoteSelec_Impo.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.tbLoteSelec_Impo.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.tbLoteSelec_Impo.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.tbLoteSelec_Impo.FillColor = System.Drawing.Color.DodgerBlue
-        Me.tbLoteSelec_Impo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.tbLoteSelec_Impo.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
-        Me.tbLoteSelec_Impo.ForeColor = System.Drawing.Color.White
-        Me.tbLoteSelec_Impo.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.tbLoteSelec_Impo.Location = New System.Drawing.Point(30, 140)
-        Me.tbLoteSelec_Impo.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.tbLoteSelec_Impo.Name = "tbLoteSelec_Impo"
-        Me.tbLoteSelec_Impo.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.tbLoteSelec_Impo.PlaceholderForeColor = System.Drawing.Color.White
-        Me.tbLoteSelec_Impo.PlaceholderText = "Lote de Compra"
-        Me.tbLoteSelec_Impo.ReadOnly = True
-        Me.tbLoteSelec_Impo.SelectedText = ""
-        Me.tbLoteSelec_Impo.Size = New System.Drawing.Size(249, 30)
-        Me.tbLoteSelec_Impo.TabIndex = 64
+        Me.tbLoteSelec_repar.AutoRoundedCorners = True
+        Me.tbLoteSelec_repar.BackColor = System.Drawing.Color.Transparent
+        Me.tbLoteSelec_repar.BorderColor = System.Drawing.Color.FromArgb(CType(CType(213, Byte), Integer), CType(CType(218, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.tbLoteSelec_repar.BorderRadius = 14
+        Me.tbLoteSelec_repar.Cursor = System.Windows.Forms.Cursors.No
+        Me.tbLoteSelec_repar.DefaultText = ""
+        Me.tbLoteSelec_repar.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.tbLoteSelec_repar.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.tbLoteSelec_repar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.tbLoteSelec_repar.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.tbLoteSelec_repar.FillColor = System.Drawing.Color.DodgerBlue
+        Me.tbLoteSelec_repar.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.tbLoteSelec_repar.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
+        Me.tbLoteSelec_repar.ForeColor = System.Drawing.Color.White
+        Me.tbLoteSelec_repar.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.tbLoteSelec_repar.Location = New System.Drawing.Point(30, 140)
+        Me.tbLoteSelec_repar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.tbLoteSelec_repar.Name = "tbLoteSelec_repar"
+        Me.tbLoteSelec_repar.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.tbLoteSelec_repar.PlaceholderForeColor = System.Drawing.Color.White
+        Me.tbLoteSelec_repar.PlaceholderText = "Lote de Compra"
+        Me.tbLoteSelec_repar.ReadOnly = True
+        Me.tbLoteSelec_repar.SelectedText = ""
+        Me.tbLoteSelec_repar.Size = New System.Drawing.Size(249, 30)
+        Me.tbLoteSelec_repar.TabIndex = 64
         '
         'Label2
         '
@@ -386,28 +329,28 @@ Partial Class Reparaciones
         Me.Label2.Size = New System.Drawing.Size(0, 13)
         Me.Label2.TabIndex = 65
         '
-        'tbencar_impor
+        'tbencar_repar
         '
-        Me.tbencar_impor.AutoRoundedCorners = True
-        Me.tbencar_impor.BorderRadius = 16
-        Me.tbencar_impor.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.tbencar_impor.DefaultText = ""
-        Me.tbencar_impor.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.tbencar_impor.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.tbencar_impor.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.tbencar_impor.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.tbencar_impor.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.tbencar_impor.Font = New System.Drawing.Font("Segoe UI Black", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.tbencar_impor.ForeColor = System.Drawing.Color.Black
-        Me.tbencar_impor.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.tbencar_impor.Location = New System.Drawing.Point(310, 98)
-        Me.tbencar_impor.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.tbencar_impor.Name = "tbencar_impor"
-        Me.tbencar_impor.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.tbencar_impor.PlaceholderText = "Encargado de Reparación"
-        Me.tbencar_impor.SelectedText = ""
-        Me.tbencar_impor.Size = New System.Drawing.Size(277, 35)
-        Me.tbencar_impor.TabIndex = 66
+        Me.tbencar_repar.AutoRoundedCorners = True
+        Me.tbencar_repar.BorderRadius = 14
+        Me.tbencar_repar.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.tbencar_repar.DefaultText = ""
+        Me.tbencar_repar.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.tbencar_repar.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.tbencar_repar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.tbencar_repar.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.tbencar_repar.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.tbencar_repar.Font = New System.Drawing.Font("Segoe UI Black", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.tbencar_repar.ForeColor = System.Drawing.Color.Black
+        Me.tbencar_repar.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.tbencar_repar.Location = New System.Drawing.Point(31, 216)
+        Me.tbencar_repar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.tbencar_repar.Name = "tbencar_repar"
+        Me.tbencar_repar.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.tbencar_repar.PlaceholderText = "Encargado de Reparación"
+        Me.tbencar_repar.SelectedText = ""
+        Me.tbencar_repar.Size = New System.Drawing.Size(250, 30)
+        Me.tbencar_repar.TabIndex = 66
         '
         'Label5
         '
@@ -415,105 +358,188 @@ Partial Class Reparaciones
         Me.Label5.BackColor = System.Drawing.Color.Transparent
         Me.Label5.Font = New System.Drawing.Font("Segoe UI Black", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.Black
-        Me.Label5.Location = New System.Drawing.Point(306, 185)
+        Me.Label5.Location = New System.Drawing.Point(306, 144)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(143, 21)
         Me.Label5.TabIndex = 68
         Me.Label5.Text = "Fecha de Entrega"
         '
-        'Guna2DateTimePicker1
+        'dtpEntrega_repar
         '
-        Me.Guna2DateTimePicker1.AutoRoundedCorners = True
-        Me.Guna2DateTimePicker1.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2DateTimePicker1.BorderRadius = 14
-        Me.Guna2DateTimePicker1.Checked = True
-        Me.Guna2DateTimePicker1.FillColor = System.Drawing.Color.MediumSpringGreen
-        Me.Guna2DateTimePicker1.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.Guna2DateTimePicker1.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.Guna2DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.Guna2DateTimePicker1.Location = New System.Drawing.Point(455, 180)
-        Me.Guna2DateTimePicker1.MaxDate = New Date(2022, 12, 31, 0, 0, 0, 0)
-        Me.Guna2DateTimePicker1.MinDate = New Date(2019, 1, 1, 0, 0, 0, 0)
-        Me.Guna2DateTimePicker1.Name = "Guna2DateTimePicker1"
-        Me.Guna2DateTimePicker1.Size = New System.Drawing.Size(132, 30)
-        Me.Guna2DateTimePicker1.TabIndex = 67
-        Me.Guna2DateTimePicker1.Value = New Date(2022, 9, 1, 0, 0, 0, 0)
+        Me.dtpEntrega_repar.AutoRoundedCorners = True
+        Me.dtpEntrega_repar.BackColor = System.Drawing.Color.Transparent
+        Me.dtpEntrega_repar.BorderRadius = 14
+        Me.dtpEntrega_repar.Checked = True
+        Me.dtpEntrega_repar.FillColor = System.Drawing.Color.MediumSpringGreen
+        Me.dtpEntrega_repar.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.dtpEntrega_repar.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.dtpEntrega_repar.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.dtpEntrega_repar.Location = New System.Drawing.Point(455, 139)
+        Me.dtpEntrega_repar.MaxDate = New Date(2022, 12, 31, 0, 0, 0, 0)
+        Me.dtpEntrega_repar.MinDate = New Date(2019, 1, 1, 0, 0, 0, 0)
+        Me.dtpEntrega_repar.Name = "dtpEntrega_repar"
+        Me.dtpEntrega_repar.Size = New System.Drawing.Size(132, 30)
+        Me.dtpEntrega_repar.TabIndex = 67
+        Me.dtpEntrega_repar.Value = New Date(2022, 9, 1, 0, 0, 0, 0)
         '
-        'Guna2DateTimePicker2
+        'dtpEntrada_repar
         '
-        Me.Guna2DateTimePicker2.AutoRoundedCorners = True
-        Me.Guna2DateTimePicker2.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2DateTimePicker2.BorderRadius = 14
-        Me.Guna2DateTimePicker2.Checked = True
-        Me.Guna2DateTimePicker2.FillColor = System.Drawing.Color.MediumSpringGreen
-        Me.Guna2DateTimePicker2.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.Guna2DateTimePicker2.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.Guna2DateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.Guna2DateTimePicker2.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Guna2DateTimePicker2.Location = New System.Drawing.Point(455, 140)
-        Me.Guna2DateTimePicker2.MaxDate = New Date(2022, 12, 31, 0, 0, 0, 0)
-        Me.Guna2DateTimePicker2.MinDate = New Date(2019, 1, 1, 0, 0, 0, 0)
-        Me.Guna2DateTimePicker2.Name = "Guna2DateTimePicker2"
-        Me.Guna2DateTimePicker2.Size = New System.Drawing.Size(132, 30)
-        Me.Guna2DateTimePicker2.TabIndex = 70
-        Me.Guna2DateTimePicker2.Value = New Date(2022, 9, 1, 0, 0, 0, 0)
+        Me.dtpEntrada_repar.AutoRoundedCorners = True
+        Me.dtpEntrada_repar.BackColor = System.Drawing.Color.Transparent
+        Me.dtpEntrada_repar.BorderRadius = 14
+        Me.dtpEntrada_repar.Checked = True
+        Me.dtpEntrada_repar.FillColor = System.Drawing.Color.MediumSpringGreen
+        Me.dtpEntrada_repar.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.dtpEntrada_repar.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.dtpEntrada_repar.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.dtpEntrada_repar.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.dtpEntrada_repar.Location = New System.Drawing.Point(455, 99)
+        Me.dtpEntrada_repar.MaxDate = New Date(2022, 12, 31, 0, 0, 0, 0)
+        Me.dtpEntrada_repar.MinDate = New Date(2019, 1, 1, 0, 0, 0, 0)
+        Me.dtpEntrada_repar.Name = "dtpEntrada_repar"
+        Me.dtpEntrada_repar.Size = New System.Drawing.Size(132, 30)
+        Me.dtpEntrada_repar.TabIndex = 70
+        Me.dtpEntrada_repar.Value = New Date(2022, 9, 1, 0, 0, 0, 0)
+        '
+        'dgvRepar
+        '
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
+        Me.dgvRepar.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        Me.dgvRepar.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
+        Me.dgvRepar.BackgroundColor = System.Drawing.Color.White
+        Me.dgvRepar.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.dgvRepar.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
+        Me.dgvRepar.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.HotPink
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI Black", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvRepar.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        Me.dgvRepar.ColumnHeadersHeight = 20
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI Black", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(215, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvRepar.DefaultCellStyle = DataGridViewCellStyle3
+        Me.dgvRepar.EnableHeadersVisualStyles = False
+        Me.dgvRepar.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.dgvRepar.Location = New System.Drawing.Point(29, 266)
+        Me.dgvRepar.Name = "dgvRepar"
+        Me.dgvRepar.ReadOnly = True
+        Me.dgvRepar.RowHeadersVisible = False
+        Me.dgvRepar.RowTemplate.Height = 24
+        Me.dgvRepar.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.dgvRepar.Size = New System.Drawing.Size(849, 277)
+        Me.dgvRepar.TabIndex = 71
+        Me.dgvRepar.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White
+        Me.dgvRepar.ThemeStyle.AlternatingRowsStyle.Font = Nothing
+        Me.dgvRepar.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty
+        Me.dgvRepar.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty
+        Me.dgvRepar.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty
+        Me.dgvRepar.ThemeStyle.BackColor = System.Drawing.Color.White
+        Me.dgvRepar.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.dgvRepar.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.dgvRepar.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        Me.dgvRepar.ThemeStyle.HeaderStyle.Font = New System.Drawing.Font("Segoe UI Black", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.dgvRepar.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White
+        Me.dgvRepar.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing
+        Me.dgvRepar.ThemeStyle.HeaderStyle.Height = 20
+        Me.dgvRepar.ThemeStyle.ReadOnly = True
+        Me.dgvRepar.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White
+        Me.dgvRepar.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
+        Me.dgvRepar.ThemeStyle.RowsStyle.Font = New System.Drawing.Font("Segoe UI Black", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.dgvRepar.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        Me.dgvRepar.ThemeStyle.RowsStyle.Height = 24
+        Me.dgvRepar.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.dgvRepar.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        '
+        'tbDanos_repar
+        '
+        Me.tbDanos_repar.AutoRoundedCorners = True
+        Me.tbDanos_repar.BorderRadius = 14
+        Me.tbDanos_repar.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.tbDanos_repar.DefaultText = ""
+        Me.tbDanos_repar.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.tbDanos_repar.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.tbDanos_repar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.tbDanos_repar.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.tbDanos_repar.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.tbDanos_repar.Font = New System.Drawing.Font("Segoe UI Black", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.tbDanos_repar.ForeColor = System.Drawing.Color.Black
+        Me.tbDanos_repar.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.tbDanos_repar.Location = New System.Drawing.Point(310, 178)
+        Me.tbDanos_repar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.tbDanos_repar.Name = "tbDanos_repar"
+        Me.tbDanos_repar.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.tbDanos_repar.PlaceholderText = "Daños/Mantenimiento"
+        Me.tbDanos_repar.SelectedText = ""
+        Me.tbDanos_repar.Size = New System.Drawing.Size(277, 30)
+        Me.tbDanos_repar.TabIndex = 72
         '
         'Reparaciones
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(902, 572)
-        Me.Controls.Add(Me.Guna2DateTimePicker2)
+        Me.ClientSize = New System.Drawing.Size(902, 564)
+        Me.Controls.Add(Me.tbDanos_repar)
+        Me.Controls.Add(Me.dgvRepar)
+        Me.Controls.Add(Me.dtpEntrada_repar)
         Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.Guna2DateTimePicker1)
-        Me.Controls.Add(Me.tbencar_impor)
+        Me.Controls.Add(Me.dtpEntrega_repar)
+        Me.Controls.Add(Me.tbencar_repar)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.tbLoteSelec_Impo)
+        Me.Controls.Add(Me.tbLoteSelec_repar)
         Me.Controls.Add(Me.Panel1)
-        Me.Controls.Add(Me.cbCarro_CompraCar)
-        Me.Controls.Add(Me.tbCarroSelec_CompraCar)
+        Me.Controls.Add(Me.cbCarro_repar)
+        Me.Controls.Add(Me.tbCarroSelec_repar)
         Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.dgvCompraC)
         Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.nudCosto_CompraCar)
+        Me.Controls.Add(Me.nudCosto_repar)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.Guna2Button3)
-        Me.Controls.Add(Me.Guna2Button2)
-        Me.Controls.Add(Me.Guna2Button1)
-        Me.Controls.Add(Me.tbID_CompraCar)
+        Me.Controls.Add(Me.bUpdate)
+        Me.Controls.Add(Me.bSave)
+        Me.Controls.Add(Me.bNew)
+        Me.Controls.Add(Me.tbID_repar)
         Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "Reparaciones"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Reparaciones"
-        CType(Me.dgvCompraC, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.nudCosto_CompraCar, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.nudCosto_repar, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
+        CType(Me.dgvRepar, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents cbCarro_CompraCar As Guna.UI2.WinForms.Guna2ComboBox
-    Friend WithEvents tbCarroSelec_CompraCar As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents cbCarro_repar As Guna.UI2.WinForms.Guna2ComboBox
+    Friend WithEvents tbCarroSelec_repar As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Label4 As Label
-    Friend WithEvents dgvCompraC As Guna.UI2.WinForms.Guna2DataGridView
     Friend WithEvents Label3 As Label
-    Friend WithEvents nudCosto_CompraCar As Guna.UI2.WinForms.Guna2NumericUpDown
+    Friend WithEvents nudCosto_repar As Guna.UI2.WinForms.Guna2NumericUpDown
     Friend WithEvents Label1 As Label
-    Friend WithEvents Guna2Button3 As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents Guna2Button2 As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents Guna2Button1 As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents tbID_CompraCar As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents bUpdate As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents bSave As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents bNew As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents tbID_repar As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Button1 As Button
     Friend WithEvents Button2 As Button
     Friend WithEvents bMinimizar As Button
     Friend WithEvents bCerrar As Button
-    Friend WithEvents tbLoteSelec_Impo As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents tbLoteSelec_repar As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Label2 As Label
-    Friend WithEvents tbencar_impor As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents tbencar_repar As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Label5 As Label
-    Friend WithEvents Guna2DateTimePicker1 As Guna.UI2.WinForms.Guna2DateTimePicker
-    Friend WithEvents Guna2DateTimePicker2 As Guna.UI2.WinForms.Guna2DateTimePicker
+    Friend WithEvents dtpEntrega_repar As Guna.UI2.WinForms.Guna2DateTimePicker
+    Friend WithEvents dtpEntrada_repar As Guna.UI2.WinForms.Guna2DateTimePicker
+    Friend WithEvents dgvRepar As Guna.UI2.WinForms.Guna2DataGridView
+    Friend WithEvents tbDanos_repar As Guna.UI2.WinForms.Guna2TextBox
 End Class

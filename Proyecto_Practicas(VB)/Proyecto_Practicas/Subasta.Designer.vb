@@ -109,6 +109,8 @@ Partial Class Subasta
         '
         'Guna2Button2
         '
+        Me.Guna2Button2.AutoRoundedCorners = True
+        Me.Guna2Button2.BorderRadius = 18
         Me.Guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.Guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.Guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
@@ -124,6 +126,8 @@ Partial Class Subasta
         '
         'Guna2Button1
         '
+        Me.Guna2Button1.AutoRoundedCorners = True
+        Me.Guna2Button1.BorderRadius = 18
         Me.Guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.Guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.Guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
@@ -138,6 +142,8 @@ Partial Class Subasta
         '
         'Guna2Button3
         '
+        Me.Guna2Button3.AutoRoundedCorners = True
+        Me.Guna2Button3.BorderRadius = 18
         Me.Guna2Button3.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.Guna2Button3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.Guna2Button3.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
@@ -153,6 +159,8 @@ Partial Class Subasta
         '
         'tbID
         '
+        Me.tbID.AutoRoundedCorners = True
+        Me.tbID.BorderRadius = 14
         Me.tbID.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.tbID.DefaultText = ""
         Me.tbID.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
@@ -160,7 +168,7 @@ Partial Class Subasta
         Me.tbID.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.tbID.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.tbID.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.tbID.Font = New System.Drawing.Font("Segoe UI Black", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tbID.Font = New System.Drawing.Font("Segoe UI Black", 12.0!, System.Drawing.FontStyle.Bold)
         Me.tbID.ForeColor = System.Drawing.Color.Black
         Me.tbID.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.tbID.Location = New System.Drawing.Point(13, 60)
@@ -175,6 +183,8 @@ Partial Class Subasta
         '
         'tbURL_Sub
         '
+        Me.tbURL_Sub.AutoRoundedCorners = True
+        Me.tbURL_Sub.BorderRadius = 14
         Me.tbURL_Sub.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.tbURL_Sub.DefaultText = ""
         Me.tbURL_Sub.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
@@ -196,6 +206,8 @@ Partial Class Subasta
         '
         'tbNombre_Sub
         '
+        Me.tbNombre_Sub.AutoRoundedCorners = True
+        Me.tbNombre_Sub.BorderRadius = 14
         Me.tbNombre_Sub.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.tbNombre_Sub.DefaultText = ""
         Me.tbNombre_Sub.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))

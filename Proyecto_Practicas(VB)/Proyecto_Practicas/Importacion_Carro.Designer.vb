@@ -52,12 +52,14 @@ Partial Class Importacion_Carro
         '
         'cbCarro_Compraimpor
         '
+        Me.cbCarro_Compraimpor.AutoRoundedCorners = True
         Me.cbCarro_Compraimpor.BackColor = System.Drawing.Color.Transparent
+        Me.cbCarro_Compraimpor.BorderRadius = 17
         Me.cbCarro_Compraimpor.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
         Me.cbCarro_Compraimpor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbCarro_Compraimpor.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.cbCarro_Compraimpor.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.cbCarro_Compraimpor.Font = New System.Drawing.Font("Segoe UI Black", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cbCarro_Compraimpor.Font = New System.Drawing.Font("Segoe UI Black", 9.75!, System.Drawing.FontStyle.Bold)
         Me.cbCarro_Compraimpor.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
         Me.cbCarro_Compraimpor.ItemHeight = 30
         Me.cbCarro_Compraimpor.Location = New System.Drawing.Point(71, 99)
@@ -79,7 +81,9 @@ Partial Class Importacion_Carro
         '
         'nudCosto_impor
         '
+        Me.nudCosto_impor.AutoRoundedCorners = True
         Me.nudCosto_impor.BackColor = System.Drawing.Color.Transparent
+        Me.nudCosto_impor.BorderRadius = 14
         Me.nudCosto_impor.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.nudCosto_impor.Font = New System.Drawing.Font("Segoe UI Black", 12.0!, System.Drawing.FontStyle.Bold)
         Me.nudCosto_impor.ForeColor = System.Drawing.Color.Black
@@ -108,6 +112,8 @@ Partial Class Importacion_Carro
         '
         'Btnmodi_impor
         '
+        Me.Btnmodi_impor.AutoRoundedCorners = True
+        Me.Btnmodi_impor.BorderRadius = 18
         Me.Btnmodi_impor.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.Btnmodi_impor.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.Btnmodi_impor.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
@@ -123,6 +129,8 @@ Partial Class Importacion_Carro
         '
         'btnguarda_impor
         '
+        Me.btnguarda_impor.AutoRoundedCorners = True
+        Me.btnguarda_impor.BorderRadius = 18
         Me.btnguarda_impor.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.btnguarda_impor.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.btnguarda_impor.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
@@ -138,6 +146,9 @@ Partial Class Importacion_Carro
         '
         'btnnew_impor
         '
+        Me.btnnew_impor.AutoRoundedCorners = True
+        Me.btnnew_impor.BackColor = System.Drawing.Color.Transparent
+        Me.btnnew_impor.BorderRadius = 18
         Me.btnnew_impor.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.btnnew_impor.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.btnnew_impor.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
@@ -152,6 +163,8 @@ Partial Class Importacion_Carro
         '
         'tbID_impo
         '
+        Me.tbID_impo.AutoRoundedCorners = True
+        Me.tbID_impo.BorderRadius = 14
         Me.tbID_impo.Cursor = System.Windows.Forms.Cursors.No
         Me.tbID_impo.DefaultText = ""
         Me.tbID_impo.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
@@ -174,6 +187,8 @@ Partial Class Importacion_Carro
         '
         'tbmeto_impor
         '
+        Me.tbmeto_impor.AutoRoundedCorners = True
+        Me.tbmeto_impor.BorderRadius = 14
         Me.tbmeto_impor.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.tbmeto_impor.DefaultText = ""
         Me.tbmeto_impor.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
@@ -286,13 +301,13 @@ Partial Class Importacion_Carro
         Me.dgvImpo.DefaultCellStyle = DataGridViewCellStyle3
         Me.dgvImpo.EnableHeadersVisualStyles = False
         Me.dgvImpo.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.dgvImpo.Location = New System.Drawing.Point(26, 241)
+        Me.dgvImpo.Location = New System.Drawing.Point(19, 241)
         Me.dgvImpo.Name = "dgvImpo"
         Me.dgvImpo.ReadOnly = True
         Me.dgvImpo.RowHeadersVisible = False
         Me.dgvImpo.RowTemplate.Height = 24
         Me.dgvImpo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvImpo.Size = New System.Drawing.Size(842, 313)
+        Me.dgvImpo.Size = New System.Drawing.Size(849, 313)
         Me.dgvImpo.TabIndex = 61
         Me.dgvImpo.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White
         Me.dgvImpo.ThemeStyle.AlternatingRowsStyle.Font = Nothing
@@ -318,8 +333,10 @@ Partial Class Importacion_Carro
         '
         'tbCarroSelec_CompraCar
         '
+        Me.tbCarroSelec_CompraCar.AutoRoundedCorners = True
         Me.tbCarroSelec_CompraCar.BackColor = System.Drawing.Color.Transparent
         Me.tbCarroSelec_CompraCar.BorderColor = System.Drawing.Color.FromArgb(CType(CType(213, Byte), Integer), CType(CType(218, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.tbCarroSelec_CompraCar.BorderRadius = 14
         Me.tbCarroSelec_CompraCar.Cursor = System.Windows.Forms.Cursors.No
         Me.tbCarroSelec_CompraCar.DefaultText = ""
         Me.tbCarroSelec_CompraCar.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
@@ -344,8 +361,10 @@ Partial Class Importacion_Carro
         '
         'tbLoteSelec_Impo
         '
+        Me.tbLoteSelec_Impo.AutoRoundedCorners = True
         Me.tbLoteSelec_Impo.BackColor = System.Drawing.Color.Transparent
         Me.tbLoteSelec_Impo.BorderColor = System.Drawing.Color.FromArgb(CType(CType(213, Byte), Integer), CType(CType(218, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.tbLoteSelec_Impo.BorderRadius = 14
         Me.tbLoteSelec_Impo.Cursor = System.Windows.Forms.Cursors.No
         Me.tbLoteSelec_Impo.DefaultText = ""
         Me.tbLoteSelec_Impo.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
@@ -378,6 +397,8 @@ Partial Class Importacion_Carro
         '
         'tbencar_impor
         '
+        Me.tbencar_impor.AutoRoundedCorners = True
+        Me.tbencar_impor.BorderRadius = 14
         Me.tbencar_impor.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.tbencar_impor.DefaultText = ""
         Me.tbencar_impor.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))

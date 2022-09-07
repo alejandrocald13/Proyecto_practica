@@ -120,6 +120,8 @@ Partial Class Compra_Carros
         '
         'tbID_CompraCar
         '
+        Me.tbID_CompraCar.AutoRoundedCorners = True
+        Me.tbID_CompraCar.BorderRadius = 14
         Me.tbID_CompraCar.Cursor = System.Windows.Forms.Cursors.No
         Me.tbID_CompraCar.DefaultText = ""
         Me.tbID_CompraCar.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
@@ -142,6 +144,8 @@ Partial Class Compra_Carros
         '
         'Guna2Button3
         '
+        Me.Guna2Button3.AutoRoundedCorners = True
+        Me.Guna2Button3.BorderRadius = 18
         Me.Guna2Button3.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.Guna2Button3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.Guna2Button3.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
@@ -157,6 +161,8 @@ Partial Class Compra_Carros
         '
         'Guna2Button2
         '
+        Me.Guna2Button2.AutoRoundedCorners = True
+        Me.Guna2Button2.BorderRadius = 18
         Me.Guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.Guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.Guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
@@ -172,6 +178,8 @@ Partial Class Compra_Carros
         '
         'Guna2Button1
         '
+        Me.Guna2Button1.AutoRoundedCorners = True
+        Me.Guna2Button1.BorderRadius = 18
         Me.Guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.Guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.Guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
@@ -210,6 +218,8 @@ Partial Class Compra_Carros
         '
         'tbLote_CompraCar
         '
+        Me.tbLote_CompraCar.AutoRoundedCorners = True
+        Me.tbLote_CompraCar.BorderRadius = 14
         Me.tbLote_CompraCar.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.tbLote_CompraCar.DefaultText = ""
         Me.tbLote_CompraCar.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
@@ -231,6 +241,8 @@ Partial Class Compra_Carros
         '
         'tbDanoPrin_CompraCar
         '
+        Me.tbDanoPrin_CompraCar.AutoRoundedCorners = True
+        Me.tbDanoPrin_CompraCar.BorderRadius = 14
         Me.tbDanoPrin_CompraCar.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.tbDanoPrin_CompraCar.DefaultText = ""
         Me.tbDanoPrin_CompraCar.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
@@ -252,9 +264,11 @@ Partial Class Compra_Carros
         '
         'dtpFecha_CompraCar
         '
+        Me.dtpFecha_CompraCar.AutoRoundedCorners = True
+        Me.dtpFecha_CompraCar.BorderRadius = 17
         Me.dtpFecha_CompraCar.Checked = True
         Me.dtpFecha_CompraCar.FillColor = System.Drawing.Color.MediumSpringGreen
-        Me.dtpFecha_CompraCar.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.dtpFecha_CompraCar.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold)
         Me.dtpFecha_CompraCar.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.dtpFecha_CompraCar.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.dtpFecha_CompraCar.Location = New System.Drawing.Point(438, 140)
@@ -267,7 +281,9 @@ Partial Class Compra_Carros
         '
         'nudCosto_CompraCar
         '
+        Me.nudCosto_CompraCar.AutoRoundedCorners = True
         Me.nudCosto_CompraCar.BackColor = System.Drawing.Color.Transparent
+        Me.nudCosto_CompraCar.BorderRadius = 14
         Me.nudCosto_CompraCar.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.nudCosto_CompraCar.Font = New System.Drawing.Font("Segoe UI Black", 12.0!, System.Drawing.FontStyle.Bold)
         Me.nudCosto_CompraCar.ForeColor = System.Drawing.Color.Black
@@ -296,6 +312,8 @@ Partial Class Compra_Carros
         '
         'tbUbi_CompraCar
         '
+        Me.tbUbi_CompraCar.AutoRoundedCorners = True
+        Me.tbUbi_CompraCar.BorderRadius = 14
         Me.tbUbi_CompraCar.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.tbUbi_CompraCar.DefaultText = ""
         Me.tbUbi_CompraCar.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
@@ -387,8 +405,10 @@ Partial Class Compra_Carros
         '
         'tbCarroSelec_CompraCar
         '
+        Me.tbCarroSelec_CompraCar.AutoRoundedCorners = True
         Me.tbCarroSelec_CompraCar.BackColor = System.Drawing.Color.Transparent
         Me.tbCarroSelec_CompraCar.BorderColor = System.Drawing.Color.FromArgb(CType(CType(213, Byte), Integer), CType(CType(218, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.tbCarroSelec_CompraCar.BorderRadius = 17
         Me.tbCarroSelec_CompraCar.Cursor = System.Windows.Forms.Cursors.No
         Me.tbCarroSelec_CompraCar.DefaultText = ""
         Me.tbCarroSelec_CompraCar.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
@@ -413,12 +433,14 @@ Partial Class Compra_Carros
         '
         'cbSub_CompraCar
         '
+        Me.cbSub_CompraCar.AutoRoundedCorners = True
         Me.cbSub_CompraCar.BackColor = System.Drawing.Color.Transparent
+        Me.cbSub_CompraCar.BorderRadius = 17
         Me.cbSub_CompraCar.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
         Me.cbSub_CompraCar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbSub_CompraCar.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.cbSub_CompraCar.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.cbSub_CompraCar.Font = New System.Drawing.Font("Segoe UI Black", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cbSub_CompraCar.Font = New System.Drawing.Font("Segoe UI Black", 9.75!, System.Drawing.FontStyle.Bold)
         Me.cbSub_CompraCar.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
         Me.cbSub_CompraCar.ItemHeight = 30
         Me.cbSub_CompraCar.Location = New System.Drawing.Point(90, 139)
@@ -428,12 +450,14 @@ Partial Class Compra_Carros
         '
         'cbCarro_CompraCar
         '
+        Me.cbCarro_CompraCar.AutoRoundedCorners = True
         Me.cbCarro_CompraCar.BackColor = System.Drawing.Color.Transparent
+        Me.cbCarro_CompraCar.BorderRadius = 17
         Me.cbCarro_CompraCar.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
         Me.cbCarro_CompraCar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbCarro_CompraCar.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.cbCarro_CompraCar.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.cbCarro_CompraCar.Font = New System.Drawing.Font("Segoe UI Black", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cbCarro_CompraCar.Font = New System.Drawing.Font("Segoe UI Black", 9.75!, System.Drawing.FontStyle.Bold)
         Me.cbCarro_CompraCar.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
         Me.cbCarro_CompraCar.ItemHeight = 30
         Me.cbCarro_CompraCar.Location = New System.Drawing.Point(68, 97)

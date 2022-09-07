@@ -106,6 +106,8 @@ Partial Class Revendedores
         '
         'tbCUI_reven
         '
+        Me.tbCUI_reven.AutoRoundedCorners = True
+        Me.tbCUI_reven.BorderRadius = 14
         Me.tbCUI_reven.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.tbCUI_reven.DefaultText = ""
         Me.tbCUI_reven.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
@@ -128,6 +130,8 @@ Partial Class Revendedores
         '
         'tbNombre_reven
         '
+        Me.tbNombre_reven.AutoRoundedCorners = True
+        Me.tbNombre_reven.BorderRadius = 14
         Me.tbNombre_reven.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.tbNombre_reven.DefaultText = ""
         Me.tbNombre_reven.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
@@ -149,6 +153,8 @@ Partial Class Revendedores
         '
         'tbID_reven
         '
+        Me.tbID_reven.AutoRoundedCorners = True
+        Me.tbID_reven.BorderRadius = 14
         Me.tbID_reven.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.tbID_reven.DefaultText = ""
         Me.tbID_reven.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
@@ -171,6 +177,8 @@ Partial Class Revendedores
         '
         'Guna2Button3
         '
+        Me.Guna2Button3.AutoRoundedCorners = True
+        Me.Guna2Button3.BorderRadius = 14
         Me.Guna2Button3.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.Guna2Button3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.Guna2Button3.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
@@ -186,6 +194,8 @@ Partial Class Revendedores
         '
         'Guna2Button2
         '
+        Me.Guna2Button2.AutoRoundedCorners = True
+        Me.Guna2Button2.BorderRadius = 14
         Me.Guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.Guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.Guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
@@ -201,6 +211,9 @@ Partial Class Revendedores
         '
         'Guna2Button1
         '
+        Me.Guna2Button1.AutoRoundedCorners = True
+        Me.Guna2Button1.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2Button1.BorderRadius = 14
         Me.Guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.Guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.Guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
@@ -280,6 +293,8 @@ Partial Class Revendedores
         '
         'Guna2Button4
         '
+        Me.Guna2Button4.AutoRoundedCorners = True
+        Me.Guna2Button4.BorderRadius = 14
         Me.Guna2Button4.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.Guna2Button4.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.Guna2Button4.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
@@ -295,6 +310,8 @@ Partial Class Revendedores
         '
         'tbApellido_revend
         '
+        Me.tbApellido_revend.AutoRoundedCorners = True
+        Me.tbApellido_revend.BorderRadius = 14
         Me.tbApellido_revend.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.tbApellido_revend.DefaultText = ""
         Me.tbApellido_revend.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
@@ -316,6 +333,8 @@ Partial Class Revendedores
         '
         'tbNum_reven
         '
+        Me.tbNum_reven.AutoRoundedCorners = True
+        Me.tbNum_reven.BorderRadius = 14
         Me.tbNum_reven.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.tbNum_reven.DefaultText = ""
         Me.tbNum_reven.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))

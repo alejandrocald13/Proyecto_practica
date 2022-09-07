@@ -36,7 +36,9 @@ Partial Class Login
         '
         'tbUser
         '
+        Me.tbUser.AutoRoundedCorners = True
         Me.tbUser.BorderColor = System.Drawing.Color.Silver
+        Me.tbUser.BorderRadius = 18
         Me.tbUser.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.tbUser.DefaultText = ""
         Me.tbUser.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
@@ -59,7 +61,9 @@ Partial Class Login
         '
         'tbPswd
         '
+        Me.tbPswd.AutoRoundedCorners = True
         Me.tbPswd.BorderColor = System.Drawing.Color.Silver
+        Me.tbPswd.BorderRadius = 18
         Me.tbPswd.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.tbPswd.DefaultText = ""
         Me.tbPswd.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
@@ -93,12 +97,14 @@ Partial Class Login
         '
         'Guna2Button1
         '
+        Me.Guna2Button1.AutoRoundedCorners = True
+        Me.Guna2Button1.BorderRadius = 25
         Me.Guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.Guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.Guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
         Me.Guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
         Me.Guna2Button1.FillColor = System.Drawing.Color.CornflowerBlue
-        Me.Guna2Button1.Font = New System.Drawing.Font("Segoe UI Black", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Guna2Button1.Font = New System.Drawing.Font("Segoe UI Black", 14.25!, System.Drawing.FontStyle.Bold)
         Me.Guna2Button1.ForeColor = System.Drawing.Color.White
         Me.Guna2Button1.Location = New System.Drawing.Point(136, 230)
         Me.Guna2Button1.Name = "Guna2Button1"
@@ -154,7 +160,7 @@ Partial Class Login
         Me.bMpswd.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.MenuHighlight
         Me.bMpswd.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.MenuHighlight
         Me.bMpswd.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.bMpswd.Location = New System.Drawing.Point(368, 171)
+        Me.bMpswd.Location = New System.Drawing.Point(354, 171)
         Me.bMpswd.Name = "bMpswd"
         Me.bMpswd.Size = New System.Drawing.Size(45, 35)
         Me.bMpswd.TabIndex = 5
