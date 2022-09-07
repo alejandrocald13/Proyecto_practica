@@ -125,6 +125,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Reparaciones.Designer.vb">
+      <DependentUpon>Reparaciones.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reparaciones.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Revendedores.Designer.vb">
       <DependentUpon>Revendedores.vb</DependentUpon>
     </Compile>
@@ -159,6 +165,9 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reparaciones.resx">
+      <DependentUpon>Reparaciones.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Revendedores.resx">
       <DependentUpon>Revendedores.vb</DependentUpon>

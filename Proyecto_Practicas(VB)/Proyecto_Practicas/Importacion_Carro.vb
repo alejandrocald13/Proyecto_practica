@@ -5,7 +5,7 @@ Public Class Importacion_Carro
     Dim objetoconexion As New conexion
     Dim i = 0
     Sub clin()
-        tbID_CompraCar.Clear()
+        tbID_impo.Clear()
         cbCarro_Compraimpor.SelectedIndex = -1
         tbLoteSelec_Impo.Clear()
         tbencar_impor.Clear()
@@ -16,11 +16,11 @@ Public Class Importacion_Carro
     End Sub
     Sub mostrar()
         conn = objetoconexion.AbrirCon
-        Dim query As String = "SELECT i.id_impo as 'ID', ifc.vin_carro as 'VIN', cc.lote_compra as 'Lote de Compra', i.encarg_impo as 'Encargado de Importación', i.metodo_impo as 'Método de Importación', i.costo_impo as 'Costo de Importación' FROM importaciones i INNER JOIN info_carro ifc ON i.id_carro = ifc.id_carro INNER JOIN compra_carros cc ON cc.id_compras =i.id_compras;"
+        Dim query As String = "SELECT i.id_impo as 'ID', ifc.vin_carro as 'VIN', cc.lote_compra as 'Lote de Compra', i.encarg_impo as 'Encargado', i.metodo_impo as 'Método', CONCAT('$',i.costo_impo) as 'Costo ($)' FROM importaciones i INNER JOIN info_carro ifc ON i.id_carro = ifc.id_carro INNER JOIN compra_carros cc ON cc.id_compras =i.id_compras;"
         Dim adpt As New MySqlDataAdapter(query, conn)
         Dim ds As New DataSet()
         adpt.Fill(ds)
-        dgvCompraC.DataSource = ds.Tables(0)
+        dgvImpo.DataSource = ds.Tables(0)
         conn.Close()
         conn.Dispose()
     End Sub
@@ -33,18 +33,6 @@ Public Class Importacion_Carro
         cbCarro_Compraimpor.DataSource = ds.Tables(0)
         cbCarro_Compraimpor.DisplayMember = "vin_carro"
         cbCarro_Compraimpor.ValueMember = "id_carro"
-        conn.Close()
-        conn.Dispose()
-    End Sub
-    Sub sd()
-        conn = objetoconexion.AbrirCon
-        Dim query As String = "Select * FROM compra_carros;"
-        Dim adpt As New MySqlDataAdapter(query, conn)
-        Dim ds As New DataSet()
-        adpt.Fill(ds)
-        Guna2ComboBox1.DataSource = ds.Tables(0)
-        Guna2ComboBox1.DisplayMember = "lote_compra"
-        Guna2ComboBox1.ValueMember = "id_compras"
         conn.Close()
         conn.Dispose()
     End Sub
@@ -95,8 +83,9 @@ Public Class Importacion_Carro
                             row = dt.Rows(0)
                         End If
                     End Using
-                    Dim n = Convert.ToString(row("lote_compra"))
-                    Guna2ComboBox1.SelectedItem = n
+                    tbLoteSelec_Impo.Text = Convert.ToString(row("lote_compra"))
+                    Label2.Text = Convert.ToString(row("id_compras"))
+                    Label2.Visible = False
                 Else
                     MessageBox.Show("Vaya, parece que el carro seleccionado, no tiene lote de Compra. Por favor, registra la compra del mismo.", "ERROR AL SELECCIONAR", MessageBoxButtons.RetryCancel, MessageBoxIcon.Asterisk)
                     cbCarro_Compraimpor.SelectedIndex += -1
@@ -112,7 +101,6 @@ Public Class Importacion_Carro
     Private Sub Importacion_Carro_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         mostrar()
         cargarcarrito()
-        sd()
         cbCarro_Compraimpor.SelectedIndex = -1
         btnguarda_impor.Enabled = False
     End Sub
@@ -135,20 +123,67 @@ Public Class Importacion_Carro
             Else
                 cmd = conn.CreateCommand
                 cmd.CommandText = "insert into importaciones(id_carro,id_compras,encarg_impo,metodo_impo,costo_impo)values(@car,@com,@encar,@met, @cost);"
-                'cmd.Parameters.AddWithValue("@car", cbCarro_Compraimpor.SelectedValue.ToString)
-                'cmd.Parameters.AddWithValue("@com", )
-                'cmd.Parameters.AddWithValue("@ubi", tbUbi_CompraCar.Text)
-                'cmd.ExecuteNonQuery()
-                'conn.Close()
-                'conn.Dispose()
-                'mostrar()
-                'l()
-                'cbCarro_CompraCar.SelectedIndex = -1
-                'cbSub_CompraCar.SelectedIndex = -1
-                'Guna2Button2.Enabled = False
+                cmd.Parameters.AddWithValue("@car", cbCarro_Compraimpor.SelectedValue.ToString)
+                cmd.Parameters.AddWithValue("@com", Label2.Text)
+                cmd.Parameters.AddWithValue("@encar", tbencar_impor.Text)
+                cmd.Parameters.AddWithValue("@met", tbmeto_impor.Text)
+                cmd.Parameters.AddWithValue("@cost", nudCosto_impor.Value)
+                cmd.ExecuteNonQuery()
+                conn.Close()
+                conn.Dispose()
+                mostrar()
+                clin()
+                cbCarro_Compraimpor.SelectedIndex = -1
+                btnguarda_impor.Enabled = False
             End If
         Catch ex As Exception
             MessageBox.Show(ex.ToString())
         End Try
+    End Sub
+    Private Sub dgvCompraC_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvImpo.CellContentClick
+        btnguarda_impor.Enabled = False
+        Dim row As DataGridViewRow = dgvImpo.CurrentRow
+        Try
+            tbID_impo.Text = row.Cells(0).Value.ToString()
+            cbCarro_Compraimpor.Text = row.Cells(1).Value.ToString()
+            tbencar_impor.Text = row.Cells(3).Value.ToString()
+            tbmeto_impor.Text = row.Cells(4).Value.ToString()
+            Dim x = row.Cells(5).Value.ToString()
+            nudCosto_impor.Value = x.Split("$")(1)
+            Btnmodi_impor.Enabled = True
+        Catch ex As Exception
+            MessageBox.Show(ex.ToString())
+        End Try
+    End Sub
+    Private Sub Btnmodi_impor_Click(sender As Object, e As EventArgs) Handles Btnmodi_impor.Click
+        conn = objetoconexion.AbrirCon
+        Try
+            If tbencar_impor.Text = "" Or tbmeto_impor.Text = "" Or cbCarro_Compraimpor.SelectedIndex = -1 Then
+                MessageBox.Show("ALGUN CAMPO ESTÁ VACÍO", "ERROR AL MODIFICAR", MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
+            Else
+                cmd = conn.CreateCommand
+                cmd.CommandText = "UPDATE importaciones SET id_carro=@car,id_compras=@com,encarg_impo=@encar,metodo_impo=@met,costo_impo=@cost WHERE id_impo=@id"
+                cmd.Parameters.AddWithValue("@id", tbID_impo.Text)
+                cmd.Parameters.AddWithValue("@car", cbCarro_Compraimpor.SelectedValue.ToString)
+                cmd.Parameters.AddWithValue("@com", Label2.Text)
+                cmd.Parameters.AddWithValue("@encar", tbencar_impor.Text)
+                cmd.Parameters.AddWithValue("@met", tbmeto_impor.Text)
+                cmd.Parameters.AddWithValue("@cost", nudCosto_impor.Value)
+                cmd.ExecuteNonQuery()
+                conn.Close()
+                conn.Dispose()
+                mostrar()
+                clin()
+                Btnmodi_impor.Enabled = False
+            End If
+        Catch ex As Exception
+        End Try
+    End Sub
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Me.Hide()
+        Login.Close()
+    End Sub
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Me.WindowState = FormWindowState.Minimized
     End Sub
 End Class
