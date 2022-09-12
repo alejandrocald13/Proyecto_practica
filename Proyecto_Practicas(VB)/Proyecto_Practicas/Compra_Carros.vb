@@ -125,7 +125,7 @@ Public Class Compra_Carros
         Dim adpt As New MySqlDataAdapter(query, conn)
         Dim ds As New DataSet()
         adpt.Fill(ds)
-        dgvCompraC.DataSource = ds.Tables(0)
+        dgvCompraCarro.DataSource = ds.Tables(0)
         conn.Close()
         conn.Dispose()
     End Sub
@@ -153,9 +153,9 @@ Public Class Compra_Carros
             txtbox()
         End If
     End Sub
-    Private Sub dgvCompraC_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvCompraC.CellContentClick
+    Private Sub dgvCompraC_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvCompraCarro.CellContentClick
         Guna2Button2.Enabled = False
-        Dim row As DataGridViewRow = dgvCompraC.CurrentRow
+        Dim row As DataGridViewRow = dgvCompraCarro.CurrentRow
         Try
             tbID_CompraCar.Text = row.Cells(0).Value.ToString()
             cbCarro_CompraCar.Text = row.Cells(1).Value.ToString()
@@ -176,5 +176,35 @@ Public Class Compra_Carros
     End Sub
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Me.WindowState = FormWindowState.Minimized
+    End Sub
+
+    Private Sub tbDanoPrin_CompraCar_KeyPress(sender As Object, e As KeyPressEventArgs) Handles tbDanoPrin_CompraCar.KeyPress
+        If Not (Asc(e.KeyChar) = 8) Then
+            Dim allowedChars As String = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZáéíóúÁÉÍÓÚ1234567890-().@#"",;: "
+            If Not allowedChars.Contains(e.KeyChar.ToString.ToLower) Then
+                e.KeyChar = ChrW(0)
+                e.Handled = True
+            End If
+        End If
+    End Sub
+
+    Private Sub tbLote_CompraCar_KeyPress(sender As Object, e As KeyPressEventArgs) Handles tbLote_CompraCar.KeyPress
+        If Not (Asc(e.KeyChar) = 8) Then
+            Dim allowedChars As String = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZáéíóúÁÉÍÓÚ1234567890-().@#"",;: "
+            If Not allowedChars.Contains(e.KeyChar.ToString.ToLower) Then
+                e.KeyChar = ChrW(0)
+                e.Handled = True
+            End If
+        End If
+    End Sub
+
+    Private Sub tbUbi_CompraCar_KeyPress(sender As Object, e As KeyPressEventArgs) Handles tbUbi_CompraCar.KeyPress
+        If Not (Asc(e.KeyChar) = 8) Then
+            Dim allowedChars As String = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZáéíóúÁÉÍÓÚ1234567890-().@#"",;: "
+            If Not allowedChars.Contains(e.KeyChar.ToString.ToLower) Then
+                e.KeyChar = ChrW(0)
+                e.Handled = True
+            End If
+        End If
     End Sub
 End Class

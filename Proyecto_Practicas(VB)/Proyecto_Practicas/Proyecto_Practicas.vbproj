@@ -97,6 +97,12 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="conexion.vb" />
+    <Compile Include="Costodefacturación.Designer.vb">
+      <DependentUpon>Costodefacturación.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Costodefacturación.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="facturacion.Designer.vb">
       <DependentUpon>facturacion.vb</DependentUpon>
     </Compile>
@@ -107,6 +113,12 @@
       <DependentUpon>Importacion_Carro.vb</DependentUpon>
     </Compile>
     <Compile Include="Importacion_Carro.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventario.Designer.vb">
+      <DependentUpon>Inventario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Inventario.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Login.vb">
@@ -149,6 +161,12 @@
     <Compile Include="Subasta.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Ventas.Designer.vb">
+      <DependentUpon>Ventas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ventas.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Carros.resx">
@@ -160,11 +178,17 @@
     <EmbeddedResource Include="Compra_Carros.resx">
       <DependentUpon>Compra_Carros.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Costodefacturación.resx">
+      <DependentUpon>Costodefacturación.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="facturacion.resx">
       <DependentUpon>facturacion.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Importacion_Carro.resx">
       <DependentUpon>Importacion_Carro.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventario.resx">
+      <DependentUpon>Inventario.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.vb</DependentUpon>
@@ -183,6 +207,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Subasta.resx">
       <DependentUpon>Subasta.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventas.resx">
+      <DependentUpon>Ventas.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

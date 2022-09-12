@@ -22,6 +22,9 @@ Partial Class facturacion
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.cbCarro_CompraCar = New Guna.UI2.WinForms.Guna2ComboBox()
         Me.tbUbi_CompraCar = New Guna.UI2.WinForms.Guna2TextBox()
         Me.tbDanoPrin_CompraCar = New Guna.UI2.WinForms.Guna2TextBox()
@@ -35,6 +38,8 @@ Partial Class facturacion
         Me.tbID_CompraCar = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Guna2ComboBox1 = New Guna.UI2.WinForms.Guna2ComboBox()
+        Me.dgvfacturacion = New Guna.UI2.WinForms.Guna2DataGridView()
+        CType(Me.dgvfacturacion, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'cbCarro_CompraCar
@@ -256,11 +261,72 @@ Partial Class facturacion
         Me.Guna2ComboBox1.Size = New System.Drawing.Size(228, 36)
         Me.Guna2ComboBox1.TabIndex = 58
         '
+        'dgvfacturacion
+        '
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
+        Me.dgvfacturacion.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        Me.dgvfacturacion.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
+        Me.dgvfacturacion.BackgroundColor = System.Drawing.Color.White
+        Me.dgvfacturacion.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.dgvfacturacion.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
+        Me.dgvfacturacion.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.HotPink
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI Black", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvfacturacion.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        Me.dgvfacturacion.ColumnHeadersHeight = 20
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI Black", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(215, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvfacturacion.DefaultCellStyle = DataGridViewCellStyle3
+        Me.dgvfacturacion.EnableHeadersVisualStyles = False
+        Me.dgvfacturacion.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.dgvfacturacion.Location = New System.Drawing.Point(13, 245)
+        Me.dgvfacturacion.Margin = New System.Windows.Forms.Padding(4)
+        Me.dgvfacturacion.Name = "dgvfacturacion"
+        Me.dgvfacturacion.ReadOnly = True
+        Me.dgvfacturacion.RowHeadersVisible = False
+        Me.dgvfacturacion.RowTemplate.Height = 24
+        Me.dgvfacturacion.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.dgvfacturacion.Size = New System.Drawing.Size(1036, 319)
+        Me.dgvfacturacion.TabIndex = 97
+        Me.dgvfacturacion.TabStop = False
+        Me.dgvfacturacion.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White
+        Me.dgvfacturacion.ThemeStyle.AlternatingRowsStyle.Font = Nothing
+        Me.dgvfacturacion.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty
+        Me.dgvfacturacion.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty
+        Me.dgvfacturacion.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty
+        Me.dgvfacturacion.ThemeStyle.BackColor = System.Drawing.Color.White
+        Me.dgvfacturacion.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.dgvfacturacion.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.dgvfacturacion.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        Me.dgvfacturacion.ThemeStyle.HeaderStyle.Font = New System.Drawing.Font("Segoe UI Black", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.dgvfacturacion.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White
+        Me.dgvfacturacion.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing
+        Me.dgvfacturacion.ThemeStyle.HeaderStyle.Height = 20
+        Me.dgvfacturacion.ThemeStyle.ReadOnly = True
+        Me.dgvfacturacion.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White
+        Me.dgvfacturacion.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
+        Me.dgvfacturacion.ThemeStyle.RowsStyle.Font = New System.Drawing.Font("Segoe UI Black", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.dgvfacturacion.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        Me.dgvfacturacion.ThemeStyle.RowsStyle.Height = 24
+        Me.dgvfacturacion.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.dgvfacturacion.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        '
         'facturacion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1107, 511)
+        Me.ClientSize = New System.Drawing.Size(1107, 592)
+        Me.Controls.Add(Me.dgvfacturacion)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Guna2ComboBox1)
         Me.Controls.Add(Me.cbCarro_CompraCar)
@@ -276,6 +342,7 @@ Partial Class facturacion
         Me.Controls.Add(Me.tbID_CompraCar)
         Me.Name = "facturacion"
         Me.Text = "facturacion"
+        CType(Me.dgvfacturacion, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -294,4 +361,5 @@ Partial Class facturacion
     Friend WithEvents tbID_CompraCar As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Label5 As Label
     Friend WithEvents Guna2ComboBox1 As Guna.UI2.WinForms.Guna2ComboBox
+    Friend WithEvents dgvfacturacion As Guna.UI2.WinForms.Guna2DataGridView
 End Class

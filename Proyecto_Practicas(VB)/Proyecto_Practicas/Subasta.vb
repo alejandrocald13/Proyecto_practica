@@ -88,4 +88,14 @@ Public Class Subasta
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         WindowState = FormWindowState.Minimized
     End Sub
+
+    Private Sub tbNombre_Sub_KeyPress(sender As Object, e As KeyPressEventArgs) Handles tbNombre_Sub.KeyPress
+        If Not (Asc(e.KeyChar) = 8) Then
+            Dim allowedChars As String = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZáéíóúÁÉÍÓÚ1234567890-().@#"",;: "
+            If Not allowedChars.Contains(e.KeyChar.ToString.ToLower) Then
+                e.KeyChar = ChrW(0)
+                e.Handled = True
+            End If
+        End If
+    End Sub
 End Class

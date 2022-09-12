@@ -134,15 +134,14 @@ Public Class Carros
     End Sub
 
     Private Sub tbmar_car_KeyPress(sender As Object, e As KeyPressEventArgs) Handles tbmar_car.KeyPress
-        If Char.IsDigit(e.KeyChar) Then
-            e.Handled = False
-        ElseIf Char.IsControl(e.KeyChar) Then
-            e.Handled = False
-        Else
-            e.Handled = True
+        If Not (Asc(e.KeyChar) = 8) Then
+            Dim allowedChars As String = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZáéíóúÁÉÍÓÚ "
+            If Not allowedChars.Contains(e.KeyChar.ToString.ToLower) Then
+                e.KeyChar = ChrW(0)
+                e.Handled = True
+            End If
         End If
     End Sub
-
     Private Sub tbmodelo_car_KeyPress(sender As Object, e As KeyPressEventArgs) Handles tbmodelo_car.KeyPress
         If Char.IsDigit(e.KeyChar) Then
             e.Handled = False
@@ -154,16 +153,36 @@ Public Class Carros
     End Sub
 
     Private Sub tbcol_car_KeyPress(sender As Object, e As KeyPressEventArgs) Handles tbcol_car.KeyPress
-        If Char.IsDigit(e.KeyChar) Then
-            e.Handled = False
-        ElseIf Char.IsControl(e.KeyChar) Then
-            e.Handled = False
-        Else
-            e.Handled = True
+        If Not (Asc(e.KeyChar) = 8) Then
+            Dim allowedChars As String = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZáéíóúÁÉÍÓÚ "
+            If Not allowedChars.Contains(e.KeyChar.ToString.ToLower) Then
+                e.KeyChar = ChrW(0)
+                e.Handled = True
+            End If
         End If
     End Sub
 
-    Private Sub tbmotor_car_TextChanged(sender As Object, e As EventArgs) Handles tbmotor_car.TextChanged
+    Private Sub tbVIN_car_KeyPress(sender As Object, e As KeyPressEventArgs) Handles tbVIN_car.KeyPress
+        If Not (Asc(e.KeyChar) = 8) Then
+            Dim allowedChars As String = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZáéíóúÁÉÍÓÚ1234567890/.-()# "
+            If Not allowedChars.Contains(e.KeyChar.ToString.ToLower) Then
+                e.KeyChar = ChrW(0)
+                e.Handled = True
+            End If
+        End If
+    End Sub
+
+    Private Sub tbmotor_car_KeyPress(sender As Object, e As KeyPressEventArgs) Handles tbmotor_car.KeyPress
+        If Not (Asc(e.KeyChar) = 8) Then
+            Dim allowedChars As String = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZáéíóúÁÉÍÓÚ1234567890/.-()# "
+            If Not allowedChars.Contains(e.KeyChar.ToString.ToLower) Then
+                e.KeyChar = ChrW(0)
+                e.Handled = True
+            End If
+        End If
+    End Sub
+
+    Private Sub tbURL_car_KeyPress(sender As Object, e As KeyPressEventArgs) Handles tbURL_car.KeyPress
 
     End Sub
 End Class

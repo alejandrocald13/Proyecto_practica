@@ -51,8 +51,9 @@ Partial Class Subasta
         Me.Panel1.Controls.Add(Me.bCerrar)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(473, 35)
+        Me.Panel1.Size = New System.Drawing.Size(631, 43)
         Me.Panel1.TabIndex = 21
         '
         'Button1
@@ -62,9 +63,10 @@ Partial Class Subasta
         Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
-        Me.Button1.Location = New System.Drawing.Point(355, 0)
+        Me.Button1.Location = New System.Drawing.Point(473, 0)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(52, 35)
+        Me.Button1.Size = New System.Drawing.Size(69, 43)
         Me.Button1.TabIndex = 24
         Me.Button1.UseVisualStyleBackColor = True
         '
@@ -75,9 +77,10 @@ Partial Class Subasta
         Me.bMinimizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray
         Me.bMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.bMinimizar.Image = CType(resources.GetObject("bMinimizar.Image"), System.Drawing.Image)
-        Me.bMinimizar.Location = New System.Drawing.Point(953, 0)
+        Me.bMinimizar.Location = New System.Drawing.Point(1271, 0)
+        Me.bMinimizar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.bMinimizar.Name = "bMinimizar"
-        Me.bMinimizar.Size = New System.Drawing.Size(52, 35)
+        Me.bMinimizar.Size = New System.Drawing.Size(69, 43)
         Me.bMinimizar.TabIndex = 22
         Me.bMinimizar.UseVisualStyleBackColor = True
         '
@@ -88,9 +91,10 @@ Partial Class Subasta
         Me.Button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button2.Image = CType(resources.GetObject("Button2.Image"), System.Drawing.Image)
-        Me.Button2.Location = New System.Drawing.Point(413, 0)
+        Me.Button2.Location = New System.Drawing.Point(551, 0)
+        Me.Button2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(52, 35)
+        Me.Button2.Size = New System.Drawing.Size(69, 43)
         Me.Button2.TabIndex = 23
         Me.Button2.UseVisualStyleBackColor = True
         '
@@ -101,16 +105,17 @@ Partial Class Subasta
         Me.bCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red
         Me.bCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.bCerrar.Image = CType(resources.GetObject("bCerrar.Image"), System.Drawing.Image)
-        Me.bCerrar.Location = New System.Drawing.Point(1011, 0)
+        Me.bCerrar.Location = New System.Drawing.Point(1348, 0)
+        Me.bCerrar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.bCerrar.Name = "bCerrar"
-        Me.bCerrar.Size = New System.Drawing.Size(52, 35)
+        Me.bCerrar.Size = New System.Drawing.Size(69, 43)
         Me.bCerrar.TabIndex = 21
         Me.bCerrar.UseVisualStyleBackColor = True
         '
         'Guna2Button2
         '
         Me.Guna2Button2.AutoRoundedCorners = True
-        Me.Guna2Button2.BorderRadius = 18
+        Me.Guna2Button2.BorderRadius = 22
         Me.Guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.Guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.Guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
@@ -118,32 +123,34 @@ Partial Class Subasta
         Me.Guna2Button2.FillColor = System.Drawing.Color.MediumSeaGreen
         Me.Guna2Button2.Font = New System.Drawing.Font("Segoe UI Black", 10.8!, System.Drawing.FontStyle.Bold)
         Me.Guna2Button2.ForeColor = System.Drawing.Color.White
-        Me.Guna2Button2.Location = New System.Drawing.Point(343, 96)
+        Me.Guna2Button2.Location = New System.Drawing.Point(457, 118)
+        Me.Guna2Button2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Guna2Button2.Name = "Guna2Button2"
-        Me.Guna2Button2.Size = New System.Drawing.Size(118, 38)
+        Me.Guna2Button2.Size = New System.Drawing.Size(157, 47)
         Me.Guna2Button2.TabIndex = 23
         Me.Guna2Button2.Text = "Guardar"
         '
         'Guna2Button1
         '
         Me.Guna2Button1.AutoRoundedCorners = True
-        Me.Guna2Button1.BorderRadius = 18
+        Me.Guna2Button1.BorderRadius = 22
         Me.Guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.Guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.Guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
         Me.Guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
         Me.Guna2Button1.Font = New System.Drawing.Font("Segoe UI Black", 10.8!, System.Drawing.FontStyle.Bold)
         Me.Guna2Button1.ForeColor = System.Drawing.Color.White
-        Me.Guna2Button1.Location = New System.Drawing.Point(343, 52)
+        Me.Guna2Button1.Location = New System.Drawing.Point(457, 64)
+        Me.Guna2Button1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Guna2Button1.Name = "Guna2Button1"
-        Me.Guna2Button1.Size = New System.Drawing.Size(118, 38)
+        Me.Guna2Button1.Size = New System.Drawing.Size(157, 47)
         Me.Guna2Button1.TabIndex = 22
         Me.Guna2Button1.Text = "Nuevo"
         '
         'Guna2Button3
         '
         Me.Guna2Button3.AutoRoundedCorners = True
-        Me.Guna2Button3.BorderRadius = 18
+        Me.Guna2Button3.BorderRadius = 22
         Me.Guna2Button3.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.Guna2Button3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.Guna2Button3.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
@@ -151,16 +158,17 @@ Partial Class Subasta
         Me.Guna2Button3.FillColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.Guna2Button3.Font = New System.Drawing.Font("Segoe UI Black", 10.8!, System.Drawing.FontStyle.Bold)
         Me.Guna2Button3.ForeColor = System.Drawing.Color.White
-        Me.Guna2Button3.Location = New System.Drawing.Point(343, 140)
+        Me.Guna2Button3.Location = New System.Drawing.Point(457, 172)
+        Me.Guna2Button3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Guna2Button3.Name = "Guna2Button3"
-        Me.Guna2Button3.Size = New System.Drawing.Size(118, 38)
+        Me.Guna2Button3.Size = New System.Drawing.Size(157, 47)
         Me.Guna2Button3.TabIndex = 24
         Me.Guna2Button3.Text = "Modificar"
         '
         'tbID
         '
         Me.tbID.AutoRoundedCorners = True
-        Me.tbID.BorderRadius = 14
+        Me.tbID.BorderRadius = 17
         Me.tbID.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.tbID.DefaultText = ""
         Me.tbID.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
@@ -171,20 +179,20 @@ Partial Class Subasta
         Me.tbID.Font = New System.Drawing.Font("Segoe UI Black", 12.0!, System.Drawing.FontStyle.Bold)
         Me.tbID.ForeColor = System.Drawing.Color.Black
         Me.tbID.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.tbID.Location = New System.Drawing.Point(13, 60)
-        Me.tbID.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.tbID.Location = New System.Drawing.Point(17, 74)
+        Me.tbID.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
         Me.tbID.Name = "tbID"
         Me.tbID.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.tbID.PlaceholderText = "ID"
         Me.tbID.ReadOnly = True
         Me.tbID.SelectedText = ""
-        Me.tbID.Size = New System.Drawing.Size(211, 30)
+        Me.tbID.Size = New System.Drawing.Size(281, 37)
         Me.tbID.TabIndex = 25
         '
         'tbURL_Sub
         '
         Me.tbURL_Sub.AutoRoundedCorners = True
-        Me.tbURL_Sub.BorderRadius = 14
+        Me.tbURL_Sub.BorderRadius = 17
         Me.tbURL_Sub.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.tbURL_Sub.DefaultText = ""
         Me.tbURL_Sub.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
@@ -195,19 +203,19 @@ Partial Class Subasta
         Me.tbURL_Sub.Font = New System.Drawing.Font("Segoe UI Black", 12.0!, System.Drawing.FontStyle.Bold)
         Me.tbURL_Sub.ForeColor = System.Drawing.Color.Black
         Me.tbURL_Sub.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.tbURL_Sub.Location = New System.Drawing.Point(11, 148)
-        Me.tbURL_Sub.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.tbURL_Sub.Location = New System.Drawing.Point(15, 182)
+        Me.tbURL_Sub.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.tbURL_Sub.Name = "tbURL_Sub"
         Me.tbURL_Sub.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.tbURL_Sub.PlaceholderText = "URL"
         Me.tbURL_Sub.SelectedText = ""
-        Me.tbURL_Sub.Size = New System.Drawing.Size(211, 30)
+        Me.tbURL_Sub.Size = New System.Drawing.Size(281, 37)
         Me.tbURL_Sub.TabIndex = 27
         '
         'tbNombre_Sub
         '
         Me.tbNombre_Sub.AutoRoundedCorners = True
-        Me.tbNombre_Sub.BorderRadius = 14
+        Me.tbNombre_Sub.BorderRadius = 17
         Me.tbNombre_Sub.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.tbNombre_Sub.DefaultText = ""
         Me.tbNombre_Sub.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
@@ -218,13 +226,13 @@ Partial Class Subasta
         Me.tbNombre_Sub.Font = New System.Drawing.Font("Segoe UI Black", 12.0!, System.Drawing.FontStyle.Bold)
         Me.tbNombre_Sub.ForeColor = System.Drawing.Color.Black
         Me.tbNombre_Sub.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.tbNombre_Sub.Location = New System.Drawing.Point(13, 104)
-        Me.tbNombre_Sub.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.tbNombre_Sub.Location = New System.Drawing.Point(17, 128)
+        Me.tbNombre_Sub.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
         Me.tbNombre_Sub.Name = "tbNombre_Sub"
         Me.tbNombre_Sub.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.tbNombre_Sub.PlaceholderText = "Nombre"
         Me.tbNombre_Sub.SelectedText = ""
-        Me.tbNombre_Sub.Size = New System.Drawing.Size(211, 30)
+        Me.tbNombre_Sub.Size = New System.Drawing.Size(281, 37)
         Me.tbNombre_Sub.TabIndex = 26
         '
         'dgvSubastas
@@ -256,13 +264,14 @@ Partial Class Subasta
         Me.dgvSubastas.DefaultCellStyle = DataGridViewCellStyle3
         Me.dgvSubastas.EnableHeadersVisualStyles = False
         Me.dgvSubastas.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.dgvSubastas.Location = New System.Drawing.Point(11, 194)
+        Me.dgvSubastas.Location = New System.Drawing.Point(15, 239)
+        Me.dgvSubastas.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.dgvSubastas.Name = "dgvSubastas"
         Me.dgvSubastas.ReadOnly = True
         Me.dgvSubastas.RowHeadersVisible = False
         Me.dgvSubastas.RowTemplate.Height = 24
         Me.dgvSubastas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvSubastas.Size = New System.Drawing.Size(450, 179)
+        Me.dgvSubastas.Size = New System.Drawing.Size(600, 220)
         Me.dgvSubastas.TabIndex = 28
         Me.dgvSubastas.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White
         Me.dgvSubastas.ThemeStyle.AlternatingRowsStyle.Font = Nothing
@@ -288,9 +297,9 @@ Partial Class Subasta
         '
         'Subasta
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(473, 391)
+        Me.ClientSize = New System.Drawing.Size(631, 481)
         Me.Controls.Add(Me.dgvSubastas)
         Me.Controls.Add(Me.tbURL_Sub)
         Me.Controls.Add(Me.tbNombre_Sub)
@@ -300,6 +309,7 @@ Partial Class Subasta
         Me.Controls.Add(Me.Guna2Button1)
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "Subasta"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Subasta"
