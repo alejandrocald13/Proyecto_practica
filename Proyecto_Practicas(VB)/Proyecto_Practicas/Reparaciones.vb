@@ -33,7 +33,7 @@ Public Class Reparaciones
                     Label2.Visible = False
                 Else
                     MessageBox.Show("Vaya, parece que el carro seleccionado, no tiene lote de Compra. Por favor, registra la compra del mismo.", "ERROR AL SELECCIONAR", MessageBoxButtons.RetryCancel, MessageBoxIcon.Asterisk)
-                    cbCarro_repar.SelectedIndex += -1
+                    cbCarro_repar.SelectedIndex = -1
                 End If
                 conn.Close()
                 conn.Dispose()
@@ -180,39 +180,23 @@ Public Class Reparaciones
     Private Sub bUpdate_Click(sender As Object, e As EventArgs) Handles bUpdate.Click
         conn = objetoconexion.AbrirCon
         Try
-            Dim cmd2 As MySqlCommand = New MySqlCommand
-            conn = objetoconexion.AbrirCon
-            cmd2.Connection = conn
-            cmd2.CommandText = "Select * FROM reparaciones WHERE id_carro='" + cbCarro_repar.SelectedValue.ToString + "';"
-            Dim r As MySqlDataReader
-            r = cmd2.ExecuteReader
-            If r.HasRows <> True Then
-                r.Read()
+            If nudCosto_repar.Value = 100 Or tbencar_repar.Text = "" Or cbCarro_repar.SelectedIndex = -1 Then
+                MessageBox.Show("ALGUN CAMPO ESTÁ VACÍO", "ERROR AL MODIFICAR", MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
+            Else
+                cmd = conn.CreateCommand
+                cmd.CommandText = "UPDATE reparaciones SET id_carro=@car,id_compras=@com,costo_reparacion=@cost,encarg_reparacion=@encar,fechae_reparacion=@fecha1,fechad_reparacion=@fecha2,danos_repar=@danos WHERE id_reparaciones=@id"
+                cmd.Parameters.AddWithValue("@id", tbID_repar.Text)
+                cmd.Parameters.AddWithValue("@car", cbCarro_repar.SelectedValue.ToString)
+                cmd.Parameters.AddWithValue("@com", Label2.Text)
+                cmd.Parameters.AddWithValue("@cost", nudCosto_repar.Value)
+                cmd.Parameters.AddWithValue("@encar", tbencar_repar.Text)
+                cmd.Parameters.AddWithValue("@fecha1", dtpEntrada_repar.Value.Date)
+                cmd.Parameters.AddWithValue("@fecha2", dtpEntrega_repar.Value.Date)
+                cmd.Parameters.AddWithValue("@danos", tbDanos_repar.Text)
+                cmd.ExecuteNonQuery()
                 conn.Close()
                 conn.Dispose()
-                If nudCosto_repar.Value = 100 Or tbencar_repar.Text = "" Or cbCarro_repar.SelectedIndex = -1 Then
-                    MessageBox.Show("ALGUN CAMPO ESTÁ VACÍO", "ERROR AL MODIFICAR", MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
-                Else
-                    cmd = conn.CreateCommand
-                    cmd.CommandText = "UPDATE reparaciones SET id_carro=@car,id_compras=@com,costo_reparacion=@cost,encarg_reparacion=@encar,fechae_reparacion=@fecha1,fechad_reparacion=@fecha2,danos_repar=@danos WHERE id_reparaciones=@id"
-                    cmd.Parameters.AddWithValue("@id", tbID_repar.Text)
-                    cmd.Parameters.AddWithValue("@car", cbCarro_repar.SelectedValue.ToString)
-                    cmd.Parameters.AddWithValue("@com", Label2.Text)
-                    cmd.Parameters.AddWithValue("@cost", nudCosto_repar.Value)
-                    cmd.Parameters.AddWithValue("@encar", tbencar_repar.Text)
-                    cmd.Parameters.AddWithValue("@fecha1", dtpEntrada_repar.Value.Date)
-                    cmd.Parameters.AddWithValue("@fecha2", dtpEntrega_repar.Value.Date)
-                    cmd.Parameters.AddWithValue("@danos", tbDanos_repar.Text)
-                    cmd.ExecuteNonQuery()
-                    conn.Close()
-                    conn.Dispose()
-                    mostrar()
-                    limpiar()
-                    limpiar()
-                    bUpdate.Enabled = False
-                End If
-            Else
-                MessageBox.Show("Vaya, parece que el carro seleccionado ya está registrado. Selecciona otro.", "ERROR AL GUARDAR", MessageBoxButtons.RetryCancel, MessageBoxIcon.Asterisk)
+                mostrar()
                 limpiar()
                 limpiar()
                 bUpdate.Enabled = False

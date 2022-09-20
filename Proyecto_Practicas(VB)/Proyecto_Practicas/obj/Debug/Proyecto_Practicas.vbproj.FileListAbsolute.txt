@@ -173,7 +173,6 @@ C:\Users\HP\Documents\GitHub\Proyecto_practica\Proyecto_Practicas(VB)\Proyecto_P
 C:\Users\HP\Documents\GitHub\Proyecto_practica\Proyecto_Practicas(VB)\Proyecto_Practicas\obj\Debug\Proyecto_Practicas.Subasta.resources
 C:\Users\HP\Documents\GitHub\Proyecto_practica\Proyecto_Practicas(VB)\Proyecto_Practicas\obj\Debug\Proyecto_Practicas.vbproj.GenerateResource.Cache
 C:\Users\HP\Documents\GitHub\Proyecto_practica\Proyecto_Practicas(VB)\Proyecto_Practicas\obj\Debug\Proyecto_Practicas.Importacion_Carro.resources
-A:\Roberto\Roberto (Beta)\Proyecto_practica\Proyecto_practica\Proyecto_Practicas(VB)\Proyecto_Practicas\obj\Debug\Proyecto_Practicas.facturacion.resources
 A:\Roberto\Roberto (Beta)\Proyecto_practica\Proyecto_practica\Proyecto_Practicas(VB)\Proyecto_Practicas\obj\Debug\Proyecto_Practicas.Importacion_Carro.resources
 A:\Roberto\Roberto (Beta)\Proyecto_practica\Proyecto_practica\Proyecto_Practicas(VB)\Proyecto_Practicas\obj\Debug\Proyecto_Practicas.Reparaciones.resources
 A:\Roberto\Roberto (Beta)\Proyecto_practica\Proyecto_practica\Proyecto_Practicas(VB)\Proyecto_Practicas\obj\Debug\Proyecto_Practicas.clientes.resources
@@ -184,3 +183,6 @@ C:\Users\diego\OneDrive\Documents\GitHub\Proyecto_practica\Proyecto_Practicas(VB
 C:\Users\diego\OneDrive\Documents\GitHub\Proyecto_practica\Proyecto_Practicas(VB)\Proyecto_Practicas\obj\Debug\Proyecto_Practicas.Costodefacturación.resources
 C:\Users\diego\OneDrive\Documents\GitHub\Proyecto_practica\Proyecto_Practicas(VB)\Proyecto_Practicas\obj\Debug\Proyecto_Practicas.Inventario.resources
 C:\Users\diego\OneDrive\Documents\GitHub\Proyecto_practica\Proyecto_Practicas(VB)\Proyecto_Practicas\obj\Debug\Proyecto_Practicas.Ventas.resources
+A:\Roberto\Roberto (Beta)\Proyecto_practica\Proyecto_practica\Proyecto_Practicas(VB)\Proyecto_Practicas\obj\Debug\Proyecto_Practicas.Costodefacturación.resources
+A:\Roberto\Roberto (Beta)\Proyecto_practica\Proyecto_practica\Proyecto_Practicas(VB)\Proyecto_Practicas\obj\Debug\Proyecto_Practicas.Inventario.resources
+A:\Roberto\Roberto (Beta)\Proyecto_practica\Proyecto_practica\Proyecto_Practicas(VB)\Proyecto_Practicas\obj\Debug\Proyecto_Practicas.Ventas.resources

@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Costodefacturación
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,68 +20,72 @@ Partial Class Costodefacturación
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Costodefacturación))
         Me.dgvCostodefac = New Guna.UI2.WinForms.Guna2DataGridView()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.Btnmodi_cliente = New Guna.UI2.WinForms.Guna2Button()
         Me.btnguarda_client = New Guna.UI2.WinForms.Guna2Button()
         Me.btnnew_client = New Guna.UI2.WinForms.Guna2Button()
-        Me.tbplaca_cdfac = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.tbplegal_cdfac = New Guna.UI2.WinForms.Guna2TextBox()
         Me.tbID_cdfac = New Guna.UI2.WinForms.Guna2TextBox()
         Me.cbCarro_Cdfac = New Guna.UI2.WinForms.Guna2ComboBox()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.cbcom_Cdfac = New Guna.UI2.WinForms.Guna2ComboBox()
-        Me.cbfact_cdfac = New Guna.UI2.WinForms.Guna2ComboBox()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.bMinimizar = New System.Windows.Forms.Button()
+        Me.bCerrar = New System.Windows.Forms.Button()
+        Me.tbLoteSelec_Impo = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.tbCarroSelec_CompraCar = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.tbEncargselec_Impo = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.tbIPRIMA_impo = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.tbIVA_impo = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.tbCostoPlacas_Impo = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.cbimpo_cdfac = New Guna.UI2.WinForms.Guna2ComboBox()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.tbirs_cdfac = New Guna.UI2.WinForms.Guna2TextBox()
         CType(Me.dgvCostodefac, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'dgvCostodefac
         '
-        DataGridViewCellStyle7.BackColor = System.Drawing.Color.White
-        Me.dgvCostodefac.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle7
+        DataGridViewCellStyle4.BackColor = System.Drawing.Color.White
+        Me.dgvCostodefac.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle4
         Me.dgvCostodefac.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
         Me.dgvCostodefac.BackgroundColor = System.Drawing.Color.White
         Me.dgvCostodefac.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dgvCostodefac.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
         Me.dgvCostodefac.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle8.BackColor = System.Drawing.Color.HotPink
-        DataGridViewCellStyle8.Font = New System.Drawing.Font("Segoe UI Black", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle8.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvCostodefac.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle8
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(65, Byte), Integer), CType(CType(115, Byte), Integer))
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Segoe UI Black", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvCostodefac.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
         Me.dgvCostodefac.ColumnHeadersHeight = 20
-        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle9.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle9.Font = New System.Drawing.Font("Segoe UI Black", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(215, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvCostodefac.DefaultCellStyle = DataGridViewCellStyle9
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle6.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Segoe UI Black", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(182, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvCostodefac.DefaultCellStyle = DataGridViewCellStyle6
         Me.dgvCostodefac.EnableHeadersVisualStyles = False
         Me.dgvCostodefac.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.dgvCostodefac.Location = New System.Drawing.Point(81, 277)
-        Me.dgvCostodefac.Margin = New System.Windows.Forms.Padding(4)
+        Me.dgvCostodefac.Location = New System.Drawing.Point(13, 228)
         Me.dgvCostodefac.Name = "dgvCostodefac"
         Me.dgvCostodefac.ReadOnly = True
         Me.dgvCostodefac.RowHeadersVisible = False
         Me.dgvCostodefac.RowTemplate.Height = 24
         Me.dgvCostodefac.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvCostodefac.Size = New System.Drawing.Size(1036, 319)
+        Me.dgvCostodefac.Size = New System.Drawing.Size(795, 268)
         Me.dgvCostodefac.TabIndex = 96
         Me.dgvCostodefac.TabStop = False
         Me.dgvCostodefac.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White
@@ -106,20 +110,10 @@ Partial Class Costodefacturación
         Me.dgvCostodefac.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.dgvCostodefac.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
         '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Segoe UI Black", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(98, 143)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(0, 28)
-        Me.Label1.TabIndex = 95
-        '
         'Btnmodi_cliente
         '
         Me.Btnmodi_cliente.AutoRoundedCorners = True
-        Me.Btnmodi_cliente.BorderRadius = 22
+        Me.Btnmodi_cliente.BorderRadius = 18
         Me.Btnmodi_cliente.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.Btnmodi_cliente.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.Btnmodi_cliente.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
@@ -127,17 +121,16 @@ Partial Class Costodefacturación
         Me.Btnmodi_cliente.FillColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.Btnmodi_cliente.Font = New System.Drawing.Font("Segoe UI Black", 10.8!, System.Drawing.FontStyle.Bold)
         Me.Btnmodi_cliente.ForeColor = System.Drawing.Color.White
-        Me.Btnmodi_cliente.Location = New System.Drawing.Point(833, 115)
-        Me.Btnmodi_cliente.Margin = New System.Windows.Forms.Padding(4)
+        Me.Btnmodi_cliente.Location = New System.Drawing.Point(628, 166)
         Me.Btnmodi_cliente.Name = "Btnmodi_cliente"
-        Me.Btnmodi_cliente.Size = New System.Drawing.Size(240, 47)
+        Me.Btnmodi_cliente.Size = New System.Drawing.Size(180, 38)
         Me.Btnmodi_cliente.TabIndex = 94
         Me.Btnmodi_cliente.Text = "Modificar"
         '
         'btnguarda_client
         '
         Me.btnguarda_client.AutoRoundedCorners = True
-        Me.btnguarda_client.BorderRadius = 22
+        Me.btnguarda_client.BorderRadius = 18
         Me.btnguarda_client.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.btnguarda_client.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.btnguarda_client.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
@@ -145,10 +138,9 @@ Partial Class Costodefacturación
         Me.btnguarda_client.FillColor = System.Drawing.Color.MediumSeaGreen
         Me.btnguarda_client.Font = New System.Drawing.Font("Segoe UI Black", 10.8!, System.Drawing.FontStyle.Bold)
         Me.btnguarda_client.ForeColor = System.Drawing.Color.White
-        Me.btnguarda_client.Location = New System.Drawing.Point(833, 61)
-        Me.btnguarda_client.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnguarda_client.Location = New System.Drawing.Point(628, 120)
         Me.btnguarda_client.Name = "btnguarda_client"
-        Me.btnguarda_client.Size = New System.Drawing.Size(240, 47)
+        Me.btnguarda_client.Size = New System.Drawing.Size(180, 38)
         Me.btnguarda_client.TabIndex = 93
         Me.btnguarda_client.Text = "Guardar"
         '
@@ -156,71 +148,23 @@ Partial Class Costodefacturación
         '
         Me.btnnew_client.AutoRoundedCorners = True
         Me.btnnew_client.BackColor = System.Drawing.Color.Transparent
-        Me.btnnew_client.BorderRadius = 22
+        Me.btnnew_client.BorderRadius = 18
         Me.btnnew_client.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.btnnew_client.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.btnnew_client.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
         Me.btnnew_client.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
         Me.btnnew_client.Font = New System.Drawing.Font("Segoe UI Black", 10.8!, System.Drawing.FontStyle.Bold)
         Me.btnnew_client.ForeColor = System.Drawing.Color.White
-        Me.btnnew_client.Location = New System.Drawing.Point(833, 7)
-        Me.btnnew_client.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnnew_client.Location = New System.Drawing.Point(628, 76)
         Me.btnnew_client.Name = "btnnew_client"
-        Me.btnnew_client.Size = New System.Drawing.Size(240, 47)
+        Me.btnnew_client.Size = New System.Drawing.Size(180, 38)
         Me.btnnew_client.TabIndex = 92
         Me.btnnew_client.Text = "Nuevo"
-        '
-        'tbplaca_cdfac
-        '
-        Me.tbplaca_cdfac.AutoRoundedCorners = True
-        Me.tbplaca_cdfac.BorderRadius = 17
-        Me.tbplaca_cdfac.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.tbplaca_cdfac.DefaultText = ""
-        Me.tbplaca_cdfac.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.tbplaca_cdfac.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.tbplaca_cdfac.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.tbplaca_cdfac.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.tbplaca_cdfac.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.tbplaca_cdfac.Font = New System.Drawing.Font("Segoe UI Black", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.tbplaca_cdfac.ForeColor = System.Drawing.Color.Black
-        Me.tbplaca_cdfac.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.tbplaca_cdfac.Location = New System.Drawing.Point(469, 78)
-        Me.tbplaca_cdfac.Margin = New System.Windows.Forms.Padding(5)
-        Me.tbplaca_cdfac.MaxLength = 9
-        Me.tbplaca_cdfac.Name = "tbplaca_cdfac"
-        Me.tbplaca_cdfac.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.tbplaca_cdfac.PlaceholderText = "Placas "
-        Me.tbplaca_cdfac.SelectedText = ""
-        Me.tbplaca_cdfac.Size = New System.Drawing.Size(345, 37)
-        Me.tbplaca_cdfac.TabIndex = 90
-        '
-        'tbplegal_cdfac
-        '
-        Me.tbplegal_cdfac.AutoRoundedCorners = True
-        Me.tbplegal_cdfac.BorderRadius = 17
-        Me.tbplegal_cdfac.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.tbplegal_cdfac.DefaultText = ""
-        Me.tbplegal_cdfac.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.tbplegal_cdfac.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.tbplegal_cdfac.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.tbplegal_cdfac.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.tbplegal_cdfac.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.tbplegal_cdfac.Font = New System.Drawing.Font("Segoe UI Black", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.tbplegal_cdfac.ForeColor = System.Drawing.Color.Black
-        Me.tbplegal_cdfac.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.tbplegal_cdfac.Location = New System.Drawing.Point(467, 125)
-        Me.tbplegal_cdfac.Margin = New System.Windows.Forms.Padding(5)
-        Me.tbplegal_cdfac.Name = "tbplegal_cdfac"
-        Me.tbplegal_cdfac.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.tbplegal_cdfac.PlaceholderText = "Proceso legal"
-        Me.tbplegal_cdfac.SelectedText = ""
-        Me.tbplegal_cdfac.Size = New System.Drawing.Size(347, 37)
-        Me.tbplegal_cdfac.TabIndex = 91
         '
         'tbID_cdfac
         '
         Me.tbID_cdfac.AutoRoundedCorners = True
-        Me.tbID_cdfac.BorderRadius = 17
+        Me.tbID_cdfac.BorderRadius = 14
         Me.tbID_cdfac.Cursor = System.Windows.Forms.Cursors.No
         Me.tbID_cdfac.DefaultText = ""
         Me.tbID_cdfac.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
@@ -231,14 +175,14 @@ Partial Class Costodefacturación
         Me.tbID_cdfac.Font = New System.Drawing.Font("Segoe UI Black", 12.0!, System.Drawing.FontStyle.Bold)
         Me.tbID_cdfac.ForeColor = System.Drawing.Color.Black
         Me.tbID_cdfac.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.tbID_cdfac.Location = New System.Drawing.Point(40, 7)
-        Me.tbID_cdfac.Margin = New System.Windows.Forms.Padding(5)
+        Me.tbID_cdfac.Location = New System.Drawing.Point(13, 54)
+        Me.tbID_cdfac.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.tbID_cdfac.Name = "tbID_cdfac"
         Me.tbID_cdfac.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.tbID_cdfac.PlaceholderText = "ID"
         Me.tbID_cdfac.ReadOnly = True
         Me.tbID_cdfac.SelectedText = ""
-        Me.tbID_cdfac.Size = New System.Drawing.Size(57, 37)
+        Me.tbID_cdfac.Size = New System.Drawing.Size(43, 30)
         Me.tbID_cdfac.TabIndex = 85
         '
         'cbCarro_Cdfac
@@ -253,24 +197,10 @@ Partial Class Costodefacturación
         Me.cbCarro_Cdfac.Font = New System.Drawing.Font("Segoe UI Black", 9.75!, System.Drawing.FontStyle.Bold)
         Me.cbCarro_Cdfac.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
         Me.cbCarro_Cdfac.ItemHeight = 30
-        Me.cbCarro_Cdfac.Location = New System.Drawing.Point(142, 71)
-        Me.cbCarro_Cdfac.Margin = New System.Windows.Forms.Padding(4)
+        Me.cbCarro_Cdfac.Location = New System.Drawing.Point(88, 85)
         Me.cbCarro_Cdfac.Name = "cbCarro_Cdfac"
-        Me.cbCarro_Cdfac.Size = New System.Drawing.Size(257, 36)
+        Me.cbCarro_Cdfac.Size = New System.Drawing.Size(194, 36)
         Me.cbCarro_Cdfac.TabIndex = 100
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.BackColor = System.Drawing.Color.Transparent
-        Me.Label2.Font = New System.Drawing.Font("Segoe UI Black", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.Black
-        Me.Label2.Location = New System.Drawing.Point(35, 133)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(90, 28)
-        Me.Label2.TabIndex = 99
-        Me.Label2.Text = "Compra"
         '
         'Label3
         '
@@ -278,174 +208,321 @@ Partial Class Costodefacturación
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Segoe UI Black", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.Black
-        Me.Label3.Location = New System.Drawing.Point(35, 80)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label3.Location = New System.Drawing.Point(12, 93)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(67, 28)
+        Me.Label3.Size = New System.Drawing.Size(53, 21)
         Me.Label3.TabIndex = 98
         Me.Label3.Text = "Carro"
         '
-        'cbcom_Cdfac
+        'Panel1
         '
-        Me.cbcom_Cdfac.AutoRoundedCorners = True
-        Me.cbcom_Cdfac.BackColor = System.Drawing.Color.Transparent
-        Me.cbcom_Cdfac.BorderRadius = 17
-        Me.cbcom_Cdfac.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
-        Me.cbcom_Cdfac.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cbcom_Cdfac.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.cbcom_Cdfac.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.cbcom_Cdfac.Font = New System.Drawing.Font("Segoe UI Black", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.cbcom_Cdfac.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
-        Me.cbcom_Cdfac.ItemHeight = 30
-        Me.cbcom_Cdfac.Location = New System.Drawing.Point(142, 126)
-        Me.cbcom_Cdfac.Margin = New System.Windows.Forms.Padding(4)
-        Me.cbcom_Cdfac.Name = "cbcom_Cdfac"
-        Me.cbcom_Cdfac.Size = New System.Drawing.Size(257, 36)
-        Me.cbcom_Cdfac.TabIndex = 97
+        Me.Panel1.BackColor = System.Drawing.Color.DarkBlue
+        Me.Panel1.Controls.Add(Me.Button1)
+        Me.Panel1.Controls.Add(Me.Button2)
+        Me.Panel1.Controls.Add(Me.bMinimizar)
+        Me.Panel1.Controls.Add(Me.bCerrar)
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel1.Location = New System.Drawing.Point(0, 0)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(823, 35)
+        Me.Panel1.TabIndex = 107
         '
-        'cbfact_cdfac
+        'Button1
         '
-        Me.cbfact_cdfac.AutoRoundedCorners = True
-        Me.cbfact_cdfac.BackColor = System.Drawing.Color.Transparent
-        Me.cbfact_cdfac.BorderRadius = 17
-        Me.cbfact_cdfac.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
-        Me.cbfact_cdfac.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cbfact_cdfac.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.cbfact_cdfac.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.cbfact_cdfac.Font = New System.Drawing.Font("Segoe UI Black", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.cbfact_cdfac.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
-        Me.cbfact_cdfac.ItemHeight = 30
-        Me.cbfact_cdfac.Location = New System.Drawing.Point(142, 181)
-        Me.cbfact_cdfac.Margin = New System.Windows.Forms.Padding(4)
-        Me.cbfact_cdfac.Name = "cbfact_cdfac"
-        Me.cbfact_cdfac.Size = New System.Drawing.Size(257, 36)
-        Me.cbfact_cdfac.TabIndex = 105
+        Me.Button1.FlatAppearance.BorderSize = 0
+        Me.Button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray
+        Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
+        Me.Button1.Location = New System.Drawing.Point(713, 0)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(52, 35)
+        Me.Button1.TabIndex = 24
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'Button2
+        '
+        Me.Button2.FlatAppearance.BorderSize = 0
+        Me.Button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray
+        Me.Button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button2.Image = CType(resources.GetObject("Button2.Image"), System.Drawing.Image)
+        Me.Button2.Location = New System.Drawing.Point(771, 0)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(52, 35)
+        Me.Button2.TabIndex = 23
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'bMinimizar
+        '
+        Me.bMinimizar.FlatAppearance.BorderSize = 0
+        Me.bMinimizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray
+        Me.bMinimizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray
+        Me.bMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.bMinimizar.Image = CType(resources.GetObject("bMinimizar.Image"), System.Drawing.Image)
+        Me.bMinimizar.Location = New System.Drawing.Point(953, 0)
+        Me.bMinimizar.Name = "bMinimizar"
+        Me.bMinimizar.Size = New System.Drawing.Size(52, 35)
+        Me.bMinimizar.TabIndex = 22
+        Me.bMinimizar.UseVisualStyleBackColor = True
+        '
+        'bCerrar
+        '
+        Me.bCerrar.FlatAppearance.BorderSize = 0
+        Me.bCerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray
+        Me.bCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red
+        Me.bCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.bCerrar.Image = CType(resources.GetObject("bCerrar.Image"), System.Drawing.Image)
+        Me.bCerrar.Location = New System.Drawing.Point(1011, 0)
+        Me.bCerrar.Name = "bCerrar"
+        Me.bCerrar.Size = New System.Drawing.Size(52, 35)
+        Me.bCerrar.TabIndex = 21
+        Me.bCerrar.UseVisualStyleBackColor = True
+        '
+        'tbLoteSelec_Impo
+        '
+        Me.tbLoteSelec_Impo.AutoRoundedCorners = True
+        Me.tbLoteSelec_Impo.BackColor = System.Drawing.Color.Transparent
+        Me.tbLoteSelec_Impo.BorderColor = System.Drawing.Color.FromArgb(CType(CType(213, Byte), Integer), CType(CType(218, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.tbLoteSelec_Impo.BorderRadius = 14
+        Me.tbLoteSelec_Impo.Cursor = System.Windows.Forms.Cursors.No
+        Me.tbLoteSelec_Impo.DefaultText = ""
+        Me.tbLoteSelec_Impo.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.tbLoteSelec_Impo.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.tbLoteSelec_Impo.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.tbLoteSelec_Impo.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.tbLoteSelec_Impo.FillColor = System.Drawing.Color.SteelBlue
+        Me.tbLoteSelec_Impo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.tbLoteSelec_Impo.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
+        Me.tbLoteSelec_Impo.ForeColor = System.Drawing.Color.White
+        Me.tbLoteSelec_Impo.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.tbLoteSelec_Impo.Location = New System.Drawing.Point(13, 128)
+        Me.tbLoteSelec_Impo.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.tbLoteSelec_Impo.Name = "tbLoteSelec_Impo"
+        Me.tbLoteSelec_Impo.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.tbLoteSelec_Impo.PlaceholderForeColor = System.Drawing.Color.White
+        Me.tbLoteSelec_Impo.PlaceholderText = "Lote de Compra"
+        Me.tbLoteSelec_Impo.ReadOnly = True
+        Me.tbLoteSelec_Impo.SelectedText = ""
+        Me.tbLoteSelec_Impo.Size = New System.Drawing.Size(269, 30)
+        Me.tbLoteSelec_Impo.TabIndex = 109
+        '
+        'tbCarroSelec_CompraCar
+        '
+        Me.tbCarroSelec_CompraCar.AutoRoundedCorners = True
+        Me.tbCarroSelec_CompraCar.BackColor = System.Drawing.Color.Transparent
+        Me.tbCarroSelec_CompraCar.BorderColor = System.Drawing.Color.FromArgb(CType(CType(213, Byte), Integer), CType(CType(218, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.tbCarroSelec_CompraCar.BorderRadius = 14
+        Me.tbCarroSelec_CompraCar.Cursor = System.Windows.Forms.Cursors.No
+        Me.tbCarroSelec_CompraCar.DefaultText = ""
+        Me.tbCarroSelec_CompraCar.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.tbCarroSelec_CompraCar.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.tbCarroSelec_CompraCar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.tbCarroSelec_CompraCar.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.tbCarroSelec_CompraCar.FillColor = System.Drawing.Color.DarkGreen
+        Me.tbCarroSelec_CompraCar.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.tbCarroSelec_CompraCar.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
+        Me.tbCarroSelec_CompraCar.ForeColor = System.Drawing.Color.White
+        Me.tbCarroSelec_CompraCar.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.tbCarroSelec_CompraCar.Location = New System.Drawing.Point(323, 54)
+        Me.tbCarroSelec_CompraCar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.tbCarroSelec_CompraCar.Name = "tbCarroSelec_CompraCar"
+        Me.tbCarroSelec_CompraCar.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.tbCarroSelec_CompraCar.PlaceholderForeColor = System.Drawing.Color.White
+        Me.tbCarroSelec_CompraCar.PlaceholderText = "Carro Seleccionado"
+        Me.tbCarroSelec_CompraCar.ReadOnly = True
+        Me.tbCarroSelec_CompraCar.SelectedText = ""
+        Me.tbCarroSelec_CompraCar.Size = New System.Drawing.Size(275, 30)
+        Me.tbCarroSelec_CompraCar.TabIndex = 108
+        '
+        'tbEncargselec_Impo
+        '
+        Me.tbEncargselec_Impo.AutoRoundedCorners = True
+        Me.tbEncargselec_Impo.BackColor = System.Drawing.Color.Transparent
+        Me.tbEncargselec_Impo.BorderColor = System.Drawing.Color.FromArgb(CType(CType(213, Byte), Integer), CType(CType(218, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.tbEncargselec_Impo.BorderRadius = 14
+        Me.tbEncargselec_Impo.Cursor = System.Windows.Forms.Cursors.No
+        Me.tbEncargselec_Impo.DefaultText = ""
+        Me.tbEncargselec_Impo.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.tbEncargselec_Impo.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.tbEncargselec_Impo.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.tbEncargselec_Impo.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.tbEncargselec_Impo.FillColor = System.Drawing.Color.SteelBlue
+        Me.tbEncargselec_Impo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.tbEncargselec_Impo.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
+        Me.tbEncargselec_Impo.ForeColor = System.Drawing.Color.White
+        Me.tbEncargselec_Impo.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.tbEncargselec_Impo.Location = New System.Drawing.Point(13, 166)
+        Me.tbEncargselec_Impo.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.tbEncargselec_Impo.Name = "tbEncargselec_Impo"
+        Me.tbEncargselec_Impo.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.tbEncargselec_Impo.PlaceholderForeColor = System.Drawing.Color.White
+        Me.tbEncargselec_Impo.PlaceholderText = "Encargado de Importación"
+        Me.tbEncargselec_Impo.ReadOnly = True
+        Me.tbEncargselec_Impo.SelectedText = ""
+        Me.tbEncargselec_Impo.Size = New System.Drawing.Size(269, 30)
+        Me.tbEncargselec_Impo.TabIndex = 112
+        '
+        'tbIPRIMA_impo
+        '
+        Me.tbIPRIMA_impo.AutoRoundedCorners = True
+        Me.tbIPRIMA_impo.BackColor = System.Drawing.Color.Transparent
+        Me.tbIPRIMA_impo.BorderColor = System.Drawing.Color.FromArgb(CType(CType(213, Byte), Integer), CType(CType(218, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.tbIPRIMA_impo.BorderRadius = 14
+        Me.tbIPRIMA_impo.Cursor = System.Windows.Forms.Cursors.No
+        Me.tbIPRIMA_impo.DefaultText = ""
+        Me.tbIPRIMA_impo.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.tbIPRIMA_impo.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.tbIPRIMA_impo.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.tbIPRIMA_impo.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.tbIPRIMA_impo.FillColor = System.Drawing.Color.SteelBlue
+        Me.tbIPRIMA_impo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.tbIPRIMA_impo.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
+        Me.tbIPRIMA_impo.ForeColor = System.Drawing.Color.White
+        Me.tbIPRIMA_impo.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.tbIPRIMA_impo.Location = New System.Drawing.Point(323, 129)
+        Me.tbIPRIMA_impo.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.tbIPRIMA_impo.Name = "tbIPRIMA_impo"
+        Me.tbIPRIMA_impo.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.tbIPRIMA_impo.PlaceholderForeColor = System.Drawing.Color.White
+        Me.tbIPRIMA_impo.PlaceholderText = "IPRIMA (Q)"
+        Me.tbIPRIMA_impo.ReadOnly = True
+        Me.tbIPRIMA_impo.SelectedText = ""
+        Me.tbIPRIMA_impo.Size = New System.Drawing.Size(275, 30)
+        Me.tbIPRIMA_impo.TabIndex = 113
+        '
+        'tbIVA_impo
+        '
+        Me.tbIVA_impo.AutoRoundedCorners = True
+        Me.tbIVA_impo.BackColor = System.Drawing.Color.Transparent
+        Me.tbIVA_impo.BorderColor = System.Drawing.Color.FromArgb(CType(CType(213, Byte), Integer), CType(CType(218, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.tbIVA_impo.BorderRadius = 14
+        Me.tbIVA_impo.Cursor = System.Windows.Forms.Cursors.No
+        Me.tbIVA_impo.DefaultText = ""
+        Me.tbIVA_impo.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.tbIVA_impo.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.tbIVA_impo.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.tbIVA_impo.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.tbIVA_impo.FillColor = System.Drawing.Color.SteelBlue
+        Me.tbIVA_impo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.tbIVA_impo.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
+        Me.tbIVA_impo.ForeColor = System.Drawing.Color.White
+        Me.tbIVA_impo.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.tbIVA_impo.Location = New System.Drawing.Point(323, 166)
+        Me.tbIVA_impo.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.tbIVA_impo.Name = "tbIVA_impo"
+        Me.tbIVA_impo.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.tbIVA_impo.PlaceholderForeColor = System.Drawing.Color.White
+        Me.tbIVA_impo.PlaceholderText = "IVA (Q)"
+        Me.tbIVA_impo.ReadOnly = True
+        Me.tbIVA_impo.SelectedText = ""
+        Me.tbIVA_impo.Size = New System.Drawing.Size(275, 30)
+        Me.tbIVA_impo.TabIndex = 114
+        '
+        'tbCostoPlacas_Impo
+        '
+        Me.tbCostoPlacas_Impo.AutoRoundedCorners = True
+        Me.tbCostoPlacas_Impo.BackColor = System.Drawing.Color.Transparent
+        Me.tbCostoPlacas_Impo.BorderRadius = 14
+        Me.tbCostoPlacas_Impo.Cursor = System.Windows.Forms.Cursors.No
+        Me.tbCostoPlacas_Impo.DefaultText = ""
+        Me.tbCostoPlacas_Impo.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.tbCostoPlacas_Impo.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.tbCostoPlacas_Impo.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.tbCostoPlacas_Impo.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.tbCostoPlacas_Impo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.tbCostoPlacas_Impo.Font = New System.Drawing.Font("Segoe UI Black", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.tbCostoPlacas_Impo.ForeColor = System.Drawing.Color.Black
+        Me.tbCostoPlacas_Impo.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.tbCostoPlacas_Impo.Location = New System.Drawing.Point(322, 91)
+        Me.tbCostoPlacas_Impo.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.tbCostoPlacas_Impo.Name = "tbCostoPlacas_Impo"
+        Me.tbCostoPlacas_Impo.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.tbCostoPlacas_Impo.PlaceholderText = "Costo de Placas (Q)"
+        Me.tbCostoPlacas_Impo.SelectedText = ""
+        Me.tbCostoPlacas_Impo.Size = New System.Drawing.Size(278, 30)
+        Me.tbCostoPlacas_Impo.TabIndex = 115
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(192, 54)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(0, 13)
+        Me.Label1.TabIndex = 116
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(28, 205)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(0, 13)
+        Me.Label2.TabIndex = 117
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.BackColor = System.Drawing.Color.Transparent
         Me.Label4.Font = New System.Drawing.Font("Segoe UI Black", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.ForeColor = System.Drawing.Color.Black
-        Me.Label4.Location = New System.Drawing.Point(-6, 233)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label4.ForeColor = System.Drawing.Color.Green
+        Me.Label4.Location = New System.Drawing.Point(661, 46)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(140, 28)
-        Me.Label4.TabIndex = 104
-        Me.Label4.Text = "Importacion "
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.BackColor = System.Drawing.Color.Transparent
-        Me.Label5.Font = New System.Drawing.Font("Segoe UI Black", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.ForeColor = System.Drawing.Color.Black
-        Me.Label5.Location = New System.Drawing.Point(7, 181)
-        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(127, 28)
-        Me.Label5.TabIndex = 103
-        Me.Label5.Text = "Facturacion"
-        '
-        'cbimpo_cdfac
-        '
-        Me.cbimpo_cdfac.AutoRoundedCorners = True
-        Me.cbimpo_cdfac.BackColor = System.Drawing.Color.Transparent
-        Me.cbimpo_cdfac.BorderRadius = 17
-        Me.cbimpo_cdfac.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
-        Me.cbimpo_cdfac.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cbimpo_cdfac.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.cbimpo_cdfac.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.cbimpo_cdfac.Font = New System.Drawing.Font("Segoe UI Black", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.cbimpo_cdfac.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
-        Me.cbimpo_cdfac.ItemHeight = 30
-        Me.cbimpo_cdfac.Location = New System.Drawing.Point(142, 233)
-        Me.cbimpo_cdfac.Margin = New System.Windows.Forms.Padding(4)
-        Me.cbimpo_cdfac.Name = "cbimpo_cdfac"
-        Me.cbimpo_cdfac.Size = New System.Drawing.Size(257, 36)
-        Me.cbimpo_cdfac.TabIndex = 102
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Segoe UI Black", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(98, 253)
-        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(0, 28)
-        Me.Label6.TabIndex = 101
-        '
-        'tbirs_cdfac
-        '
-        Me.tbirs_cdfac.AutoRoundedCorners = True
-        Me.tbirs_cdfac.BorderRadius = 17
-        Me.tbirs_cdfac.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.tbirs_cdfac.DefaultText = ""
-        Me.tbirs_cdfac.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.tbirs_cdfac.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.tbirs_cdfac.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.tbirs_cdfac.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.tbirs_cdfac.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.tbirs_cdfac.Font = New System.Drawing.Font("Segoe UI Black", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.tbirs_cdfac.ForeColor = System.Drawing.Color.Black
-        Me.tbirs_cdfac.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.tbirs_cdfac.Location = New System.Drawing.Point(467, 172)
-        Me.tbirs_cdfac.Margin = New System.Windows.Forms.Padding(5)
-        Me.tbirs_cdfac.Name = "tbirs_cdfac"
-        Me.tbirs_cdfac.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.tbirs_cdfac.PlaceholderText = "IRS "
-        Me.tbirs_cdfac.SelectedText = ""
-        Me.tbirs_cdfac.Size = New System.Drawing.Size(347, 37)
-        Me.tbirs_cdfac.TabIndex = 106
+        Me.Label4.Size = New System.Drawing.Size(0, 21)
+        Me.Label4.TabIndex = 118
         '
         'Costodefacturación
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ControlLight
-        Me.ClientSize = New System.Drawing.Size(1295, 681)
-        Me.Controls.Add(Me.tbirs_cdfac)
-        Me.Controls.Add(Me.cbfact_cdfac)
+        Me.ClientSize = New System.Drawing.Size(823, 518)
         Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.cbimpo_cdfac)
-        Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.cbCarro_Cdfac)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.cbcom_Cdfac)
-        Me.Controls.Add(Me.dgvCostodefac)
         Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.tbCostoPlacas_Impo)
+        Me.Controls.Add(Me.tbIVA_impo)
+        Me.Controls.Add(Me.tbIPRIMA_impo)
+        Me.Controls.Add(Me.tbEncargselec_Impo)
+        Me.Controls.Add(Me.tbLoteSelec_Impo)
+        Me.Controls.Add(Me.tbCarroSelec_CompraCar)
+        Me.Controls.Add(Me.Panel1)
+        Me.Controls.Add(Me.cbCarro_Cdfac)
+        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.dgvCostodefac)
         Me.Controls.Add(Me.Btnmodi_cliente)
         Me.Controls.Add(Me.btnguarda_client)
         Me.Controls.Add(Me.btnnew_client)
-        Me.Controls.Add(Me.tbplaca_cdfac)
-        Me.Controls.Add(Me.tbplegal_cdfac)
         Me.Controls.Add(Me.tbID_cdfac)
         Me.Cursor = System.Windows.Forms.Cursors.Arrow
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "Costodefacturación"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Costodefacturación"
         CType(Me.dgvCostodefac, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel1.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
     Friend WithEvents dgvCostodefac As Guna.UI2.WinForms.Guna2DataGridView
-    Friend WithEvents Label1 As Label
     Friend WithEvents Btnmodi_cliente As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents btnguarda_client As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents btnnew_client As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents tbplaca_cdfac As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents tbplegal_cdfac As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents tbID_cdfac As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents cbCarro_Cdfac As Guna.UI2.WinForms.Guna2ComboBox
-    Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents cbcom_Cdfac As Guna.UI2.WinForms.Guna2ComboBox
-    Friend WithEvents cbfact_cdfac As Guna.UI2.WinForms.Guna2ComboBox
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents Button1 As Button
+    Friend WithEvents Button2 As Button
+    Friend WithEvents bMinimizar As Button
+    Friend WithEvents bCerrar As Button
+    Friend WithEvents tbLoteSelec_Impo As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents tbCarroSelec_CompraCar As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents tbEncargselec_Impo As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents tbIPRIMA_impo As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents tbIVA_impo As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents tbCostoPlacas_Impo As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Label2 As Label
     Friend WithEvents Label4 As Label
-    Friend WithEvents Label5 As Label
-    Friend WithEvents cbimpo_cdfac As Guna.UI2.WinForms.Guna2ComboBox
-    Friend WithEvents Label6 As Label
-    Friend WithEvents tbirs_cdfac As Guna.UI2.WinForms.Guna2TextBox
 End Class

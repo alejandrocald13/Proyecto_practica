@@ -88,7 +88,7 @@ Public Class Importacion_Carro
                     Label2.Visible = False
                 Else
                     MessageBox.Show("Vaya, parece que el carro seleccionado, no tiene lote de Compra. Por favor, registra la compra del mismo.", "ERROR AL SELECCIONAR", MessageBoxButtons.RetryCancel, MessageBoxIcon.Asterisk)
-                    cbCarro_Compraimpor.SelectedIndex += -1
+                    cbCarro_Compraimpor.SelectedIndex = -1
                 End If
                 conn.Close()
                 conn.Dispose()
@@ -118,23 +118,38 @@ Public Class Importacion_Carro
     Private Sub btnguarda_impor_Click(sender As Object, e As EventArgs) Handles btnguarda_impor.Click
         conn = objetoconexion.AbrirCon
         Try
-            If tbencar_impor.Text = "" Or tbmeto_impor.Text = "" Or cbCarro_Compraimpor.SelectedIndex = -1 Then
-                MessageBox.Show("ALGUN CAMPO ESTÁ VACÍO", "ERROR AL GUARDAR", MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
-            Else
-                cmd = conn.CreateCommand
-                cmd.CommandText = "insert into importaciones(id_carro,id_compras,encarg_impo,metodo_impo,costo_impo)values(@car,@com,@encar,@met, @cost);"
-                cmd.Parameters.AddWithValue("@car", cbCarro_Compraimpor.SelectedValue.ToString)
-                cmd.Parameters.AddWithValue("@com", Label2.Text)
-                cmd.Parameters.AddWithValue("@encar", tbencar_impor.Text)
-                cmd.Parameters.AddWithValue("@met", tbmeto_impor.Text)
-                cmd.Parameters.AddWithValue("@cost", nudCosto_impor.Value)
-                cmd.ExecuteNonQuery()
+            Dim cmd2 As MySqlCommand = New MySqlCommand
+            conn = objetoconexion.AbrirCon
+            cmd2.Connection = conn
+            cmd2.CommandText = "Select * FROM importaciones WHERE id_carro='" + cbCarro_Compraimpor.SelectedValue.ToString + "';"
+            Dim r As MySqlDataReader
+            r = cmd2.ExecuteReader
+            If r.HasRows <> True Then
+                r.Read()
                 conn.Close()
                 conn.Dispose()
-                mostrar()
+                If tbencar_impor.Text = "" Or tbmeto_impor.Text = "" Or cbCarro_Compraimpor.SelectedIndex = -1 Then
+                    MessageBox.Show("ALGUN CAMPO ESTÁ VACÍO", "ERROR AL GUARDAR", MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
+                Else
+                    cmd = conn.CreateCommand
+                    cmd.CommandText = "insert into importaciones(id_carro,id_compras,encarg_impo,metodo_impo,costo_impo)values(@car,@com,@encar,@met, @cost);"
+                    cmd.Parameters.AddWithValue("@car", cbCarro_Compraimpor.SelectedValue.ToString)
+                    cmd.Parameters.AddWithValue("@com", Label2.Text)
+                    cmd.Parameters.AddWithValue("@encar", tbencar_impor.Text)
+                    cmd.Parameters.AddWithValue("@met", tbmeto_impor.Text)
+                    cmd.Parameters.AddWithValue("@cost", nudCosto_impor.Value)
+                    cmd.ExecuteNonQuery()
+                    conn.Close()
+                    conn.Dispose()
+                    mostrar()
+                    clin()
+                    cbCarro_Compraimpor.SelectedIndex = -1
+                    btnguarda_impor.Enabled = False
+                End If
+            Else
+                MessageBox.Show("Vaya, parece que el carro seleccionado ya está registrado. Si cometiste un error, intenta modificarlo.", "ERROR AL GUARDAR", MessageBoxButtons.RetryCancel, MessageBoxIcon.Asterisk)
                 clin()
-                cbCarro_Compraimpor.SelectedIndex = -1
-                btnguarda_impor.Enabled = False
+                clin()
             End If
         Catch ex As Exception
             MessageBox.Show(ex.ToString())
@@ -186,7 +201,6 @@ Public Class Importacion_Carro
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Me.WindowState = FormWindowState.Minimized
     End Sub
-
     Private Sub tbencar_impor_KeyPress(sender As Object, e As KeyPressEventArgs) Handles tbencar_impor.KeyPress
         If Not (Asc(e.KeyChar) = 8) Then
             Dim allowedChars As String = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZáéíóúÁÉÍÓÚ"
@@ -196,7 +210,6 @@ Public Class Importacion_Carro
             End If
         End If
     End Sub
-
     Private Sub tbmeto_impor_KeyPress(sender As Object, e As KeyPressEventArgs) Handles tbmeto_impor.KeyPress
         If Not (Asc(e.KeyChar) = 8) Then
             Dim allowedChars As String = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZáéíóúÁÉÍÓÚ1234567890-().@#"",;: "
