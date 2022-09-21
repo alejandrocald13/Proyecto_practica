@@ -24,7 +24,7 @@ Public Class Costodefacturación
                     conn.Close()
                     conn.Dispose()
                     Dim query As String = "Select * FROM compra_carros WHERE id_carro='" + cbCarro_Cdfac.SelectedValue.ToString + "';"
-                    Dim adpt As New MySqlDataAdapter(cmd2.CommandText, conn)
+                    Dim adpt As New MySqlDataAdapter(query, conn)
                     Dim row As DataRow = Nothing
                     Using dt As New DataTable()
                         adpt.Fill(dt)

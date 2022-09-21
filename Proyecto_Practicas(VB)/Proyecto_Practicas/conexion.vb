@@ -15,10 +15,14 @@ Public Class conexion
     End Sub
     Public Function AbrirCon() As MySqlConnection
         Dim MySqlConnectionString As String
-        Dim conn As MySqlConnection
-        MySqlConnectionString = "Server=" + servidor + ";" & "Database=" + database + ";" & "Uid=" + usuario + ";" & "Pwd=" + password + ";Convert Zero Datetime=True;"
-        conn = New MySqlConnection(MySqlConnectionString)
-        conn.Open()
+        Dim conn As New MySqlConnection
+        Try
+            MySqlConnectionString = "Server=" + servidor + ";" & "Database=" + database + ";" & "Uid=" + usuario + ";" & "Pwd=" + password + ";Convert Zero Datetime=True;"
+            conn = New MySqlConnection(MySqlConnectionString)
+            conn.Open()
+        Catch ex As Exception
+            MsgBox(ex.Message, MsgBoxStyle.Critical)
+        End Try
         Return conn
     End Function
 End Class

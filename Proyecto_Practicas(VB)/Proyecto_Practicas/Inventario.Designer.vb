@@ -22,9 +22,9 @@ Partial Class Inventario
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Inventario))
         Me.dgvInvent = New Guna.UI2.WinForms.Guna2DataGridView()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -45,6 +45,8 @@ Partial Class Inventario
         Me.cbestado_invent = New Guna.UI2.WinForms.Guna2ComboBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.tbTotal_invent = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.btndelete_inven = New Guna.UI2.WinForms.Guna2Button()
         CType(Me.dgvInvent, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.gpSoli_inven.SuspendLayout()
@@ -52,39 +54,39 @@ Partial Class Inventario
         '
         'dgvInvent
         '
-        DataGridViewCellStyle10.BackColor = System.Drawing.Color.White
-        Me.dgvInvent.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle10
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
+        Me.dgvInvent.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.dgvInvent.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
         Me.dgvInvent.BackgroundColor = System.Drawing.Color.White
         Me.dgvInvent.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dgvInvent.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
         Me.dgvInvent.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle11.BackColor = System.Drawing.Color.Red
-        DataGridViewCellStyle11.Font = New System.Drawing.Font("Segoe UI Black", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle11.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvInvent.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle11
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.Red
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI Black", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvInvent.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.dgvInvent.ColumnHeadersHeight = 20
-        DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle12.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle12.Font = New System.Drawing.Font("Segoe UI Black", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(218, Byte), Integer), CType(CType(218, Byte), Integer))
-        DataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvInvent.DefaultCellStyle = DataGridViewCellStyle12
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI Black", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(218, Byte), Integer), CType(CType(218, Byte), Integer))
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvInvent.DefaultCellStyle = DataGridViewCellStyle3
         Me.dgvInvent.EnableHeadersVisualStyles = False
         Me.dgvInvent.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.dgvInvent.Location = New System.Drawing.Point(13, 236)
+        Me.dgvInvent.Location = New System.Drawing.Point(13, 253)
         Me.dgvInvent.Name = "dgvInvent"
         Me.dgvInvent.ReadOnly = True
         Me.dgvInvent.RowHeadersVisible = False
         Me.dgvInvent.RowTemplate.Height = 24
         Me.dgvInvent.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvInvent.Size = New System.Drawing.Size(793, 313)
+        Me.dgvInvent.Size = New System.Drawing.Size(793, 296)
         Me.dgvInvent.TabIndex = 55
         Me.dgvInvent.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White
         Me.dgvInvent.ThemeStyle.AlternatingRowsStyle.Font = Nothing
@@ -131,7 +133,7 @@ Partial Class Inventario
         Me.btnmodi_inven.FillColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.btnmodi_inven.Font = New System.Drawing.Font("Segoe UI Black", 10.8!, System.Drawing.FontStyle.Bold)
         Me.btnmodi_inven.ForeColor = System.Drawing.Color.White
-        Me.btnmodi_inven.Location = New System.Drawing.Point(626, 158)
+        Me.btnmodi_inven.Location = New System.Drawing.Point(626, 144)
         Me.btnmodi_inven.Name = "btnmodi_inven"
         Me.btnmodi_inven.Size = New System.Drawing.Size(180, 38)
         Me.btnmodi_inven.TabIndex = 45
@@ -148,7 +150,7 @@ Partial Class Inventario
         Me.btnguardar_inven.FillColor = System.Drawing.Color.MediumSeaGreen
         Me.btnguardar_inven.Font = New System.Drawing.Font("Segoe UI Black", 10.8!, System.Drawing.FontStyle.Bold)
         Me.btnguardar_inven.ForeColor = System.Drawing.Color.White
-        Me.btnguardar_inven.Location = New System.Drawing.Point(626, 114)
+        Me.btnguardar_inven.Location = New System.Drawing.Point(626, 100)
         Me.btnguardar_inven.Name = "btnguardar_inven"
         Me.btnguardar_inven.Size = New System.Drawing.Size(180, 38)
         Me.btnguardar_inven.TabIndex = 44
@@ -164,7 +166,7 @@ Partial Class Inventario
         Me.btnnuevo_inven.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
         Me.btnnuevo_inven.Font = New System.Drawing.Font("Segoe UI Black", 10.8!, System.Drawing.FontStyle.Bold)
         Me.btnnuevo_inven.ForeColor = System.Drawing.Color.White
-        Me.btnnuevo_inven.Location = New System.Drawing.Point(626, 70)
+        Me.btnnuevo_inven.Location = New System.Drawing.Point(626, 56)
         Me.btnnuevo_inven.Name = "btnnuevo_inven"
         Me.btnnuevo_inven.Size = New System.Drawing.Size(180, 38)
         Me.btnnuevo_inven.TabIndex = 43
@@ -348,7 +350,7 @@ Partial Class Inventario
         Me.rdSi_soli.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.rdSi_soli.CheckedState.InnerColor = System.Drawing.Color.White
         Me.rdSi_soli.CheckedState.InnerOffset = -4
-        Me.rdSi_soli.Font = New System.Drawing.Font("Segoe UI Black", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rdSi_soli.Font = New System.Drawing.Font("Segoe UI Black", 9.0!, System.Drawing.FontStyle.Bold)
         Me.rdSi_soli.ForeColor = System.Drawing.Color.Black
         Me.rdSi_soli.Location = New System.Drawing.Point(50, 46)
         Me.rdSi_soli.Name = "rdSi_soli"
@@ -372,7 +374,7 @@ Partial Class Inventario
         Me.cbestado_invent.Font = New System.Drawing.Font("Segoe UI Black", 9.75!, System.Drawing.FontStyle.Bold)
         Me.cbestado_invent.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
         Me.cbestado_invent.ItemHeight = 30
-        Me.cbestado_invent.Items.AddRange(New Object() {"Disponible", "Reparación", "Importación"})
+        Me.cbestado_invent.Items.AddRange(New Object() {"Disponible", "Reparación", "Espertaje", "Importación"})
         Me.cbestado_invent.Location = New System.Drawing.Point(81, 182)
         Me.cbestado_invent.Name = "cbestado_invent"
         Me.cbestado_invent.Size = New System.Drawing.Size(194, 36)
@@ -412,17 +414,46 @@ Partial Class Inventario
         Me.tbTotal_invent.Name = "tbTotal_invent"
         Me.tbTotal_invent.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.tbTotal_invent.PlaceholderForeColor = System.Drawing.Color.White
-        Me.tbTotal_invent.PlaceholderText = "Valor Total"
+        Me.tbTotal_invent.PlaceholderText = "Costo Total"
         Me.tbTotal_invent.ReadOnly = True
         Me.tbTotal_invent.SelectedText = ""
         Me.tbTotal_invent.Size = New System.Drawing.Size(262, 30)
         Me.tbTotal_invent.TabIndex = 113
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Segoe UI Black", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.Green
+        Me.Label4.Location = New System.Drawing.Point(378, 105)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(0, 21)
+        Me.Label4.TabIndex = 119
+        '
+        'btndelete_inven
+        '
+        Me.btndelete_inven.AutoRoundedCorners = True
+        Me.btndelete_inven.BorderRadius = 18
+        Me.btndelete_inven.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btndelete_inven.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btndelete_inven.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btndelete_inven.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btndelete_inven.FillColor = System.Drawing.Color.Red
+        Me.btndelete_inven.Font = New System.Drawing.Font("Segoe UI Black", 10.8!, System.Drawing.FontStyle.Bold)
+        Me.btndelete_inven.ForeColor = System.Drawing.Color.White
+        Me.btndelete_inven.Location = New System.Drawing.Point(626, 188)
+        Me.btndelete_inven.Name = "btndelete_inven"
+        Me.btndelete_inven.Size = New System.Drawing.Size(180, 38)
+        Me.btndelete_inven.TabIndex = 120
+        Me.btndelete_inven.Text = "Eliminar"
         '
         'Inventario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(826, 561)
+        Me.Controls.Add(Me.btndelete_inven)
+        Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.tbTotal_invent)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.cbestado_invent)
@@ -468,4 +499,6 @@ Partial Class Inventario
     Friend WithEvents cbestado_invent As Guna.UI2.WinForms.Guna2ComboBox
     Friend WithEvents Label2 As Label
     Friend WithEvents tbTotal_invent As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents Label4 As Label
+    Friend WithEvents btndelete_inven As Guna.UI2.WinForms.Guna2Button
 End Class

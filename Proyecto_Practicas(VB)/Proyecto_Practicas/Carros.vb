@@ -25,15 +25,17 @@ Public Class Carros
             rdSi_llaves.Checked = False
             rdNo_llaves.Checked = False
         End If
+        tbMillaje_carro.Clear()
         Numano_Car.Focus()
     End Sub
     Private Sub Guna2Button1_Click(sender As Object, e As EventArgs) Handles Guna2Button1.Click
         limpiar()
         Guna2Button2.Enabled = True
+        Guna2Button3.Enabled = False
     End Sub
     Sub mostrar()
         conn = objetoconexion.AbrirCon
-        Dim query As String = "SELECT id_carro as 'ID', año_carro as 'Año',marca_carro as 'Marca', modelo_carro as 'Modelo', color_carro as 'Color', vin_carro as 'VIN', cilindros_carro as 'Cilindros', motor_carro as 'Motor', CASE WHEN llaves_carro = 0 THEN 'No' WHEN llaves_carro = 1 THEN 'Si' END AS 'Contiene Llaves', foto_carro as 'Fotografía del Carro (URL)' FROM info_carro;"
+        Dim query As String = "SELECT id_carro as 'ID', año_carro as 'Año',marca_carro as 'Marca', modelo_carro as 'Modelo', color_carro as 'Color', vin_carro as 'VIN', cilindros_carro as 'Cilindros', motor_carro as 'Motor', CASE WHEN llaves_carro = 0 THEN 'No' WHEN llaves_carro = 1 THEN 'Si' END AS 'Contiene Llaves', CONCAT(millaje_carro,' mi') as 'Millaje', foto_carro as 'Fotografía del Carro (URL)' FROM info_carro;"
         Dim adpt As New MySqlDataAdapter(query, conn)
         Dim ds As New DataSet()
         adpt.Fill(ds)
@@ -44,11 +46,11 @@ Public Class Carros
     Private Sub Guna2Button2_Click(sender As Object, e As EventArgs) Handles Guna2Button2.Click
         conn = objetoconexion.AbrirCon
         Try
-            If tbmar_car.Text = "" Or tbmodelo_car.Text = "" Or tbcol_car.Text = "" Then
+            If tbmar_car.Text = "" Or tbmodelo_car.Text = "" Or tbcol_car.Text = "" Or (rdSi_llaves.Checked = False And rdNo_llaves.Checked = False) Then
                 MessageBox.Show("ALGUN CAMPO ESTÁ VACÍO", "ERROR AL GUARDAR", MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
             Else
                 cmd = conn.CreateCommand
-                cmd.CommandText = "insert into info_carro(id_carro,año_carro,marca_carro,modelo_carro,color_carro,vin_carro,cilindros_carro,motor_carro,llaves_carro,foto_carro)values(NULL,@ano,@mar,@mod,@col,@vin,@cilin,@motor,@lla,@fot);"
+                cmd.CommandText = "insert into info_carro(id_carro,año_carro,marca_carro,modelo_carro,color_carro,vin_carro,cilindros_carro,motor_carro,llaves_carro,millaje_carro,foto_carro)values(NULL,@ano,@mar,@mod,@col,@vin,@cilin,@motor,@lla,@mi,@fot);"
                 cmd.Parameters.AddWithValue("@ano", CStr(Numano_Car.Value))
                 cmd.Parameters.AddWithValue("@mar", tbmar_car.Text)
                 cmd.Parameters.AddWithValue("@mod", tbmodelo_car.Text)
@@ -61,6 +63,7 @@ Public Class Carros
                     cmd.Parameters.AddWithValue("@lla", CStr(0))
                 End If
                 cmd.Parameters.AddWithValue("@motor", tbmotor_car.Text)
+                cmd.Parameters.AddWithValue("@mi", tbMillaje_carro.Text)
                 cmd.Parameters.AddWithValue("@fot", tbURL_car.Text)
                 cmd.ExecuteNonQuery()
                 conn.Close()
@@ -76,15 +79,16 @@ Public Class Carros
     Private Sub Carros_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         mostrar()
         Guna2Button2.Enabled = False
+        Guna2Button3.Enabled = False
     End Sub
     Private Sub Guna2Button3_Click(sender As Object, e As EventArgs) Handles Guna2Button3.Click
         conn = objetoconexion.AbrirCon
         Try
-            If tbmar_car.Text = "" Or tbmodelo_car.Text = "" Or tbcol_car.Text = "" Then
+            If tbmar_car.Text = "" Or tbmodelo_car.Text = "" Or tbcol_car.Text = "" Or (rdSi_llaves.Checked = False And rdNo_llaves.Checked = False) Then
                 MessageBox.Show("ALGUN CAMPO ESTÁ VACÍO", "ERROR AL MODIFICAR", MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
             Else
                 cmd = conn.CreateCommand
-                cmd.CommandText = "UPDATE info_carro SET año_carro=@ano,marca_carro=@mar,modelo_carro=@mod,color_carro=@col,vin_carro=@vin,cilindros_carro=@cilin,motor_carro=@motor,llaves_carro=@lla,foto_carro=@fot WHERE id_carro=@id"
+                cmd.CommandText = "UPDATE info_carro SET año_carro=@ano,marca_carro=@mar,modelo_carro=@mod,color_carro=@col,vin_carro=@vin,cilindros_carro=@cilin,motor_carro=@motor,llaves_carro=@lla,millaje_carro=@mi,foto_carro=@fot WHERE id_carro=@id"
                 cmd.Parameters.AddWithValue("@id", tbID.Text)
                 cmd.Parameters.AddWithValue("@ano", CStr(Numano_Car.Value))
                 cmd.Parameters.AddWithValue("@mar", tbmar_car.Text)
@@ -98,6 +102,7 @@ Public Class Carros
                     cmd.Parameters.AddWithValue("@lla", CStr(0))
                 End If
                 cmd.Parameters.AddWithValue("@motor", tbmotor_car.Text)
+                cmd.Parameters.AddWithValue("@mi", tbMillaje_carro.Text)
                 cmd.Parameters.AddWithValue("@fot", tbURL_car.Text)
                 cmd.ExecuteNonQuery()
                 conn.Close()
@@ -111,6 +116,7 @@ Public Class Carros
     End Sub
     Private Sub dgvCarros_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvCarros.CellContentClick
         Guna2Button2.Enabled = False
+        Guna2Button3.Enabled = True
         Dim row As DataGridViewRow = dgvCarros.CurrentRow
         Try
             tbID.Text = row.Cells(0).Value.ToString()
@@ -125,9 +131,11 @@ Public Class Carros
             If x = "Si" Then
                 rdSi_llaves.Checked = True
             ElseIf x = "No" Then
-                rdNo_llaves.Checked = False
+                rdNo_llaves.Checked = True
             End If
-            tbURL_car.Text = row.Cells(8).Value.ToString()
+            Dim s = row.Cells(9).Value.ToString()
+            tbMillaje_carro.Text = s.Split("mi")(0)
+            tbURL_car.Text = row.Cells(10).Value.ToString()
         Catch ex As Exception
             MessageBox.Show(ex.ToString())
         End Try
@@ -181,8 +189,13 @@ Public Class Carros
             End If
         End If
     End Sub
-
-    Private Sub tbURL_car_KeyPress(sender As Object, e As KeyPressEventArgs) Handles tbURL_car.KeyPress
-
+    Private Sub Guna2TextBox1_KeyPress(sender As Object, e As KeyPressEventArgs) Handles tbMillaje_carro.KeyPress
+        If Not (Asc(e.KeyChar) = 8) Then
+            Dim allowedChars As String = "1234567890 "
+            If Not allowedChars.Contains(e.KeyChar.ToString.ToLower) Then
+                e.KeyChar = ChrW(0)
+                e.Handled = True
+            End If
+        End If
     End Sub
 End Class
