@@ -1,6 +1,13 @@
 ﻿Imports MySql.Data.MySqlClient
+Imports System.Runtime.InteropServices
 Public Class Login
     Dim cont = 0
+    <DllImport("user32.DLL", EntryPoint:="ReleaseCapture")>
+    Private Shared Sub ReleaseCapture()
+    End Sub
+    <DllImport("user32.DLL", EntryPoint:="SendMessage")>
+    Private Shared Sub SendMessage(ByVal hWnd As System.IntPtr, ByVal wMsg As Integer, ByVal wParam As Integer, ByVal lParam As Integer)
+    End Sub
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles bCerrar.Click
         Me.Close()
     End Sub
@@ -54,33 +61,8 @@ Public Class Login
             cont += 1
         End If
     End Sub
-
-    Private Sub Login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+    Private Sub Panel1_MouseMove(sender As Object, e As MouseEventArgs) Handles Panel1.MouseMove
+        ReleaseCapture()
+        SendMessage(Me.Handle, &H112&, &HF012&, 0)
     End Sub
-    'Sub cargarcombox()
-    '    conn.Open()
-    '    Dim query As String = "Select * FROM proveedores;"
-    '    Dim adpt As New MySqlDataAdapter(query, conn)
-    '    Dim ds As New DataSet()
-    '    adpt.Fill(ds)
-    '    ComboBox2.DataSource = ds.Tables(0)
-    '    ComboBox2.DisplayMember = "nombre_proveedor"
-    '    ComboBox2.ValueMember = "id_proveedor"
-    '    conn.Close()
-    'End Sub
-    'ELIMINAR
-    'conn = objetoconexion.AbrirCon
-
-    '    Try
-    '        cmd = conn.CreateCommand
-    '        cmd.CommandText = "delete from consolas_videojuegos where id_cons=@id"
-    '        cmd.Parameters.AddWithValue("@id", TextBox10.Text)
-    '        cmd.ExecuteNonQuery()
-    '        conn.Close()
-    '        conn.Dispose()
-    '        mostrar3()
-    '        limpiar3()
-    '    Catch ex As Exception
-    'End Try
 End Class

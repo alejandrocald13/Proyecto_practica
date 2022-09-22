@@ -564,6 +564,7 @@ Partial Class Ventas
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(924, 641)
+        Me.ControlBox = False
         Me.Controls.Add(Me.tbCarroSelec_CompraCar)
         Me.Controls.Add(Me.cbComision_vent)
         Me.Controls.Add(Me.Guna2GroupBox1)

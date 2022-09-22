@@ -1,9 +1,16 @@
-﻿Imports MySql.Data.MySqlClient
+﻿Imports System.Runtime.InteropServices
+Imports MySql.Data.MySqlClient
 Public Class Ventas
     Dim cmd As MySqlCommand
     Dim conn As New MySqlConnection
     Dim objetoconexion As New conexion
     Dim i As Integer
+    <DllImport("user32.DLL", EntryPoint:="ReleaseCapture")>
+    Private Shared Sub ReleaseCapture()
+    End Sub
+    <DllImport("user32.DLL", EntryPoint:="SendMessage")>
+    Private Shared Sub SendMessage(ByVal hWnd As System.IntPtr, ByVal wMsg As Integer, ByVal wParam As Integer, ByVal lParam As Integer)
+    End Sub
     Private Sub Ventas_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Guna2GroupBox1.Enabled = False
         mostrar()
@@ -92,7 +99,7 @@ Public Class Ventas
     End Sub
     Sub mostrar()
         conn = objetoconexion.AbrirCon
-        Dim query As String = "SELECT v.id_venta as 'ID',c.nom_clien as 'Nombre del Cliente', CASE WHEN v.traspaso_venta = 0 THEN 'No' WHEN v.traspaso_venta = 1 THEN 'Si' END AS 'Traspaso', v.fecha_venta as 'Fecha de Venta', ifc.vin_carro as 'VIN', ifc.año_carro as 'Año', ifc.marca_carro as 'Marca', ifc.modelo_carro as 'Modelo', ifc.color_carro as 'Color', CONCAT(ifc.millaje_carro,' mi') as 'Millaje', CONCAT(r.apelli_revend,' ', r.nom_revend) as 'Revendedor', v.comision_venta as 'Comisión', v.ganancia_venta as 'Ganancia', v.total_venta as 'Total de Venta' FROM ventas v INNER JOIN info_carro ifc ON v.id_carro = ifc.id_carro INNER JOIN revendedores r ON v.id_revend= r.id_revend INNER JOIN clientes c ON v.id_clien = c.id_clien;"
+        Dim query As String = "SELECT v.id_venta as 'ID',c.nom_clien as 'Nombre del Cliente', CASE WHEN v.traspaso_venta = 0 THEN 'No' WHEN v.traspaso_venta = 1 THEN 'Si' END AS 'Traspaso', v.fecha_venta as 'Fecha de Venta', ifc.vin_carro as 'VIN', ifc.año_carro as 'Año', ifc.marca_carro as 'Marca', ifc.modelo_carro as 'Modelo', ifc.color_carro as 'Color', CONCAT(ifc.millaje_carro,' mi') as 'Millaje', CONCAT(r.apelli_revend,' ', r.nom_revend) as 'Revendedor', CONCAT('Q',v.comision_venta) as 'Comisión', CONCAT('Q',v.ganancia_venta) as 'Ganancia', CONCAT('Q',v.total_venta) as 'Total de Venta' FROM ventas v INNER JOIN info_carro ifc ON v.id_carro = ifc.id_carro INNER JOIN revendedores r ON v.id_revend= r.id_revend INNER JOIN clientes c ON v.id_clien = c.id_clien;"
         Dim adpt As New MySqlDataAdapter(query, conn)
         Dim ds As New DataSet()
         adpt.Fill(ds)
@@ -131,12 +138,68 @@ Public Class Ventas
     End Sub
     Private Sub btnsave_ventas_Click(sender As Object, e As EventArgs) Handles btnsave_ventas.Click
         Try
-            If cbCarro_ventas.SelectedValue = 0 Or cbcliente_cliente.SelectedIndex = -1 Or (rdSi_trasp.Checked = False And rdNo_trasp.Checked = False) Then
+
+            If cbCarro_ventas.SelectedValue = 0 Or cbcliente_cliente.SelectedIndex = -1 Or (rdSi_trasp.Checked = False And rdNo_trasp.Checked = False) Or (cbComision_vent.Checked = True And cbrevendedor_ventas.SelectedIndex = -1) Then
                 MessageBox.Show("ALGUN CAMPO ESTÁ VACÍO", "ERROR AL GUARDAR", MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
             Else
+                Dim cmd2 As MySqlCommand = New MySqlCommand
                 conn = objetoconexion.AbrirCon
+                cmd2.Connection = conn
+                cmd2.CommandText = "Select * FROM ventas WHERE id_carro='" + cbCarro_ventas.SelectedValue.ToString + "';"
+                Dim r As MySqlDataReader
+                r = cmd2.ExecuteReader
+                If r.HasRows <> True Then
+                    r.Read()
+                    conn.Close()
+                    conn.Dispose()
+                    conn = objetoconexion.AbrirCon
+                    cmd = conn.CreateCommand
+                    cmd.CommandText = "insert into ventas(id_carro,id_revend,comision_venta,total_venta,ganancia_venta,id_clien,fecha_venta,traspaso_venta)values(@car,@rev,@com,@tot,@gan,@cli,@fech,@tras);"
+                    cmd.Parameters.AddWithValue("@car", cbCarro_ventas.SelectedValue.ToString)
+                    If cbComision_vent.Checked = False Then
+                        cmd.Parameters.AddWithValue("@rev", CStr(3))
+                        cmd.Parameters.AddWithValue("@com", CStr(0))
+                    ElseIf cbComision_vent.Checked = True Then
+                        cmd.Parameters.AddWithValue("@rev", cbrevendedor_ventas.SelectedValue.ToString)
+                        cmd.Parameters.AddWithValue("@com", nudcomision_ventas.Value)
+                    End If
+                    cmd.Parameters.AddWithValue("@tot", nudtotal_ventas.Value)
+                    cmd.Parameters.AddWithValue("@gan", nudganancias_ventas.Value)
+                    cmd.Parameters.AddWithValue("@cli", cbcliente_cliente.SelectedValue.ToString)
+                    cmd.Parameters.AddWithValue("@fech", dtpFecha_CompraCar.Value.Date)
+                    If rdSi_trasp.Checked = True Then
+                        cmd.Parameters.AddWithValue("@tras", CStr(1))
+                    ElseIf rdNo_trasp.Checked = True Then
+                        cmd.Parameters.AddWithValue("@tras", CStr(0))
+                    End If
+                    cmd.ExecuteNonQuery()
+                    conn.Close()
+                    conn.Dispose()
+                    mostrar()
+                    limpiar()
+                    cbCarro_ventas.SelectedIndex = -1
+                    tbCarroSelec_CompraCar.Clear()
+                    btnsave_ventas.Enabled = False
+                Else
+                    MessageBox.Show("Vaya, parece que el carro seleccionado ya está registrado. Si cometiste un error, intenta modificarlo.", "ERROR AL GUARDAR", MessageBoxButtons.RetryCancel, MessageBoxIcon.Asterisk)
+                    limpiar()
+                    limpiar()
+                End If
+                btnsave_ventas.Enabled = False
+            End If
+        Catch ex As Exception
+            MessageBox.Show(ex.ToString())
+        End Try
+    End Sub
+    Private Sub btnmodifi_ventas_Click(sender As Object, e As EventArgs) Handles btnmodifi_ventas.Click
+        conn = objetoconexion.AbrirCon
+        Try
+            If cbCarro_ventas.SelectedValue = 0 Or cbcliente_cliente.SelectedIndex = -1 Or (rdSi_trasp.Checked = False And rdNo_trasp.Checked = False) Or (cbComision_vent.Checked = True And cbrevendedor_ventas.SelectedIndex = -1) Then
+                MessageBox.Show("ALGUN CAMPO ESTÁ VACÍO", "ERROR AL MODIFICAR", MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
+            Else
                 cmd = conn.CreateCommand
-                cmd.CommandText = "insert into ventas(id_carro,id_revend,comision_venta,total_venta,ganancia_venta,id_clien,fecha_venta,traspaso_venta)values(@car,@rev,@com,@tot,@gan,@cli,@fech,@tras);"
+                cmd.CommandText = "UPDATE ventas SET id_carro=@car,id_revend=@rev,comision_venta=@com,total_venta=@tot,ganancia_venta=@gan,id_clien=@cli,fecha_venta=@fech,traspaso_venta=@tras WHERE id_venta=@id"
+                cmd.Parameters.AddWithValue("@id", tbID_CompraCar.Text)
                 cmd.Parameters.AddWithValue("@car", cbCarro_ventas.SelectedValue.ToString)
                 If cbComision_vent.Checked = False Then
                     cmd.Parameters.AddWithValue("@rev", CStr(3))
@@ -161,10 +224,52 @@ Public Class Ventas
                 limpiar()
                 cbCarro_ventas.SelectedIndex = -1
                 tbCarroSelec_CompraCar.Clear()
-                btnsave_ventas.Enabled = True
+                btnmodifi_ventas.Enabled = False
             End If
+        Catch ex As Exception
+
+        End Try
+    End Sub
+    Private Sub dgvventas_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvventas.CellContentClick
+        btnsave_ventas.Enabled = False
+        Dim row As DataGridViewRow = dgvventas.CurrentRow
+        Try
+            tbID_CompraCar.Text = row.Cells(0).Value.ToString()
+            cbcliente_cliente.Text = row.Cells(1).Value.ToString()
+            Dim x = row.Cells(2).Value.ToString
+            If x = "Si" Then
+                rdSi_trasp.Checked = True
+            ElseIf x = "No" Then
+                rdNo_trasp.Checked = True
+            End If
+            dtpFecha_CompraCar.Value = row.Cells(3).Value.ToString()
+            cbCarro_ventas.Text = row.Cells(4).Value.ToString()
+            cbrevendedor_ventas.Text = row.Cells(10).Value.ToString()
+            Dim s = row.Cells(11).Value.ToString
+            nudcomision_ventas.Value = s.Split("Q")(1)
+            If row.Cells(10).Value.ToString() <> "NAC NAC" Then
+                cbComision_vent.Checked = True
+            Else
+                cbComision_vent.Checked = False
+            End If
+            Dim s2 = row.Cells(12).Value.ToString
+            nudganancias_ventas.Value = s2.Split("Q")(1)
+            Dim s3 = row.Cells(13).Value.ToString
+            nudtotal_ventas.Value = s3.Split("Q")(1)
+            btnmodifi_ventas.Enabled = True
         Catch ex As Exception
             MessageBox.Show(ex.ToString())
         End Try
+    End Sub
+    Private Sub bCerrar_Click(sender As Object, e As EventArgs) Handles bCerrar.Click
+        Hide()
+        Login.Close()
+    End Sub
+    Private Sub bMinimizar_Click(sender As Object, e As EventArgs) Handles bMinimizar.Click
+        WindowState = FormWindowState.Minimized
+    End Sub
+    Private Sub Panel1_MouseMove(sender As Object, e As MouseEventArgs) Handles Panel1.MouseMove
+        ReleaseCapture()
+        SendMessage(Me.Handle, &H112&, &HF012&, 0)
     End Sub
 End Class

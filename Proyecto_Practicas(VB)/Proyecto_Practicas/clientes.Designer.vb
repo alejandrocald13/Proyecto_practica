@@ -23,9 +23,9 @@ Partial Class clientes
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(clientes))
-        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.tbcorreo_client = New Guna.UI2.WinForms.Guna2TextBox()
         Me.tbID_client = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
@@ -48,7 +48,7 @@ Partial Class clientes
         'tbcorreo_client
         '
         Me.tbcorreo_client.AutoRoundedCorners = True
-        Me.tbcorreo_client.BorderRadius = 17
+        Me.tbcorreo_client.BorderRadius = 14
         Me.tbcorreo_client.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.tbcorreo_client.DefaultText = ""
         Me.tbcorreo_client.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
@@ -59,19 +59,19 @@ Partial Class clientes
         Me.tbcorreo_client.Font = New System.Drawing.Font("Segoe UI Black", 12.0!, System.Drawing.FontStyle.Bold)
         Me.tbcorreo_client.ForeColor = System.Drawing.Color.Black
         Me.tbcorreo_client.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.tbcorreo_client.Location = New System.Drawing.Point(19, 225)
-        Me.tbcorreo_client.Margin = New System.Windows.Forms.Padding(5)
+        Me.tbcorreo_client.Location = New System.Drawing.Point(14, 183)
+        Me.tbcorreo_client.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.tbcorreo_client.Name = "tbcorreo_client"
         Me.tbcorreo_client.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.tbcorreo_client.PlaceholderText = "Correo"
         Me.tbcorreo_client.SelectedText = ""
-        Me.tbcorreo_client.Size = New System.Drawing.Size(345, 37)
+        Me.tbcorreo_client.Size = New System.Drawing.Size(259, 30)
         Me.tbcorreo_client.TabIndex = 3
         '
         'tbID_client
         '
         Me.tbID_client.AutoRoundedCorners = True
-        Me.tbID_client.BorderRadius = 17
+        Me.tbID_client.BorderRadius = 14
         Me.tbID_client.Cursor = System.Windows.Forms.Cursors.No
         Me.tbID_client.DefaultText = ""
         Me.tbID_client.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
@@ -82,14 +82,14 @@ Partial Class clientes
         Me.tbID_client.Font = New System.Drawing.Font("Segoe UI Black", 12.0!, System.Drawing.FontStyle.Bold)
         Me.tbID_client.ForeColor = System.Drawing.Color.Black
         Me.tbID_client.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.tbID_client.Location = New System.Drawing.Point(19, 85)
-        Me.tbID_client.Margin = New System.Windows.Forms.Padding(5)
+        Me.tbID_client.Location = New System.Drawing.Point(14, 69)
+        Me.tbID_client.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.tbID_client.Name = "tbID_client"
         Me.tbID_client.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.tbID_client.PlaceholderText = "ID"
         Me.tbID_client.ReadOnly = True
         Me.tbID_client.SelectedText = ""
-        Me.tbID_client.Size = New System.Drawing.Size(57, 37)
+        Me.tbID_client.Size = New System.Drawing.Size(43, 30)
         Me.tbID_client.TabIndex = 0
         '
         'Panel1
@@ -99,9 +99,8 @@ Partial Class clientes
         Me.Panel1.Controls.Add(Me.Button2)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1079, 43)
+        Me.Panel1.Size = New System.Drawing.Size(809, 35)
         Me.Panel1.TabIndex = 75
         '
         'Button1
@@ -111,10 +110,9 @@ Partial Class clientes
         Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
-        Me.Button1.Location = New System.Drawing.Point(932, 0)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(4)
+        Me.Button1.Location = New System.Drawing.Point(699, 0)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(69, 43)
+        Me.Button1.Size = New System.Drawing.Size(52, 35)
         Me.Button1.TabIndex = 24
         Me.Button1.UseVisualStyleBackColor = True
         '
@@ -125,17 +123,16 @@ Partial Class clientes
         Me.Button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button2.Image = CType(resources.GetObject("Button2.Image"), System.Drawing.Image)
-        Me.Button2.Location = New System.Drawing.Point(1009, 0)
-        Me.Button2.Margin = New System.Windows.Forms.Padding(4)
+        Me.Button2.Location = New System.Drawing.Point(757, 0)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(69, 43)
+        Me.Button2.Size = New System.Drawing.Size(52, 35)
         Me.Button2.TabIndex = 23
         Me.Button2.UseVisualStyleBackColor = True
         '
         'tbDirec_client
         '
         Me.tbDirec_client.AutoRoundedCorners = True
-        Me.tbDirec_client.BorderRadius = 17
+        Me.tbDirec_client.BorderRadius = 14
         Me.tbDirec_client.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.tbDirec_client.DefaultText = ""
         Me.tbDirec_client.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
@@ -146,19 +143,19 @@ Partial Class clientes
         Me.tbDirec_client.Font = New System.Drawing.Font("Segoe UI Black", 12.0!, System.Drawing.FontStyle.Bold)
         Me.tbDirec_client.ForeColor = System.Drawing.Color.Black
         Me.tbDirec_client.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.tbDirec_client.Location = New System.Drawing.Point(409, 225)
-        Me.tbDirec_client.Margin = New System.Windows.Forms.Padding(5)
+        Me.tbDirec_client.Location = New System.Drawing.Point(307, 183)
+        Me.tbDirec_client.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.tbDirec_client.Name = "tbDirec_client"
         Me.tbDirec_client.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.tbDirec_client.PlaceholderText = "Dirección"
         Me.tbDirec_client.SelectedText = ""
-        Me.tbDirec_client.Size = New System.Drawing.Size(347, 37)
+        Me.tbDirec_client.Size = New System.Drawing.Size(260, 30)
         Me.tbDirec_client.TabIndex = 6
         '
         'tbNomAp_client
         '
         Me.tbNomAp_client.AutoRoundedCorners = True
-        Me.tbNomAp_client.BorderRadius = 17
+        Me.tbNomAp_client.BorderRadius = 14
         Me.tbNomAp_client.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.tbNomAp_client.DefaultText = ""
         Me.tbNomAp_client.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
@@ -169,19 +166,19 @@ Partial Class clientes
         Me.tbNomAp_client.Font = New System.Drawing.Font("Segoe UI Black", 12.0!, System.Drawing.FontStyle.Bold)
         Me.tbNomAp_client.ForeColor = System.Drawing.Color.Black
         Me.tbNomAp_client.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.tbNomAp_client.Location = New System.Drawing.Point(19, 132)
-        Me.tbNomAp_client.Margin = New System.Windows.Forms.Padding(5)
+        Me.tbNomAp_client.Location = New System.Drawing.Point(14, 107)
+        Me.tbNomAp_client.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.tbNomAp_client.Name = "tbNomAp_client"
         Me.tbNomAp_client.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.tbNomAp_client.PlaceholderText = "Nombre y Apellido"
         Me.tbNomAp_client.SelectedText = ""
-        Me.tbNomAp_client.Size = New System.Drawing.Size(345, 37)
+        Me.tbNomAp_client.Size = New System.Drawing.Size(259, 30)
         Me.tbNomAp_client.TabIndex = 1
         '
         'tbNum_client
         '
         Me.tbNum_client.AutoRoundedCorners = True
-        Me.tbNum_client.BorderRadius = 17
+        Me.tbNum_client.BorderRadius = 14
         Me.tbNum_client.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.tbNum_client.DefaultText = ""
         Me.tbNum_client.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
@@ -192,19 +189,19 @@ Partial Class clientes
         Me.tbNum_client.Font = New System.Drawing.Font("Segoe UI Black", 12.0!, System.Drawing.FontStyle.Bold)
         Me.tbNum_client.ForeColor = System.Drawing.Color.Black
         Me.tbNum_client.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.tbNum_client.Location = New System.Drawing.Point(411, 132)
-        Me.tbNum_client.Margin = New System.Windows.Forms.Padding(5)
+        Me.tbNum_client.Location = New System.Drawing.Point(308, 107)
+        Me.tbNum_client.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.tbNum_client.Name = "tbNum_client"
         Me.tbNum_client.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.tbNum_client.PlaceholderText = "Número"
         Me.tbNum_client.SelectedText = ""
-        Me.tbNum_client.Size = New System.Drawing.Size(345, 37)
+        Me.tbNum_client.Size = New System.Drawing.Size(259, 30)
         Me.tbNum_client.TabIndex = 4
         '
         'tbNIT_client
         '
         Me.tbNIT_client.AutoRoundedCorners = True
-        Me.tbNIT_client.BorderRadius = 17
+        Me.tbNIT_client.BorderRadius = 14
         Me.tbNIT_client.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.tbNIT_client.DefaultText = ""
         Me.tbNIT_client.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
@@ -215,20 +212,20 @@ Partial Class clientes
         Me.tbNIT_client.Font = New System.Drawing.Font("Segoe UI Black", 12.0!, System.Drawing.FontStyle.Bold)
         Me.tbNIT_client.ForeColor = System.Drawing.Color.Black
         Me.tbNIT_client.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.tbNIT_client.Location = New System.Drawing.Point(409, 178)
-        Me.tbNIT_client.Margin = New System.Windows.Forms.Padding(5)
+        Me.tbNIT_client.Location = New System.Drawing.Point(307, 145)
+        Me.tbNIT_client.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.tbNIT_client.MaxLength = 10
         Me.tbNIT_client.Name = "tbNIT_client"
         Me.tbNIT_client.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.tbNIT_client.PlaceholderText = "NIT"
         Me.tbNIT_client.SelectedText = ""
-        Me.tbNIT_client.Size = New System.Drawing.Size(345, 37)
+        Me.tbNIT_client.Size = New System.Drawing.Size(259, 30)
         Me.tbNIT_client.TabIndex = 5
         '
         'Btnmodi_cliente
         '
         Me.Btnmodi_cliente.AutoRoundedCorners = True
-        Me.Btnmodi_cliente.BorderRadius = 22
+        Me.Btnmodi_cliente.BorderRadius = 18
         Me.Btnmodi_cliente.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.Btnmodi_cliente.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.Btnmodi_cliente.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
@@ -236,17 +233,16 @@ Partial Class clientes
         Me.Btnmodi_cliente.FillColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.Btnmodi_cliente.Font = New System.Drawing.Font("Segoe UI Black", 10.8!, System.Drawing.FontStyle.Bold)
         Me.Btnmodi_cliente.ForeColor = System.Drawing.Color.White
-        Me.Btnmodi_cliente.Location = New System.Drawing.Point(812, 193)
-        Me.Btnmodi_cliente.Margin = New System.Windows.Forms.Padding(4)
+        Me.Btnmodi_cliente.Location = New System.Drawing.Point(609, 157)
         Me.Btnmodi_cliente.Name = "Btnmodi_cliente"
-        Me.Btnmodi_cliente.Size = New System.Drawing.Size(240, 47)
+        Me.Btnmodi_cliente.Size = New System.Drawing.Size(180, 38)
         Me.Btnmodi_cliente.TabIndex = 82
         Me.Btnmodi_cliente.Text = "Modificar"
         '
         'btnguarda_client
         '
         Me.btnguarda_client.AutoRoundedCorners = True
-        Me.btnguarda_client.BorderRadius = 22
+        Me.btnguarda_client.BorderRadius = 18
         Me.btnguarda_client.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.btnguarda_client.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.btnguarda_client.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
@@ -254,10 +250,9 @@ Partial Class clientes
         Me.btnguarda_client.FillColor = System.Drawing.Color.MediumSeaGreen
         Me.btnguarda_client.Font = New System.Drawing.Font("Segoe UI Black", 10.8!, System.Drawing.FontStyle.Bold)
         Me.btnguarda_client.ForeColor = System.Drawing.Color.White
-        Me.btnguarda_client.Location = New System.Drawing.Point(812, 139)
-        Me.btnguarda_client.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnguarda_client.Location = New System.Drawing.Point(609, 113)
         Me.btnguarda_client.Name = "btnguarda_client"
-        Me.btnguarda_client.Size = New System.Drawing.Size(240, 47)
+        Me.btnguarda_client.Size = New System.Drawing.Size(180, 38)
         Me.btnguarda_client.TabIndex = 81
         Me.btnguarda_client.Text = "Guardar"
         '
@@ -265,17 +260,16 @@ Partial Class clientes
         '
         Me.btnnew_client.AutoRoundedCorners = True
         Me.btnnew_client.BackColor = System.Drawing.Color.Transparent
-        Me.btnnew_client.BorderRadius = 22
+        Me.btnnew_client.BorderRadius = 18
         Me.btnnew_client.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.btnnew_client.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.btnnew_client.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
         Me.btnnew_client.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
         Me.btnnew_client.Font = New System.Drawing.Font("Segoe UI Black", 10.8!, System.Drawing.FontStyle.Bold)
         Me.btnnew_client.ForeColor = System.Drawing.Color.White
-        Me.btnnew_client.Location = New System.Drawing.Point(812, 85)
-        Me.btnnew_client.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnnew_client.Location = New System.Drawing.Point(609, 69)
         Me.btnnew_client.Name = "btnnew_client"
-        Me.btnnew_client.Size = New System.Drawing.Size(240, 47)
+        Me.btnnew_client.Size = New System.Drawing.Size(180, 38)
         Me.btnnew_client.TabIndex = 80
         Me.btnnew_client.Text = "Nuevo"
         '
@@ -283,48 +277,46 @@ Partial Class clientes
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Segoe UI Black", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(16, 267)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Location = New System.Drawing.Point(12, 217)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(0, 28)
+        Me.Label1.Size = New System.Drawing.Size(0, 21)
         Me.Label1.TabIndex = 83
         '
         'dgvClient
         '
-        DataGridViewCellStyle10.BackColor = System.Drawing.Color.White
-        Me.dgvClient.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle10
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
+        Me.dgvClient.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.dgvClient.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
         Me.dgvClient.BackgroundColor = System.Drawing.Color.White
         Me.dgvClient.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dgvClient.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
         Me.dgvClient.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle11.BackColor = System.Drawing.Color.HotPink
-        DataGridViewCellStyle11.Font = New System.Drawing.Font("Segoe UI Black", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle11.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvClient.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle11
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.HotPink
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI Black", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvClient.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.dgvClient.ColumnHeadersHeight = 20
-        DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle12.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle12.Font = New System.Drawing.Font("Segoe UI Black", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(215, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvClient.DefaultCellStyle = DataGridViewCellStyle12
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI Black", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(215, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvClient.DefaultCellStyle = DataGridViewCellStyle3
         Me.dgvClient.EnableHeadersVisualStyles = False
         Me.dgvClient.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.dgvClient.Location = New System.Drawing.Point(19, 299)
-        Me.dgvClient.Margin = New System.Windows.Forms.Padding(4)
+        Me.dgvClient.Location = New System.Drawing.Point(14, 243)
         Me.dgvClient.Name = "dgvClient"
         Me.dgvClient.ReadOnly = True
         Me.dgvClient.RowHeadersVisible = False
         Me.dgvClient.RowTemplate.Height = 24
         Me.dgvClient.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvClient.Size = New System.Drawing.Size(1036, 369)
+        Me.dgvClient.Size = New System.Drawing.Size(777, 300)
         Me.dgvClient.TabIndex = 84
         Me.dgvClient.TabStop = False
         Me.dgvClient.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White
@@ -352,7 +344,7 @@ Partial Class clientes
         'tbCUI_client
         '
         Me.tbCUI_client.AutoRoundedCorners = True
-        Me.tbCUI_client.BorderRadius = 17
+        Me.tbCUI_client.BorderRadius = 14
         Me.tbCUI_client.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.tbCUI_client.DefaultText = ""
         Me.tbCUI_client.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
@@ -363,21 +355,21 @@ Partial Class clientes
         Me.tbCUI_client.Font = New System.Drawing.Font("Segoe UI Black", 12.0!, System.Drawing.FontStyle.Bold)
         Me.tbCUI_client.ForeColor = System.Drawing.Color.Black
         Me.tbCUI_client.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.tbCUI_client.Location = New System.Drawing.Point(19, 178)
-        Me.tbCUI_client.Margin = New System.Windows.Forms.Padding(5)
+        Me.tbCUI_client.Location = New System.Drawing.Point(14, 145)
+        Me.tbCUI_client.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.tbCUI_client.MaxLength = 13
         Me.tbCUI_client.Name = "tbCUI_client"
         Me.tbCUI_client.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.tbCUI_client.PlaceholderText = "CUI"
         Me.tbCUI_client.SelectedText = ""
-        Me.tbCUI_client.Size = New System.Drawing.Size(345, 37)
+        Me.tbCUI_client.Size = New System.Drawing.Size(259, 30)
         Me.tbCUI_client.TabIndex = 2
         '
         'clientes
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1079, 689)
+        Me.ClientSize = New System.Drawing.Size(809, 560)
         Me.Controls.Add(Me.tbCUI_client)
         Me.Controls.Add(Me.dgvClient)
         Me.Controls.Add(Me.Label1)
@@ -392,7 +384,6 @@ Partial Class clientes
         Me.Controls.Add(Me.tbcorreo_client)
         Me.Controls.Add(Me.tbID_client)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "clientes"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "clientes"

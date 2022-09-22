@@ -1,9 +1,16 @@
 ﻿Imports MySql.Data.MySqlClient
+Imports System.Runtime.InteropServices
 Public Class Importacion_Carro
     Dim cmd As MySqlCommand
     Dim conn As New MySqlConnection
     Dim objetoconexion As New conexion
     Dim i = 0
+    <DllImport("user32.DLL", EntryPoint:="ReleaseCapture")>
+    Private Shared Sub ReleaseCapture()
+    End Sub
+    <DllImport("user32.DLL", EntryPoint:="SendMessage")>
+    Private Shared Sub SendMessage(ByVal hWnd As System.IntPtr, ByVal wMsg As Integer, ByVal wParam As Integer, ByVal lParam As Integer)
+    End Sub
     Sub clin()
         tbID_impo.Clear()
         cbCarro_Compraimpor.SelectedIndex = -1
@@ -218,5 +225,9 @@ Public Class Importacion_Carro
                 e.Handled = True
             End If
         End If
+    End Sub
+    Private Sub Panel1_MouseMove(sender As Object, e As MouseEventArgs) Handles Panel1.MouseMove
+        ReleaseCapture()
+        SendMessage(Me.Handle, &H112&, &HF012&, 0)
     End Sub
 End Class

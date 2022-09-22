@@ -1,6 +1,7 @@
 ﻿Imports System.Net
 Imports System.IO
 Imports MySql.Data.MySqlClient
+Imports System.Runtime.InteropServices
 Public Class Costodefacturación
     Dim cmd As MySqlCommand
     Dim conn As New MySqlConnection
@@ -8,6 +9,12 @@ Public Class Costodefacturación
     Dim dolar As Double = 0.00
     Dim i As Integer = 0
     Dim i2 As Integer
+    <DllImport("user32.DLL", EntryPoint:="ReleaseCapture")>
+    Private Shared Sub ReleaseCapture()
+    End Sub
+    <DllImport("user32.DLL", EntryPoint:="SendMessage")>
+    Private Shared Sub SendMessage(ByVal hWnd As System.IntPtr, ByVal wMsg As Integer, ByVal wParam As Integer, ByVal lParam As Integer)
+    End Sub
     Sub cargarIPRIMAeIVA()
         If cbCarro_Cdfac.SelectedValue = 0 Then
             Exit Sub
@@ -302,33 +309,33 @@ Public Class Costodefacturación
                 MessageBox.Show("ALGUN CAMPO ESTÁ VACÍO", "ERROR AL MODIFICAR", MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
             Else
                 If MessageBox.Show("¿Deseas modificar los valores del IPRIMA e IVA?", "Atención", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) = vbYes Then
-                        i2 = 1
-                        tbIPRIMA_impo.ReadOnly = False
-                        tbIVA_impo.ReadOnly = False
-                    Else
-                        If i2 = 1 Then
-                            i2 = 0
-                            tbIPRIMA_impo.ReadOnly = True
-                            tbIVA_impo.ReadOnly = True
-                        End If
-                        cmd = conn.CreateCommand
-                        cmd.CommandText = "UPDATE facturacion SET id_carro=@car,id_compras=@com,id_impo=@impo,IPRIMA_importe=@IPRIMA,IVA_importe=@IVA,placas_factu=@plac WHERE id_factu=@id"
-                        cmd.Parameters.AddWithValue("@id", tbID_cdfac.Text)
-                        cmd.Parameters.AddWithValue("@car", cbCarro_Cdfac.SelectedValue.ToString)
-                        cmd.Parameters.AddWithValue("@com", Label1.Text)
-                        cmd.Parameters.AddWithValue("@impo", Label2.Text)
-                        cmd.Parameters.AddWithValue("@IPRIMA", tbIPRIMA_impo.Text)
-                        cmd.Parameters.AddWithValue("@IVA", tbIVA_impo.Text)
-                        cmd.Parameters.AddWithValue("@plac", tbCostoPlacas_Impo.Text)
-                        cmd.ExecuteNonQuery()
-                        conn.Close()
-                        conn.Dispose()
-                        mostrar()
-                        limpiar()
-                        cbCarro_Cdfac.SelectedIndex = -1
-                        Btnmodi_cliente.Enabled = False
+                    i2 = 1
+                    tbIPRIMA_impo.ReadOnly = False
+                    tbIVA_impo.ReadOnly = False
+                Else
+                    If i2 = 1 Then
+                        i2 = 0
+                        tbIPRIMA_impo.ReadOnly = True
+                        tbIVA_impo.ReadOnly = True
                     End If
+                    cmd = conn.CreateCommand
+                    cmd.CommandText = "UPDATE facturacion SET id_carro=@car,id_compras=@com,id_impo=@impo,IPRIMA_importe=@IPRIMA,IVA_importe=@IVA,placas_factu=@plac WHERE id_factu=@id"
+                    cmd.Parameters.AddWithValue("@id", tbID_cdfac.Text)
+                    cmd.Parameters.AddWithValue("@car", cbCarro_Cdfac.SelectedValue.ToString)
+                    cmd.Parameters.AddWithValue("@com", Label1.Text)
+                    cmd.Parameters.AddWithValue("@impo", Label2.Text)
+                    cmd.Parameters.AddWithValue("@IPRIMA", tbIPRIMA_impo.Text)
+                    cmd.Parameters.AddWithValue("@IVA", tbIVA_impo.Text)
+                    cmd.Parameters.AddWithValue("@plac", tbCostoPlacas_Impo.Text)
+                    cmd.ExecuteNonQuery()
+                    conn.Close()
+                    conn.Dispose()
+                    mostrar()
+                    limpiar()
+                    cbCarro_Cdfac.SelectedIndex = -1
+                    Btnmodi_cliente.Enabled = False
                 End If
+            End If
         Catch ex As Exception
             MessageBox.Show(ex.ToString())
         End Try
@@ -365,5 +372,9 @@ Public Class Costodefacturación
                 e.Handled = True
             End If
         End If
+    End Sub
+    Private Sub Panel1_MouseMove(sender As Object, e As MouseEventArgs) Handles Panel1.MouseMove
+        ReleaseCapture()
+        SendMessage(Me.Handle, &H112&, &HF012&, 0)
     End Sub
 End Class

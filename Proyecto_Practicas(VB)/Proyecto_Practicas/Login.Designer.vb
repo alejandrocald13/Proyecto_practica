@@ -91,7 +91,7 @@ Partial Class Login
         Me.Label1.Location = New System.Drawing.Point(111, 49)
         Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(324, 54)
+        Me.Label1.Size = New System.Drawing.Size(260, 45)
         Me.Label1.TabIndex = 2
         Me.Label1.Text = "INICIAR SESIÓN"
         '
@@ -168,7 +168,7 @@ Partial Class Login
         '
         'Login
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 28.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 21.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(490, 310)
         Me.ControlBox = False

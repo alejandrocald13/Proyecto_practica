@@ -186,3 +186,4 @@ C:\Users\diego\OneDrive\Documents\GitHub\Proyecto_practica\Proyecto_Practicas(VB
 A:\Roberto\Roberto (Beta)\Proyecto_practica\Proyecto_practica\Proyecto_Practicas(VB)\Proyecto_Practicas\obj\Debug\Proyecto_Practicas.Costodefacturación.resources
 A:\Roberto\Roberto (Beta)\Proyecto_practica\Proyecto_practica\Proyecto_Practicas(VB)\Proyecto_Practicas\obj\Debug\Proyecto_Practicas.Inventario.resources
 A:\Roberto\Roberto (Beta)\Proyecto_practica\Proyecto_practica\Proyecto_Practicas(VB)\Proyecto_Practicas\obj\Debug\Proyecto_Practicas.Ventas.resources
+A:\Roberto\Roberto (Beta)\Proyecto_practica\Proyecto_practica\Proyecto_Practicas(VB)\Proyecto_Practicas\obj\Debug\Proyecto_Practicas.Registro.resources
