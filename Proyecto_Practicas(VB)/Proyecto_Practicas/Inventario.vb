@@ -223,7 +223,13 @@ Public Class Inventario
             End If
         End If
     End Sub
-
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Me.Hide()
+        Login.Close()
+    End Sub
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Me.WindowState = FormWindowState.Minimized
+    End Sub
     Private Sub dgvInvent_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvInvent.CellContentClick
         i3 = 1
         btnguardar_inven.Enabled = False

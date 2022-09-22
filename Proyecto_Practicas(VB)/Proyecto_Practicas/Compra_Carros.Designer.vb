@@ -277,7 +277,7 @@ Partial Class Compra_Carros
         Me.dtpFecha_CompraCar.Name = "dtpFecha_CompraCar"
         Me.dtpFecha_CompraCar.Size = New System.Drawing.Size(132, 36)
         Me.dtpFecha_CompraCar.TabIndex = 32
-        Me.dtpFecha_CompraCar.Value = New Date(2022, 9, 1, 0, 0, 0, 0)
+        Me.dtpFecha_CompraCar.Value = New Date(2022, 9, 21, 0, 0, 0, 0)
         '
         'nudCosto_CompraCar
         '

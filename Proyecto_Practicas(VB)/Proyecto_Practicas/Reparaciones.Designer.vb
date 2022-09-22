@@ -381,7 +381,7 @@ Partial Class Reparaciones
         Me.dtpEntrega_repar.Name = "dtpEntrega_repar"
         Me.dtpEntrega_repar.Size = New System.Drawing.Size(132, 30)
         Me.dtpEntrega_repar.TabIndex = 67
-        Me.dtpEntrega_repar.Value = New Date(2022, 9, 1, 0, 0, 0, 0)
+        Me.dtpEntrega_repar.Value = New Date(2022, 9, 21, 0, 0, 0, 0)
         '
         'dtpEntrada_repar
         '
@@ -400,7 +400,7 @@ Partial Class Reparaciones
         Me.dtpEntrada_repar.Name = "dtpEntrada_repar"
         Me.dtpEntrada_repar.Size = New System.Drawing.Size(132, 30)
         Me.dtpEntrada_repar.TabIndex = 70
-        Me.dtpEntrada_repar.Value = New Date(2022, 9, 1, 0, 0, 0, 0)
+        Me.dtpEntrada_repar.Value = New Date(2022, 9, 21, 0, 0, 0, 0)
         '
         'dgvRepar
         '
