@@ -1,7 +1,7 @@
 ﻿Imports System.Net
 Imports System.IO
 Imports MySql.Data.MySqlClient
-Imports System.Runtime.InteropServices
+'Imports System.Runtime.InteropServices
 Public Class Costodefacturación
     Dim cmd As MySqlCommand
     Dim conn As New MySqlConnection
@@ -9,12 +9,12 @@ Public Class Costodefacturación
     Dim dolar As Double = 0.00
     Dim i As Integer = 0
     Dim i2 As Integer
-    <DllImport("user32.DLL", EntryPoint:="ReleaseCapture")>
-    Private Shared Sub ReleaseCapture()
-    End Sub
-    <DllImport("user32.DLL", EntryPoint:="SendMessage")>
-    Private Shared Sub SendMessage(ByVal hWnd As System.IntPtr, ByVal wMsg As Integer, ByVal wParam As Integer, ByVal lParam As Integer)
-    End Sub
+    '<DllImport("user32.DLL", EntryPoint:="ReleaseCapture")>
+    'Private Shared Sub ReleaseCapture()
+    'End Sub
+    '<DllImport("user32.DLL", EntryPoint:="SendMessage")>
+    'Private Shared Sub SendMessage(ByVal hWnd As System.IntPtr, ByVal wMsg As Integer, ByVal wParam As Integer, ByVal lParam As Integer)
+    'End Sub
     Sub cargarIPRIMAeIVA()
         If cbCarro_Cdfac.SelectedValue = 0 Then
             Exit Sub
@@ -357,11 +357,11 @@ Public Class Costodefacturación
             MessageBox.Show(ex.ToString())
         End Try
     End Sub
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+    Private Sub Button2_Click(sender As Object, e As EventArgs)
         Me.Hide()
         Login.Close()
     End Sub
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs)
         Me.WindowState = FormWindowState.Minimized
     End Sub
     Private Sub tbIPRIMA_impo_KeyPress(sender As Object, e As KeyPressEventArgs) Handles tbIPRIMA_impo.KeyPress, tbIVA_impo.KeyPress
@@ -372,9 +372,5 @@ Public Class Costodefacturación
                 e.Handled = True
             End If
         End If
-    End Sub
-    Private Sub Panel1_MouseMove(sender As Object, e As MouseEventArgs) Handles Panel1.MouseMove
-        ReleaseCapture()
-        SendMessage(Me.Handle, &H112&, &HF012&, 0)
     End Sub
 End Class
