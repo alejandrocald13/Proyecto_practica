@@ -1,5 +1,7 @@
 ﻿Imports MySql.Data.MySqlClient
 Imports System.Runtime.InteropServices
+Imports System.Text
+Imports System.Security.Cryptography
 Public Class Login
     Dim cont = 0
     <DllImport("user32.DLL", EntryPoint:="ReleaseCapture")>
@@ -32,7 +34,14 @@ Public Class Login
 
             End Try
             Try
-                cmd.CommandText = "SELECT user from users WHERE user='" & tbUser.Text & "' AND psw='" & tbPswd.Text & "';"
+                Dim codigo As New UnicodeEncoding()
+                Dim SHA As New SHA256CryptoServiceProvider()
+                Dim clave As String
+                clave = tbPswd.Text
+                Dim hash() As Byte = SHA.ComputeHash(codigo.GetBytes(clave))
+                Dim nuevaclave As String
+                nuevaclave = Convert.ToBase64String(hash)
+                cmd.CommandText = "SELECT user from users WHERE user='" & tbUser.Text & "' AND psw='" & nuevaclave & "';"
                 Dim r As MySqlDataReader
                 r = cmd.ExecuteReader
                 If r.HasRows <> False Then
