@@ -187,3 +187,4 @@ A:\Roberto\Roberto (Beta)\Proyecto_practica\Proyecto_practica\Proyecto_Practicas
 A:\Roberto\Roberto (Beta)\Proyecto_practica\Proyecto_practica\Proyecto_Practicas(VB)\Proyecto_Practicas\bin\Debug\MySql.Data.xml
 A:\Roberto\Roberto (Beta)\Proyecto_practica\Proyecto_practica\Proyecto_Practicas(VB)\Proyecto_Practicas\obj\Debug\Proyecto_Practicas.exe
 A:\Roberto\Roberto (Beta)\Proyecto_practica\Proyecto_practica\Proyecto_Practicas(VB)\Proyecto_Practicas\obj\Debug\Proyecto_Practicas.pdb
+A:\Roberto\Roberto (Beta)\Proyecto_practica\Proyecto_practica\Proyecto_Practicas(VB)\Proyecto_Practicas\obj\Debug\Proyecto_Practicas.Costodefacturación.resources

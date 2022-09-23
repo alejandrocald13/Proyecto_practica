@@ -200,6 +200,9 @@
     <EmbeddedResource Include="Compra_Carros.resx">
       <DependentUpon>Compra_Carros.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Costodefacturación.resx">
+      <DependentUpon>Costodefacturación.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Importacion_Carro.resx">
       <DependentUpon>Importacion_Carro.vb</DependentUpon>
     </EmbeddedResource>
