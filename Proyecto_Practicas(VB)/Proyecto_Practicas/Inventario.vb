@@ -165,6 +165,7 @@ Public Class Inventario
                 cmd.ExecuteNonQuery()
                 conn.Close()
                 conn.Dispose()
+                MsgBox("Eliminado Correctamente", vbInformation, "Correcto")
                 mostrar()
                 limpiar()
             Catch ex As Exception
@@ -213,6 +214,7 @@ Public Class Inventario
                     cmd.ExecuteNonQuery()
                     conn.Close()
                     conn.Dispose()
+                    MsgBox("Modificado Correctamente", vbInformation, "Correcto")
                     mostrar()
                     limpiar()
                     cbcarrito_inven.SelectedIndex = -1
@@ -308,6 +310,8 @@ Public Class Inventario
                     cmd.ExecuteNonQuery()
                     conn.Close()
                     conn.Dispose()
+                    MsgBox("Guardado Correctamente", vbInformation, "Correcto")
+
                     mostrar()
                     limpiar()
                     cbcarrito_inven.SelectedIndex = -1

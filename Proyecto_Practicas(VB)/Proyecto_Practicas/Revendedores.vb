@@ -58,6 +58,7 @@ Public Class Revendedores
                 cmd.ExecuteNonQuery()
                 conn.Close()
                 conn.Dispose()
+                MsgBox("Modificado Correctamente", vbInformation, "Correcto")
                 mostrar()
                 limpiar()
                 Guna2Button3.Enabled = False
@@ -98,6 +99,7 @@ Public Class Revendedores
                 cmd.ExecuteNonQuery()
                 conn.Close()
                 conn.Dispose()
+                MsgBox("Guardado Correctamente", vbInformation, "Correcto")
                 mostrar()
                 limpiar()
                 Guna2Button2.Enabled = False
@@ -116,6 +118,7 @@ Public Class Revendedores
                 cmd.ExecuteNonQuery()
                 conn.Close()
                 conn.Dispose()
+                MsgBox("Eliminado Correctamente", vbInformation, "Correcto")
                 mostrar()
                 limpiar()
             Catch ex As Exception

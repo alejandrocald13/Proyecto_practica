@@ -51,6 +51,7 @@ Public Class Subasta
                 cmd.ExecuteNonQuery()
                 conn.Close()
                 conn.Dispose()
+                MsgBox("Guardado Correctamente", vbInformation, "Correcto")
                 mostrarsub()
                 cle()
                 Guna2Button2.Enabled = False
@@ -73,6 +74,7 @@ Public Class Subasta
                 cmd.ExecuteNonQuery()
                 conn.Close()
                 conn.Dispose()
+                MsgBox("Modificado Correctamente", vbInformation, "Correcto")
                 mostrarsub()
                 cle()
             End If

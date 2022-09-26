@@ -52,6 +52,8 @@ Partial Class Lista_forms
         Me.btFactu_list = New System.Windows.Forms.Button()
         Me.Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.PanelContenedor = New System.Windows.Forms.Panel()
+        Me.Panel13 = New System.Windows.Forms.Panel()
+        Me.Button12 = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.Panel4.SuspendLayout()
         CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -130,6 +132,8 @@ Partial Class Lista_forms
         'Panel4
         '
         Me.Panel4.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(7, Byte), Integer), CType(CType(7, Byte), Integer))
+        Me.Panel4.Controls.Add(Me.Panel13)
+        Me.Panel4.Controls.Add(Me.Button12)
         Me.Panel4.Controls.Add(Me.Panel12)
         Me.Panel4.Controls.Add(Me.Button11)
         Me.Panel4.Controls.Add(Me.LinkLabel1)
@@ -200,7 +204,7 @@ Partial Class Lista_forms
         'Panel11
         '
         Me.Panel11.BackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(19, Byte), Integer), CType(CType(43, Byte), Integer))
-        Me.Panel11.Location = New System.Drawing.Point(0, 618)
+        Me.Panel11.Location = New System.Drawing.Point(0, 674)
         Me.Panel11.Name = "Panel11"
         Me.Panel11.Size = New System.Drawing.Size(5, 50)
         Me.Panel11.TabIndex = 127
@@ -216,7 +220,7 @@ Partial Class Lista_forms
         Me.Button10.ForeColor = System.Drawing.Color.White
         Me.Button10.Image = CType(resources.GetObject("Button10.Image"), System.Drawing.Image)
         Me.Button10.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button10.Location = New System.Drawing.Point(3, 618)
+        Me.Button10.Location = New System.Drawing.Point(3, 674)
         Me.Button10.Name = "Button10"
         Me.Button10.Size = New System.Drawing.Size(180, 50)
         Me.Button10.TabIndex = 126
@@ -227,7 +231,7 @@ Partial Class Lista_forms
         'Panel10
         '
         Me.Panel10.BackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(19, Byte), Integer), CType(CType(43, Byte), Integer))
-        Me.Panel10.Location = New System.Drawing.Point(0, 562)
+        Me.Panel10.Location = New System.Drawing.Point(0, 618)
         Me.Panel10.Name = "Panel10"
         Me.Panel10.Size = New System.Drawing.Size(5, 50)
         Me.Panel10.TabIndex = 125
@@ -243,7 +247,7 @@ Partial Class Lista_forms
         Me.Button9.ForeColor = System.Drawing.Color.White
         Me.Button9.Image = CType(resources.GetObject("Button9.Image"), System.Drawing.Image)
         Me.Button9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button9.Location = New System.Drawing.Point(3, 562)
+        Me.Button9.Location = New System.Drawing.Point(3, 618)
         Me.Button9.Name = "Button9"
         Me.Button9.Size = New System.Drawing.Size(180, 50)
         Me.Button9.TabIndex = 124
@@ -460,6 +464,33 @@ Partial Class Lista_forms
         Me.PanelContenedor.Size = New System.Drawing.Size(1217, 814)
         Me.PanelContenedor.TabIndex = 111
         '
+        'Panel13
+        '
+        Me.Panel13.BackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(19, Byte), Integer), CType(CType(43, Byte), Integer))
+        Me.Panel13.Location = New System.Drawing.Point(0, 562)
+        Me.Panel13.Name = "Panel13"
+        Me.Panel13.Size = New System.Drawing.Size(5, 50)
+        Me.Panel13.TabIndex = 132
+        '
+        'Button12
+        '
+        Me.Button12.Cursor = System.Windows.Forms.Cursors.SizeAll
+        Me.Button12.FlatAppearance.BorderSize = 0
+        Me.Button12.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(19, Byte), Integer), CType(CType(43, Byte), Integer))
+        Me.Button12.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(57, Byte), Integer))
+        Me.Button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button12.Font = New System.Drawing.Font("Segoe UI Black", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button12.ForeColor = System.Drawing.Color.White
+        Me.Button12.Image = CType(resources.GetObject("Button12.Image"), System.Drawing.Image)
+        Me.Button12.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button12.Location = New System.Drawing.Point(3, 562)
+        Me.Button12.Name = "Button12"
+        Me.Button12.Size = New System.Drawing.Size(180, 50)
+        Me.Button12.TabIndex = 131
+        Me.Button12.Text = "Reparaciones"
+        Me.Button12.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Button12.UseVisualStyleBackColor = True
+        '
         'Lista_forms
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -509,4 +540,6 @@ Partial Class Lista_forms
     Friend WithEvents LinkLabel1 As LinkLabel
     Friend WithEvents Panel12 As Panel
     Friend WithEvents Button11 As Button
+    Friend WithEvents Panel13 As Panel
+    Friend WithEvents Button12 As Button
 End Class

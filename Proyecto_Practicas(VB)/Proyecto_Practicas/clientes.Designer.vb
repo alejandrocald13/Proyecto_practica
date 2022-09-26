@@ -277,7 +277,7 @@ Partial Class clientes
         Me.dgvClient.RowHeadersVisible = False
         Me.dgvClient.RowTemplate.Height = 24
         Me.dgvClient.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvClient.Size = New System.Drawing.Size(796, 360)
+        Me.dgvClient.Size = New System.Drawing.Size(796, 333)
         Me.dgvClient.TabIndex = 84
         Me.dgvClient.TabStop = False
         Me.dgvClient.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White

@@ -280,6 +280,8 @@ Public Class Costodefacturación
                         cmd.ExecuteNonQuery()
                         conn.Close()
                         conn.Dispose()
+
+
                         mostrar()
                         limpiar()
                         cbCarro_Cdfac.SelectedIndex = -1

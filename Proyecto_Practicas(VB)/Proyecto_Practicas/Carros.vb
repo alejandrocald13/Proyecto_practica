@@ -77,8 +77,11 @@ Public Class Carros
                 cmd.ExecuteNonQuery()
                 conn.Close()
                 conn.Dispose()
+                MsgBox("Guardado Correctamente", vbInformation, "Correcto")
                 mostrar()
                 limpiar()
+
+
                 Guna2Button2.Enabled = True
             End If
         Catch ex As Exception
@@ -86,6 +89,18 @@ Public Class Carros
         End Try
     End Sub
     Private Sub Carros_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        If Login.token <> 1 Then
+            MessageBox.Show("No tienes el Acceso Total a este formulario. Si crees que se trata de un error intenta iniciar sesión de nuevo.", "Atención", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation)
+            For Each Ctrl As Control In Controls
+                If Ctrl.ToString = "Guna.UI2.WinForms.Guna2DataGridView" Then
+                Else
+                    Ctrl.Enabled = False
+                End If
+            Next
+            If Login.token = 2 Then
+
+            End If
+        End If
         mostrar()
         Guna2Button2.Enabled = False
         Guna2Button3.Enabled = False
@@ -116,6 +131,7 @@ Public Class Carros
                 cmd.ExecuteNonQuery()
                 conn.Close()
                 conn.Dispose()
+                MsgBox("Modificado Correctamente", vbInformation, "Correcto")
                 mostrar()
                 limpiar()
             End If
@@ -124,30 +140,35 @@ Public Class Carros
         End Try
     End Sub
     Private Sub dgvCarros_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvCarros.CellContentClick
-        Guna2Button2.Enabled = False
-        Guna2Button3.Enabled = True
-        Dim row As DataGridViewRow = dgvCarros.CurrentRow
-        Try
-            tbID.Text = row.Cells(0).Value.ToString()
-            Numano_Car.Value = row.Cells(1).Value
-            tbmar_car.Text = row.Cells(2).Value.ToString()
-            tbmodelo_car.Text = row.Cells(3).Value.ToString()
-            tbcol_car.Text = row.Cells(4).Value.ToString()
-            tbVIN_car.Text = row.Cells(5).Value.ToString()
-            numcili_car.Value = row.Cells(6).Value
-            tbmotor_car.Text = row.Cells(7).Value
-            x = row.Cells(8).Value.ToString()
-            If x = "Si" Then
-                rdSi_llaves.Checked = True
-            ElseIf x = "No" Then
-                rdNo_llaves.Checked = True
-            End If
-            Dim s = row.Cells(9).Value.ToString()
-            tbMillaje_carro.Text = s.Split("mi")(0)
-            tbURL_car.Text = row.Cells(10).Value.ToString()
-        Catch ex As Exception
-            MessageBox.Show(ex.ToString())
-        End Try
+        If Login.token = 1 Then
+            Guna2Button2.Enabled = False
+            Guna2Button3.Enabled = False
+        Else
+            Guna2Button2.Enabled = False
+            Guna2Button3.Enabled = True
+            Dim row As DataGridViewRow = dgvCarros.CurrentRow
+            Try
+                tbID.Text = row.Cells(0).Value.ToString()
+                Numano_Car.Value = row.Cells(1).Value
+                tbmar_car.Text = row.Cells(2).Value.ToString()
+                tbmodelo_car.Text = row.Cells(3).Value.ToString()
+                tbcol_car.Text = row.Cells(4).Value.ToString()
+                tbVIN_car.Text = row.Cells(5).Value.ToString()
+                numcili_car.Value = row.Cells(6).Value
+                tbmotor_car.Text = row.Cells(7).Value
+                x = row.Cells(8).Value.ToString()
+                If x = "Si" Then
+                    rdSi_llaves.Checked = True
+                ElseIf x = "No" Then
+                    rdNo_llaves.Checked = True
+                End If
+                Dim s = row.Cells(9).Value.ToString()
+                tbMillaje_carro.Text = s.Split("mi")(0)
+                tbURL_car.Text = row.Cells(10).Value.ToString()
+            Catch ex As Exception
+                MessageBox.Show(ex.ToString())
+            End Try
+        End If
     End Sub
 
     Private Sub tbmar_car_KeyPress(sender As Object, e As KeyPressEventArgs) Handles tbmar_car.KeyPress

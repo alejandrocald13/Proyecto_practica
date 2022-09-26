@@ -131,7 +131,7 @@ Partial Class Login
         Me.bMinimizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray
         Me.bMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.bMinimizar.Image = CType(resources.GetObject("bMinimizar.Image"), System.Drawing.Image)
-        Me.bMinimizar.Location = New System.Drawing.Point(413, 0)
+        Me.bMinimizar.Location = New System.Drawing.Point(412, 0)
         Me.bMinimizar.Name = "bMinimizar"
         Me.bMinimizar.Size = New System.Drawing.Size(36, 36)
         Me.bMinimizar.TabIndex = 1

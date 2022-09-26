@@ -239,7 +239,7 @@ Partial Class Importacion_Carro
         Me.dgvImpo.RowHeadersVisible = False
         Me.dgvImpo.RowTemplate.Height = 24
         Me.dgvImpo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvImpo.Size = New System.Drawing.Size(849, 370)
+        Me.dgvImpo.Size = New System.Drawing.Size(849, 347)
         Me.dgvImpo.TabIndex = 61
         Me.dgvImpo.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White
         Me.dgvImpo.ThemeStyle.AlternatingRowsStyle.Font = Nothing

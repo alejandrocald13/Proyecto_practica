@@ -32,6 +32,7 @@ Public Class Compra_Carros
                 cmd.ExecuteNonQuery()
                 conn.Close()
                 conn.Dispose()
+                MsgBox("Modificado Correctamente", vbInformation, "Correcto")
                 mostrar()
                 l()
                 cbCarro_CompraCar.SelectedIndex = -1
@@ -60,6 +61,7 @@ Public Class Compra_Carros
                 cmd.ExecuteNonQuery()
                 conn.Close()
                 conn.Dispose()
+                MsgBox("Guardado Correctamente", vbInformation, "Correcto")
                 mostrar()
                 l()
                 cbCarro_CompraCar.SelectedIndex = -1

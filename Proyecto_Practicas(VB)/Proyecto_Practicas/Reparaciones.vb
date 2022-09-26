@@ -5,6 +5,8 @@ Public Class Reparaciones
     Dim conn As New MySqlConnection
     Dim objetoconexion As New conexion
     Dim i = 0
+    Dim CuRWidth As Integer = Me.Width
+    Dim CuRHeight As Integer = Me.Height
     <DllImport("user32.DLL", EntryPoint:="ReleaseCapture")>
     Private Shared Sub ReleaseCapture()
     End Sub
@@ -153,6 +155,8 @@ Public Class Reparaciones
                     cmd.ExecuteNonQuery()
                     conn.Close()
                     conn.Dispose()
+                    MsgBox("Guardado Correctamente", vbInformation, "Correcto")
+
                     mostrar()
                     limpiar()
                     cbCarro_repar.SelectedIndex = -1
@@ -203,6 +207,7 @@ Public Class Reparaciones
                 cmd.ExecuteNonQuery()
                 conn.Close()
                 conn.Dispose()
+                MsgBox("Modificado Correctamente", vbInformation, "Correcto")
                 mostrar()
                 limpiar()
                 limpiar()
@@ -211,11 +216,11 @@ Public Class Reparaciones
         Catch ex As Exception
         End Try
     End Sub
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+    Private Sub Button2_Click(sender As Object, e As EventArgs)
         Me.Hide()
         Login.Close()
     End Sub
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs)
         Me.WindowState = FormWindowState.Minimized
     End Sub
 
@@ -238,8 +243,22 @@ Public Class Reparaciones
             End If
         End If
     End Sub
-    Private Sub Panel1_MouseMove(sender As Object, e As MouseEventArgs) Handles Panel1.MouseMove
+    Private Sub Panel1_MouseMove(sender As Object, e As MouseEventArgs)
         ReleaseCapture()
         SendMessage(Me.Handle, &H112&, &HF012&, 0)
+    End Sub
+    Private Sub Reparaciones_Resize(sender As Object, e As EventArgs) Handles MyBase.Resize
+        Dim RatioHeight As Double = (Me.Height - CuRHeight) / CuRHeight
+        Dim RatioWidth As Double = (Me.Width - CuRWidth) / CuRWidth
+        For Each Ctrl As Control In Controls
+            Ctrl.Width += Ctrl.Width * RatioWidth
+            Ctrl.Left += Ctrl.Left * RatioWidth
+            Ctrl.Top += Ctrl.Top * RatioHeight
+            If Ctrl.ToString = "Guna.UI2.WinForms.Guna2DataGridView" Then
+                Ctrl.Height += Ctrl.Height * RatioHeight
+            End If
+        Next
+        CuRHeight = Me.Height
+        CuRWidth = Me.Width
     End Sub
 End Class

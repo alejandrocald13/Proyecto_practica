@@ -151,6 +151,8 @@ Public Class Importacion_Carro
                     cmd.ExecuteNonQuery()
                     conn.Close()
                     conn.Dispose()
+                    MsgBox("Guardado Correctamente", vbInformation, "Correcto")
+
                     mostrar()
                     clin()
                     cbCarro_Compraimpor.SelectedIndex = -1
@@ -197,6 +199,7 @@ Public Class Importacion_Carro
                 cmd.ExecuteNonQuery()
                 conn.Close()
                 conn.Dispose()
+                MsgBox("Modificado Correctamente", vbInformation, "Correcto")
                 mostrar()
                 clin()
                 Btnmodi_impor.Enabled = False

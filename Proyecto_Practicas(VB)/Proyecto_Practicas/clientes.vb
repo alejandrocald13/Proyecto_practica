@@ -84,6 +84,8 @@ Public Class clientes
                 cmd.ExecuteNonQuery()
                 conn.Close()
                 conn.Dispose()
+                MsgBox("Guardado Correctamente", vbInformation, "Correcto")
+
                 mostrar()
                 limpiar()
                 btnguarda_client.Enabled = False
@@ -114,6 +116,7 @@ Public Class clientes
                 cmd.ExecuteNonQuery()
                 conn.Close()
                 conn.Dispose()
+                MsgBox("Modificado Correctamente", vbInformation, "Correcto")
                 mostrar()
                 limpiar()
                 Btnmodi_cliente.Enabled = False

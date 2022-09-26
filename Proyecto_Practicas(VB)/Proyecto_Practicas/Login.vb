@@ -74,7 +74,7 @@ Public Class Login
                         token = 0
                     End Try
                     l()
-                    MessageBox.Show("¡Inicio de Sesión Correcto!")
+                    MsgBox("¡Inicio de Sesión Correcto!", vbInformation, "Correcto")
                     Lista_forms.Show()
                     Me.Hide()
                 Else

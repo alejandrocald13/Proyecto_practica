@@ -177,6 +177,7 @@ Public Class Ventas
                     cmd.ExecuteNonQuery()
                     conn.Close()
                     conn.Dispose()
+                    MsgBox("Guardado Correctamente", vbInformation, "Correcto")
                     mostrar()
                     limpiar()
                     cbCarro_ventas.SelectedIndex = -1
@@ -222,6 +223,7 @@ Public Class Ventas
                 cmd.ExecuteNonQuery()
                 conn.Close()
                 conn.Dispose()
+                MsgBox("Modificado Correctamente", vbInformation, "Correcto")
                 mostrar()
                 limpiar()
                 cbCarro_ventas.SelectedIndex = -1

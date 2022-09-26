@@ -85,6 +85,11 @@ Public Class Lista_forms
     Private Sub Button11_Click(sender As Object, e As EventArgs) Handles Button11.Click
         AbrirFormEnPanel(New Inventario)
     End Sub
+
+    Private Sub Button12_Click(sender As Object, e As EventArgs) Handles Button12.Click
+        AbrirFormEnPanel(New Reparaciones)
+    End Sub
+
     Private Sub Lista_forms_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         SizeNormal = Size
         LocationNormal = Location

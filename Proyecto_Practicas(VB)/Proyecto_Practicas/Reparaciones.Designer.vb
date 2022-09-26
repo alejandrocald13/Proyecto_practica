@@ -22,7 +22,6 @@ Partial Class Reparaciones
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Reparaciones))
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
@@ -36,11 +35,6 @@ Partial Class Reparaciones
         Me.bSave = New Guna.UI2.WinForms.Guna2Button()
         Me.bNew = New Guna.UI2.WinForms.Guna2Button()
         Me.tbID_repar = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.bMinimizar = New System.Windows.Forms.Button()
-        Me.bCerrar = New System.Windows.Forms.Button()
         Me.tbLoteSelec_repar = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.tbencar_repar = New Guna.UI2.WinForms.Guna2TextBox()
@@ -49,8 +43,8 @@ Partial Class Reparaciones
         Me.dtpEntrada_repar = New Guna.UI2.WinForms.Guna2DateTimePicker()
         Me.dgvRepar = New Guna.UI2.WinForms.Guna2DataGridView()
         Me.tbDanos_repar = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.Label6 = New System.Windows.Forms.Label()
         CType(Me.nudCosto_repar, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel1.SuspendLayout()
         CType(Me.dgvRepar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -229,71 +223,6 @@ Partial Class Reparaciones
         Me.tbID_repar.Size = New System.Drawing.Size(49, 30)
         Me.tbID_repar.TabIndex = 42
         '
-        'Panel1
-        '
-        Me.Panel1.BackColor = System.Drawing.Color.SlateBlue
-        Me.Panel1.Controls.Add(Me.Button1)
-        Me.Panel1.Controls.Add(Me.Button2)
-        Me.Panel1.Controls.Add(Me.bMinimizar)
-        Me.Panel1.Controls.Add(Me.bCerrar)
-        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel1.Location = New System.Drawing.Point(0, 0)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(902, 35)
-        Me.Panel1.TabIndex = 59
-        '
-        'Button1
-        '
-        Me.Button1.FlatAppearance.BorderSize = 0
-        Me.Button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray
-        Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
-        Me.Button1.Location = New System.Drawing.Point(792, 0)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(52, 35)
-        Me.Button1.TabIndex = 24
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'Button2
-        '
-        Me.Button2.FlatAppearance.BorderSize = 0
-        Me.Button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray
-        Me.Button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Image = CType(resources.GetObject("Button2.Image"), System.Drawing.Image)
-        Me.Button2.Location = New System.Drawing.Point(850, 0)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(52, 35)
-        Me.Button2.TabIndex = 23
-        Me.Button2.UseVisualStyleBackColor = True
-        '
-        'bMinimizar
-        '
-        Me.bMinimizar.FlatAppearance.BorderSize = 0
-        Me.bMinimizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray
-        Me.bMinimizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray
-        Me.bMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.bMinimizar.Image = CType(resources.GetObject("bMinimizar.Image"), System.Drawing.Image)
-        Me.bMinimizar.Location = New System.Drawing.Point(953, 0)
-        Me.bMinimizar.Name = "bMinimizar"
-        Me.bMinimizar.Size = New System.Drawing.Size(52, 35)
-        Me.bMinimizar.TabIndex = 22
-        Me.bMinimizar.UseVisualStyleBackColor = True
-        '
-        'bCerrar
-        '
-        Me.bCerrar.FlatAppearance.BorderSize = 0
-        Me.bCerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray
-        Me.bCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red
-        Me.bCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.bCerrar.Image = CType(resources.GetObject("bCerrar.Image"), System.Drawing.Image)
-        Me.bCerrar.Location = New System.Drawing.Point(1011, 0)
-        Me.bCerrar.Name = "bCerrar"
-        Me.bCerrar.Size = New System.Drawing.Size(52, 35)
-        Me.bCerrar.TabIndex = 21
-        Me.bCerrar.UseVisualStyleBackColor = True
-        '
         'tbLoteSelec_repar
         '
         Me.tbLoteSelec_repar.AutoRoundedCorners = True
@@ -404,9 +333,11 @@ Partial Class Reparaciones
         '
         'dgvRepar
         '
+        Me.dgvRepar.AllowUserToAddRows = False
+        Me.dgvRepar.AllowUserToDeleteRows = False
         DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
         Me.dgvRepar.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
-        Me.dgvRepar.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
+        Me.dgvRepar.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgvRepar.BackgroundColor = System.Drawing.Color.White
         Me.dgvRepar.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dgvRepar.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
@@ -436,7 +367,7 @@ Partial Class Reparaciones
         Me.dgvRepar.RowHeadersVisible = False
         Me.dgvRepar.RowTemplate.Height = 24
         Me.dgvRepar.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvRepar.Size = New System.Drawing.Size(849, 277)
+        Me.dgvRepar.Size = New System.Drawing.Size(861, 312)
         Me.dgvRepar.TabIndex = 71
         Me.dgvRepar.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White
         Me.dgvRepar.ThemeStyle.AlternatingRowsStyle.Font = Nothing
@@ -483,11 +414,23 @@ Partial Class Reparaciones
         Me.tbDanos_repar.Size = New System.Drawing.Size(277, 30)
         Me.tbDanos_repar.TabIndex = 72
         '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.ForeColor = System.Drawing.Color.Gray
+        Me.Label6.Location = New System.Drawing.Point(350, 17)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(308, 25)
+        Me.Label6.TabIndex = 122
+        Me.Label6.Text = "REGISTRO DE REPARACIONES"
+        '
         'Reparaciones
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(902, 564)
+        Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.tbDanos_repar)
         Me.Controls.Add(Me.dgvRepar)
         Me.Controls.Add(Me.dtpEntrada_repar)
@@ -496,7 +439,6 @@ Partial Class Reparaciones
         Me.Controls.Add(Me.tbencar_repar)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.tbLoteSelec_repar)
-        Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.cbCarro_repar)
         Me.Controls.Add(Me.tbCarroSelec_repar)
         Me.Controls.Add(Me.Label4)
@@ -513,7 +455,6 @@ Partial Class Reparaciones
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Reparaciones"
         CType(Me.nudCosto_repar, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Panel1.ResumeLayout(False)
         CType(Me.dgvRepar, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -530,11 +471,6 @@ Partial Class Reparaciones
     Friend WithEvents bSave As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents bNew As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents tbID_repar As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents Panel1 As Panel
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents bMinimizar As Button
-    Friend WithEvents bCerrar As Button
     Friend WithEvents tbLoteSelec_repar As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents tbencar_repar As Guna.UI2.WinForms.Guna2TextBox
@@ -543,4 +479,5 @@ Partial Class Reparaciones
     Friend WithEvents dtpEntrada_repar As Guna.UI2.WinForms.Guna2DateTimePicker
     Friend WithEvents dgvRepar As Guna.UI2.WinForms.Guna2DataGridView
     Friend WithEvents tbDanos_repar As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents Label6 As Label
 End Class
