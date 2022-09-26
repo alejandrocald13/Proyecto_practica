@@ -22,10 +22,9 @@ Partial Class Carros
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Carros))
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Numano_Car = New Guna.UI2.WinForms.Guna2NumericUpDown()
         Me.tbmar_car = New Guna.UI2.WinForms.Guna2TextBox()
         Me.tbmodelo_car = New Guna.UI2.WinForms.Guna2TextBox()
@@ -37,9 +36,6 @@ Partial Class Carros
         Me.Guna2Button2 = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2Button3 = New Guna.UI2.WinForms.Guna2Button()
         Me.dgvCarros = New Guna.UI2.WinForms.Guna2DataGridView()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.bMinimizar = New System.Windows.Forms.Button()
-        Me.bCerrar = New System.Windows.Forms.Button()
         Me.tbVIN_car = New Guna.UI2.WinForms.Guna2TextBox()
         Me.tbURL_car = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -48,10 +44,10 @@ Partial Class Carros
         Me.rdNo_llaves = New Guna.UI2.WinForms.Guna2RadioButton()
         Me.Guna2GroupBox1 = New Guna.UI2.WinForms.Guna2GroupBox()
         Me.tbMillaje_carro = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.Label5 = New System.Windows.Forms.Label()
         CType(Me.Numano_Car, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.numcili_car, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvCarros, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel1.SuspendLayout()
         Me.Guna2GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -260,30 +256,32 @@ Partial Class Carros
         '
         'dgvCarros
         '
-        DataGridViewCellStyle4.BackColor = System.Drawing.Color.White
-        Me.dgvCarros.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle4
+        Me.dgvCarros.AllowUserToAddRows = False
+        Me.dgvCarros.AllowUserToDeleteRows = False
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
+        Me.dgvCarros.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.dgvCarros.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
         Me.dgvCarros.BackgroundColor = System.Drawing.Color.White
         Me.dgvCarros.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dgvCarros.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
         Me.dgvCarros.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Segoe UI Black", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvCarros.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI Black", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvCarros.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.dgvCarros.ColumnHeadersHeight = 20
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle6.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Segoe UI Black", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvCarros.DefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI Black", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvCarros.DefaultCellStyle = DataGridViewCellStyle3
         Me.dgvCarros.EnableHeadersVisualStyles = False
         Me.dgvCarros.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.dgvCarros.Location = New System.Drawing.Point(14, 235)
@@ -292,7 +290,7 @@ Partial Class Carros
         Me.dgvCarros.RowHeadersVisible = False
         Me.dgvCarros.RowTemplate.Height = 24
         Me.dgvCarros.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvCarros.Size = New System.Drawing.Size(1039, 308)
+        Me.dgvCarros.Size = New System.Drawing.Size(1039, 357)
         Me.dgvCarros.TabIndex = 17
         Me.dgvCarros.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White
         Me.dgvCarros.ThemeStyle.AlternatingRowsStyle.Font = Nothing
@@ -315,43 +313,6 @@ Partial Class Carros
         Me.dgvCarros.ThemeStyle.RowsStyle.Height = 24
         Me.dgvCarros.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.dgvCarros.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        '
-        'Panel1
-        '
-        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.Panel1.Controls.Add(Me.bMinimizar)
-        Me.Panel1.Controls.Add(Me.bCerrar)
-        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel1.Location = New System.Drawing.Point(0, 0)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1073, 35)
-        Me.Panel1.TabIndex = 20
-        '
-        'bMinimizar
-        '
-        Me.bMinimizar.FlatAppearance.BorderSize = 0
-        Me.bMinimizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray
-        Me.bMinimizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray
-        Me.bMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.bMinimizar.Image = CType(resources.GetObject("bMinimizar.Image"), System.Drawing.Image)
-        Me.bMinimizar.Location = New System.Drawing.Point(953, 0)
-        Me.bMinimizar.Name = "bMinimizar"
-        Me.bMinimizar.Size = New System.Drawing.Size(52, 35)
-        Me.bMinimizar.TabIndex = 22
-        Me.bMinimizar.UseVisualStyleBackColor = True
-        '
-        'bCerrar
-        '
-        Me.bCerrar.FlatAppearance.BorderSize = 0
-        Me.bCerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray
-        Me.bCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red
-        Me.bCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.bCerrar.Image = CType(resources.GetObject("bCerrar.Image"), System.Drawing.Image)
-        Me.bCerrar.Location = New System.Drawing.Point(1011, 0)
-        Me.bCerrar.Name = "bCerrar"
-        Me.bCerrar.Size = New System.Drawing.Size(52, 35)
-        Me.bCerrar.TabIndex = 21
-        Me.bCerrar.UseVisualStyleBackColor = True
         '
         'tbVIN_car
         '
@@ -501,18 +462,29 @@ Partial Class Carros
         Me.tbMillaje_carro.Size = New System.Drawing.Size(135, 30)
         Me.tbMillaje_carro.TabIndex = 25
         '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.ForeColor = System.Drawing.Color.Gray
+        Me.Label5.Location = New System.Drawing.Point(430, 18)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(236, 25)
+        Me.Label5.TabIndex = 120
+        Me.Label5.Text = "REGISTRO DE CARROS"
+        '
         'Carros
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1073, 572)
         Me.ControlBox = False
+        Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.tbMillaje_carro)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.tbURL_car)
         Me.Controls.Add(Me.tbVIN_car)
-        Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Guna2GroupBox1)
         Me.Controls.Add(Me.dgvCarros)
         Me.Controls.Add(Me.Guna2Button3)
@@ -534,7 +506,6 @@ Partial Class Carros
         CType(Me.Numano_Car, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.numcili_car, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dgvCarros, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Panel1.ResumeLayout(False)
         Me.Guna2GroupBox1.ResumeLayout(False)
         Me.Guna2GroupBox1.PerformLayout()
         Me.ResumeLayout(False)
@@ -552,9 +523,6 @@ Partial Class Carros
     Friend WithEvents Guna2Button2 As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Guna2Button3 As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents dgvCarros As Guna.UI2.WinForms.Guna2DataGridView
-    Friend WithEvents Panel1 As Panel
-    Friend WithEvents bMinimizar As Button
-    Friend WithEvents bCerrar As Button
     Friend WithEvents tbVIN_car As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents tbURL_car As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Label1 As Label
@@ -563,4 +531,5 @@ Partial Class Carros
     Friend WithEvents rdNo_llaves As Guna.UI2.WinForms.Guna2RadioButton
     Friend WithEvents Guna2GroupBox1 As Guna.UI2.WinForms.Guna2GroupBox
     Friend WithEvents tbMillaje_carro As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents Label5 As Label
 End Class

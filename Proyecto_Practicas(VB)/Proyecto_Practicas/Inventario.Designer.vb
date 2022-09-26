@@ -25,18 +25,12 @@ Partial Class Inventario
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Inventario))
         Me.dgvInvent = New Guna.UI2.WinForms.Guna2DataGridView()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btnmodi_inven = New Guna.UI2.WinForms.Guna2Button()
         Me.btnguardar_inven = New Guna.UI2.WinForms.Guna2Button()
         Me.btnnuevo_inven = New Guna.UI2.WinForms.Guna2Button()
         Me.tbID_inve = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.bMinimizar = New System.Windows.Forms.Button()
-        Me.bCerrar = New System.Windows.Forms.Button()
         Me.tbCarroSelec_CompraCar = New Guna.UI2.WinForms.Guna2TextBox()
         Me.cbcarrito_inven = New Guna.UI2.WinForms.Guna2ComboBox()
         Me.gpSoli_inven = New Guna.UI2.WinForms.Guna2GroupBox()
@@ -47,16 +41,18 @@ Partial Class Inventario
         Me.tbTotal_invent = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.btndelete_inven = New Guna.UI2.WinForms.Guna2Button()
+        Me.Label5 = New System.Windows.Forms.Label()
         CType(Me.dgvInvent, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel1.SuspendLayout()
         Me.gpSoli_inven.SuspendLayout()
         Me.SuspendLayout()
         '
         'dgvInvent
         '
+        Me.dgvInvent.AllowUserToAddRows = False
+        Me.dgvInvent.AllowUserToDeleteRows = False
         DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
         Me.dgvInvent.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
-        Me.dgvInvent.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
+        Me.dgvInvent.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgvInvent.BackgroundColor = System.Drawing.Color.White
         Me.dgvInvent.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dgvInvent.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
@@ -195,71 +191,6 @@ Partial Class Inventario
         Me.tbID_inve.SelectedText = ""
         Me.tbID_inve.Size = New System.Drawing.Size(41, 30)
         Me.tbID_inve.TabIndex = 42
-        '
-        'Panel1
-        '
-        Me.Panel1.BackColor = System.Drawing.Color.LightSlateGray
-        Me.Panel1.Controls.Add(Me.Button1)
-        Me.Panel1.Controls.Add(Me.Button2)
-        Me.Panel1.Controls.Add(Me.bMinimizar)
-        Me.Panel1.Controls.Add(Me.bCerrar)
-        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel1.Location = New System.Drawing.Point(0, 0)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(826, 35)
-        Me.Panel1.TabIndex = 108
-        '
-        'Button1
-        '
-        Me.Button1.FlatAppearance.BorderSize = 0
-        Me.Button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray
-        Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
-        Me.Button1.Location = New System.Drawing.Point(714, 0)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(52, 35)
-        Me.Button1.TabIndex = 24
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'Button2
-        '
-        Me.Button2.FlatAppearance.BorderSize = 0
-        Me.Button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray
-        Me.Button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Image = CType(resources.GetObject("Button2.Image"), System.Drawing.Image)
-        Me.Button2.Location = New System.Drawing.Point(772, 0)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(52, 35)
-        Me.Button2.TabIndex = 23
-        Me.Button2.UseVisualStyleBackColor = True
-        '
-        'bMinimizar
-        '
-        Me.bMinimizar.FlatAppearance.BorderSize = 0
-        Me.bMinimizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray
-        Me.bMinimizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray
-        Me.bMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.bMinimizar.Image = CType(resources.GetObject("bMinimizar.Image"), System.Drawing.Image)
-        Me.bMinimizar.Location = New System.Drawing.Point(953, 0)
-        Me.bMinimizar.Name = "bMinimizar"
-        Me.bMinimizar.Size = New System.Drawing.Size(52, 35)
-        Me.bMinimizar.TabIndex = 22
-        Me.bMinimizar.UseVisualStyleBackColor = True
-        '
-        'bCerrar
-        '
-        Me.bCerrar.FlatAppearance.BorderSize = 0
-        Me.bCerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray
-        Me.bCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red
-        Me.bCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.bCerrar.Image = CType(resources.GetObject("bCerrar.Image"), System.Drawing.Image)
-        Me.bCerrar.Location = New System.Drawing.Point(1011, 0)
-        Me.bCerrar.Name = "bCerrar"
-        Me.bCerrar.Size = New System.Drawing.Size(52, 35)
-        Me.bCerrar.TabIndex = 21
-        Me.bCerrar.UseVisualStyleBackColor = True
         '
         'tbCarroSelec_CompraCar
         '
@@ -447,11 +378,23 @@ Partial Class Inventario
         Me.btndelete_inven.TabIndex = 120
         Me.btndelete_inven.Text = "Eliminar"
         '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.ForeColor = System.Drawing.Color.Gray
+        Me.Label5.Location = New System.Drawing.Point(371, 13)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(133, 25)
+        Me.Label5.TabIndex = 123
+        Me.Label5.Text = "INVENTARIO"
+        '
         'Inventario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(826, 561)
+        Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.btndelete_inven)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.tbTotal_invent)
@@ -459,7 +402,6 @@ Partial Class Inventario
         Me.Controls.Add(Me.cbestado_invent)
         Me.Controls.Add(Me.gpSoli_inven)
         Me.Controls.Add(Me.tbCarroSelec_CompraCar)
-        Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.cbcarrito_inven)
         Me.Controls.Add(Me.dgvInvent)
         Me.Controls.Add(Me.Label1)
@@ -473,7 +415,6 @@ Partial Class Inventario
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Inventario"
         CType(Me.dgvInvent, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Panel1.ResumeLayout(False)
         Me.gpSoli_inven.ResumeLayout(False)
         Me.gpSoli_inven.PerformLayout()
         Me.ResumeLayout(False)
@@ -486,11 +427,6 @@ Partial Class Inventario
     Friend WithEvents btnguardar_inven As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents btnnuevo_inven As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents tbID_inve As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents Panel1 As Panel
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents bMinimizar As Button
-    Friend WithEvents bCerrar As Button
     Friend WithEvents tbCarroSelec_CompraCar As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents cbcarrito_inven As Guna.UI2.WinForms.Guna2ComboBox
     Friend WithEvents gpSoli_inven As Guna.UI2.WinForms.Guna2GroupBox
@@ -501,4 +437,5 @@ Partial Class Inventario
     Friend WithEvents tbTotal_invent As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Label4 As Label
     Friend WithEvents btndelete_inven As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents Label5 As Label
 End Class

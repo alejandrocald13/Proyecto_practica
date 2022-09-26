@@ -22,15 +22,11 @@ Partial Class clientes
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(clientes))
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.tbcorreo_client = New Guna.UI2.WinForms.Guna2TextBox()
         Me.tbID_client = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
         Me.tbDirec_client = New Guna.UI2.WinForms.Guna2TextBox()
         Me.tbNomAp_client = New Guna.UI2.WinForms.Guna2TextBox()
         Me.tbNum_client = New Guna.UI2.WinForms.Guna2TextBox()
@@ -41,7 +37,7 @@ Partial Class clientes
         Me.Label1 = New System.Windows.Forms.Label()
         Me.dgvClient = New Guna.UI2.WinForms.Guna2DataGridView()
         Me.tbCUI_client = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.Panel1.SuspendLayout()
+        Me.Label5 = New System.Windows.Forms.Label()
         CType(Me.dgvClient, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -91,43 +87,6 @@ Partial Class clientes
         Me.tbID_client.SelectedText = ""
         Me.tbID_client.Size = New System.Drawing.Size(43, 30)
         Me.tbID_client.TabIndex = 0
-        '
-        'Panel1
-        '
-        Me.Panel1.BackColor = System.Drawing.Color.Silver
-        Me.Panel1.Controls.Add(Me.Button1)
-        Me.Panel1.Controls.Add(Me.Button2)
-        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel1.Location = New System.Drawing.Point(0, 0)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(809, 35)
-        Me.Panel1.TabIndex = 75
-        '
-        'Button1
-        '
-        Me.Button1.FlatAppearance.BorderSize = 0
-        Me.Button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray
-        Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
-        Me.Button1.Location = New System.Drawing.Point(699, 0)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(52, 35)
-        Me.Button1.TabIndex = 24
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'Button2
-        '
-        Me.Button2.FlatAppearance.BorderSize = 0
-        Me.Button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray
-        Me.Button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Image = CType(resources.GetObject("Button2.Image"), System.Drawing.Image)
-        Me.Button2.Location = New System.Drawing.Point(757, 0)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(52, 35)
-        Me.Button2.TabIndex = 23
-        Me.Button2.UseVisualStyleBackColor = True
         '
         'tbDirec_client
         '
@@ -284,9 +243,11 @@ Partial Class clientes
         '
         'dgvClient
         '
+        Me.dgvClient.AllowUserToAddRows = False
+        Me.dgvClient.AllowUserToDeleteRows = False
         DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
         Me.dgvClient.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
-        Me.dgvClient.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
+        Me.dgvClient.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgvClient.BackgroundColor = System.Drawing.Color.White
         Me.dgvClient.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dgvClient.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
@@ -316,7 +277,7 @@ Partial Class clientes
         Me.dgvClient.RowHeadersVisible = False
         Me.dgvClient.RowTemplate.Height = 24
         Me.dgvClient.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvClient.Size = New System.Drawing.Size(777, 300)
+        Me.dgvClient.Size = New System.Drawing.Size(796, 360)
         Me.dgvClient.TabIndex = 84
         Me.dgvClient.TabStop = False
         Me.dgvClient.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White
@@ -365,11 +326,23 @@ Partial Class clientes
         Me.tbCUI_client.Size = New System.Drawing.Size(259, 30)
         Me.tbCUI_client.TabIndex = 2
         '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.ForeColor = System.Drawing.Color.Gray
+        Me.Label5.Location = New System.Drawing.Point(311, 25)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(249, 25)
+        Me.Label5.TabIndex = 121
+        Me.Label5.Text = "REGISTRO DE CLIENTES"
+        '
         'clientes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(809, 560)
+        Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.tbCUI_client)
         Me.Controls.Add(Me.dgvClient)
         Me.Controls.Add(Me.Label1)
@@ -380,14 +353,12 @@ Partial Class clientes
         Me.Controls.Add(Me.tbNIT_client)
         Me.Controls.Add(Me.tbNomAp_client)
         Me.Controls.Add(Me.tbDirec_client)
-        Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.tbcorreo_client)
         Me.Controls.Add(Me.tbID_client)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "clientes"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "clientes"
-        Me.Panel1.ResumeLayout(False)
         CType(Me.dgvClient, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -395,9 +366,6 @@ Partial Class clientes
     End Sub
     Friend WithEvents tbcorreo_client As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents tbID_client As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents Panel1 As Panel
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
     Friend WithEvents tbDirec_client As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents tbNomAp_client As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents tbNum_client As Guna.UI2.WinForms.Guna2TextBox
@@ -408,4 +376,5 @@ Partial Class clientes
     Friend WithEvents Label1 As Label
     Friend WithEvents dgvClient As Guna.UI2.WinForms.Guna2DataGridView
     Friend WithEvents tbCUI_client As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents Label5 As Label
 End Class

@@ -8,6 +8,8 @@ Public Class Registro
     Dim cmd As MySqlCommand
     Dim conn As New MySqlConnection
     Dim objetoconexion As New conexion
+    Dim CuRWidth As Integer = Me.Width
+    Dim CuRHeight As Integer = Me.Height
     <DllImport("user32.DLL", EntryPoint:="ReleaseCapture")>
     Private Shared Sub ReleaseCapture()
     End Sub
@@ -36,7 +38,7 @@ Public Class Registro
         tbpswconf_regis.Clear()
         tbNomC_regis.Focus()
     End Sub
-    Private Sub Panel1_MouseMove(sender As Object, e As MouseEventArgs) Handles Panel1.MouseMove
+    Private Sub Panel1_MouseMove(sender As Object, e As MouseEventArgs)
         ReleaseCapture()
         SendMessage(Me.Handle, &H112&, &HF012&, 0)
     End Sub
@@ -147,12 +149,28 @@ Public Class Registro
             End If
         End If
     End Sub
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+    Private Sub Button2_Click(sender As Object, e As EventArgs)
         Me.Hide()
         Login.Close()
     End Sub
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs)
         Me.WindowState = FormWindowState.Minimized
+    End Sub
+    Private Sub Registro_Resize(sender As Object, e As EventArgs) Handles MyBase.Resize
+        Dim RatioHeight As Double = (Me.Height - CuRHeight) / CuRHeight
+        Dim RatioWidth As Double = (Me.Width - CuRWidth) / CuRWidth
+        For Each Ctrl As Control In Controls
+            If Ctrl.ToString = "System.Windows.Forms.Button, Text: " Then
+                Ctrl.Top += Ctrl.Top * RatioHeight
+
+            Else
+                Ctrl.Width += Ctrl.Width * RatioWidth
+                Ctrl.Left += Ctrl.Left * RatioWidth
+                Ctrl.Top += Ctrl.Top * RatioHeight
+            End If
+        Next
+        CuRHeight = Me.Height
+        CuRWidth = Me.Width
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click

@@ -22,7 +22,6 @@ Partial Class Importacion_Carro
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Importacion_Carro))
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
@@ -35,18 +34,13 @@ Partial Class Importacion_Carro
         Me.btnnew_impor = New Guna.UI2.WinForms.Guna2Button()
         Me.tbID_impo = New Guna.UI2.WinForms.Guna2TextBox()
         Me.tbmeto_impor = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.bMinimizar = New System.Windows.Forms.Button()
-        Me.bCerrar = New System.Windows.Forms.Button()
         Me.dgvImpo = New Guna.UI2.WinForms.Guna2DataGridView()
         Me.tbCarroSelec_CompraCar = New Guna.UI2.WinForms.Guna2TextBox()
         Me.tbLoteSelec_Impo = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.tbencar_impor = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.Label5 = New System.Windows.Forms.Label()
         CType(Me.nudCosto_impor, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel1.SuspendLayout()
         CType(Me.dgvImpo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -209,76 +203,13 @@ Partial Class Importacion_Carro
         Me.tbmeto_impor.Size = New System.Drawing.Size(276, 30)
         Me.tbmeto_impor.TabIndex = 59
         '
-        'Panel1
-        '
-        Me.Panel1.BackColor = System.Drawing.Color.DarkCyan
-        Me.Panel1.Controls.Add(Me.Button1)
-        Me.Panel1.Controls.Add(Me.Button2)
-        Me.Panel1.Controls.Add(Me.bMinimizar)
-        Me.Panel1.Controls.Add(Me.bCerrar)
-        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel1.Location = New System.Drawing.Point(0, 0)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(880, 35)
-        Me.Panel1.TabIndex = 60
-        '
-        'Button1
-        '
-        Me.Button1.FlatAppearance.BorderSize = 0
-        Me.Button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray
-        Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
-        Me.Button1.Location = New System.Drawing.Point(771, 0)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(52, 35)
-        Me.Button1.TabIndex = 24
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'Button2
-        '
-        Me.Button2.FlatAppearance.BorderSize = 0
-        Me.Button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray
-        Me.Button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Image = CType(resources.GetObject("Button2.Image"), System.Drawing.Image)
-        Me.Button2.Location = New System.Drawing.Point(829, 0)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(52, 35)
-        Me.Button2.TabIndex = 23
-        Me.Button2.UseVisualStyleBackColor = True
-        '
-        'bMinimizar
-        '
-        Me.bMinimizar.FlatAppearance.BorderSize = 0
-        Me.bMinimizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray
-        Me.bMinimizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray
-        Me.bMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.bMinimizar.Image = CType(resources.GetObject("bMinimizar.Image"), System.Drawing.Image)
-        Me.bMinimizar.Location = New System.Drawing.Point(953, 0)
-        Me.bMinimizar.Name = "bMinimizar"
-        Me.bMinimizar.Size = New System.Drawing.Size(52, 35)
-        Me.bMinimizar.TabIndex = 22
-        Me.bMinimizar.UseVisualStyleBackColor = True
-        '
-        'bCerrar
-        '
-        Me.bCerrar.FlatAppearance.BorderSize = 0
-        Me.bCerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray
-        Me.bCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red
-        Me.bCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.bCerrar.Image = CType(resources.GetObject("bCerrar.Image"), System.Drawing.Image)
-        Me.bCerrar.Location = New System.Drawing.Point(1011, 0)
-        Me.bCerrar.Name = "bCerrar"
-        Me.bCerrar.Size = New System.Drawing.Size(52, 35)
-        Me.bCerrar.TabIndex = 21
-        Me.bCerrar.UseVisualStyleBackColor = True
-        '
         'dgvImpo
         '
+        Me.dgvImpo.AllowUserToAddRows = False
+        Me.dgvImpo.AllowUserToDeleteRows = False
         DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
         Me.dgvImpo.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
-        Me.dgvImpo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
+        Me.dgvImpo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgvImpo.BackgroundColor = System.Drawing.Color.White
         Me.dgvImpo.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dgvImpo.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
@@ -308,7 +239,7 @@ Partial Class Importacion_Carro
         Me.dgvImpo.RowHeadersVisible = False
         Me.dgvImpo.RowTemplate.Height = 24
         Me.dgvImpo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvImpo.Size = New System.Drawing.Size(849, 313)
+        Me.dgvImpo.Size = New System.Drawing.Size(849, 370)
         Me.dgvImpo.TabIndex = 61
         Me.dgvImpo.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White
         Me.dgvImpo.ThemeStyle.AlternatingRowsStyle.Font = Nothing
@@ -419,16 +350,27 @@ Partial Class Importacion_Carro
         Me.tbencar_impor.Size = New System.Drawing.Size(300, 30)
         Me.tbencar_impor.TabIndex = 54
         '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.ForeColor = System.Drawing.Color.Gray
+        Me.Label5.Location = New System.Drawing.Point(330, 18)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(275, 25)
+        Me.Label5.TabIndex = 120
+        Me.Label5.Text = "IMPORTACIÓN DE CARROS"
+        '
         'Importacion_Carro
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(880, 566)
+        Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.tbLoteSelec_Impo)
         Me.Controls.Add(Me.tbCarroSelec_CompraCar)
         Me.Controls.Add(Me.dgvImpo)
-        Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.tbmeto_impor)
         Me.Controls.Add(Me.cbCarro_Compraimpor)
         Me.Controls.Add(Me.tbencar_impor)
@@ -445,7 +387,6 @@ Partial Class Importacion_Carro
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Importaion"
         CType(Me.nudCosto_impor, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Panel1.ResumeLayout(False)
         CType(Me.dgvImpo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -461,14 +402,10 @@ Partial Class Importacion_Carro
     Friend WithEvents btnnew_impor As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents tbID_impo As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents tbmeto_impor As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents Panel1 As Panel
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents bMinimizar As Button
-    Friend WithEvents bCerrar As Button
     Friend WithEvents dgvImpo As Guna.UI2.WinForms.Guna2DataGridView
     Friend WithEvents tbCarroSelec_CompraCar As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents tbLoteSelec_Impo As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents tbencar_impor As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents Label5 As Label
 End Class

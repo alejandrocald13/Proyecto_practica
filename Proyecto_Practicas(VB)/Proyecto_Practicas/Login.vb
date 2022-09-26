@@ -15,7 +15,7 @@ Public Class Login
         Me.Close()
     End Sub
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles bMinimizar.Click
-        Me.WindowState = FormWindowState.Minimized
+        WindowState = FormWindowState.Minimized
     End Sub
     Sub l()
         tbUser.Clear()
@@ -61,7 +61,7 @@ Public Class Login
                         End Using
                         If Convert.ToString(row("id_puesto")) = 1 Then
                             token = 1
-                        ElseIf Convert.ToString(row("id_puesto")) = 2 Or Convert.ToString(row("id_puesto")) = 3 Then
+                        ElseIf Convert.ToString(row("id_puesto")) = 2 Then
                             token = 1
                         ElseIf Convert.ToString(row("id_puesto")) = 4 Then
                             token = 2
@@ -75,7 +75,7 @@ Public Class Login
                     End Try
                     l()
                     MessageBox.Show("¡Inicio de Sesión Correcto!")
-                    Carros.Show()
+                    Lista_forms.Show()
                     Me.Hide()
                 Else
                     l()

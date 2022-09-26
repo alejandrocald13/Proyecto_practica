@@ -22,10 +22,9 @@ Partial Class Revendedores
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Revendedores))
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.dgvRevendedores = New Guna.UI2.WinForms.Guna2DataGridView()
         Me.tbCUI_reven = New Guna.UI2.WinForms.Guna2TextBox()
         Me.tbNombre_reven = New Guna.UI2.WinForms.Guna2TextBox()
@@ -33,45 +32,42 @@ Partial Class Revendedores
         Me.Guna2Button3 = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2Button2 = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2Button1 = New Guna.UI2.WinForms.Guna2Button()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.bMinimizar = New System.Windows.Forms.Button()
-        Me.bCerrar = New System.Windows.Forms.Button()
         Me.Guna2Button4 = New Guna.UI2.WinForms.Guna2Button()
         Me.tbApellido_revend = New Guna.UI2.WinForms.Guna2TextBox()
         Me.tbNum_reven = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.Label5 = New System.Windows.Forms.Label()
         CType(Me.dgvRevendedores, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'dgvRevendedores
         '
+        Me.dgvRevendedores.AllowUserToAddRows = False
+        Me.dgvRevendedores.AllowUserToDeleteRows = False
         Me.dgvRevendedores.AllowUserToResizeRows = False
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
-        Me.dgvRevendedores.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
-        Me.dgvRevendedores.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
+        DataGridViewCellStyle7.BackColor = System.Drawing.Color.White
+        Me.dgvRevendedores.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle7
+        Me.dgvRevendedores.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgvRevendedores.BackgroundColor = System.Drawing.Color.White
         Me.dgvRevendedores.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dgvRevendedores.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
         Me.dgvRevendedores.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(150, Byte), Integer), CType(CType(190, Byte), Integer))
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI Black", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvRevendedores.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(150, Byte), Integer), CType(CType(190, Byte), Integer))
+        DataGridViewCellStyle8.Font = New System.Drawing.Font("Segoe UI Black", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle8.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvRevendedores.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle8
         Me.dgvRevendedores.ColumnHeadersHeight = 20
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI Black", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(188, Byte), Integer), CType(CType(217, Byte), Integer), CType(CType(231, Byte), Integer))
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvRevendedores.DefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle9.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle9.Font = New System.Drawing.Font("Segoe UI Black", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(188, Byte), Integer), CType(CType(217, Byte), Integer), CType(CType(231, Byte), Integer))
+        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvRevendedores.DefaultCellStyle = DataGridViewCellStyle9
         Me.dgvRevendedores.EnableHeadersVisualStyles = False
         Me.dgvRevendedores.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.dgvRevendedores.Location = New System.Drawing.Point(13, 201)
@@ -226,71 +222,6 @@ Partial Class Revendedores
         Me.Guna2Button1.TabIndex = 29
         Me.Guna2Button1.Text = "Nuevo"
         '
-        'Button1
-        '
-        Me.Button1.FlatAppearance.BorderSize = 0
-        Me.Button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray
-        Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
-        Me.Button1.Location = New System.Drawing.Point(524, 0)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(52, 35)
-        Me.Button1.TabIndex = 24
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'Button2
-        '
-        Me.Button2.FlatAppearance.BorderSize = 0
-        Me.Button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray
-        Me.Button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Image = CType(resources.GetObject("Button2.Image"), System.Drawing.Image)
-        Me.Button2.Location = New System.Drawing.Point(582, 0)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(52, 35)
-        Me.Button2.TabIndex = 23
-        Me.Button2.UseVisualStyleBackColor = True
-        '
-        'Panel1
-        '
-        Me.Panel1.BackColor = System.Drawing.Color.DodgerBlue
-        Me.Panel1.Controls.Add(Me.Button1)
-        Me.Panel1.Controls.Add(Me.bMinimizar)
-        Me.Panel1.Controls.Add(Me.Button2)
-        Me.Panel1.Controls.Add(Me.bCerrar)
-        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel1.Location = New System.Drawing.Point(0, 0)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(637, 35)
-        Me.Panel1.TabIndex = 36
-        '
-        'bMinimizar
-        '
-        Me.bMinimizar.FlatAppearance.BorderSize = 0
-        Me.bMinimizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray
-        Me.bMinimizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray
-        Me.bMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.bMinimizar.Image = CType(resources.GetObject("bMinimizar.Image"), System.Drawing.Image)
-        Me.bMinimizar.Location = New System.Drawing.Point(953, 0)
-        Me.bMinimizar.Name = "bMinimizar"
-        Me.bMinimizar.Size = New System.Drawing.Size(52, 35)
-        Me.bMinimizar.TabIndex = 22
-        Me.bMinimizar.UseVisualStyleBackColor = True
-        '
-        'bCerrar
-        '
-        Me.bCerrar.FlatAppearance.BorderSize = 0
-        Me.bCerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray
-        Me.bCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red
-        Me.bCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.bCerrar.Image = CType(resources.GetObject("bCerrar.Image"), System.Drawing.Image)
-        Me.bCerrar.Location = New System.Drawing.Point(1011, 0)
-        Me.bCerrar.Name = "bCerrar"
-        Me.bCerrar.Size = New System.Drawing.Size(52, 35)
-        Me.bCerrar.TabIndex = 21
-        Me.bCerrar.UseVisualStyleBackColor = True
-        '
         'Guna2Button4
         '
         Me.Guna2Button4.AutoRoundedCorners = True
@@ -355,15 +286,26 @@ Partial Class Revendedores
         Me.tbNum_reven.Size = New System.Drawing.Size(211, 30)
         Me.tbNum_reven.TabIndex = 4
         '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.ForeColor = System.Drawing.Color.Gray
+        Me.Label5.Location = New System.Drawing.Point(265, 9)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(315, 25)
+        Me.Label5.TabIndex = 121
+        Me.Label5.Text = "REGISTRO DE REVENDEDORES"
+        '
         'Revendedores
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(637, 435)
+        Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.tbApellido_revend)
         Me.Controls.Add(Me.Guna2Button4)
         Me.Controls.Add(Me.tbNum_reven)
-        Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.dgvRevendedores)
         Me.Controls.Add(Me.tbCUI_reven)
         Me.Controls.Add(Me.tbNombre_reven)
@@ -376,8 +318,8 @@ Partial Class Revendedores
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Revendedores"
         CType(Me.dgvRevendedores, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Panel1.ResumeLayout(False)
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -388,12 +330,8 @@ Partial Class Revendedores
     Friend WithEvents Guna2Button3 As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Guna2Button2 As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Guna2Button1 As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Panel1 As Panel
-    Friend WithEvents bMinimizar As Button
-    Friend WithEvents bCerrar As Button
     Friend WithEvents Guna2Button4 As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents tbApellido_revend As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents tbNum_reven As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents Label5 As Label
 End Class

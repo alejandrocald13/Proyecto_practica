@@ -25,7 +25,6 @@ Partial Class Ventas
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Ventas))
         Me.cbCarro_ventas = New Guna.UI2.WinForms.Guna2ComboBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -45,20 +44,17 @@ Partial Class Ventas
         Me.nudganancias_ventas = New Guna.UI2.WinForms.Guna2NumericUpDown()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.nudtotal_ventas = New Guna.UI2.WinForms.Guna2NumericUpDown()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.bMinimizar = New System.Windows.Forms.Button()
-        Me.bCerrar = New System.Windows.Forms.Button()
         Me.gpSoli_inven = New Guna.UI2.WinForms.Guna2GroupBox()
         Me.rdNo_trasp = New Guna.UI2.WinForms.Guna2RadioButton()
         Me.rdSi_trasp = New Guna.UI2.WinForms.Guna2RadioButton()
         Me.Guna2GroupBox1 = New Guna.UI2.WinForms.Guna2GroupBox()
         Me.cbComision_vent = New Guna.UI2.WinForms.Guna2CheckBox()
         Me.tbCarroSelec_CompraCar = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
         CType(Me.nudcomision_ventas, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvventas, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.nudganancias_ventas, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.nudtotal_ventas, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel1.SuspendLayout()
         Me.gpSoli_inven.SuspendLayout()
         Me.Guna2GroupBox1.SuspendLayout()
         Me.SuspendLayout()
@@ -244,9 +240,11 @@ Partial Class Ventas
         '
         'dgvventas
         '
+        Me.dgvventas.AllowUserToAddRows = False
+        Me.dgvventas.AllowUserToDeleteRows = False
         DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
         Me.dgvventas.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
-        Me.dgvventas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
+        Me.dgvventas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgvventas.BackgroundColor = System.Drawing.Color.White
         Me.dgvventas.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dgvventas.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
@@ -402,43 +400,6 @@ Partial Class Ventas
         Me.nudtotal_ventas.UpDownButtonFillColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.nudtotal_ventas.Value = New Decimal(New Integer() {15000, 0, 0, 0})
         '
-        'Panel1
-        '
-        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(47, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(47, Byte), Integer))
-        Me.Panel1.Controls.Add(Me.bMinimizar)
-        Me.Panel1.Controls.Add(Me.bCerrar)
-        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel1.Location = New System.Drawing.Point(0, 0)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(924, 35)
-        Me.Panel1.TabIndex = 109
-        '
-        'bMinimizar
-        '
-        Me.bMinimizar.FlatAppearance.BorderSize = 0
-        Me.bMinimizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray
-        Me.bMinimizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray
-        Me.bMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.bMinimizar.Image = CType(resources.GetObject("bMinimizar.Image"), System.Drawing.Image)
-        Me.bMinimizar.Location = New System.Drawing.Point(814, 0)
-        Me.bMinimizar.Name = "bMinimizar"
-        Me.bMinimizar.Size = New System.Drawing.Size(52, 35)
-        Me.bMinimizar.TabIndex = 22
-        Me.bMinimizar.UseVisualStyleBackColor = True
-        '
-        'bCerrar
-        '
-        Me.bCerrar.FlatAppearance.BorderSize = 0
-        Me.bCerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray
-        Me.bCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red
-        Me.bCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.bCerrar.Image = CType(resources.GetObject("bCerrar.Image"), System.Drawing.Image)
-        Me.bCerrar.Location = New System.Drawing.Point(872, 0)
-        Me.bCerrar.Name = "bCerrar"
-        Me.bCerrar.Size = New System.Drawing.Size(52, 35)
-        Me.bCerrar.TabIndex = 21
-        Me.bCerrar.UseVisualStyleBackColor = True
-        '
         'gpSoli_inven
         '
         Me.gpSoli_inven.BorderColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
@@ -559,17 +520,28 @@ Partial Class Ventas
         Me.tbCarroSelec_CompraCar.Size = New System.Drawing.Size(207, 30)
         Me.tbCarroSelec_CompraCar.TabIndex = 114
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.Gray
+        Me.Label1.Location = New System.Drawing.Point(364, 12)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(233, 25)
+        Me.Label1.TabIndex = 123
+        Me.Label1.Text = "REGISTRO DE VENTAS"
+        '
         'Ventas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(924, 641)
         Me.ControlBox = False
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.tbCarroSelec_CompraCar)
         Me.Controls.Add(Me.cbComision_vent)
         Me.Controls.Add(Me.Guna2GroupBox1)
         Me.Controls.Add(Me.gpSoli_inven)
-        Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.nudtotal_ventas)
         Me.Controls.Add(Me.Label7)
@@ -594,7 +566,6 @@ Partial Class Ventas
         CType(Me.dgvventas, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.nudganancias_ventas, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.nudtotal_ventas, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Panel1.ResumeLayout(False)
         Me.gpSoli_inven.ResumeLayout(False)
         Me.gpSoli_inven.PerformLayout()
         Me.Guna2GroupBox1.ResumeLayout(False)
@@ -623,13 +594,11 @@ Partial Class Ventas
     Friend WithEvents nudganancias_ventas As Guna.UI2.WinForms.Guna2NumericUpDown
     Friend WithEvents Label8 As Label
     Friend WithEvents nudtotal_ventas As Guna.UI2.WinForms.Guna2NumericUpDown
-    Friend WithEvents Panel1 As Panel
-    Friend WithEvents bMinimizar As Button
-    Friend WithEvents bCerrar As Button
     Friend WithEvents gpSoli_inven As Guna.UI2.WinForms.Guna2GroupBox
     Friend WithEvents rdNo_trasp As Guna.UI2.WinForms.Guna2RadioButton
     Friend WithEvents rdSi_trasp As Guna.UI2.WinForms.Guna2RadioButton
     Friend WithEvents Guna2GroupBox1 As Guna.UI2.WinForms.Guna2GroupBox
     Friend WithEvents cbComision_vent As Guna.UI2.WinForms.Guna2CheckBox
     Friend WithEvents tbCarroSelec_CompraCar As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents Label1 As Label
 End Class

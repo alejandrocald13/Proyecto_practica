@@ -51,6 +51,40 @@ Public Class Lista_forms
         Size = SizeNormal
         Location = LocationNormal
     End Sub
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        AbrirFormEnPanel(New Carros)
+    End Sub
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+        AbrirFormEnPanel(New clientes)
+    End Sub
+    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
+        AbrirFormEnPanel(New Compra_Carros)
+    End Sub
+    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+        AbrirFormEnPanel(New Importacion_Carro)
+    End Sub
+
+    Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
+        AbrirFormEnPanel(New Registro)
+    End Sub
+    Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button8.Click
+        AbrirFormEnPanel(New Revendedores)
+    End Sub
+
+    Private Sub Button9_Click(sender As Object, e As EventArgs) Handles Button9.Click
+        AbrirFormEnPanel(New Subasta)
+    End Sub
+
+    Private Sub Button10_Click(sender As Object, e As EventArgs) Handles Button10.Click
+        AbrirFormEnPanel(New Ventas)
+    End Sub
+    Private Sub LinkLabel1_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
+        Me.Hide()
+        Login.Show()
+    End Sub
+    Private Sub Button11_Click(sender As Object, e As EventArgs) Handles Button11.Click
+        AbrirFormEnPanel(New Inventario)
+    End Sub
     Private Sub Lista_forms_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         SizeNormal = Size
         LocationNormal = Location

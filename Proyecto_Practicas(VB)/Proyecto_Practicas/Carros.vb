@@ -5,17 +5,19 @@ Public Class Carros
     Dim conn As New MySqlConnection
     Dim objetoconexion As New conexion
     Dim x As String = ""
+    Dim CuRWidth As Integer = Me.Width
+    Dim CuRHeight As Integer = Me.Height
     <DllImport("user32.DLL", EntryPoint:="ReleaseCapture")>
     Private Shared Sub ReleaseCapture()
     End Sub
     <DllImport("user32.DLL", EntryPoint:="SendMessage")>
     Private Shared Sub SendMessage(ByVal hWnd As System.IntPtr, ByVal wMsg As Integer, ByVal wParam As Integer, ByVal lParam As Integer)
     End Sub
-    Private Sub bCerrar_Click(sender As Object, e As EventArgs) Handles bCerrar.Click
+    Private Sub bCerrar_Click(sender As Object, e As EventArgs)
         Me.Hide()
         Login.Close()
     End Sub
-    Private Sub bMinimizar_Click(sender As Object, e As EventArgs) Handles bMinimizar.Click
+    Private Sub bMinimizar_Click(sender As Object, e As EventArgs)
         Me.WindowState = FormWindowState.Minimized
     End Sub
     Sub limpiar()
@@ -205,10 +207,24 @@ Public Class Carros
             End If
         End If
     End Sub
-    Private Sub Panel1_MouseMove(sender As Object, e As MouseEventArgs) Handles Panel1.MouseMove
+    Private Sub Panel1_MouseMove(sender As Object, e As MouseEventArgs)
         ReleaseCapture()
         SendMessage(Me.Handle, &H112&, &HF012&, 0)
     End Sub
-    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
+    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs)
+    End Sub
+    Private Sub Carros_Resize(sender As Object, e As EventArgs) Handles MyBase.Resize
+        Dim RatioHeight As Double = (Me.Height - CuRHeight) / CuRHeight
+        Dim RatioWidth As Double = (Me.Width - CuRWidth) / CuRWidth
+        For Each Ctrl As Control In Controls
+            Ctrl.Width += Ctrl.Width * RatioWidth
+            Ctrl.Left += Ctrl.Left * RatioWidth
+            Ctrl.Top += Ctrl.Top * RatioHeight
+            If Ctrl.ToString = "Guna.UI2.WinForms.Guna2DataGridView" Then
+                Ctrl.Height += Ctrl.Height * RatioHeight
+            End If
+        Next
+        CuRHeight = Me.Height
+        CuRWidth = Me.Width
     End Sub
 End Class

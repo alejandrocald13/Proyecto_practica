@@ -5,6 +5,8 @@ Public Class Ventas
     Dim conn As New MySqlConnection
     Dim objetoconexion As New conexion
     Dim i As Integer
+    Dim CuRWidth As Integer = Me.Width
+    Dim CuRHeight As Integer = Me.Height
     <DllImport("user32.DLL", EntryPoint:="ReleaseCapture")>
     Private Shared Sub ReleaseCapture()
     End Sub
@@ -261,15 +263,29 @@ Public Class Ventas
             MessageBox.Show(ex.ToString())
         End Try
     End Sub
-    Private Sub bCerrar_Click(sender As Object, e As EventArgs) Handles bCerrar.Click
+    Private Sub bCerrar_Click(sender As Object, e As EventArgs)
         Hide()
         Login.Close()
     End Sub
-    Private Sub bMinimizar_Click(sender As Object, e As EventArgs) Handles bMinimizar.Click
+    Private Sub bMinimizar_Click(sender As Object, e As EventArgs)
         WindowState = FormWindowState.Minimized
     End Sub
-    Private Sub Panel1_MouseMove(sender As Object, e As MouseEventArgs) Handles Panel1.MouseMove
+    Private Sub Panel1_MouseMove(sender As Object, e As MouseEventArgs)
         ReleaseCapture()
         SendMessage(Me.Handle, &H112&, &HF012&, 0)
+    End Sub
+    Private Sub Ventas_Resize(sender As Object, e As EventArgs) Handles MyBase.Resize
+        Dim RatioHeight As Double = (Me.Height - CuRHeight) / CuRHeight
+        Dim RatioWidth As Double = (Me.Width - CuRWidth) / CuRWidth
+        For Each Ctrl As Control In Controls
+            Ctrl.Width += Ctrl.Width * RatioWidth
+            Ctrl.Left += Ctrl.Left * RatioWidth
+            Ctrl.Top += Ctrl.Top * RatioHeight
+            If Ctrl.ToString = "Guna.UI2.WinForms.Guna2DataGridView" Then
+                Ctrl.Height += Ctrl.Height * RatioHeight
+            End If
+        Next
+        CuRHeight = Me.Height
+        CuRWidth = Me.Width
     End Sub
 End Class

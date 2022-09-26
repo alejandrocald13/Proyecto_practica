@@ -3,14 +3,14 @@ Imports System.IO
 Imports MySql.Data.MySqlClient
 'Imports System.Runtime.InteropServices
 Public Class Costodefacturación
-    Dim CuRWidth As Integer = Me.Width
-    Dim CuRHeight As Integer = Me.Height
     Dim cmd As MySqlCommand
     Dim conn As New MySqlConnection
     Dim objetoconexion As New conexion
     Dim dolar As Double = 0.00
     Dim i As Integer = 0
     Dim i2 As Integer
+    Dim CuRWidth As Integer = Me.Width
+    Dim CuRHeight As Integer = Me.Height
     '<DllImport("user32.DLL", EntryPoint:="ReleaseCapture")>
     'Private Shared Sub ReleaseCapture()
     'End Sub
@@ -332,6 +332,7 @@ Public Class Costodefacturación
                     cmd.ExecuteNonQuery()
                     conn.Close()
                     conn.Dispose()
+                    MsgBox("Modificado correctamente", vbInformation, "Correcto")
                     mostrar()
                     limpiar()
                     cbCarro_Cdfac.SelectedIndex = -1
