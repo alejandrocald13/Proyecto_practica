@@ -214,12 +214,24 @@ Public Class Costodefacturación
         End If
     End Sub
     Private Sub Costodefacturación_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        mostrar()
-        cargarcarro()
-        cargarcambio()
-        cbCarro_Cdfac.SelectedIndex = -1
-        btnguarda_client.Enabled = False
-        Btnmodi_cliente.Enabled = False
+        If Login.token <> 1 Then
+            MessageBox.Show("No tienes el Acceso Total a este formulario." & vbCrLf & "Si crees que se trata de un error intenta iniciar sesión de nuevo.", "Atención", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation)
+            For Each Ctrl As Control In Controls
+                If Ctrl.ToString <> "Guna.UI2.WinForms.Guna2DataGridView" Then
+                    Ctrl.Enabled = False
+                End If
+            Next
+            If Login.token = 2 Then
+                mostrar()
+            End If
+        Else
+            mostrar()
+            cargarcarro()
+            cargarcambio()
+            cbCarro_Cdfac.SelectedIndex = -1
+            btnguarda_client.Enabled = False
+            Btnmodi_cliente.Enabled = False
+        End If
     End Sub
     Private Sub cbCarro_Cdfac_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbCarro_Cdfac.SelectedIndexChanged
         i += 1
@@ -346,21 +358,26 @@ Public Class Costodefacturación
         End Try
     End Sub
     Private Sub dgvCostodefac_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvCostodefac.CellContentClick
-        btnguarda_client.Enabled = False
-        Dim row As DataGridViewRow = dgvCostodefac.CurrentRow
-        Try
-            tbID_cdfac.Text = row.Cells(0).Value.ToString()
-            cbCarro_Cdfac.Text = row.Cells(1).Value.ToString()
-            Dim IPRI = row.Cells(4).Value.ToString
-            tbIPRIMA_impo.Text = IPRI.Split("Q")(1)
-            Dim IVA = row.Cells(5).Value.ToString
-            tbIVA_impo.Text = IVA.Split("Q")(1)
-            Dim costp = row.Cells(6).Value.ToString
-            tbCostoPlacas_Impo.Text = costp.Split("Q")(1)
-            Btnmodi_cliente.Enabled = True
-        Catch ex As Exception
-            MessageBox.Show(ex.ToString())
-        End Try
+        If Login.token <> 1 Then
+            btnguarda_client.Enabled = False
+            Btnmodi_cliente.Enabled = False
+        Else
+            btnguarda_client.Enabled = False
+            Dim row As DataGridViewRow = dgvCostodefac.CurrentRow
+            Try
+                tbID_cdfac.Text = row.Cells(0).Value.ToString()
+                cbCarro_Cdfac.Text = row.Cells(1).Value.ToString()
+                Dim IPRI = row.Cells(4).Value.ToString
+                tbIPRIMA_impo.Text = IPRI.Split("Q")(1)
+                Dim IVA = row.Cells(5).Value.ToString
+                tbIVA_impo.Text = IVA.Split("Q")(1)
+                Dim costp = row.Cells(6).Value.ToString
+                tbCostoPlacas_Impo.Text = costp.Split("Q")(1)
+                Btnmodi_cliente.Enabled = True
+            Catch ex As Exception
+                MessageBox.Show(ex.ToString())
+            End Try
+        End If
     End Sub
     Private Sub Button2_Click(sender As Object, e As EventArgs)
         Me.Hide()

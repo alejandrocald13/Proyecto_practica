@@ -30,9 +30,21 @@ Public Class Subasta
         conn.Dispose()
     End Sub
     Private Sub Subasta_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        mostrarsub()
-        Guna2Button2.Enabled = False
-        Guna2Button3.Enabled = False
+        If Login.token <> 1 Then
+            MessageBox.Show("No tienes el Acceso Total a este formulario." & vbCrLf & "Si crees que se trata de un error intenta iniciar sesión de nuevo.", "Atención", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation)
+            For Each Ctrl As Control In Controls
+                If Ctrl.ToString <> "Guna.UI2.WinForms.Guna2DataGridView" Then
+                    Ctrl.Enabled = False
+                End If
+            Next
+            If Login.token = 2 Then
+                mostrarsub()
+            End If
+        Else
+            mostrarsub()
+            Guna2Button2.Enabled = False
+            Guna2Button3.Enabled = False
+        End If
     End Sub
     Private Sub Guna2Button1_Click(sender As Object, e As EventArgs) Handles Guna2Button1.Click
         cle()
@@ -83,15 +95,20 @@ Public Class Subasta
         End Try
     End Sub
     Private Sub dgvSubastas_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvSubastas.CellContentClick
-        Guna2Button2.Enabled = False
-        Dim row As DataGridViewRow = dgvSubastas.CurrentRow
-        Try
-            tbID.Text = row.Cells(0).Value.ToString()
-            tbNombre_Sub.Text = row.Cells(1).Value.ToString()
-            tbURL_Sub.Text = row.Cells(2).Value.ToString()
-        Catch ex As Exception
-            MessageBox.Show(ex.ToString())
-        End Try
+        If Login.token <> 1 Then
+            Guna2Button3.Enabled = False
+            Guna2Button2.Enabled = False
+        Else
+            Guna2Button2.Enabled = False
+            Dim row As DataGridViewRow = dgvSubastas.CurrentRow
+            Try
+                tbID.Text = row.Cells(0).Value.ToString()
+                tbNombre_Sub.Text = row.Cells(1).Value.ToString()
+                tbURL_Sub.Text = row.Cells(2).Value.ToString()
+            Catch ex As Exception
+                MessageBox.Show(ex.ToString())
+            End Try
+        End If
     End Sub
     Private Sub Button2_Click(sender As Object, e As EventArgs)
         Me.Hide()

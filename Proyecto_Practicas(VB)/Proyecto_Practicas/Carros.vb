@@ -90,20 +90,20 @@ Public Class Carros
     End Sub
     Private Sub Carros_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         If Login.token <> 1 Then
-            MessageBox.Show("No tienes el Acceso Total a este formulario. Si crees que se trata de un error intenta iniciar sesión de nuevo.", "Atención", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation)
+            MessageBox.Show("No tienes el Acceso Total a este formulario." & vbCrLf & "Si crees que se trata de un error intenta iniciar sesión de nuevo.", "Atención", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation)
             For Each Ctrl As Control In Controls
-                If Ctrl.ToString = "Guna.UI2.WinForms.Guna2DataGridView" Then
-                Else
+                If Ctrl.ToString <> "Guna.UI2.WinForms.Guna2DataGridView" Then
                     Ctrl.Enabled = False
                 End If
             Next
             If Login.token = 2 Then
-
+                mostrar()
             End If
+        Else
+            mostrar()
+            Guna2Button2.Enabled = False
+            Guna2Button3.Enabled = False
         End If
-        mostrar()
-        Guna2Button2.Enabled = False
-        Guna2Button3.Enabled = False
     End Sub
     Private Sub Guna2Button3_Click(sender As Object, e As EventArgs) Handles Guna2Button3.Click
         conn = objetoconexion.AbrirCon
@@ -140,7 +140,7 @@ Public Class Carros
         End Try
     End Sub
     Private Sub dgvCarros_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvCarros.CellContentClick
-        If Login.token = 1 Then
+        If Login.token <> 1 Then
             Guna2Button2.Enabled = False
             Guna2Button3.Enabled = False
         Else

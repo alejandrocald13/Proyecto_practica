@@ -109,11 +109,23 @@ Public Class Reparaciones
         conn.Dispose()
     End Sub
     Private Sub Reparaciones_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        mostrar()
-        cargarcarro()
-        cbCarro_repar.SelectedIndex = -1
-        bSave.Enabled = False
-        bUpdate.Enabled = False
+        If Login.token <> 1 Then
+            MessageBox.Show("No tienes el Acceso Total a este formulario." & vbCrLf & "Si crees que se trata de un error intenta iniciar sesión de nuevo.", "Atención", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation)
+            For Each Ctrl As Control In Controls
+                If Ctrl.ToString <> "Guna.UI2.WinForms.Guna2DataGridView" Then
+                    Ctrl.Enabled = False
+                End If
+            Next
+            If Login.token = 2 Then
+                mostrar()
+            End If
+        Else
+            mostrar()
+            cargarcarro()
+            cbCarro_repar.SelectedIndex = -1
+            bSave.Enabled = False
+            bUpdate.Enabled = False
+        End If
     End Sub
     Private Sub bNew_Click(sender As Object, e As EventArgs) Handles bNew.Click
         limpiar()
@@ -172,21 +184,26 @@ Public Class Reparaciones
         End Try
     End Sub
     Private Sub dgvRepar_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvRepar.CellContentClick
-        bSave.Enabled = False
-        Dim row As DataGridViewRow = dgvRepar.CurrentRow
-        Try
-            tbID_repar.Text = row.Cells(0).Value.ToString()
-            cbCarro_repar.Text = row.Cells(1).Value.ToString()
-            tbDanos_repar.Text = row.Cells(3).Value.ToString()
-            tbencar_repar.Text = row.Cells(4).Value.ToString()
-            dtpEntrada_repar.Value = row.Cells(5).Value
-            dtpEntrega_repar.Value = row.Cells(6).Value
-            Dim x = row.Cells(7).Value.ToString()
-            nudCosto_repar.Value = x.Split("Q")(1)
-            bUpdate.Enabled = True
-        Catch ex As Exception
-            MessageBox.Show(ex.ToString())
-        End Try
+        If Login.token <> 1 Then
+            bSave.Enabled = False
+            bUpdate.Enabled = False
+        Else
+            bSave.Enabled = False
+            Dim row As DataGridViewRow = dgvRepar.CurrentRow
+            Try
+                tbID_repar.Text = row.Cells(0).Value.ToString()
+                cbCarro_repar.Text = row.Cells(1).Value.ToString()
+                tbDanos_repar.Text = row.Cells(3).Value.ToString()
+                tbencar_repar.Text = row.Cells(4).Value.ToString()
+                dtpEntrada_repar.Value = row.Cells(5).Value
+                dtpEntrega_repar.Value = row.Cells(6).Value
+                Dim x = row.Cells(7).Value.ToString()
+                nudCosto_repar.Value = x.Split("Q")(1)
+                bUpdate.Enabled = True
+            Catch ex As Exception
+                MessageBox.Show(ex.ToString())
+            End Try
+        End If
     End Sub
     Private Sub bUpdate_Click(sender As Object, e As EventArgs) Handles bUpdate.Click
         conn = objetoconexion.AbrirCon

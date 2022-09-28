@@ -260,28 +260,32 @@ Public Class Inventario
         CuRHeight = Me.Height
         CuRWidth = Me.Width
     End Sub
-
     Private Sub dgvInvent_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvInvent.CellContentClick
-        i3 = 1
-        btnguardar_inven.Enabled = False
-        Dim row As DataGridViewRow = dgvInvent.CurrentRow
-        Try
-            tbID_inve.Text = row.Cells(0).Value.ToString()
-            cbcarrito_inven.Text = row.Cells(1).Value.ToString()
-            Dim s = row.Cells(7).Value.ToString
-            tbTotal_invent.Text = s.Split("Q")(1)
-            cbestado_invent.SelectedItem = row.Cells(8).Value.ToString()
-            x = row.Cells(9).Value.ToString()
-            If x = "Si" Then
-                rdSi_soli.Checked = True
-            ElseIf x = "No" Then
-                rdNo_Soli.Checked = True
-            End If
-            btndelete_inven.Enabled = True
-            btnmodi_inven.Enabled = True
-        Catch ex As Exception
-            MessageBox.Show(ex.ToString())
-        End Try
+        If Login.token <> 1 And Login.token <> 2 Then
+            btnguardar_inven.Enabled = False
+            btnmodi_inven.Enabled = False
+        Else
+            i3 = 1
+            btnguardar_inven.Enabled = False
+            Dim row As DataGridViewRow = dgvInvent.CurrentRow
+            Try
+                tbID_inve.Text = row.Cells(0).Value.ToString()
+                cbcarrito_inven.Text = row.Cells(1).Value.ToString()
+                Dim s = row.Cells(7).Value.ToString
+                tbTotal_invent.Text = s.Split("Q")(1)
+                cbestado_invent.SelectedItem = row.Cells(8).Value.ToString()
+                x = row.Cells(9).Value.ToString()
+                If x = "Si" Then
+                    rdSi_soli.Checked = True
+                ElseIf x = "No" Then
+                    rdNo_Soli.Checked = True
+                End If
+                btndelete_inven.Enabled = True
+                btnmodi_inven.Enabled = True
+            Catch ex As Exception
+                MessageBox.Show(ex.ToString())
+            End Try
+        End If
     End Sub
     Private Sub btnguardar_inven_Click(sender As Object, e As EventArgs) Handles btnguardar_inven.Click
         conn = objetoconexion.AbrirCon
@@ -368,9 +372,17 @@ Public Class Inventario
         conn.Dispose()
     End Sub
     Private Sub Inventario_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        cargarcambio()
         mostrar()
         dgvInvent.Columns(1).Visible = False
+        If Login.token = 3 Or Login.token = 4 Then
+            MessageBox.Show("No tienes el Acceso Total a este formulario." & vbCrLf & "Si crees que se trata de un error intenta iniciar sesión de nuevo.", "Atención", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation)
+            For Each Ctrl As Control In Controls
+                If Ctrl.ToString <> "Guna.UI2.WinForms.Guna2DataGridView" Then
+                    Ctrl.Enabled = False
+                End If
+            Next
+        End If
+        cargarcambio()
         cargarcarros()
         cbcarrito_inven.SelectedIndex = -1
         btnguardar_inven.Enabled = False

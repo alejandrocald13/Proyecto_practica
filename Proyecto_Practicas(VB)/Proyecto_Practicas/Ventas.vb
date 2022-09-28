@@ -14,16 +14,28 @@ Public Class Ventas
     Private Shared Sub SendMessage(ByVal hWnd As System.IntPtr, ByVal wMsg As Integer, ByVal wParam As Integer, ByVal lParam As Integer)
     End Sub
     Private Sub Ventas_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Guna2GroupBox1.Enabled = False
-        mostrar()
-        cargarcarrito()
-        cargarclientes()
-        cargarrevend()
-        cbCarro_ventas.SelectedIndex = -1
-        cbcliente_cliente.SelectedIndex = -1
-        cbrevendedor_ventas.SelectedIndex = -1
-        btnsave_ventas.Enabled = False
-        btnmodifi_ventas.Enabled = False
+        If Login.token <> 1 Then
+            MessageBox.Show("No tienes el Acceso Total a este formulario." & vbCrLf & "Si crees que se trata de un error intenta iniciar sesión de nuevo.", "Atención", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation)
+            For Each Ctrl As Control In Controls
+                If Ctrl.ToString <> "Guna.UI2.WinForms.Guna2DataGridView" Then
+                    Ctrl.Enabled = False
+                End If
+            Next
+            If Login.token = 2 Then
+                mostrar()
+            End If
+        Else
+            Guna2GroupBox1.Enabled = False
+            mostrar()
+            cargarcarrito()
+            cargarclientes()
+            cargarrevend()
+            cbCarro_ventas.SelectedIndex = -1
+            cbcliente_cliente.SelectedIndex = -1
+            cbrevendedor_ventas.SelectedIndex = -1
+            btnsave_ventas.Enabled = False
+            btnmodifi_ventas.Enabled = False
+        End If
     End Sub
     Sub limpiar()
         tbID_CompraCar.Clear()
@@ -235,35 +247,40 @@ Public Class Ventas
         End Try
     End Sub
     Private Sub dgvventas_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvventas.CellContentClick
-        btnsave_ventas.Enabled = False
-        Dim row As DataGridViewRow = dgvventas.CurrentRow
-        Try
-            tbID_CompraCar.Text = row.Cells(0).Value.ToString()
-            cbcliente_cliente.Text = row.Cells(1).Value.ToString()
-            Dim x = row.Cells(2).Value.ToString
-            If x = "Si" Then
-                rdSi_trasp.Checked = True
-            ElseIf x = "No" Then
-                rdNo_trasp.Checked = True
-            End If
-            dtpFecha_CompraCar.Value = row.Cells(3).Value.ToString()
-            cbCarro_ventas.Text = row.Cells(4).Value.ToString()
-            cbrevendedor_ventas.Text = row.Cells(10).Value.ToString()
-            Dim s = row.Cells(11).Value.ToString
-            nudcomision_ventas.Value = s.Split("Q")(1)
-            If row.Cells(10).Value.ToString() <> "NAC NAC" Then
-                cbComision_vent.Checked = True
-            Else
-                cbComision_vent.Checked = False
-            End If
-            Dim s2 = row.Cells(12).Value.ToString
-            nudganancias_ventas.Value = s2.Split("Q")(1)
-            Dim s3 = row.Cells(13).Value.ToString
-            nudtotal_ventas.Value = s3.Split("Q")(1)
-            btnmodifi_ventas.Enabled = True
-        Catch ex As Exception
-            MessageBox.Show(ex.ToString())
-        End Try
+        If Login.token <> 1 Then
+            btnmodifi_ventas.Enabled = False
+            btnsave_ventas.Enabled = False
+        Else
+            btnsave_ventas.Enabled = False
+            Dim row As DataGridViewRow = dgvventas.CurrentRow
+            Try
+                tbID_CompraCar.Text = row.Cells(0).Value.ToString()
+                cbcliente_cliente.Text = row.Cells(1).Value.ToString()
+                Dim x = row.Cells(2).Value.ToString
+                If x = "Si" Then
+                    rdSi_trasp.Checked = True
+                ElseIf x = "No" Then
+                    rdNo_trasp.Checked = True
+                End If
+                dtpFecha_CompraCar.Value = row.Cells(3).Value.ToString()
+                cbCarro_ventas.Text = row.Cells(4).Value.ToString()
+                cbrevendedor_ventas.Text = row.Cells(10).Value.ToString()
+                Dim s = row.Cells(11).Value.ToString
+                nudcomision_ventas.Value = s.Split("Q")(1)
+                If row.Cells(10).Value.ToString() <> "NAC NAC" Then
+                    cbComision_vent.Checked = True
+                Else
+                    cbComision_vent.Checked = False
+                End If
+                Dim s2 = row.Cells(12).Value.ToString
+                nudganancias_ventas.Value = s2.Split("Q")(1)
+                Dim s3 = row.Cells(13).Value.ToString
+                nudtotal_ventas.Value = s3.Split("Q")(1)
+                btnmodifi_ventas.Enabled = True
+            Catch ex As Exception
+                MessageBox.Show(ex.ToString())
+            End Try
+        End If
     End Sub
     Private Sub bCerrar_Click(sender As Object, e As EventArgs)
         Hide()

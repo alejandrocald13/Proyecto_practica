@@ -141,14 +141,26 @@ Public Class Compra_Carros
         conn.Dispose()
     End Sub
     Private Sub Compra_Carros_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        mostrar()
-        cargarcarro()
-        cargarsub()
-        cbCarro_CompraCar.SelectedIndex = -1
-        cbSub_CompraCar.SelectedIndex = -1
-        Guna2Button2.Enabled = False
-        Guna2Button3.Enabled = False
-        dtpFecha_CompraCar.Value = Now
+        If Login.token <> 1 Then
+            MessageBox.Show("No tienes el Acceso Total a este formulario." & vbCrLf & "Si crees que se trata de un error intenta iniciar sesión de nuevo.", "Atención", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation)
+            For Each Ctrl As Control In Controls
+                If Ctrl.ToString <> "Guna.UI2.WinForms.Guna2DataGridView" Then
+                    Ctrl.Enabled = False
+                End If
+            Next
+            If Login.token = 2 Then
+                mostrar()
+            End If
+        Else
+            mostrar()
+            cargarcarro()
+            cargarsub()
+            cbCarro_CompraCar.SelectedIndex = -1
+            cbSub_CompraCar.SelectedIndex = -1
+            Guna2Button2.Enabled = False
+            Guna2Button3.Enabled = False
+            dtpFecha_CompraCar.Value = Now
+        End If
     End Sub
     Private Sub Guna2Button1_Click(sender As Object, e As EventArgs) Handles Guna2Button1.Click
         i = 2
@@ -165,21 +177,26 @@ Public Class Compra_Carros
         End If
     End Sub
     Private Sub dgvCompraC_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvCompraCarro.CellContentClick
-        Guna2Button2.Enabled = False
-        Dim row As DataGridViewRow = dgvCompraCarro.CurrentRow
-        Try
-            tbID_CompraCar.Text = row.Cells(0).Value.ToString()
-            cbCarro_CompraCar.Text = row.Cells(1).Value.ToString()
-            cbSub_CompraCar.Text = row.Cells(2).Value.ToString()
-            tbLote_CompraCar.Text = row.Cells(3).Value.ToString()
-            tbDanoPrin_CompraCar.Text = row.Cells(4).Value.ToString()
-            dtpFecha_CompraCar.Value = row.Cells(5).Value
-            nudCosto_CompraCar.Value = row.Cells(6).Value
-            tbUbi_CompraCar.Text = row.Cells(7).Value.ToString()
-            Guna2Button3.Enabled = True
-        Catch ex As Exception
-            MessageBox.Show(ex.ToString())
-        End Try
+        If Login.token <> 1 Then
+            Guna2Button2.Enabled = False
+            Guna2Button3.Enabled = False
+        Else
+            Guna2Button2.Enabled = False
+            Dim row As DataGridViewRow = dgvCompraCarro.CurrentRow
+            Try
+                tbID_CompraCar.Text = row.Cells(0).Value.ToString()
+                cbCarro_CompraCar.Text = row.Cells(1).Value.ToString()
+                cbSub_CompraCar.Text = row.Cells(2).Value.ToString()
+                tbLote_CompraCar.Text = row.Cells(3).Value.ToString()
+                tbDanoPrin_CompraCar.Text = row.Cells(4).Value.ToString()
+                dtpFecha_CompraCar.Value = row.Cells(5).Value
+                nudCosto_CompraCar.Value = row.Cells(6).Value
+                tbUbi_CompraCar.Text = row.Cells(7).Value.ToString()
+                Guna2Button3.Enabled = True
+            Catch ex As Exception
+                MessageBox.Show(ex.ToString())
+            End Try
+        End If
     End Sub
     Private Sub Button2_Click(sender As Object, e As EventArgs)
         Me.Hide()

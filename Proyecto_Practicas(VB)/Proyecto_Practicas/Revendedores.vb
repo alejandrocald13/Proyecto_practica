@@ -32,11 +32,23 @@ Public Class Revendedores
         conn.Dispose()
     End Sub
     Private Sub Revendedores_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        mostrar()
-        tbNombre_reven.Focus()
-        Guna2Button2.Enabled = False
-        Guna2Button3.Enabled = False
-        Guna2Button4.Enabled = False
+        If Login.token <> 1 Then
+            MessageBox.Show("No tienes el Acceso Total a este formulario." & vbCrLf & "Si crees que se trata de un error intenta iniciar sesión de nuevo.", "Atención", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation)
+            For Each Ctrl As Control In Controls
+                If Ctrl.ToString <> "Guna.UI2.WinForms.Guna2DataGridView" Then
+                    Ctrl.Enabled = False
+                End If
+            Next
+            If Login.token = 2 Then
+                mostrar()
+            End If
+        Else
+            mostrar()
+            tbNombre_reven.Focus()
+            Guna2Button2.Enabled = False
+            Guna2Button3.Enabled = False
+            Guna2Button4.Enabled = False
+        End If
     End Sub
     Private Sub Guna2Button1_Click(sender As Object, e As EventArgs) Handles Guna2Button1.Click
         limpiar()
@@ -68,20 +80,25 @@ Public Class Revendedores
         End Try
     End Sub
     Private Sub dgvRevendedores_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvRevendedores.CellContentClick
-        Guna2Button2.Enabled = False
-        Dim row As DataGridViewRow = dgvRevendedores.CurrentRow
-        Try
-            tbID_reven.Text = row.Cells(0).Value.ToString()
-            Dim x = row.Cells(1).Value.ToString()
-            tbApellido_revend.Text = x.Split(" ")(0) & " " & x.Split(" ")(1)
-            tbNombre_reven.Text = x.Split(" ")(3) & " " & x.Split(" ")(4)
-            tbCUI_reven.Text = row.Cells(2).Value.ToString()
-            tbNum_reven.Text = row.Cells(3).Value.ToString()
-            Guna2Button3.Enabled = True
-            Guna2Button4.Enabled = True
-        Catch ex As Exception
-            MessageBox.Show(ex.ToString())
-        End Try
+        If Login.token <> 1 Then
+            Guna2Button2.Enabled = False
+            Guna2Button3.Enabled = False
+        Else
+            Guna2Button2.Enabled = False
+            Dim row As DataGridViewRow = dgvRevendedores.CurrentRow
+            Try
+                tbID_reven.Text = row.Cells(0).Value.ToString()
+                Dim x = row.Cells(1).Value.ToString()
+                tbApellido_revend.Text = x.Split(" ")(0) & " " & x.Split(" ")(1)
+                tbNombre_reven.Text = x.Split(" ")(3) & " " & x.Split(" ")(4)
+                tbCUI_reven.Text = row.Cells(2).Value.ToString()
+                tbNum_reven.Text = row.Cells(3).Value.ToString()
+                Guna2Button3.Enabled = True
+                Guna2Button4.Enabled = True
+            Catch ex As Exception
+                MessageBox.Show(ex.ToString())
+            End Try
+        End If
     End Sub
 
     Private Sub Guna2Button2_Click(sender As Object, e As EventArgs) Handles Guna2Button2.Click

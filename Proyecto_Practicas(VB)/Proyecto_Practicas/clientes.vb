@@ -54,10 +54,22 @@ Public Class clientes
 
     End Sub
     Private Sub clientes_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Label1.Text = Nothing
-        mostrar()
-        btnguarda_client.Enabled = False
-        Btnmodi_cliente.Enabled = False
+        If Login.token <> 1 Then
+            MessageBox.Show("No tienes el Acceso Total a este formulario." & vbCrLf & "Si crees que se trata de un error intenta iniciar sesión de nuevo.", "Atención", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation)
+            For Each Ctrl As Control In Controls
+                If Ctrl.ToString <> "Guna.UI2.WinForms.Guna2DataGridView" Then
+                    Ctrl.Enabled = False
+                End If
+            Next
+            If Login.token = 2 Then
+                mostrar()
+            End If
+        Else
+            Label1.Text = Nothing
+            mostrar()
+            btnguarda_client.Enabled = False
+            Btnmodi_cliente.Enabled = False
+        End If
     End Sub
     Private Sub btnnew_client_Click(sender As Object, e As EventArgs) Handles btnnew_client.Click
         limpiar()
@@ -125,20 +137,25 @@ Public Class clientes
         End Try
     End Sub
     Private Sub dgvClient_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvClient.CellContentClick
-        btnguarda_client.Enabled = False
-        Dim row As DataGridViewRow = dgvClient.CurrentRow
-        Try
-            tbID_client.Text = row.Cells(0).Value.ToString()
-            tbNomAp_client.Text = row.Cells(1).Value.ToString()
-            tbCUI_client.Text = row.Cells(2).Value.ToString()
-            tbDirec_client.Text = row.Cells(3).Value.ToString()
-            tbcorreo_client.Text = row.Cells(4).Value.ToString
-            tbNum_client.Text = row.Cells(5).Value.ToString
-            tbNIT_client.Text = row.Cells(6).Value.ToString
-            Btnmodi_cliente.Enabled = True
-        Catch ex As Exception
-            MessageBox.Show(ex.ToString())
-        End Try
+        If Login.token <> 1 Then
+            btnguarda_client.Enabled = False
+            Btnmodi_cliente.Enabled = False
+        Else
+            btnguarda_client.Enabled = False
+            Dim row As DataGridViewRow = dgvClient.CurrentRow
+            Try
+                tbID_client.Text = row.Cells(0).Value.ToString()
+                tbNomAp_client.Text = row.Cells(1).Value.ToString()
+                tbCUI_client.Text = row.Cells(2).Value.ToString()
+                tbDirec_client.Text = row.Cells(3).Value.ToString()
+                tbcorreo_client.Text = row.Cells(4).Value.ToString
+                tbNum_client.Text = row.Cells(5).Value.ToString
+                tbNIT_client.Text = row.Cells(6).Value.ToString
+                Btnmodi_cliente.Enabled = True
+            Catch ex As Exception
+                MessageBox.Show(ex.ToString())
+            End Try
+        End If
     End Sub
     Private Sub Button2_Click(sender As Object, e As EventArgs)
         Me.Hide()

@@ -52,7 +52,7 @@ Partial Class Inventario
         Me.dgvInvent.AllowUserToDeleteRows = False
         DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
         Me.dgvInvent.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
-        Me.dgvInvent.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.dgvInvent.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
         Me.dgvInvent.BackgroundColor = System.Drawing.Color.White
         Me.dgvInvent.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dgvInvent.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
@@ -81,8 +81,9 @@ Partial Class Inventario
         Me.dgvInvent.ReadOnly = True
         Me.dgvInvent.RowHeadersVisible = False
         Me.dgvInvent.RowTemplate.Height = 24
+        Me.dgvInvent.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal
         Me.dgvInvent.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvInvent.Size = New System.Drawing.Size(793, 296)
+        Me.dgvInvent.Size = New System.Drawing.Size(793, 323)
         Me.dgvInvent.TabIndex = 55
         Me.dgvInvent.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White
         Me.dgvInvent.ThemeStyle.AlternatingRowsStyle.Font = Nothing

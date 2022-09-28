@@ -67,10 +67,19 @@ Public Class Registro
         limpiar()
     End Sub
     Private Sub Registro_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Label2.Text = "Ingresa tu Correo Electrónico"
-        Label2.ForeColor = Color.Blue
-        cargarpuesto()
-        cbpuesto_regis.SelectedIndex = -1
+        If Login.token <> 1 And Login.token <> 2 Then
+            MessageBox.Show("No tienes el Acceso Total a este formulario." & vbCrLf & "Si crees que se trata de un error intenta iniciar sesión de nuevo.", "Atención", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation)
+            For Each Ctrl As Control In Controls
+                If Ctrl.ToString <> "Guna.UI2.WinForms.Guna2DataGridView" Then
+                    Ctrl.Enabled = False
+                End If
+            Next
+        Else
+            Label2.Text = "Ingresa tu Correo Electrónico"
+            Label2.ForeColor = Color.Blue
+            cargarpuesto()
+            cbpuesto_regis.SelectedIndex = -1
+        End If
     End Sub
     Private Sub bregister_Click(sender As Object, e As EventArgs) Handles bregister.Click
         If b = 1 And a = 1 Then

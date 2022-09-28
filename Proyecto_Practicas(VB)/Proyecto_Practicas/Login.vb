@@ -62,11 +62,11 @@ Public Class Login
                         If Convert.ToString(row("id_puesto")) = 1 Then
                             token = 1
                         ElseIf Convert.ToString(row("id_puesto")) = 2 Then
-                            token = 1
-                        ElseIf Convert.ToString(row("id_puesto")) = 4 Then
                             token = 2
-                        ElseIf Convert.ToString(row("id_puesto")) = 5 Then
+                        ElseIf Convert.ToString(row("id_puesto")) = 4 Then
                             token = 3
+                        ElseIf Convert.ToString(row("id_puesto")) = 5 Then
+                            token = 4
                         Else
                             token = 0
                         End If

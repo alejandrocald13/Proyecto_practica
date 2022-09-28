@@ -108,11 +108,23 @@ Public Class Importacion_Carro
         End If
     End Sub
     Private Sub Importacion_Carro_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        mostrar()
-        cargarcarrito()
-        cbCarro_Compraimpor.SelectedIndex = -1
-        btnguarda_impor.Enabled = False
-        Btnmodi_impor.Enabled = False
+        If Login.token <> 1 Then
+            MessageBox.Show("No tienes el Acceso Total a este formulario." & vbCrLf & "Si crees que se trata de un error intenta iniciar sesión de nuevo.", "Atención", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation)
+            For Each Ctrl As Control In Controls
+                If Ctrl.ToString <> "Guna.UI2.WinForms.Guna2DataGridView" Then
+                    Ctrl.Enabled = False
+                End If
+            Next
+            If Login.token = 2 Then
+                mostrar()
+            End If
+        Else
+            mostrar()
+            cargarcarrito()
+            cbCarro_Compraimpor.SelectedIndex = -1
+            btnguarda_impor.Enabled = False
+            Btnmodi_impor.Enabled = False
+        End If
     End Sub
     Private Sub cbCarro_Compraimpor_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbCarro_Compraimpor.SelectedIndexChanged
         i += 1
@@ -168,19 +180,24 @@ Public Class Importacion_Carro
         End Try
     End Sub
     Private Sub dgvCompraC_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvImpo.CellContentClick
-        btnguarda_impor.Enabled = False
-        Dim row As DataGridViewRow = dgvImpo.CurrentRow
-        Try
-            tbID_impo.Text = row.Cells(0).Value.ToString()
-            cbCarro_Compraimpor.Text = row.Cells(1).Value.ToString()
-            tbencar_impor.Text = row.Cells(3).Value.ToString()
-            tbmeto_impor.Text = row.Cells(4).Value.ToString()
-            Dim x = row.Cells(5).Value.ToString()
-            nudCosto_impor.Value = x.Split("$")(1)
-            Btnmodi_impor.Enabled = True
-        Catch ex As Exception
-            MessageBox.Show(ex.ToString())
-        End Try
+        If Login.token <> 1 Then
+            btnguarda_impor.Enabled = False
+            Btnmodi_impor.Enabled = False
+        Else
+            btnguarda_impor.Enabled = False
+            Dim row As DataGridViewRow = dgvImpo.CurrentRow
+            Try
+                tbID_impo.Text = row.Cells(0).Value.ToString()
+                cbCarro_Compraimpor.Text = row.Cells(1).Value.ToString()
+                tbencar_impor.Text = row.Cells(3).Value.ToString()
+                tbmeto_impor.Text = row.Cells(4).Value.ToString()
+                Dim x = row.Cells(5).Value.ToString()
+                nudCosto_impor.Value = x.Split("$")(1)
+                Btnmodi_impor.Enabled = True
+            Catch ex As Exception
+                MessageBox.Show(ex.ToString())
+            End Try
+        End If
     End Sub
     Private Sub Btnmodi_impor_Click(sender As Object, e As EventArgs) Handles Btnmodi_impor.Click
         conn = objetoconexion.AbrirCon
