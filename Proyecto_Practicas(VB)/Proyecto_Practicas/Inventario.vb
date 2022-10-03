@@ -1,29 +1,15 @@
 ﻿Imports MySql.Data.MySqlClient
 Imports System.Net
 Imports System.IO
-Imports System.Runtime.InteropServices
 Public Class Inventario
+    Dim CuRWidth As Integer = Me.Width
+    Dim CuRHeight As Integer = Me.Height
     Dim cmd As MySqlCommand
     Dim conn As New MySqlConnection
     Dim objetoconexion As New conexion
     Dim i, i2, i3 As Integer
     Dim costosubasta, dolar, IPRIMA, IVA, CostoP, Impo, Repar As Double
     Dim x As String = ""
-    Dim CuRWidth As Integer = Me.Width
-    Dim CuRHeight As Integer = Me.Height
-    <DllImport("user32.DLL", EntryPoint:="ReleaseCapture")>
-    Private Shared Sub ReleaseCapture()
-    End Sub
-    <DllImport("user32.DLL", EntryPoint:="SendMessage")>
-    Private Shared Sub SendMessage(ByVal hWnd As System.IntPtr, ByVal wMsg As Integer, ByVal wParam As Integer, ByVal lParam As Integer)
-    End Sub
-    'If Not (Asc(e.KeyChar) = 8) Then
-    '    Dim allowedChars As String = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZáéíóúÁÉÍÓÚ1234567890-().@#"",;: "
-    '    If Not allowedChars.Contains(e.KeyChar.ToString.ToLower) Then
-    '        e.KeyChar = ChrW(0)
-    '        e.Handled = True
-    '    End If
-    'End If
     Sub limpiar()
         tbID_inve.Clear()
         cbcarrito_inven.SelectedIndex = -1
@@ -241,11 +227,6 @@ Public Class Inventario
     Private Sub Button1_Click(sender As Object, e As EventArgs)
         Me.WindowState = FormWindowState.Minimized
     End Sub
-    Private Sub Panel1_MouseMove(sender As Object, e As MouseEventArgs)
-        ReleaseCapture()
-        SendMessage(Me.Handle, &H112&, &HF012&, 0)
-    End Sub
-
     Private Sub Inventario_Resize(sender As Object, e As EventArgs) Handles MyBase.Resize
         Dim RatioHeight As Double = (Me.Height - CuRHeight) / CuRHeight
         Dim RatioWidth As Double = (Me.Width - CuRWidth) / CuRWidth
@@ -372,22 +353,34 @@ Public Class Inventario
         conn.Dispose()
     End Sub
     Private Sub Inventario_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        mostrar()
-        dgvInvent.Columns(1).Visible = False
-        If Login.token = 3 Or Login.token = 4 Then
+        If Login.token <> 1 Then
             MessageBox.Show("No tienes el Acceso Total a este formulario." & vbCrLf & "Si crees que se trata de un error intenta iniciar sesión de nuevo.", "Atención", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation)
             For Each Ctrl As Control In Controls
                 If Ctrl.ToString <> "Guna.UI2.WinForms.Guna2DataGridView" Then
                     Ctrl.Enabled = False
                 End If
             Next
+            If Login.token = 2 Then
+                mostrar()
+            End If
+        Else
+            mostrar()
+            dgvInvent.Columns(1).Visible = False
+            If Login.token = 3 Or Login.token = 4 Then
+                MessageBox.Show("No tienes el Acceso Total a este formulario." & vbCrLf & "Si crees que se trata de un error intenta iniciar sesión de nuevo.", "Atención", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation)
+                For Each Ctrl As Control In Controls
+                    If Ctrl.ToString <> "Guna.UI2.WinForms.Guna2DataGridView" Then
+                        Ctrl.Enabled = False
+                    End If
+                Next
+            End If
+            cargarcambio()
+            cargarcarros()
+            cbcarrito_inven.SelectedIndex = -1
+            btnguardar_inven.Enabled = False
+            btnmodi_inven.Enabled = False
+            btndelete_inven.Enabled = False
         End If
-        cargarcambio()
-        cargarcarros()
-        cbcarrito_inven.SelectedIndex = -1
-        btnguardar_inven.Enabled = False
-        btnmodi_inven.Enabled = False
-        btndelete_inven.Enabled = False
     End Sub
     Private Sub cbcarrito_inven_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbcarrito_inven.SelectedIndexChanged
         If i3 = 1 Then

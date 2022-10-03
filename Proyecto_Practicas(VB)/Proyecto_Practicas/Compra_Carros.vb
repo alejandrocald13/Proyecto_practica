@@ -50,7 +50,7 @@ Public Class Compra_Carros
                 MessageBox.Show("ALGUN CAMPO ESTÁ VACÍO", "ERROR AL GUARDAR", MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
             Else
                 cmd = conn.CreateCommand
-                cmd.CommandText = "insert into compra_carros(id_compras,id_carro,id_sub,lote_compra, daño_princ,fecha_compra, costosubasta_compra, ubicacion_compra)values(NULL,@carro,@sub,@lote,@dano, @fec, @cost,@ubi);"
+                cmd.CommandText = "insert into compra_carros(id_carro,id_sub,lote_compra, daño_princ,fecha_compra, costosubasta_compra, ubicacion_compra)values(@carro,@sub,@lote,@dano, @fec, @cost,@ubi);"
                 cmd.Parameters.AddWithValue("@carro", cbCarro_CompraCar.SelectedValue.ToString)
                 cmd.Parameters.AddWithValue("@sub", cbSub_CompraCar.SelectedValue.ToString)
                 cmd.Parameters.AddWithValue("@lote", tbLote_CompraCar.Text)
