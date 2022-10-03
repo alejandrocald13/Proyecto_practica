@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 23-08-2022 a las 02:20:51
+-- Tiempo de generación: 03-10-2022 a las 17:31:05
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 8.1.6
 
@@ -33,7 +33,8 @@ CREATE TABLE `clientes` (
   `direc_clien` varchar(100) NOT NULL,
   `correo_clien` varchar(100) DEFAULT NULL,
   `num_clien` varchar(8) NOT NULL,
-  `NIT_clien` varchar(15) NOT NULL
+  `NIT_clien` varchar(15) NOT NULL,
+  `CUI_clien` varchar(13) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -64,9 +65,9 @@ CREATE TABLE `facturacion` (
   `id_carro` int(11) NOT NULL,
   `id_compras` int(11) NOT NULL,
   `id_impo` int(11) NOT NULL,
-  `IRS_importe` int(6) NOT NULL,
   `placas_factu` int(6) NOT NULL,
-  `plegal_factu` int(6) NOT NULL
+  `IPRIMA_importe` int(10) NOT NULL,
+  `IVA_importe` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -100,7 +101,8 @@ CREATE TABLE `info_carro` (
   `cilindros_carro` varchar(4) NOT NULL,
   `llaves_carro` tinyint(1) NOT NULL,
   `motor_carro` varchar(4) NOT NULL,
-  `foto_carro` text DEFAULT NULL
+  `foto_carro` text DEFAULT NULL,
+  `millaje_carro` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -135,7 +137,6 @@ CREATE TABLE `puestos` (
 INSERT INTO `puestos` (`id_puestos`, `puesto`) VALUES
 (1, 'Administrador'),
 (2, 'Gerente'),
-(3, 'Sub-Gerente'),
 (4, 'Cliente'),
 (5, 'Revendedor');
 
@@ -150,9 +151,10 @@ CREATE TABLE `reparaciones` (
   `id_carro` int(11) NOT NULL,
   `id_compras` int(11) NOT NULL,
   `costo_reparacion` int(11) NOT NULL,
-  `encarg_reparacion` int(11) NOT NULL,
+  `encarg_reparacion` varchar(100) NOT NULL,
   `fechae_reparacion` date NOT NULL,
-  `fechad_reparacion` date NOT NULL
+  `fechad_reparacion` date NOT NULL,
+  `danos_repar` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -163,9 +165,8 @@ CREATE TABLE `reparaciones` (
 
 CREATE TABLE `revendedores` (
   `id_revend` int(11) NOT NULL,
-  `Nombre_revend` varchar(100) NOT NULL,
-  `Carro_vendido` varchar(50) NOT NULL,
-  `Comision` int(5) NOT NULL,
+  `nom_revend` varchar(100) NOT NULL,
+  `apelli_revend` int(11) NOT NULL,
   `CUI_revend` varchar(13) NOT NULL,
   `num_revend` varchar(8) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -193,9 +194,16 @@ CREATE TABLE `users` (
   `nombre_completo` varchar(50) NOT NULL,
   `correo` text NOT NULL,
   `id_puesto` int(11) NOT NULL,
-  `user` varchar(20) NOT NULL,
-  `psw` varchar(20) NOT NULL
+  `user` varchar(15) NOT NULL,
+  `psw` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `users`
+--
+
+INSERT INTO `users` (`id_user`, `nombre_completo`, `correo`, `id_puesto`, `user`, `psw`) VALUES
+(3, 'Roberto Alejandro Calderón Martínez', 'robertocald1309@gmail.com', 1, 'alejandrocald', 'jSG5TlJBMBA14AC3udcLXkmtCCQhe+311jQtIMItBy4=');
 
 -- --------------------------------------------------------
 
@@ -281,8 +289,7 @@ ALTER TABLE `reparaciones`
 -- Indices de la tabla `revendedores`
 --
 ALTER TABLE `revendedores`
-  ADD PRIMARY KEY (`id_revend`),
-  ADD KEY `index_carro` (`Carro_vendido`);
+  ADD PRIMARY KEY (`id_revend`);
 
 --
 -- Indices de la tabla `subastas`
@@ -374,7 +381,7 @@ ALTER TABLE `subastas`
 -- AUTO_INCREMENT de la tabla `users`
 --
 ALTER TABLE `users`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT de la tabla `ventas`

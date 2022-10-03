@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Inventario
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class Inventario
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
@@ -76,15 +76,15 @@ Partial Class Inventario
         Me.dgvInvent.DefaultCellStyle = DataGridViewCellStyle3
         Me.dgvInvent.EnableHeadersVisualStyles = False
         Me.dgvInvent.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.dgvInvent.Location = New System.Drawing.Point(17, 311)
-        Me.dgvInvent.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.dgvInvent.Location = New System.Drawing.Point(13, 280)
+        Me.dgvInvent.Margin = New System.Windows.Forms.Padding(4)
         Me.dgvInvent.Name = "dgvInvent"
         Me.dgvInvent.ReadOnly = True
         Me.dgvInvent.RowHeadersVisible = False
         Me.dgvInvent.RowTemplate.Height = 24
         Me.dgvInvent.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal
         Me.dgvInvent.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvInvent.Size = New System.Drawing.Size(1057, 398)
+        Me.dgvInvent.Size = New System.Drawing.Size(1046, 467)
         Me.dgvInvent.TabIndex = 55
         Me.dgvInvent.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White
         Me.dgvInvent.ThemeStyle.AlternatingRowsStyle.Font = Nothing
@@ -114,7 +114,7 @@ Partial Class Inventario
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Segoe UI Black", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.Black
-        Me.Label1.Location = New System.Drawing.Point(16, 127)
+        Me.Label1.Location = New System.Drawing.Point(13, 120)
         Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(67, 28)
@@ -132,8 +132,8 @@ Partial Class Inventario
         Me.btnmodi_inven.FillColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.btnmodi_inven.Font = New System.Drawing.Font("Segoe UI Black", 10.8!, System.Drawing.FontStyle.Bold)
         Me.btnmodi_inven.ForeColor = System.Drawing.Color.White
-        Me.btnmodi_inven.Location = New System.Drawing.Point(835, 177)
-        Me.btnmodi_inven.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnmodi_inven.Location = New System.Drawing.Point(819, 160)
+        Me.btnmodi_inven.Margin = New System.Windows.Forms.Padding(4)
         Me.btnmodi_inven.Name = "btnmodi_inven"
         Me.btnmodi_inven.Size = New System.Drawing.Size(240, 47)
         Me.btnmodi_inven.TabIndex = 45
@@ -150,8 +150,8 @@ Partial Class Inventario
         Me.btnguardar_inven.FillColor = System.Drawing.Color.MediumSeaGreen
         Me.btnguardar_inven.Font = New System.Drawing.Font("Segoe UI Black", 10.8!, System.Drawing.FontStyle.Bold)
         Me.btnguardar_inven.ForeColor = System.Drawing.Color.White
-        Me.btnguardar_inven.Location = New System.Drawing.Point(835, 123)
-        Me.btnguardar_inven.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnguardar_inven.Location = New System.Drawing.Point(819, 106)
+        Me.btnguardar_inven.Margin = New System.Windows.Forms.Padding(4)
         Me.btnguardar_inven.Name = "btnguardar_inven"
         Me.btnguardar_inven.Size = New System.Drawing.Size(240, 47)
         Me.btnguardar_inven.TabIndex = 44
@@ -167,8 +167,8 @@ Partial Class Inventario
         Me.btnnuevo_inven.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
         Me.btnnuevo_inven.Font = New System.Drawing.Font("Segoe UI Black", 10.8!, System.Drawing.FontStyle.Bold)
         Me.btnnuevo_inven.ForeColor = System.Drawing.Color.White
-        Me.btnnuevo_inven.Location = New System.Drawing.Point(835, 69)
-        Me.btnnuevo_inven.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnnuevo_inven.Location = New System.Drawing.Point(819, 52)
+        Me.btnnuevo_inven.Margin = New System.Windows.Forms.Padding(4)
         Me.btnnuevo_inven.Name = "btnnuevo_inven"
         Me.btnnuevo_inven.Size = New System.Drawing.Size(240, 47)
         Me.btnnuevo_inven.TabIndex = 43
@@ -188,8 +188,8 @@ Partial Class Inventario
         Me.tbID_inve.Font = New System.Drawing.Font("Segoe UI Black", 12.0!, System.Drawing.FontStyle.Bold)
         Me.tbID_inve.ForeColor = System.Drawing.Color.Black
         Me.tbID_inve.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.tbID_inve.Location = New System.Drawing.Point(17, 69)
-        Me.tbID_inve.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
+        Me.tbID_inve.Location = New System.Drawing.Point(14, 62)
+        Me.tbID_inve.Margin = New System.Windows.Forms.Padding(5)
         Me.tbID_inve.Name = "tbID_inve"
         Me.tbID_inve.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.tbID_inve.PlaceholderText = "ID"
@@ -215,8 +215,8 @@ Partial Class Inventario
         Me.tbCarroSelec_CompraCar.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
         Me.tbCarroSelec_CompraCar.ForeColor = System.Drawing.Color.Black
         Me.tbCarroSelec_CompraCar.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.tbCarroSelec_CompraCar.Location = New System.Drawing.Point(416, 69)
-        Me.tbCarroSelec_CompraCar.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
+        Me.tbCarroSelec_CompraCar.Location = New System.Drawing.Point(403, 62)
+        Me.tbCarroSelec_CompraCar.Margin = New System.Windows.Forms.Padding(5)
         Me.tbCarroSelec_CompraCar.Name = "tbCarroSelec_CompraCar"
         Me.tbCarroSelec_CompraCar.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.tbCarroSelec_CompraCar.PlaceholderForeColor = System.Drawing.Color.Black
@@ -238,8 +238,8 @@ Partial Class Inventario
         Me.cbcarrito_inven.Font = New System.Drawing.Font("Segoe UI Black", 9.75!, System.Drawing.FontStyle.Bold)
         Me.cbcarrito_inven.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
         Me.cbcarrito_inven.ItemHeight = 30
-        Me.cbcarrito_inven.Location = New System.Drawing.Point(108, 116)
-        Me.cbcarrito_inven.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.cbcarrito_inven.Location = New System.Drawing.Point(105, 109)
+        Me.cbcarrito_inven.Margin = New System.Windows.Forms.Padding(4)
         Me.cbcarrito_inven.Name = "cbcarrito_inven"
         Me.cbcarrito_inven.Size = New System.Drawing.Size(257, 36)
         Me.cbcarrito_inven.TabIndex = 58
@@ -254,8 +254,8 @@ Partial Class Inventario
         Me.gpSoli_inven.FillColor = System.Drawing.Color.Transparent
         Me.gpSoli_inven.Font = New System.Drawing.Font("Segoe UI", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.gpSoli_inven.ForeColor = System.Drawing.Color.Black
-        Me.gpSoli_inven.Location = New System.Drawing.Point(416, 175)
-        Me.gpSoli_inven.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.gpSoli_inven.Location = New System.Drawing.Point(403, 168)
+        Me.gpSoli_inven.Margin = New System.Windows.Forms.Padding(4)
         Me.gpSoli_inven.Name = "gpSoli_inven"
         Me.gpSoli_inven.Size = New System.Drawing.Size(367, 94)
         Me.gpSoli_inven.TabIndex = 110
@@ -272,7 +272,7 @@ Partial Class Inventario
         Me.rdNo_Soli.Font = New System.Drawing.Font("Segoe UI Black", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.rdNo_Soli.ForeColor = System.Drawing.Color.Black
         Me.rdNo_Soli.Location = New System.Drawing.Point(245, 57)
-        Me.rdNo_Soli.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.rdNo_Soli.Margin = New System.Windows.Forms.Padding(4)
         Me.rdNo_Soli.Name = "rdNo_Soli"
         Me.rdNo_Soli.Size = New System.Drawing.Size(52, 24)
         Me.rdNo_Soli.TabIndex = 1
@@ -293,7 +293,7 @@ Partial Class Inventario
         Me.rdSi_soli.Font = New System.Drawing.Font("Segoe UI Black", 9.0!, System.Drawing.FontStyle.Bold)
         Me.rdSi_soli.ForeColor = System.Drawing.Color.Black
         Me.rdSi_soli.Location = New System.Drawing.Point(67, 57)
-        Me.rdSi_soli.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.rdSi_soli.Margin = New System.Windows.Forms.Padding(4)
         Me.rdSi_soli.Name = "rdSi_soli"
         Me.rdSi_soli.Size = New System.Drawing.Size(44, 24)
         Me.rdSi_soli.TabIndex = 0
@@ -316,8 +316,8 @@ Partial Class Inventario
         Me.cbestado_invent.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
         Me.cbestado_invent.ItemHeight = 30
         Me.cbestado_invent.Items.AddRange(New Object() {"Disponible", "Reparación", "Espertaje", "Importación"})
-        Me.cbestado_invent.Location = New System.Drawing.Point(108, 224)
-        Me.cbestado_invent.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.cbestado_invent.Location = New System.Drawing.Point(105, 217)
+        Me.cbestado_invent.Margin = New System.Windows.Forms.Padding(4)
         Me.cbestado_invent.Name = "cbestado_invent"
         Me.cbestado_invent.Size = New System.Drawing.Size(257, 36)
         Me.cbestado_invent.TabIndex = 111
@@ -328,7 +328,7 @@ Partial Class Inventario
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Segoe UI Black", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.Black
-        Me.Label2.Location = New System.Drawing.Point(16, 235)
+        Me.Label2.Location = New System.Drawing.Point(13, 228)
         Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(78, 28)
@@ -352,8 +352,8 @@ Partial Class Inventario
         Me.tbTotal_invent.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
         Me.tbTotal_invent.ForeColor = System.Drawing.Color.White
         Me.tbTotal_invent.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.tbTotal_invent.Location = New System.Drawing.Point(17, 175)
-        Me.tbTotal_invent.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
+        Me.tbTotal_invent.Location = New System.Drawing.Point(14, 168)
+        Me.tbTotal_invent.Margin = New System.Windows.Forms.Padding(5)
         Me.tbTotal_invent.Name = "tbTotal_invent"
         Me.tbTotal_invent.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.tbTotal_invent.PlaceholderForeColor = System.Drawing.Color.White
@@ -368,7 +368,7 @@ Partial Class Inventario
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Segoe UI Black", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.Green
-        Me.Label4.Location = New System.Drawing.Point(504, 129)
+        Me.Label4.Location = New System.Drawing.Point(465, 125)
         Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(0, 28)
@@ -385,8 +385,8 @@ Partial Class Inventario
         Me.btndelete_inven.FillColor = System.Drawing.Color.Red
         Me.btndelete_inven.Font = New System.Drawing.Font("Segoe UI Black", 10.8!, System.Drawing.FontStyle.Bold)
         Me.btndelete_inven.ForeColor = System.Drawing.Color.White
-        Me.btndelete_inven.Location = New System.Drawing.Point(835, 231)
-        Me.btndelete_inven.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btndelete_inven.Location = New System.Drawing.Point(819, 214)
+        Me.btndelete_inven.Margin = New System.Windows.Forms.Padding(4)
         Me.btndelete_inven.Name = "btndelete_inven"
         Me.btndelete_inven.Size = New System.Drawing.Size(240, 47)
         Me.btndelete_inven.TabIndex = 120
@@ -397,7 +397,7 @@ Partial Class Inventario
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.Gray
-        Me.Label5.Location = New System.Drawing.Point(495, 16)
+        Me.Label5.Location = New System.Drawing.Point(465, 8)
         Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(164, 29)
@@ -408,22 +408,22 @@ Partial Class Inventario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1101, 690)
+        Me.ClientSize = New System.Drawing.Size(1211, 787)
         Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.btndelete_inven)
         Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.tbTotal_invent)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.cbestado_invent)
-        Me.Controls.Add(Me.gpSoli_inven)
-        Me.Controls.Add(Me.tbCarroSelec_CompraCar)
-        Me.Controls.Add(Me.cbcarrito_inven)
-        Me.Controls.Add(Me.dgvInvent)
-        Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.btnmodi_inven)
-        Me.Controls.Add(Me.btnguardar_inven)
-        Me.Controls.Add(Me.btnnuevo_inven)
         Me.Controls.Add(Me.tbID_inve)
+        Me.Controls.Add(Me.btndelete_inven)
+        Me.Controls.Add(Me.btnnuevo_inven)
+        Me.Controls.Add(Me.dgvInvent)
+        Me.Controls.Add(Me.cbestado_invent)
+        Me.Controls.Add(Me.btnguardar_inven)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.gpSoli_inven)
+        Me.Controls.Add(Me.btnmodi_inven)
+        Me.Controls.Add(Me.tbTotal_invent)
+        Me.Controls.Add(Me.cbcarrito_inven)
+        Me.Controls.Add(Me.tbCarroSelec_CompraCar)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "Inventario"

@@ -63,18 +63,15 @@ Public Class Lista_forms
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
         AbrirFormEnPanel(New Importacion_Carro)
     End Sub
-
     Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
         AbrirFormEnPanel(New Registro)
     End Sub
     Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button8.Click
         AbrirFormEnPanel(New Revendedores)
     End Sub
-
     Private Sub Button9_Click(sender As Object, e As EventArgs) Handles Button9.Click
         AbrirFormEnPanel(New Subasta)
     End Sub
-
     Private Sub Button10_Click(sender As Object, e As EventArgs) Handles Button10.Click
         AbrirFormEnPanel(New Ventas)
     End Sub
@@ -85,11 +82,9 @@ Public Class Lista_forms
     Private Sub Button11_Click(sender As Object, e As EventArgs) Handles Button11.Click
         AbrirFormEnPanel(New Inventario)
     End Sub
-
     Private Sub Button12_Click(sender As Object, e As EventArgs) Handles Button12.Click
         AbrirFormEnPanel(New Reparaciones)
     End Sub
-
     Private Sub Lista_forms_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         SizeNormal = Size
         LocationNormal = Location

@@ -7,7 +7,7 @@ Public Class Inventario
     Dim cmd As MySqlCommand
     Dim conn As New MySqlConnection
     Dim objetoconexion As New conexion
-    Dim i, i2, i3 As Integer
+    Dim i, i2, i3, i4 As Integer
     Dim costosubasta, dolar, IPRIMA, IVA, CostoP, Impo, Repar As Double
     Dim x As String = ""
     Sub limpiar()
@@ -228,14 +228,16 @@ Public Class Inventario
         Me.WindowState = FormWindowState.Minimized
     End Sub
     Private Sub Inventario_Resize(sender As Object, e As EventArgs) Handles MyBase.Resize
+        i4 += 1
+        MsgBox(i4)
         Dim RatioHeight As Double = (Me.Height - CuRHeight) / CuRHeight
         Dim RatioWidth As Double = (Me.Width - CuRWidth) / CuRWidth
-        For Each Ctrl As Control In Controls
-            Ctrl.Width += Ctrl.Width * RatioWidth
-            Ctrl.Left += Ctrl.Left * RatioWidth
-            Ctrl.Top += Ctrl.Top * RatioHeight
-            If Ctrl.ToString = "Guna.UI2.WinForms.Guna2DataGridView" Then
-                Ctrl.Height += Ctrl.Height * RatioHeight
+        For Each Ctrl1 As Control In Controls
+            Ctrl1.Width += Ctrl1.Width * RatioWidth
+            Ctrl1.Left += Ctrl1.Left * RatioWidth
+            Ctrl1.Top += Ctrl1.Top * RatioHeight
+            If Ctrl1.ToString = "Guna.UI2.WinForms.Guna2DataGridView" Then
+                Ctrl1.Height += Ctrl1.Height * RatioHeight
             End If
         Next
         CuRHeight = Me.Height
