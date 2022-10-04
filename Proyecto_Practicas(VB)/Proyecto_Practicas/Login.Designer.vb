@@ -77,7 +77,7 @@ Partial Class Login
         Me.tbPswd.Location = New System.Drawing.Point(65, 169)
         Me.tbPswd.Margin = New System.Windows.Forms.Padding(7, 6, 7, 6)
         Me.tbPswd.Name = "tbPswd"
-        Me.tbPswd.PasswordChar = Global.Microsoft.VisualBasic.ChrW(183)
+        Me.tbPswd.PasswordChar = Global.Microsoft.VisualBasic.ChrW(8226)
         Me.tbPswd.PlaceholderForeColor = System.Drawing.Color.LightGray
         Me.tbPswd.PlaceholderText = "Contraseña"
         Me.tbPswd.SelectedText = ""
