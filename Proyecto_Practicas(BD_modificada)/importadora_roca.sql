@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 04-10-2022 a las 03:49:55
+-- Tiempo de generación: 13-10-2022 a las 06:38:12
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 8.1.6
 
@@ -42,7 +42,8 @@ CREATE TABLE `clientes` (
 --
 
 INSERT INTO `clientes` (`id_clien`, `nom_clien`, `direc_clien`, `correo_clien`, `num_clien`, `NIT_clien`, `CUI_clien`) VALUES
-(1, 'Pedro Leonel', 'Villa Nueva', 'pedroleonel4589@gmail.com', '45589043', '12358442-5', '3133468910603');
+(2, 'Rigoberto Andrés Marroquin Xecul', '8va Avenida 3-8 Zona 1 Guatemala', 'rigoberto@gmail.com', '45980930', '12385964', '1258909109089'),
+(3, 'Luisa Ana de Armas Dos', '5ta Calle 8-3 Zona 3', 'luisa2564@gmail.com', '45895621', '13258498', '2185149849884');
 
 -- --------------------------------------------------------
 
@@ -66,9 +67,11 @@ CREATE TABLE `compra_carros` (
 --
 
 INSERT INTO `compra_carros` (`id_compras`, `id_carro`, `id_sub`, `lote_compra`, `daño_princ`, `fecha_compra`, `costosubasta_compra`, `ubicacion_compra`) VALUES
-(1, 2, 1, '29760620', 'FRONT END', '2022-07-06', 7500, 'CA - SAN DIEGO '),
-(2, 3, 1, '31180514', 'FRONT END', '2022-05-01', 10000, 'NY - NEWBURGH '),
-(3, 4, 1, '25890831', 'FRONT END', '2022-08-01', 400, 'AR - LITTLE ROCK');
+(4, 8, 4, '45263992', 'FRONT END', '2022-10-15', 300, 'TX - AUSTIN '),
+(5, 6, 4, '52599592', 'MINOR DENT/SCRATCHES', '2022-10-22', 10000, 'TX - DALLAS'),
+(6, 9, 4, '46831872', 'FRONT END', '2022-10-13', 7000, 'TX - AUSTIN'),
+(7, 10, 4, '40659152', 'FRONT END', '2022-10-15', 3000, 'TX - AUSTIN'),
+(8, 7, 4, '37114862', 'REAR END', '2022-10-24', 2000, 'TX - AUSTIN');
 
 -- --------------------------------------------------------
 
@@ -91,7 +94,11 @@ CREATE TABLE `facturacion` (
 --
 
 INSERT INTO `facturacion` (`id_factu`, `id_carro`, `id_compras`, `id_impo`, `IPRIMA_importe`, `IVA_importe`, `placas_factu`) VALUES
-(1, 2, 1, 3, 4752, 2808, 1589.58);
+(2, 6, 5, 5, 15760, 9456, 1500),
+(3, 7, 8, 4, 3152, 1891.2, 3000),
+(4, 8, 4, 6, 472.8, 283.68, 3000),
+(5, 9, 6, 8, 11032, 6619.2, 300),
+(6, 10, 7, 7, 4728, 2836.8, 1800);
 
 -- --------------------------------------------------------
 
@@ -113,7 +120,11 @@ CREATE TABLE `importaciones` (
 --
 
 INSERT INTO `importaciones` (`id_impo`, `id_carro`, `id_compras`, `encarg_impo`, `metodo_impo`, `costo_impo`) VALUES
-(3, 2, 1, 'Margarita ', 'Avión', 1700);
+(4, 7, 8, 'Luisa Ana de Armas', 'Barco', 750),
+(5, 6, 5, 'Luisa Ana de Armas', 'Avión', 3000),
+(6, 8, 4, 'Luis Pedro Coyop', 'Aduana Terrestre', 5000),
+(7, 10, 7, 'Luis Pedro Arm', 'Aduana Terrestre', 800),
+(8, 9, 6, 'Juan Cruz', 'Avión', 1500);
 
 -- --------------------------------------------------------
 
@@ -123,7 +134,7 @@ INSERT INTO `importaciones` (`id_impo`, `id_carro`, `id_compras`, `encarg_impo`,
 
 CREATE TABLE `info_carro` (
   `id_carro` int(11) NOT NULL,
-  `año_carro` varchar(4) NOT NULL,
+  `anio_carro` varchar(4) NOT NULL,
   `marca_carro` varchar(20) NOT NULL,
   `modelo_carro` varchar(20) NOT NULL,
   `color_carro` varchar(10) NOT NULL,
@@ -139,11 +150,12 @@ CREATE TABLE `info_carro` (
 -- Volcado de datos para la tabla `info_carro`
 --
 
-INSERT INTO `info_carro` (`id_carro`, `año_carro`, `marca_carro`, `modelo_carro`, `color_carro`, `vin_carro`, `cilindros_carro`, `llaves_carro`, `motor_carro`, `millaje_carro`, `foto_carro`) VALUES
-(2, '2014', 'Mazda', 'Mazda 3 Grand Tourin', 'Rojo', 'JM1BM1M71E1******', '4.0', 1, '2.0L', '65000', 'https://cs.copart.com/v1/AUTH_svc.pdoc00001/PIX250/fd2bdd7e-08e3-4baf-bf03-04b19e8035b4.JPG'),
-(3, '2017', 'Lamborghini', 'Huracan', 'Rojo', 'ZHWUR2ZF2HL******', '10', 1, '5.2L', '120000', 'https://cs.copart.com/v1/AUTH_svc.pdoc00001/PIX382/e6f814c5-6191-49d4-8971-d607a41d70b2.JPG'),
-(4, '1996', 'Toyota', 'Tacoma Xtracab', 'Verde', '4TAVL52N4TZ******', '4.0', 1, '2.4L', '65300', 'https://cs.copart.com/v1/AUTH_svc.pdoc00001/PIX235/927f3007-4400-47f0-b76f-19759d6a2afe.JPG'),
-(5, '2011', 'Toyota', 'Camry Base', 'Gris', '4T1BF3EK8BU******', '4.0', 0, '2.5L', '3100 ', 'https://cs.copart.com/v1/AUTH_svc.pdoc00001/PIX74/ec9bb24b-83d7-4159-a0b0-dceb02de5481.JPG');
+INSERT INTO `info_carro` (`id_carro`, `anio_carro`, `marca_carro`, `modelo_carro`, `color_carro`, `vin_carro`, `cilindros_carro`, `llaves_carro`, `motor_carro`, `millaje_carro`, `foto_carro`) VALUES
+(6, '2014', 'BMW', 'BMW 328 I', 'Blanco', 'WBA3A5C50EP******', '4.0', 1, '2.0L 4', '58598  ', 'https://cs.copart.com/v1/AUTH_svc.pdoc00001/LPP368/4e16bd5ddb8540a4ab78118aa754d286_ful.jpg'),
+(7, '2005', 'Ford', ' F150 SUPERCREW', 'Negro', '1FTPW12515K******', '8', 1, '5.4L 8', '133,368', 'https://cs.copart.com/v1/AUTH_svc.pdoc00001/LPP275/9784438a8bb742b9a461dbd9a56e2b92_ful.jpg'),
+(8, '2010', 'CHEVROLET', 'CAMARO LT', 'Rojo', '2G1FB1EV1A9******', '6', 0, '3.6L 6', '49,940', 'https://cs.copart.com/v1/AUTH_svc.pdoc00001/LPP340/c7eb2c719e224220bc34482fef6de8fd_ful.jpg'),
+(9, '2014', 'Ford', 'MUSTANG', 'Verde', '1ZVBP8AM6E5******', '6', 1, '3.7L 6', '100,045', 'https://cs.copart.com/v1/AUTH_svc.pdoc00001/LPP332/03642223ef4c4af5a84227558bf0c28d_ful.jpg'),
+(10, '2014', 'MAZDA', '3 SPORT', 'Blanco', 'JM1BM1U7XE1******', '4', 1, '2.0L 4', '110,528', 'https://cs.copart.com/v1/AUTH_svc.pdoc00001/LPP291/c7705750176f4e3c8bceed84f8a68a85_ful.jpg');
 
 -- --------------------------------------------------------
 
@@ -164,7 +176,11 @@ CREATE TABLE `inventario` (
 --
 
 INSERT INTO `inventario` (`id_invent`, `id_carro`, `total_invent`, `estado_invent`, `solici_invent`) VALUES
-(1, 3, 85000, 'Disponible', 0);
+(3, 6, 112516, 'Disponible', 0),
+(4, 7, 40000, 'Espertaje', 1),
+(5, 8, 11620, 'Disponible', 0),
+(6, 9, 76111, 'Disponible', 1),
+(7, 10, 39805, 'Disponible', 1);
 
 -- --------------------------------------------------------
 
@@ -209,9 +225,11 @@ CREATE TABLE `reparaciones` (
 --
 
 INSERT INTO `reparaciones` (`id_reparaciones`, `id_carro`, `id_compras`, `costo_reparacion`, `encarg_reparacion`, `fechae_reparacion`, `fechad_reparacion`, `danos_repar`) VALUES
-(1, 3, 2, 7000, 'Cristian Rodriguéz', '2022-08-20', '2022-09-15', 'Pintura Nueva, Llantas Nuevas, Pulido y Encerado.'),
-(2, 4, 3, 8050, 'Pedro El Memin', '2022-08-30', '2022-09-30', 'Pintura Nueva, Cambio de Aceite, Pulido y Encerado.'),
-(3, 2, 1, 8195.36, 'Cristian Rodriguéz', '2022-09-03', '2022-09-23', 'Se pintó de buena manera.\r\nSe pulió el carro.\r\nRequiere cambio de Llantas y de Chock.');
+(4, 6, 5, 4000, 'Cristian Rodriguéz', '2022-10-02', '2022-10-28', 'Se le añadirá pintura en ciertas partes del vehículo, se arreglará el bomper trasero y delantero, se enderezará las llantas y se realizará el encerado y limpieza.'),
+(5, 7, 8, 300, 'Edwin Rivas', '2022-10-11', '2022-11-25', 'Se le cambiarán las llantas.'),
+(6, 8, 4, 500, 'Edwin Rivas', '2022-10-13', '2022-10-27', 'Se le cambiaran los retrovisores y se le encerará.'),
+(7, 9, 6, 1500, 'Electricista Don R', '2022-10-13', '2022-10-29', 'Se le cambiarán algunos circuitos internos.'),
+(8, 10, 7, 6000, 'Edwin Rivas', '2022-10-12', '2022-10-12', 'Se le cambiarán las carcaza a las tres puertas.');
 
 -- --------------------------------------------------------
 
@@ -232,8 +250,9 @@ CREATE TABLE `revendedores` (
 --
 
 INSERT INTO `revendedores` (`id_revend`, `nom_revend`, `apelli_revend`, `CUI_revend`, `num_revend`) VALUES
-(1, 'Roberto Alejandro', 'Calderón Martínez', '3133455890901', '40447309'),
-(3, 'NAC', 'NAC', 'NAC', 'NAC');
+(3, 'NAC', 'NAC', 'NAC', 'NAC'),
+(4, 'Luis Diego', 'Díaz Jolomná', '16589423141', '58748560'),
+(5, 'Carlos Jesús', 'Zapote Villagrán', '2165898019809', '54609305');
 
 -- --------------------------------------------------------
 
@@ -252,7 +271,7 @@ CREATE TABLE `subastas` (
 --
 
 INSERT INTO `subastas` (`id_sub`, `nombre_sub`, `url_sub`) VALUES
-(1, 'Copart', 'https://www.copart.com/es/');
+(4, 'Copart', 'https://www.copart.com/es/');
 
 -- --------------------------------------------------------
 
@@ -274,10 +293,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id_user`, `nombre_completo`, `correo`, `id_puesto`, `user`, `psw`) VALUES
-(3, 'Roberto Alejandro Calderón Martínez', 'robertocald1309@gmail.com', 1, 'alejandrocald', 'jSG5TlJBMBA14AC3udcLXkmtCCQhe+311jQtIMItBy4='),
-(4, 'Cepillin Cincuenta', 'cepillin50@gmail.com', 2, 'Cepillin50_', 'CsiPtaewcbdpw7mAcwJxy2L5XB6jlVMZqVTHF/jWNkc='),
-(5, 'Aleman Tio', 'alemantio1235cal@hotmail.com', 5, 'AlemanTio2', 'TzfAYfGFT5aC9UP+y17p1lLIAyNZcCAt6XxuQMg2F2Y='),
-(6, 'Ben Diez', 'ben10cuartrobrazos@cepillinfc.com', 5, 'Ben1058', 'Om/lciwsuCoJeGtHEF3XYx4/PgbjidBfdLvr/E9/S0k=');
+(8, 'Roberto Alejandro Calderón Martínez', 'robertoalejandrocalderon@gmail.com', 1, 'alejandro', '8PiUUqJeQuOJCPaigiN7J0/+NXUxDouyEwXLT77Tq78='),
+(9, 'Carlos Roberto Calderón Ruíz', 'robertocal2@yahoo.com', 1, 'CrCALDERON2', 'AtdEutpWV4JM57sM1GDcQHkCaf9WjvZj7OBZeL4gTXg=');
 
 -- --------------------------------------------------------
 
@@ -302,7 +319,11 @@ CREATE TABLE `ventas` (
 --
 
 INSERT INTO `ventas` (`id_venta`, `id_carro`, `id_revend`, `comision_venta`, `total_venta`, `ganancia_venta`, `id_clien`, `fecha_venta`, `traspaso_venta`) VALUES
-(1, 3, 1, 8000, 85000, 4500, 1, '2022-08-29', 0);
+(2, 7, 5, 1500, 80000, 1000, 2, '2022-10-22', 1),
+(3, 6, 3, 0, 15000, 0, 3, '2022-11-19', 0),
+(4, 8, 4, 8000, 70000, 5000, 3, '2022-11-25', 1),
+(5, 9, 3, 0, 40000, 4000, 3, '2022-10-01', 0),
+(6, 10, 4, 2000, 70000, 2000, 3, '2022-10-29', 1);
 
 --
 -- Índices para tablas volcadas
@@ -402,37 +423,37 @@ ALTER TABLE `ventas`
 -- AUTO_INCREMENT de la tabla `clientes`
 --
 ALTER TABLE `clientes`
-  MODIFY `id_clien` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_clien` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `compra_carros`
 --
 ALTER TABLE `compra_carros`
-  MODIFY `id_compras` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_compras` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT de la tabla `facturacion`
 --
 ALTER TABLE `facturacion`
-  MODIFY `id_factu` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_factu` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT de la tabla `importaciones`
 --
 ALTER TABLE `importaciones`
-  MODIFY `id_impo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_impo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT de la tabla `info_carro`
 --
 ALTER TABLE `info_carro`
-  MODIFY `id_carro` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_carro` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT de la tabla `inventario`
 --
 ALTER TABLE `inventario`
-  MODIFY `id_invent` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_invent` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT de la tabla `puestos`
@@ -444,31 +465,31 @@ ALTER TABLE `puestos`
 -- AUTO_INCREMENT de la tabla `reparaciones`
 --
 ALTER TABLE `reparaciones`
-  MODIFY `id_reparaciones` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_reparaciones` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT de la tabla `revendedores`
 --
 ALTER TABLE `revendedores`
-  MODIFY `id_revend` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_revend` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de la tabla `subastas`
 --
 ALTER TABLE `subastas`
-  MODIFY `id_sub` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_sub` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de la tabla `users`
 --
 ALTER TABLE `users`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT de la tabla `ventas`
 --
 ALTER TABLE `ventas`
-  MODIFY `id_venta` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_venta` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- Restricciones para tablas volcadas

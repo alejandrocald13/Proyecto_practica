@@ -105,6 +105,7 @@ Public Class Subasta
                 tbID.Text = row.Cells(0).Value.ToString()
                 tbNombre_Sub.Text = row.Cells(1).Value.ToString()
                 tbURL_Sub.Text = row.Cells(2).Value.ToString()
+                Guna2Button3.Enabled = True
             Catch ex As Exception
                 MessageBox.Show(ex.ToString())
             End Try

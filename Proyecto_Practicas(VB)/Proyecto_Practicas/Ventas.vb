@@ -152,7 +152,7 @@ Public Class Ventas
     End Sub
     Private Sub btnsave_ventas_Click(sender As Object, e As EventArgs) Handles btnsave_ventas.Click
         Try
-
+            btnmodifi_ventas.Enabled = False
             If cbCarro_ventas.SelectedValue = 0 Or cbcliente_cliente.SelectedIndex = -1 Or (rdSi_trasp.Checked = False And rdNo_trasp.Checked = False) Or (cbComision_vent.Checked = True And cbrevendedor_ventas.SelectedIndex = -1) Then
                 MessageBox.Show("ALGUN CAMPO ESTÁ VACÍO", "ERROR AL GUARDAR", MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
             Else

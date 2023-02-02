@@ -140,7 +140,6 @@ Public Class Reparaciones
         End If
     End Sub
     Private Sub bSave_Click(sender As Object, e As EventArgs) Handles bSave.Click
-        conn = objetoconexion.AbrirCon
         Try
             Dim cmd2 As MySqlCommand = New MySqlCommand
             conn = objetoconexion.AbrirCon
@@ -155,6 +154,7 @@ Public Class Reparaciones
                 If nudCosto_repar.Value = 100 Or tbencar_repar.Text = "" Or cbCarro_repar.SelectedIndex = -1 Then
                     MessageBox.Show("ALGUN CAMPO ESTÁ VACÍO", "ERROR AL GUARDAR", MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
                 Else
+                    conn = objetoconexion.AbrirCon
                     cmd = conn.CreateCommand
                     cmd.CommandText = "insert into reparaciones(id_carro,id_compras,costo_reparacion,encarg_reparacion,fechae_reparacion,fechad_reparacion,danos_repar)values(@car,@com,@cost,@encar, @fecha1,@fecha2,@danos);"
                     cmd.Parameters.AddWithValue("@car", cbCarro_repar.SelectedValue.ToString)
@@ -253,7 +253,7 @@ Public Class Reparaciones
 
     Private Sub tbDanos_repar_KeyPress(sender As Object, e As KeyPressEventArgs) Handles tbDanos_repar.KeyPress
         If Not (Asc(e.KeyChar) = 8) Then
-            Dim allowedChars As String = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZáéíóúÁÉÍÓÚ1234567890-().@#"",;: "
+            Dim allowedChars As String = "abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZáéíóúÁÉÍÓÚ1234567890-().@#"",;: "
             If Not allowedChars.Contains(e.KeyChar.ToString.ToLower) Then
                 e.KeyChar = ChrW(0)
                 e.Handled = True

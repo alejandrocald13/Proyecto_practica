@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 03-10-2022 a las 17:31:05
+-- Tiempo de generación: 13-10-2022 a las 03:31:18
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 8.1.6
 
@@ -65,9 +65,9 @@ CREATE TABLE `facturacion` (
   `id_carro` int(11) NOT NULL,
   `id_compras` int(11) NOT NULL,
   `id_impo` int(11) NOT NULL,
-  `placas_factu` int(6) NOT NULL,
-  `IPRIMA_importe` int(10) NOT NULL,
-  `IVA_importe` int(11) NOT NULL
+  `IPRIMA_importe` double NOT NULL,
+  `IVA_importe` double NOT NULL,
+  `placas_factu` double NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -82,7 +82,7 @@ CREATE TABLE `importaciones` (
   `id_compras` int(11) NOT NULL,
   `encarg_impo` varchar(100) NOT NULL,
   `metodo_impo` varchar(20) NOT NULL,
-  `costo_impo` int(7) NOT NULL
+  `costo_impo` double NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -100,9 +100,9 @@ CREATE TABLE `info_carro` (
   `vin_carro` varchar(30) NOT NULL,
   `cilindros_carro` varchar(4) NOT NULL,
   `llaves_carro` tinyint(1) NOT NULL,
-  `motor_carro` varchar(4) NOT NULL,
-  `foto_carro` text DEFAULT NULL,
-  `millaje_carro` varchar(10) NOT NULL
+  `motor_carro` varchar(7) NOT NULL,
+  `millaje_carro` varchar(7) NOT NULL,
+  `foto_carro` text DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -150,8 +150,8 @@ CREATE TABLE `reparaciones` (
   `id_reparaciones` int(11) NOT NULL,
   `id_carro` int(11) NOT NULL,
   `id_compras` int(11) NOT NULL,
-  `costo_reparacion` int(11) NOT NULL,
-  `encarg_reparacion` varchar(100) NOT NULL,
+  `costo_reparacion` double NOT NULL,
+  `encarg_reparacion` varchar(30) NOT NULL,
   `fechae_reparacion` date NOT NULL,
   `fechad_reparacion` date NOT NULL,
   `danos_repar` text NOT NULL
@@ -165,11 +165,18 @@ CREATE TABLE `reparaciones` (
 
 CREATE TABLE `revendedores` (
   `id_revend` int(11) NOT NULL,
-  `nom_revend` varchar(100) NOT NULL,
-  `apelli_revend` int(11) NOT NULL,
+  `nom_revend` varchar(20) NOT NULL,
+  `apelli_revend` varchar(20) NOT NULL,
   `CUI_revend` varchar(13) NOT NULL,
   `num_revend` varchar(8) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `revendedores`
+--
+
+INSERT INTO `revendedores` (`id_revend`, `nom_revend`, `apelli_revend`, `CUI_revend`, `num_revend`) VALUES
+(3, 'NAC', 'NAC', 'NAC', 'NAC');
 
 -- --------------------------------------------------------
 
@@ -203,7 +210,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id_user`, `nombre_completo`, `correo`, `id_puesto`, `user`, `psw`) VALUES
-(3, 'Roberto Alejandro Calderón Martínez', 'robertocald1309@gmail.com', 1, 'alejandrocald', 'jSG5TlJBMBA14AC3udcLXkmtCCQhe+311jQtIMItBy4=');
+(8, 'Roberto Alejandro Calderón Martínez', 'robertoalejandrocalderon@gmail.com', 1, 'alejandro', '8PiUUqJeQuOJCPaigiN7J0/+NXUxDouyEwXLT77Tq78=');
 
 -- --------------------------------------------------------
 
@@ -321,37 +328,37 @@ ALTER TABLE `ventas`
 -- AUTO_INCREMENT de la tabla `clientes`
 --
 ALTER TABLE `clientes`
-  MODIFY `id_clien` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_clien` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `compra_carros`
 --
 ALTER TABLE `compra_carros`
-  MODIFY `id_compras` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_compras` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `facturacion`
 --
 ALTER TABLE `facturacion`
-  MODIFY `id_factu` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_factu` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `importaciones`
 --
 ALTER TABLE `importaciones`
-  MODIFY `id_impo` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_impo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `info_carro`
 --
 ALTER TABLE `info_carro`
-  MODIFY `id_carro` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_carro` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de la tabla `inventario`
 --
 ALTER TABLE `inventario`
-  MODIFY `id_invent` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_invent` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `puestos`
@@ -363,19 +370,19 @@ ALTER TABLE `puestos`
 -- AUTO_INCREMENT de la tabla `reparaciones`
 --
 ALTER TABLE `reparaciones`
-  MODIFY `id_reparaciones` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_reparaciones` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `revendedores`
 --
 ALTER TABLE `revendedores`
-  MODIFY `id_revend` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_revend` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `subastas`
 --
 ALTER TABLE `subastas`
-  MODIFY `id_sub` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_sub` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `users`
@@ -387,7 +394,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT de la tabla `ventas`
 --
 ALTER TABLE `ventas`
-  MODIFY `id_venta` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_venta` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- Restricciones para tablas volcadas

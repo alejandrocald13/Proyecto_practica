@@ -20,12 +20,13 @@ Public Class Importacion_Carro
         tbencar_impor.Clear()
         tbCarroSelec_CompraCar.Clear()
         tbmeto_impor.Clear()
+        Guna2TextBox1.Clear()
         nudCosto_impor.Value = 100
         cbCarro_Compraimpor.Focus()
     End Sub
     Sub mostrar()
         conn = objetoconexion.AbrirCon
-        Dim query As String = "SELECT i.id_impo as 'ID', ifc.vin_carro as 'VIN', cc.lote_compra as 'Lote de Compra', i.encarg_impo as 'Encargado', i.metodo_impo as 'Método', CONCAT('$',i.costo_impo) as 'Costo ($)' FROM importaciones i INNER JOIN info_carro ifc ON i.id_carro = ifc.id_carro INNER JOIN compra_carros cc ON cc.id_compras =i.id_compras;"
+        Dim query As String = "SELECT i.id_impo as 'ID', ifc.vin_carro as 'VIN', cc.lote_compra as 'Lote de Compra', i.encarg_impo as 'Encargado', i.metodo_impo as 'Método', CONCAT('Q',i.costo_impo) as 'Costo (Q)' FROM importaciones i INNER JOIN info_carro ifc ON i.id_carro = ifc.id_carro INNER JOIN compra_carros cc ON cc.id_compras =i.id_compras;"
         Dim adpt As New MySqlDataAdapter(query, conn)
         Dim ds As New DataSet()
         adpt.Fill(ds)
@@ -107,6 +108,43 @@ Public Class Importacion_Carro
 
         End If
     End Sub
+    Sub ubiselec()
+        If cbCarro_Compraimpor.SelectedValue = 0 Then
+            Exit Sub
+        Else
+            Try
+                Dim cmd2 As MySqlCommand = New MySqlCommand
+                conn = objetoconexion.AbrirCon
+                cmd2.Connection = conn
+                cmd2.CommandText = "Select * FROM compra_carros WHERE id_carro='" + cbCarro_Compraimpor.SelectedValue.ToString + "';"
+                Dim r As MySqlDataReader
+                r = cmd2.ExecuteReader
+                If r.HasRows <> False Then
+                    r.Read()
+                    conn.Close()
+                    conn.Dispose()
+                    Dim query As String = "Select * FROM compra_carros WHERE id_carro='" + cbCarro_Compraimpor.SelectedValue.ToString + "';"
+                    Dim adpt As New MySqlDataAdapter(cmd2.CommandText, conn)
+                    Dim row As DataRow = Nothing
+                    Using dt As New DataTable()
+                        adpt.Fill(dt)
+                        If (dt.Rows.Count > 0) Then
+                            row = dt.Rows(0)
+                        End If
+                    End Using
+                    Guna2TextBox1.Text = Convert.ToString(row("ubicacion_compra"))
+                Else
+                    MessageBox.Show("Vaya, parece que el carro seleccionado, no tiene ubicación de compra. Por favor, registra la compra del mismo.", "ERROR AL SELECCIONAR", MessageBoxButtons.RetryCancel, MessageBoxIcon.Asterisk)
+                    cbCarro_Compraimpor.SelectedIndex = -1
+                End If
+                conn.Close()
+                conn.Dispose()
+            Catch ex As Exception
+                MsgBox(ex.ToString)
+            End Try
+
+        End If
+    End Sub
     Private Sub Importacion_Carro_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         If Login.token <> 1 Then
             MessageBox.Show("No tienes el Acceso Total a este formulario." & vbCrLf & "Si crees que se trata de un error intenta iniciar sesión de nuevo.", "Atención", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation)
@@ -131,6 +169,7 @@ Public Class Importacion_Carro
         If i >= 4 Then
             carroselec()
             loteselec()
+            ubiselec()
         End If
     End Sub
     Private Sub btnnew_impor_Click(sender As Object, e As EventArgs) Handles btnnew_impor.Click
@@ -138,7 +177,6 @@ Public Class Importacion_Carro
         btnguarda_impor.Enabled = True
     End Sub
     Private Sub btnguarda_impor_Click(sender As Object, e As EventArgs) Handles btnguarda_impor.Click
-        conn = objetoconexion.AbrirCon
         Try
             Dim cmd2 As MySqlCommand = New MySqlCommand
             conn = objetoconexion.AbrirCon
@@ -153,6 +191,7 @@ Public Class Importacion_Carro
                 If tbencar_impor.Text = "" Or tbmeto_impor.Text = "" Or cbCarro_Compraimpor.SelectedIndex = -1 Then
                     MessageBox.Show("ALGUN CAMPO ESTÁ VACÍO", "ERROR AL GUARDAR", MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
                 Else
+                    conn = objetoconexion.AbrirCon
                     cmd = conn.CreateCommand
                     cmd.CommandText = "insert into importaciones(id_carro,id_compras,encarg_impo,metodo_impo,costo_impo)values(@car,@com,@encar,@met, @cost);"
                     cmd.Parameters.AddWithValue("@car", cbCarro_Compraimpor.SelectedValue.ToString)
@@ -192,7 +231,7 @@ Public Class Importacion_Carro
                 tbencar_impor.Text = row.Cells(3).Value.ToString()
                 tbmeto_impor.Text = row.Cells(4).Value.ToString()
                 Dim x = row.Cells(5).Value.ToString()
-                nudCosto_impor.Value = x.Split("$")(1)
+                nudCosto_impor.Value = x.Split("Q")(1)
                 Btnmodi_impor.Enabled = True
             Catch ex As Exception
                 MessageBox.Show(ex.ToString())
@@ -233,7 +272,7 @@ Public Class Importacion_Carro
     End Sub
     Private Sub tbencar_impor_KeyPress(sender As Object, e As KeyPressEventArgs) Handles tbencar_impor.KeyPress
         If Not (Asc(e.KeyChar) = 8) Then
-            Dim allowedChars As String = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZáéíóúÁÉÍÓÚ"
+            Dim allowedChars As String = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZáéíóúÁÉÍÓÚ "
             If Not allowedChars.Contains(e.KeyChar.ToString.ToLower) Then
                 e.KeyChar = ChrW(0)
                 e.Handled = True

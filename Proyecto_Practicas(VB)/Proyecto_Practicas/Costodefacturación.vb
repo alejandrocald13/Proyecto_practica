@@ -247,7 +247,6 @@ Public Class Costodefacturación
         btnguarda_client.Enabled = True
     End Sub
     Private Sub btnguarda_client_Click(sender As Object, e As EventArgs) Handles btnguarda_client.Click
-        conn = objetoconexion.AbrirCon
         Try
             Dim cmd2 As MySqlCommand = New MySqlCommand
             conn = objetoconexion.AbrirCon
@@ -259,7 +258,7 @@ Public Class Costodefacturación
                 r.Read()
                 conn.Close()
                 conn.Dispose()
-                If cbCarro_Cdfac.SelectedIndex = 1 Or tbCostoPlacas_Impo.Text = Nothing Or Not IsNumeric(tbCostoPlacas_Impo.Text) Or tbCostoPlacas_Impo.Text = "0" Then
+                If cbCarro_Cdfac.SelectedIndex = -1 Or tbCostoPlacas_Impo.Text = Nothing Or Not IsNumeric(tbCostoPlacas_Impo.Text) Or tbCostoPlacas_Impo.Text = "0" Then
                     If Not IsNumeric(tbCostoPlacas_Impo.Text) Then
                         MessageBox.Show("VAYA, PARECE QUE EL NÚMERO NO ES VÁLIDO, VERIFICAR.", "ERROR AL GUARDAR", MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
                         tbCostoPlacas_Impo.Clear()
@@ -281,6 +280,7 @@ Public Class Costodefacturación
                             tbIPRIMA_impo.ReadOnly = True
                             tbIVA_impo.ReadOnly = True
                         End If
+                        conn = objetoconexion.AbrirCon
                         cmd = conn.CreateCommand
                         cmd.CommandText = "insert into facturacion(id_carro,id_compras,id_impo,IPRIMA_importe,IVA_importe,placas_factu)values(@car,@com,@impo,@IPRIMA,@IVA,@plac);"
                         cmd.Parameters.AddWithValue("@car", cbCarro_Cdfac.SelectedValue.ToString)
